@@ -56,7 +56,7 @@ build_dir=`pwd`
 src_images=${build_dir}/"src/out/target/product/goldfish"
 kernel_images=${build_dir}/"kernel-src/arch/arm/boot"
 packaging_stuff=${build_dir}/"packaging"
-output_dir=${build_dir}/"packaged"
+output_dir=${build_dir}/"addon-cobradroid-beta"
 
 debug "Trying to create output directory ${output_dir}..."
 
@@ -69,7 +69,7 @@ if [ $(dir_exists ${output_dir}) -eq 1 ]; then
     fi
 fi
 
-mkdir ${build_dir}/packaged 2>/dev/null
+mkdir ${output_dir} 2>/dev/null
 
 debug  "Copying required directory structure from ${packaging_stuff}..."
 
@@ -77,24 +77,26 @@ if [ $(dir_exists ${packaging_stuff}) -eq 0 ]; then
    error "The packaging directory does not exist. Stopping."
 fi
 
-cp -r $packaging_stuff/* ${build_dir}/packaged/ 2>/dev/null
+cp -r $packaging_stuff/* ${output_dir} 2>/dev/null
 
-
-debug "Copying system images..."
+debug "Copying system files..."
 debug  "1. system.img.."
-cp ${src_images}/system.img ${build_dir}/packaged/images/ 2>/dev/null|| error "\"system.img\" not found! Did you build the tree?"
+cp ${src_images}/system.img ${output_dir}/images/ 2>/dev/null|| error "\"system.img\" not found! Did you build the tree?"
 
 debug "2. ramdisk.img.."
-cp ${src_images}/ramdisk.img ${build_dir}/packaged/images/ 2>/dev/null|| error "\"ramdisk.img\" not found! Did you build the tree?"
+cp ${src_images}/ramdisk.img ${output_dir}/images/ 2>/dev/null|| error "\"ramdisk.img\" not found! Did you build the tree?"
 
 debug "3. userdata.img.."
-cp ${src_images}/userdata.img ${build_dir}/packaged/images/ 2>/dev/null|| error "\"userdata.img\" not found! Did you build the tree?"
+cp ${src_images}/userdata.img ${output_dir}/images/ 2>/dev/null|| error "\"userdata.img\" not found! Did you build the tree?"
+
+debug "4. NOTICE.html.."
+cp ${src_images}/obj/NOTICE.html ${output_dir} 2>/dev/null || error "\"NOTICE.html\" not found! Did you build the full tree?"
 
 debug "Copying kernel image..."
 debug "1. zImage (as kernel-qemu).."
-cp ${kernel_images}/zImage ${build_dir}/packaged/images/kernel-qemu 2>/dev/null|| error "\"zImage\" not found! Did you build the kernel?"
+cp ${kernel_images}/zImage ${output_dir}/images/kernel-qemu 2>/dev/null|| error "\"zImage\" not found! Did you build the kernel?"
 
 debug "Compressing to \"addon-cobradroid-beta.tar.bz2\"..."
-tar cjf ${build_dir}/addon-cobradroid-beta.tar.bz2 packaged/* || error "Could not create compressed image."
+tar cjf addon-cobradroid-beta.tar.bz2 addon-cobradroid-beta || error "Could not create compressed image."
 
 debug "Complete!"
