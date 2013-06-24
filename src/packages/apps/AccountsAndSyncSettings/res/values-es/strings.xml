@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/*
+ * Copyright (C) 2007 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_label" msgid="3706018265751197270">"Ajustes de sincronización y de cuenta"</string>
+    <string name="sync_settings" msgid="8707056705985552604">"Ajustes de sincronización y de cuentas"</string>
+    <string name="sync_too_many_deletes" msgid="1621369057980827097">"Límite de eliminaciones superado"</string>
+    <string name="background_data" msgid="1103557117473896066">"Datos de referencia"</string>
+    <string name="background_data_summary" msgid="9048259510387973822">"Las aplicaciones pueden sincronizar datos, enviarlos y recibirlos."</string>
+    <string name="background_data_dialog_title" msgid="6303755495467986079">"Atención"</string>
+    <string name="background_data_dialog_message" msgid="8417297954700022363">"Si inhabilitas los datos de referencia, aumentarás la duración de la batería y reducirás el uso de datos. Es posible que algunas aplicaciones sigan utilizando la conexión de datos de referencia."</string>
+    <string name="sync_automatically" msgid="4694735102757960100">"Sincronización automática"</string>
+    <string name="sync_automatically_summary" msgid="4598895616781542745">"Las aplicaciones sincronizan los datos de forma automática."</string>
+    <string name="settings_backup" msgid="6114299464740014762">"Realizar copia de seguridad de configuración"</string>
+    <string name="settings_backup_summary" msgid="1787552172618610178">"Realizar copia de seguridad de mi configuración"</string>
+    <string name="sync_menu_sync_now" msgid="5796024841315572404">"Sincronizar ahora"</string>
+    <string name="sync_menu_sync_cancel" msgid="1005480041232010062">"Cancelar sincronización"</string>
+    <string name="sync_one_time_sync" msgid="3274364877518422827">"Tocar para realizar la sincronización ahora<xliff:g id="LAST_SYNC_TIME">
+%1$s</xliff:g>"</string>
+    <string name="sync_gmail" msgid="5806053858668452000">"Gmail"</string>
+    <string name="sync_calendar" msgid="1796292773734071897">"Calendario"</string>
+    <string name="sync_contacts" msgid="2035690905925565660">"Contactos"</string>
+    <string name="sync_too_many_deletes_desc" msgid="699495654174066067">"Hay <xliff:g id="NUMBER_OF_DELETED_ITEMS">%1$d</xliff:g> elementos eliminados para <xliff:g id="TYPE_OF_SYNC">%2$s</xliff:g>, cuenta <xliff:g id="ACCOUNT_NAME">%3$s</xliff:g>. ¿Qué quieres hacer?"</string>
+    <string name="sync_really_delete" msgid="5456355204562588976">"Eliminar los elementos"</string>
+    <string name="sync_undo_deletes" msgid="8695514459839593307">"Deshacer las eliminaciones"</string>
+    <string name="sync_do_nothing" msgid="5798755982392201673">"No hacer nada por ahora"</string>
+    <string name="sync_is_failing" msgid="5230237058552433773">"En este momento hay problemas con la sincronización. Se restablecerá en breve."</string>
+    <string name="sync_plug" msgid="7020432439004167162"><font fgcolor="#ffffffff">"Te damos la bienvenida a Google Sync,"</font>" "\n"un servicio de Google que te permite sincronizar datos para hacer posible el acceso a tus contactos, a tus citas, etc., desde cualquier ubicación."</string>
+    <string name="header_application_sync_settings" msgid="5263025067167527890">"Ajustes de sincronización de aplicación"</string>
+    <string name="header_manage_accounts" msgid="381956296995298770">"Administrar cuentas"</string>
+    <string name="header_general_sync_settings" msgid="1598537524696692308">"Ajustes de sincronización general"</string>
+    <string name="sync_enabled" msgid="913018877443997502">"La sincronización está activada."</string>
+    <string name="sync_disabled" msgid="185731301298967302">"La sincronización está desactivada."</string>
+    <string name="sync_error" msgid="681431702824599812">"Error de sincronización"</string>
+    <string name="add_account_label" msgid="2035321485672826779">"Añadir cuenta"</string>
+    <string name="header_data_and_synchronization" msgid="6286257845276834071">"Datos y sincronización"</string>
+    <string name="preference_change_password_title" msgid="6468827554159468315">"Cambiar contraseña"</string>
+    <string name="header_account_settings" msgid="4950809499418403792">"Ajustes de la cuenta"</string>
+    <string name="remove_account_label" msgid="5624712684599197863">"Eliminar cuenta"</string>
+    <string name="header_add_an_account" msgid="2198078922829535425">"Añadir una cuenta"</string>
+    <string name="finish_button_label" msgid="6121560986057356757">"Finalizar"</string>
+    <string name="really_remove_account_title" msgid="8808121039511188784">"Eliminar cuenta"</string>
+    <string name="really_remove_account_message" msgid="3293445755620109578">"¿Deseas eliminar realmente esta cuenta? Si la eliminas, se eliminarán también todos los mensajes, los contactos y otros datos del teléfono. "\n"¿Quieres continuar?"</string>
+    <string name="remove_account_failed" msgid="8178924513521241001">"Algunas aplicaciones necesitan esta cuenta. Solo puedes eliminarla restableciendo los valores predeterminados de fábrica del teléfono (esta acción elimina todos tus datos personales). Accede a Ajustes y después a Privacidad."</string>
+    <string name="provider_label" msgid="6191617139291321517">"Enviar suscripciones"</string>
+    <string name="sync_item_title" msgid="7984962124867021854">"Sincronizar <xliff:g id="AUTHORITY">%s</xliff:g>"</string>
+    <string name="cant_sync_dialog_title" msgid="3016197392261471761">"No se puede realizar la sincronización de forma manual."</string>
+    <string name="cant_sync_dialog_message" msgid="7200115394296632300">"La sincronización de este elemento no está disponible en este momento. Para modificar tu preferencia, activa temporalmente los datos de referencia y la sincronización automática."</string>
+</resources>

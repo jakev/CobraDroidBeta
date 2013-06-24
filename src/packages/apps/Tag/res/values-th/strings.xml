@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2010 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="5128188288358721369">"แท็ก"</string>
+    <string name="title_scanned_tag" msgid="4347835407095551450">"เก็บรวบรวมแท็กใหม่แล้ว"</string>
+    <string name="title_existing_tag" msgid="5656560272594190244">"แท็ก"</string>
+    <string name="tab_tags" msgid="3254131516215269385">"แท็ก"</string>
+    <string name="tab_starred" msgid="3892615665321783044">"ที่ติดดาว"</string>
+    <string name="tab_my_tag" msgid="4194581094362833242">"แท็กของฉัน"</string>
+    <string name="tag_unknown" msgid="2897956823877728783">"ไม่รู้จักประเภทแท็ก"</string>
+    <string name="tag_empty" msgid="3726529819932095782">"แท็กว่างเปล่า"</string>
+    <string name="button_delete" msgid="8636971153075546776">"ลบ"</string>
+    <string name="button_done" msgid="7048822758098308158">"เสร็จสิ้น"</string>
+    <string name="button_save" msgid="1396693475082322626">"บันทึก"</string>
+    <string name="button_cancel" msgid="8094182910311905776">"ยกเลิก"</string>
+    <string name="cancel_help_text" msgid="2582335582642459522">"หากต้องการข้ามการเพิ่มแท็กนี้ลงในคอลเล็กชันของคุณ ให้แตะ เสร็จสิ้น"</string>
+    <string name="action_text" msgid="577417996159152923">"ส่งข้อความถึง <xliff:g id="PHONE_NUMBER">%s</xliff:g>"</string>
+    <string name="action_call" msgid="6226253647953184035">"โทร <xliff:g id="PHONE_NUMBER">%s</xliff:g>"</string>
+    <string name="turn_on_my_tag" msgid="6584695906051991524">"แบ่งปันแท็กของฉัน"</string>
+    <string name="edit_tag" msgid="3708659122033447892">"แก้ไขแท็ก"</string>
+    <string name="turn_on_my_tag_subtitle" msgid="4174686056239752759">"อนุญาตให้ผู้อื่นอ่านแท็กของฉัน"</string>
+    <string name="add_content" msgid="6592975981339055673">"เพิ่มเติม…"</string>
+    <string name="tag_title" msgid="4734199420853998617">"ชื่อ"</string>
+    <string name="tag_text" msgid="522896767632155048">"ข้อความ"</string>
+    <string name="select_type" msgid="1845302736320827995">"เลือกประเภทที่จะเพิ่ม"</string>
+    <string name="photo" msgid="986413518082114481">"รูปภาพ"</string>
+    <string name="bad_photo" msgid="1601260684495341633">"ไม่สามารถเปิดภาพได้"</string>
+    <string name="url" msgid="5939765162489949437">"URL"</string>
+    <string name="contact" msgid="8810195884019228695">"รายชื่อติดต่อ"</string>
+    <string name="location" msgid="2476366526591580807">"ตำแหน่ง"</string>
+    <string name="empty_tag_prompt" msgid="4206394383309956030">"แท็กนี้ว่างเปล่า"</string>
+    <string name="empty_tag_instructions" msgid="9156733538909958916">"แตะ "<b>"เขียนแท็ก"</b>" เพื่อเพิ่มเนื้อหา"</string>
+    <string name="write" msgid="4957259770248890625">"เขียนแท็ก"</string>
+    <string name="cancel" msgid="2168193471147260328">"ยกเลิก"</string>
+    <string name="menu_help" msgid="2340550693525288105">"ความช่วยเหลือ"</string>
+    <string name="import_vcard" msgid="5104299047930666528">"นำเข้า ^1"</string>
+    <string name="mime_display_name" msgid="5926357152623764485">"ข้อมูลจากแท็ก NFC"</string>
+    <string name="dialog_title_nfc_off" msgid="6945643404976801203">"ปิด NFC แล้ว"</string>
+    <string name="dialog_text_nfc_off" msgid="6323019332983777990">"คุณต้องเปิด NFC เพื่อสแกนแท็ก"</string>
+    <string name="button_settings" msgid="6909066985958159920">"การตั้งค่า"</string>
+    <string name="empty_list" msgid="1306390399412856676">"คุณยังไม่ได้สแกนแท็กใดๆ"</string>
+    <string name="empty_list_starred" msgid="7185947321271594216">"คุณไม่มีแท็กที่ติดดาว"</string>
+    <string name="button_more_info" msgid="574247138099633767">"ข้อมูลเพิ่มเติม"</string>
+    <string name="vcard_title" msgid="7122634780732426007">"ข้อมูลรายชื่อติดต่อสำหรับ ^1"</string>
+    <string name="next" msgid="8672447228208567606">"ถัดไป"</string>
+    <string name="back" msgid="7389918385345281227">"ย้อนกลับ"</string>
+    <string name="close" msgid="5521003720382005075">"ปิด"</string>
+    <string name="intro_title" msgid="2798106838231744219">"เกี่ยวกับแท็ก"</string>
+    <string name="intro_text_about" msgid="1366913102380816468">"แท็กใช้ในการจัดระเบียบและแบ่งปันแท็ก Near Field Communication (NFC)"</string>
+    <string name="intro_text_usage" msgid="2343260114638598627">"คุณสแกนแท็กโดยการเปิดใช้โทรศัพท์และวางไว้ติดกับแท็ก"</string>
+    <string name="intro_text_contents" msgid="1973327615218723220">"แท็ก NFC สามารถมีข้อความ, URL, รูปภาพ และข้อมูลชนิดอื่นๆ ได้"</string>
+    <string name="intro_text_more" msgid="4127006088499721149">"หากต้องการสแกนหรือแบ่งปันแท็ก คุณต้องเปิดใช้ NFC ไว้ (ใน การตั้งค่า ที่ส่วน ระบบไร้สายและเครือข่าย)"</string>
+    <string name="intro_text_more2" msgid="28835616891750572">"หากต้องการข้อมูลเพิ่มเติม ให้กด เมนู แล้วแตะ ความช่วยเหลือ บนหน้าจอแท็กใดๆ"</string>
+    <string name="tag_deleted" msgid="5411251725532471624">"ลบแท็กแล้ว"</string>
+    <string name="add_tag" msgid="703494598879855113">"เพิ่มแท็กใหม่"</string>
+    <string name="choose_my_tag" msgid="4208730132705026130">"เลือกแท็กที่จะแบ่งปัน"</string>
+    <string name="active_tag" msgid="7417732109196094058">"แท็กที่ใช้งานอยู่"</string>
+    <string name="manage_my_tags" msgid="3616349610711109286">"จัดการแท็กของฉัน"</string>
+    <string name="menu_delete" msgid="8834253717174232653">"ลบแท็ก"</string>
+    <string name="menu_edit" msgid="2163829689000692138">"แก้ไขแท็ก"</string>
+    <string name="menu_set_as_active" msgid="6637492981297642733">"ตั้งเป็นแท็กที่ใช้งานอยู่"</string>
+    <string name="no_tag_selected" msgid="127078607162539962">"คุณไม่ได้เลือกแท็กที่จะแบ่งปัน"</string>
+    <string name="no_tags_created" msgid="5963013948308289234">"คุณไม่ได้สร้างแท็กใดๆ ไว้"</string>
+</resources>

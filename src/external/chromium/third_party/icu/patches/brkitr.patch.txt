@@ -1,0 +1,21 @@
+--- source/data/brkitr/line.txt	2009-06-24 14:06:38.000000000 -0700
++++ source/data/brkitr/line.txt	2009-08-07 17:27:26.991805000 -0700
+@@ -69,7 +69,8 @@
+ $HY = [:LineBreak =  Hyphen:];
+ $H2 = [:LineBreak =  H2:];
+ $H3 = [:LineBreak =  H3:];
+-$ID = [:LineBreak =  Ideographic:];
++$IDDelta = [\ufe45\ufe46\ufe51];
++$ID = [[:LineBreak =  Ideographic:] - $IDDelta];
+ $IN = [:LineBreak =  Inseperable:];
+ $IS = [:LineBreak =  Infix_Numeric:];
+ $JL = [:LineBreak =  JL:];
+@@ -77,7 +78,7 @@
+ $JT = [:LineBreak =  JT:];
+ $LF = [:LineBreak =  Line_Feed:];
+ $NL = [:LineBreak =  Next_Line:];
+-$NS = [:LineBreak =  Nonstarter:];
++$NS = [[:LineBreak =  Nonstarter:] $IDDelta \u23b5];
+ $NU = [:LineBreak =  Numeric:];
+ $OP = [:LineBreak =  Open_Punctuation:];
+ $PO = [:LineBreak =  Postfix_Numeric:];

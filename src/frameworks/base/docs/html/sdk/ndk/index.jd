@@ -1,0 +1,421 @@
+ndk=true
+
+ndk.win_download=android-ndk-r5b-windows.zip
+ndk.win_bytes=61299831
+ndk.win_checksum=87745ada305ab639399161ab4faf684c
+
+ndk.mac_download=android-ndk-r5b-darwin-x86.tar.bz2
+ndk.mac_bytes=50210863
+ndk.mac_checksum=019a14622a377b3727ec789af6707037
+
+ndk.linux_download=android-ndk-r5b-linux-x86.tar.bz2
+ndk.linux_bytes=44138539
+ndk.linux_checksum=4c0045ddc2bfd657be9d5177d0e0b7e7
+
+page.title=Android NDK
+@jd:body
+
+<h2 id="notes">Revisions</h2>
+
+<p>The sections below provide information and notes about successive releases of
+the NDK, as denoted by revision number. </p>
+
+<script type="text/javascript">
+function toggleDiv(link) {
+  var toggleable = $(link).parent();
+  if (toggleable.hasClass("closed")) {
+    //$(".toggleme", toggleable).slideDown("fast");
+    toggleable.removeClass("closed");
+    toggleable.addClass("open");
+    $(".toggle-img", toggleable).attr("title", "hide").attr("src", "{@docRoot}assets/images/triangle-opened.png");
+  } else {
+    //$(".toggleme", toggleable).slideUp("fast");
+    toggleable.removeClass("open");
+    toggleable.addClass("closed");
+    $(".toggle-img", toggleable).attr("title", "show").attr("src", "/assets/images/triangle-closed.png");
+  }
+  return false;
+}
+</script>
+<style>
+.toggleable {
+padding: .25em 1em;
+}
+.toggleme {
+  padding: 1em 1em 0 2em;
+  line-height:1em;
+}
+.toggleable a {
+  text-decoration:none;
+}
+.toggleme a {
+  text-decoration:underline;
+}
+.toggleable.closed .toggleme {
+  display:none;
+}
+#jd-content .toggle-img {
+  margin:0;
+}
+</style>
+
+
+<div class="toggleable open">
+    <a href="#"
+         onclick="return toggleDiv(this)"><img src="{@docRoot}assets/images/triangle-opened.png"
+         class="toggle-img"
+         height="9px"
+         width="9px" /> Android NDK, Revision 5b</a> <em>(January 2011)</em>
+
+    <div class="toggleme">
+      <p>This release of the NDK does not include any new features compared to r5. The r5b release addresses the
+      following problems in the r5 release:
+      </p>
+      <ul>
+    <li>The r5 binaries required glibc 2.11, but the r5b binaries are generated with a special
+    toolchain that targets glibc 2.7 or higher instead. The Linux toolchain binaries now run on Ubuntu 8.04 or higher. </li>
+    <li>Fixes a compiler bug in the arm-linux-androideabi-4.4.3 toolchain.
+    The previous binary generated invalid thumb instruction sequences when
+    dealing with signed chars.</li>
+    <li>Adds missing documentation for the
+    "gnustl_static" value for APP_STL, that allows you to link against
+    a static library version of GNU libstdc++. </li>
+    <li>The following <code>ndk-build</code> issues are fixed:
+      <ul>
+        <li>A bug that created inconsistent dependency files when a
+        compilation error occured on Windows. This prevented a proper build after
+        the error was fixed in the source code.</li>
+        <li>A Cygwin-specific bug where using very short paths for
+        the Android NDK installation or the project path led to the
+        generation of invalid dependency files. This made incremental builds
+        impossible.</li>
+        <li>A typo that prevented the cpufeatures library from working correctly
+        with the new NDK toolchain.</li>
+        <li>Builds in Cygwin are faster by avoiding calls to <code>cygpath -m</code>
+        from GNU Make for every source or object file, which caused problems
+        with very large source trees. In case this doesn't work properly, define <code>NDK_USE_CYGPATH=1</code> in your
+        environment to use <code>cygpath -m</code> again.</li>
+        <li>The Cygwin installation now notifies the user of invalid installation paths that contain spaces. Previously, an invalid path
+        would output an error that complained about an incorrect version of GNU Make, even if the right one was installed.
+      </ul>
+    </li>
+  <li>Fixed a typo that prevented the <code>NDK_MODULE_PATH</code> environment variable from working properly when
+  it contained multiple directories separated with a colon. </li>
+  <li>The <code>prebuilt-common.sh</code> script contains fixes to check the compiler for 64-bit
+  generated machine code, instead of relying on the host tag, which
+  allows the 32-bit toolchain to rebuild properly on Snow Leopard. The toolchain rebuild scripts now also support
+  using a 32-bit host toolchain.</li>
+  <li>A missing declaration for <code>INET_ADDRSTRLEN</code> was added to <code>&lt;netinet/in.h&gt;</code>.</li>
+  <li>Missing declarations for <code>IN6_IS_ADDR_MC_NODELOCAL</code> and <code>IN6_IS_ADDR_MC_GLOBAL</code> were added to <code>&lt;netinet/in6.h&gt;</code>.</li>
+  <li>'asm' was replaced with '__asm__' in <code>&lt;asm/byteorder.h&gt;</code> to allow compilation with <code>-std=c99</code>.</li>
+  </ul>
+  </div>
+  </div>
+
+<div class="toggleable closed">
+    <a href="#"
+         onclick="return toggleDiv(this)"><img src="{@docRoot}assets/images/triangle-closed.png"
+         class="toggle-img"
+         height="9px"
+         width="9px" /> Android NDK, Revision 5</a> <em>(December 2010)</em>
+
+    <div class="toggleme">
+      <p>This release of the NDK includes many new APIs, most of which are introduced to
+         support the development of games and similar applications that make extensive use
+         of native code. Using the APIs, developers have direct native access to events, audio,
+         graphics and window management, assets, and storage. Developers can also implement the
+         Android application lifecycle in native code with help from the new
+         {@link android.app.NativeActivity} class. For detailed information describing the changes in this
+         release, read the <code>CHANGES.HTML</code> document included in the downloaded NDK package.
+      </p>
+      <dl>
+        <dt>General notes:</dt>
+        <dd>
+          <ul>
+            <li>Adds support for native activities, which allows you to implement the
+            Android application lifecycle in native code.</li>
+
+            <li>Adds native support for the following:
+
+              <ul>
+
+                <li>Input subsystem (such as the keyboard and touch screen)</li>
+
+                <li>Access to sensor data (accelerometer, compass, gyroscope, etc).</li>
+
+                <li>Event loop APIs to wait for things such as input and sensor events.</li>
+
+                <li>Window and surface subsystem</li>
+
+                <li>Audio APIs based on the OpenSL ES standard that support playback and recording
+                as well as control over platform audio effects</li>
+
+                <li>Access to assets packaged in an <code>.apk</code> file.</li>
+                
+              </ul>
+            </li>
+
+            <li>Includes a new toolchain (based on GCC 4.4.3), which generates better code, and can also now
+            be used as a standalone cross-compiler, for people who want to build their stuff with
+            <code>./configure &amp;&amp; make</code>. See
+            docs/STANDALONE-TOOLCHAIN.html for the details. The binaries for GCC 4.4.0 are still provided,
+            but the 4.2.1 binaries were removed.</li>
+
+            <li>Adds support for prebuilt static and shared libraries (docs/PREBUILTS.html) and module
+            exports and imports to make sharing and reuse of third-party modules much easier
+            (docs/IMPORT-MODULE.html explains why).</li>
+
+            <li>Provides a default C++ STL implementation (based on STLport) as a helper module. It can be used either
+            as a static or shared library (details and usage examples are in sources/android/stlport/README). Prebuilt
+            binaries for STLport (static or shared) and GNU libstdc++ (static only) are also provided if you choose to
+            compile against those libraries instead of the default C++ STL implementation. 
+            C++ Exceptions and RTTI are not supported in the default STL implementation. For more information, see
+            docs/CPLUSPLUS-SUPPORT.HTML.</li>
+
+            <li>Includes improvements to the <code>cpufeatures</code> helper library that improves reporting
+            of the CPU type (some devices previously reported ARMv7 CPU when the device really was an ARMv6). We
+            recommend developers that use this library to rebuild their applications then
+            upload to Market to benefit from the improvements.</li>
+
+            <li>Adds an EGL library that lets you create and manage OpenGL ES textures and
+              services.</li>
+                
+            <li>Adds new sample applications, <code>native-plasma</code> and <code>native-activity</code>, 
+            to demonstrate how to write a native activity.</li>
+
+            <li>Includes many bugfixes and other small improvements; see docs/CHANGES.html for a more
+              detailed list of changes.</li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="toggleable closed">
+    <a href="#"
+         onclick="return toggleDiv(this)"><img src="{@docRoot}assets/images/triangle-closed.png"
+         class="toggle-img"
+         height="9px"
+         width="9px" /> Android NDK, Revision 4b</a> <em>(June 2010)</em>
+
+    <div class="toggleme">
+      <dl>
+        <dt>NDK r4b notes:</dt>
+
+        <dd>
+          <p>Includes fixes for several issues in the NDK build and debugging scripts &mdash; if
+          you are using NDK r4, we recommend downloading the NDK r4b build. For detailed
+          information describing the changes in this release, read the CHANGES.TXT document
+          included in the downloaded NDK package.</p>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt>General notes:</dt>
+
+        <dd>
+          <ul>
+            <li>Provides a simplified build system through the new <code>ndk-build</code> build
+            command.</li>
+
+            <li>Adds support for easy native debugging of generated machine code on production
+            devices through the new <code>ndk-gdb</code> command.</li>
+
+            <li>Adds a new Android-specific ABI for ARM-based CPU architectures,
+            <code>armeabi-v7a</code>. The new ABI extends the existing <code>armeabi</code> ABI to
+            include these CPU instruction set extensions:
+
+              <ul>
+                <li>Thumb-2 instructions</li>
+
+                <li>VFP hardware FPU instructions (VFPv3-D16)</li>
+
+                <li>Optional support for ARM Advanced SIMD (NEON) GCC intrinsics and VFPv3-D32.
+                Supported by devices such as Verizon Droid by Motorola, Google Nexus One, and
+                others.</li>
+              </ul>
+            </li>
+
+            <li>Adds a new <code>cpufeatures</code> static library (with sources) that lets your
+            app detect the host device's CPU features at runtime. Specifically, applications can
+            check for ARMv7-A support, as well as VFPv3-D32 and NEON support, then provide separate
+            code paths as needed.</li>
+
+            <li>Adds a sample application, <code>hello-neon</code>, that illustrates how to use the
+            <code>cpufeatures</code> library to check CPU features and then provide an optimized
+            code path using NEON instrinsics, if supported by the CPU.</li>
+
+            <li>Lets you generate machine code for either or both of the instruction sets supported
+            by the NDK. For example, you can build for both ARMv5 and ARMv7-A architectures at the
+            same time and have everything stored to your application's final
+            <code>.apk</code>.</li>
+
+            <li>To ensure that your applications are available to users only if their devices are
+            capable of running them, Android Market now filters applications based on the
+            instruction set information included in your application &mdash; no action is needed on
+            your part to enable the filtering. Additionally, the Android system itself also checks
+            your application at install time and allows the installation to continue only if the
+            application provides a library that is compiled for the device's CPU architecture.</li>
+
+            <li>Adds support for Android 2.2, including a new stable API for accessing the pixel
+            buffers of {@link android.graphics.Bitmap} objects from native code.</li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="toggleable closed">
+    <a href="#"
+         onclick="return toggleDiv(this)"><img src="{@docRoot}assets/images/triangle-closed.png"
+         class="toggle-img"
+         height="9px"
+         width="9px" /> Android NDK, Revision 3</a> <em>(March 2010)</em>
+
+    <div class="toggleme">
+      <dl>
+        <dt>General notes:</dt>
+
+        <dd>
+          <ul>
+            <li>Adds OpenGL ES 2.0 native library support.</li>
+
+            <li>Adds a sample application,<code>hello-gl2</code>, that illustrates the use of
+            OpenGL ES 2.0 vertex and fragment shaders.</li>
+
+            <li>The toolchain binaries have been refreshed for this release with GCC 4.4.0, which
+            should generate slightly more compact and efficient machine code than the previous one
+            (4.2.1). The NDK also still provides the 4.2.1 binaries, which you can optionally use
+            to build your machine code.</li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="toggleable closed">
+    <a href="#"
+         onclick="return toggleDiv(this)"><img src="{@docRoot}assets/images/triangle-closed.png"
+         class="toggle-img"
+         height="9px"
+         width="9px" /> Android NDK, Revision 2</a> <em>(September 2009)</em>
+
+    <div class="toggleme">
+      <p>Originally released as "Android 1.6 NDK, Release 1".</p>
+
+      <dl>
+        <dt>General notes:</dt>
+
+        <dd>
+          <ul>
+            <li>Adds OpenGL ES 1.1 native library support.</li>
+
+            <li>Adds a sample application, <code>san-angeles</code>, that renders 3D graphics
+            through the native OpenGL ES APIs, while managing activity lifecycle with a {@link
+            android.opengl.GLSurfaceView} object.</li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="toggleable closed">
+    <a href="#"
+         onclick="return toggleDiv(this)"><img src="{@docRoot}assets/images/triangle-closed.png"
+         class="toggle-img"
+         height="9px"
+         width="9px" /> Android NDK, Revision 1</a> <em>(June 2009)</em>
+
+    <div class="toggleme">
+      <p>Originally released as "Android 1.5 NDK, Release 1".</p>
+
+      <dl>
+        <dt>General notes:</dt>
+
+        <dd>
+          <ul>
+            <li>Includes compiler support (GCC) for ARMv5TE instructions, including Thumb-1
+            instructions.</li>
+
+            <li>Includes system headers for stable native APIs, documentation, and sample
+            applications.</li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+  </div>
+  
+  <h2 id="installing">Installing the NDK</h2>
+  <p>Installing the NDK on your development computer is straightforward and involves extracting the
+  NDK from its download package.</p>
+
+  <p>Before you get started make sure that you have downloaded the latest <a href=
+  "{@docRoot}sdk/index.html">Android SDK</a> and upgraded your applications and environment as
+  needed. The NDK is compatible with older platform versions but not older versions of the SDK tools.
+  Also, take a moment to review the <a href="{@docRoot}sdk/ndk/overview.html#reqs">System and
+Software Requirements</a>
+  for the NDK, if you haven't already.</p>
+
+  <p>To install the NDK, follow these steps:</p>
+
+  <ol>
+    <li>From the table at the top of this page, select the NDK package that is appropriate for your
+    development computer and download the package.</li>
+
+    <li>Uncompress the NDK download package using tools available on your computer. When
+    uncompressed, the NDK files are contained in a directory called
+    <code>android-ndk-&lt;version&gt;</code>. You can rename the NDK directory if necessary and you
+    can move it to any location on your computer. This documentation refers to the NDK directory as
+    <code>&lt;ndk&gt;</code>.</li>
+  </ol>
+
+  <p>You are now ready to start working with the NDK.</p>
+
+  <h2 id="gettingstarted">Getting Started with the NDK</h2>
+
+  <p>Once you've installed the NDK successfully, take a few minutes to read the documentation
+  included in the NDK. You can find the documentation in the <code>&lt;ndk&gt;/docs/</code>
+  directory. In particular, please read the OVERVIEW.HTML document completely, so that you
+  understand the intent of the NDK and how to use it.</p>
+
+  <p>If you used a previous version of the NDK, take a moment to review the list of NDK changes in
+  the CHANGES.HTML document.</p>
+
+  <p>Here's the general outline of how you work with the NDK tools:</p>
+
+  <ol>
+    <li>Place your native sources under <code>&lt;project&gt;/jni/...</code></li>
+
+    <li>Create <code>&lt;project&gt;/jni/Android.mk</code> to describe your native sources to the
+    NDK build system</li>
+
+    <li>Optional: Create <code>&lt;project&gt;/jni/Application.mk</code>.</li>
+
+    <li>Build your native code by running the 'ndk-build' script from your project's directory. It
+    is located in the top-level NDK directory:
+      <pre class="no-pretty-print">cd &lt;project&gt;
+&lt;ndk&gt;/ndk-build
+</pre>
+
+      <p>The build tools copy the stripped, shared libraries needed by your application to the
+      proper location in the application's project directory.</p>
+    </li>
+
+    <li>Finally, compile your application using the SDK tools in the usual way. The SDK build tools
+    will package the shared libraries in the application's deployable <code>.apk</code> file.</li>
+  </ol>
+
+  <p>For complete information on all of the steps listed above, please see the documentation
+  included with the NDK package.</p>
+
+  <h2 id="samples">Sample Applications</h2>
+
+  <p>The NDK includes sample Android applications that illustrate how to use native code in your
+  Android applications. For more information, see <a href=
+  "{@docRoot}sdk/ndk/overview.html#samples">Sample Applications</a>.</p>
+
+  <h2 id="forum">Discussion Forum and Mailing List</h2>
+
+  <p>If you have questions about the NDK or would like to read or contribute to discussions about
+  it, please visit the <a href="http://groups.google.com/group/android-ndk">android-ndk</a> group
+  and mailing list.</p>

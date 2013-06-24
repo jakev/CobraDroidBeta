@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2010 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="5128188288358721369">"태그"</string>
+    <string name="title_scanned_tag" msgid="4347835407095551450">"새 태그 수집됨"</string>
+    <string name="title_existing_tag" msgid="5656560272594190244">"태그"</string>
+    <string name="tab_tags" msgid="3254131516215269385">"태그"</string>
+    <string name="tab_starred" msgid="3892615665321783044">"별표"</string>
+    <string name="tab_my_tag" msgid="4194581094362833242">"내 태그"</string>
+    <string name="tag_unknown" msgid="2897956823877728783">"알 수 없는 태그 유형"</string>
+    <string name="tag_empty" msgid="3726529819932095782">"빈 태그"</string>
+    <string name="button_delete" msgid="8636971153075546776">"삭제"</string>
+    <string name="button_done" msgid="7048822758098308158">"완료"</string>
+    <string name="button_save" msgid="1396693475082322626">"저장"</string>
+    <string name="button_cancel" msgid="8094182910311905776">"취소"</string>
+    <string name="cancel_help_text" msgid="2582335582642459522">"컬렉션에 태그를 추가하는 것을 건너뛰려면 완료를 터치하세요."</string>
+    <string name="action_text" msgid="577417996159152923">"<xliff:g id="PHONE_NUMBER">%s</xliff:g>(으)로 문자 보내기"</string>
+    <string name="action_call" msgid="6226253647953184035">"<xliff:g id="PHONE_NUMBER">%s</xliff:g>(으)로 전화걸기"</string>
+    <string name="turn_on_my_tag" msgid="6584695906051991524">"내 태그 공유"</string>
+    <string name="edit_tag" msgid="3708659122033447892">"태그 수정"</string>
+    <string name="turn_on_my_tag_subtitle" msgid="4174686056239752759">"다른 사용자가 내 태그를 읽을 수 있도록 허용"</string>
+    <string name="add_content" msgid="6592975981339055673">"더보기…"</string>
+    <string name="tag_title" msgid="4734199420853998617">"제목"</string>
+    <string name="tag_text" msgid="522896767632155048">"텍스트"</string>
+    <string name="select_type" msgid="1845302736320827995">"추가할 유형 선택"</string>
+    <string name="photo" msgid="986413518082114481">"사진"</string>
+    <string name="bad_photo" msgid="1601260684495341633">"이미지를 열 수 없습니다."</string>
+    <string name="url" msgid="5939765162489949437">"URL"</string>
+    <string name="contact" msgid="8810195884019228695">"연락처"</string>
+    <string name="location" msgid="2476366526591580807">"위치"</string>
+    <string name="empty_tag_prompt" msgid="4206394383309956030">"태그가 비어 있습니다."</string>
+    <string name="empty_tag_instructions" msgid="9156733538909958916"><b>"태그 작성"</b>"을 터치하여 콘텐츠를 추가하세요."</string>
+    <string name="write" msgid="4957259770248890625">"태그 작성"</string>
+    <string name="cancel" msgid="2168193471147260328">"취소"</string>
+    <string name="menu_help" msgid="2340550693525288105">"도움말"</string>
+    <string name="import_vcard" msgid="5104299047930666528">"^1 가져오기"</string>
+    <string name="mime_display_name" msgid="5926357152623764485">"NFC 태그의 데이터"</string>
+    <string name="dialog_title_nfc_off" msgid="6945643404976801203">"NFC 사용 중지됨"</string>
+    <string name="dialog_text_nfc_off" msgid="6323019332983777990">"태그를 검색하려면 NFC를 사용하도록 설정해야 합니다."</string>
+    <string name="button_settings" msgid="6909066985958159920">"설정"</string>
+    <string name="empty_list" msgid="1306390399412856676">"태그를 검색하지 않았습니다."</string>
+    <string name="empty_list_starred" msgid="7185947321271594216">"별표 표시된 태그가 없습니다."</string>
+    <string name="button_more_info" msgid="574247138099633767">"추가 정보"</string>
+    <string name="vcard_title" msgid="7122634780732426007">"^1에 대한 연락처 정보"</string>
+    <string name="next" msgid="8672447228208567606">"다음"</string>
+    <string name="back" msgid="7389918385345281227">"뒤로"</string>
+    <string name="close" msgid="5521003720382005075">"닫기"</string>
+    <string name="intro_title" msgid="2798106838231744219">"태그 정보"</string>
+    <string name="intro_text_about" msgid="1366913102380816468">"NFC(Near Field Communication) 태그 구성 및 공유를 위한 태그입니다."</string>
+    <string name="intro_text_usage" msgid="2343260114638598627">"전화를 켜서 태그 바로 옆에 놓아 태그를 스캔할 수 있습니다."</string>
+    <string name="intro_text_contents" msgid="1973327615218723220">"NFC 태그는 텍스트와 URL, 사진, 기타 정보를 포함할 수 있습니다."</string>
+    <string name="intro_text_more" msgid="4127006088499721149">"태그를 스캔하거나 공유하려면 \'설정\'의 \'무선 및 네트워크\'에서 NFC를 사용하도록 설정해야 합니다."</string>
+    <string name="intro_text_more2" msgid="28835616891750572">"자세한 내용을 보려면 \'메뉴\'를 누르고 태그 화면에서 \'도움말\'을 터치하세요."</string>
+    <string name="tag_deleted" msgid="5411251725532471624">"태그 삭제됨"</string>
+    <string name="add_tag" msgid="703494598879855113">"새 태그 추가"</string>
+    <string name="choose_my_tag" msgid="4208730132705026130">"공유할 태그 선택"</string>
+    <string name="active_tag" msgid="7417732109196094058">"활성 태그"</string>
+    <string name="manage_my_tags" msgid="3616349610711109286">"내 태그 관리"</string>
+    <string name="menu_delete" msgid="8834253717174232653">"태그 삭제"</string>
+    <string name="menu_edit" msgid="2163829689000692138">"태그 수정"</string>
+    <string name="menu_set_as_active" msgid="6637492981297642733">"활성 태그로 설정"</string>
+    <string name="no_tag_selected" msgid="127078607162539962">"공유하도록 선택한 태그가 없습니다."</string>
+    <string name="no_tags_created" msgid="5963013948308289234">"만든 태그가 없습니다."</string>
+</resources>

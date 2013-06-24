@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="widget_margin">4dip</dimen>
+	<dimen name="widget_button_width">70dip</dimen>
+	<dimen name="widget_button_height">70dip</dimen>
+	<dimen name="widget_indicator_height">10dip</dimen>
+</resources>

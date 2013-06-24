@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2008 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+    <!--
+        This file contains configuration data for commonly-used email providers.
+        
+        ==== CONTENT GUIDELINES ====
+        
+        This file should only be used for email providers that are considered "universal"
+        and are appropriate for *all* android platform devices.  These entries must be accessible
+        from all networks.  It should be reasonable for any user to obtain an account on these
+        networks, and test accounts must be easily obtainable.  No entries should be added
+        that are device, product, or carrier-specific.
+        
+        Entries that are device, product or carrier-specific should be added as overlays 
+        in the appropriate providers_product.xml file.
+     
+        ==== FORMAT OF ENTRIES ====
+        
+        This file is used to specify providers that we know default settings for
+        so that the user can set up their account by simply entering their email
+        address and password.
+
+        When a user starts this process, the email address is parsed, the domain
+        broken out and used to search this file for a provider. If one is found the
+        provider's settings are used to attempt to connect to the account.
+        
+        At this time, the id and label attributes are not used.  However, please include them
+        if you make edits to this file.  id must also be completely unique.  label will be shown
+        to the user when there are multiple options provided for a single domain (not currently
+        supported).
+
+        A provider contains the settings for setting up an email account
+        that ends with the given domain. Domains should be unique within
+        this file. Each provider should have at least one incoming section and
+        one outgoing section. If more than one is specified only the first
+        will be used.
+
+        Valid incoming uri schemes are:
+            imap        IMAP with no transport security.
+            imap+tls+   IMAP with required TLS transport security.
+                            If TLS is not available the connection fails.
+            imap+ssl+   IMAP with required SSL transport security.
+                            If SSL is not available the connection fails.
+
+            pop3        POP3 with no transport security.
+            pop3+tls+   POP3 with required TLS transport security.
+                            If TLS is not available the connection fails.
+            pop3+ssl+   POP3 with required SSL transport security.
+                            If SSL is not available the connection fails.
+
+        Valid outgoing uri schemes are:
+            smtp        SMTP with no transport security.
+            smtp+tls+   SMTP with required TLS transport security.
+                            If TLS is not available the connection fails.
+            smtp+ssl+   SMTP with required SSL transport security.
+                            If SSL is not available the connection fails.
+
+        To the above schemes you may also add "trustallcerts" to indicate that,
+        although link encryption is still required, "non-trusted" certificates may
+        will be excepted.  For example, "imap+ssl+trustallcerts" or
+        "smtp+tls+trustallcerts".  This should only used when necessary, as it
+        could allow a spoofed server to intercept password and mail.
+
+        The URIs should be full templates for connection, including a port if
+        the service uses a non-default port.  The default ports are as follows:
+            imap        143     pop3        110     smtp        587
+            imap+tls+   143     pop3+tls+   110     smtp+tls+   587
+            imap+ssl+   993     pop3+ssl+   995     smtp+ssl+   465
+
+        The username attribute is used to supply a template for the username
+        that will be presented to the server. This username is built from a
+        set of variables that are substituted with parts of the user
+        specified email address.
+
+        Valid substitution values for the username attribute are:
+            $email - the email address the user entered
+            $user - the value before the @ sign in the email address the user entered
+            $domain - the value after the @ signin the email address the user entered
+            
+        The username attribute MUST be specified for the incoming element, so the POP3 or IMAP
+        server can identify the mailbox to be opened.
+        
+        The username attribute MAY be the empty string for the outgoing element, but only if the 
+        SMTP server supports anonymous transmission (most don't).
+    -->
+
+<providers>
+
+    <!-- Gmail variants -->
+    <provider id="gmail" label="Gmail" domain="gmail.com">
+        <incoming uri="imap+ssl+://imap.gmail.com" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.gmail.com" username="$email" />
+    </provider>
+    <provider id="googlemail" label="Google Mail" domain="googlemail.com">
+        <incoming uri="imap+ssl+://imap.googlemail.com" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.googlemail.com" username="$email" />
+    </provider>
+    <provider id="google" label="Google" domain="google.com">
+        <incoming uri="imap+ssl+://imap.gmail.com" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.gmail.com" username="$email" />
+    </provider>
+    <provider id="android" label="Android" domain="android.com">
+        <incoming uri="imap+ssl+://imap.gmail.com" username="$email" />
+        <outgoing uri="smtp+ssl+://smtp.gmail.com" username="$email" />
+    </provider>
+
+    <!-- Yahoo! Mail variants -->
+    <provider id="yahoo" label="Yahoo!" domain="yahoo.com">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="rocketmail" label="Yahoo! RocketMail" domain="rocketmail.com">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="ymail" label="Yahoo!" domain="ymail.com">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="bellsouth" label="AT&amp;T Bell South" domain="bellsouth.net">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="att" label="AT&amp;T" domain="att.net">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="pacbell" label="AT&amp;T Pacific Bell" domain="pacbell.net">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="sbcglobal" label="AT&amp;T SBC Global" domain="sbcglobal.net">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="swbell" label="AT&amp;T Southwest Bell" domain="swbell.net">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="btinternet" label="BT Internet" domain="btinternet.com">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="btopenworld" label="BT Open World" domain="btopenworld.com">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="talk21" label="BT Talk 21" domain="talk21.com">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="rogers" label="Rogers" domain="rogers.com">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="rogers-nl" label="Rogers" domain="nl.rogers.com">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+
+    <!-- Roadrunner variants -->
+    <provider id="rr-roadrunner" label="RoadRunner" domain="roadrunner.com">
+        <incoming uri="pop3://pop-server.roadrunner.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-austin" label="RoadRunner" domain="austin.rr.com">
+        <incoming uri="pop3://pop-server.austin.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-bak" label="RoadRunner" domain="bak.rr.com">
+        <incoming uri="pop3://pop-server.bak.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-berkshire" label="RoadRunner" domain="berkshire.rr.com">
+        <incoming uri="pop3://pop-server.berkshire.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-bham" label="RoadRunner" domain="bham.rr.com">
+        <incoming uri="pop3://pop-server.bham.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-ca" label="RoadRunner" domain="ca.rr.com">
+        <incoming uri="pop3://pop-server.ca.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-carolina" label="RoadRunner" domain="carolina.rr.com">
+        <incoming uri="pop3://pop-server.carolina.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-cfl" label="RoadRunner" domain="cfl.rr.com">
+        <incoming uri="pop3://pop-server.cfl.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-cinci" label="RoadRunner" domain="cinci.rr.com">
+        <incoming uri="pop3://pop-server.cinci.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-columbus" label="RoadRunner" domain="columbus.rr.com">
+        <incoming uri="pop3://pop-server.columbus.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-dc" label="RoadRunner" domain="dc.rr.com">
+        <incoming uri="pop3://pop-server.dc.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-ec" label="RoadRunner" domain="ec.rr.com">
+        <incoming uri="pop3://pop-server.ec.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-elmore" label="RoadRunner" domain="elmore.rr.com">
+        <incoming uri="pop3://pop-server.elmore.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-elp" label="RoadRunner" domain="elp.rr.com">
+        <incoming uri="pop3://pop-server.elp.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-eufaula" label="RoadRunner" domain="eufaula.rr.com">
+        <incoming uri="pop3://pop-server.eufaula.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-gt" label="RoadRunner" domain="gt.rr.com">
+        <incoming uri="pop3://pop-server.gt.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-hawaii" label="RoadRunner" domain="hawaii.rr.com">
+        <incoming uri="pop3://pop-server.hawaii.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-hot" label="RoadRunner" domain="hot.rr.com">
+        <incoming uri="pop3://pop-server.hot.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-hvc" label="RoadRunner" domain="hvc.rr.com">
+        <incoming uri="pop3://pop-server.hvc.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-indy" label="RoadRunner" domain="indy.rr.com">
+        <incoming uri="pop3://pop-server.indy.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-insight" label="RoadRunner" domain="insight.rr.com">
+        <incoming uri="pop3://pop-server.insight.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-kc" label="RoadRunner" domain="kc.rr.com">
+        <incoming uri="pop3://pop-server.kc.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-ma" label="RoadRunner" domain="ma.rr.com">
+        <incoming uri="pop3://pop-server.ma.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-maine" label="RoadRunner" domain="maine.rr.com">
+        <incoming uri="pop3://pop-server.maine.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-mass" label="RoadRunner" domain="mass.rr.com">
+        <incoming uri="pop3://pop-server.mass.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-mi" label="RoadRunner" domain="mi.rr.com">
+        <incoming uri="pop3://pop-server.mi.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-nc" label="RoadRunner" domain="nc.rr.com">
+        <incoming uri="pop3://pop-server.nc.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-ne" label="RoadRunner" domain="ne.rr.com">
+        <incoming uri="pop3://pop-server.ne.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-neb" label="RoadRunner" domain="neb.rr.com">
+        <incoming uri="pop3://pop-server.neb.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-neo" label="RoadRunner" domain="neo.rr.com">
+        <incoming uri="pop3://pop-server.neo.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-new" label="RoadRunner" domain="new.rr.com">
+        <incoming uri="pop3://pop-server.new.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-nj" label="RoadRunner" domain="nj.rr.com">
+        <incoming uri="pop3://pop-server.nj.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-nyc" label="RoadRunner" domain="nyc.rr.com">
+        <incoming uri="pop3://pop-server.nyc.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-nycap" label="RoadRunner" domain="nycap.rr.com">
+        <incoming uri="pop3://pop-server.nycap.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-oh" label="RoadRunner" domain="oh.rr.com">
+        <incoming uri="pop3://pop-server.oh.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-pa" label="RoadRunner" domain="pa.rr.com">
+        <incoming uri="pop3://pop-server.pa.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-panhandle" label="RoadRunner" domain="panhandle.rr.com">
+        <incoming uri="pop3://pop-server.panhandle.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-rgv" label="RoadRunner" domain="rgv.rr.com">
+        <incoming uri="pop3://pop-server.rgv.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-rochester" label="RoadRunner" domain="rochester.rr.com">
+        <incoming uri="pop3://pop-server.rochester.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-san" label="RoadRunner" domain="san.rr.com">
+        <incoming uri="pop3://pop-server.san.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-satx" label="RoadRunner" domain="satx.rr.com">
+        <incoming uri="pop3://pop-server.satx.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-sc" label="RoadRunner" domain="sc.rr.com">
+        <incoming uri="pop3://pop-server.sc.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-si" label="RoadRunner" domain="si.rr.com">
+        <incoming uri="pop3://pop-server.si.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-socal" label="RoadRunner" domain="socal.rr.com">
+        <incoming uri="pop3://pop-server.socal.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-stny" label="RoadRunner" domain="stny.rr.com">
+        <incoming uri="pop3://pop-server.stny.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-stx" label="RoadRunner" domain="stx.rr.com">
+        <incoming uri="pop3://pop-server.stx.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-sw" label="RoadRunner" domain="sw.rr.com">
+        <incoming uri="pop3://pop-server.sw.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-tampabay" label="RoadRunner" domain="tampabay.rr.com">
+        <incoming uri="pop3://pop-server.tampabay.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-triad" label="RoadRunner" domain="triad.rr.com">
+        <incoming uri="pop3://pop-server.triad.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-twcny" label="RoadRunner" domain="twcny.rr.com">
+        <incoming uri="pop3://pop-server.twcny.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-twmi" label="RoadRunner" domain="twmi.rr.com">
+        <incoming uri="pop3://pop-server.twmi.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-tx" label="RoadRunner" domain="tx.rr.com">
+        <incoming uri="pop3://pop-server.tx.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-we" label="RoadRunner" domain="we.rr.com">
+        <incoming uri="pop3://pop-server.we.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-wi" label="RoadRunner" domain="wi.rr.com">
+        <incoming uri="pop3://pop-server.wi.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+    <provider id="rr-woh" label="RoadRunner" domain="woh.rr.com">
+        <incoming uri="pop3://pop-server.woh.rr.com" username="$email" />
+        <outgoing uri="smtp://mobile-smtp.roadrunner.com" username="$email" />
+    </provider>
+
+    <!-- USA -->
+    <!-- Note, AOL appears to support SSL on both sides, as well -->
+    <provider id="aim" label="AIM" domain="aim.com">
+        <incoming uri="imap://imap.aim.com" label="IMAP" username="$email" />
+        <outgoing uri="smtp://smtp.aim.com" username="$email" />
+    </provider>
+    <!-- Note, AOL appears to support SSL on both sides, as well -->
+    <provider id="aol" label="AOL" domain="aol.com">
+        <incoming uri="imap://imap.aol.com" label="IMAP" username="$email" />
+        <outgoing uri="smtp://smtp.aol.com" username="$email" />
+    </provider>
+    <provider id="comcast" label="Comcast" domain="comcast.net">
+        <incoming uri="pop3+ssl+://mail.comcast.net" username="$user" />
+        <outgoing uri="smtp+ssl+://smtp.comcast.net" username="$user" />
+    </provider>
+    <provider id="compuserve" label="CompuServe" domain="cs.com">
+        <incoming uri="imap://imap.cs.com" username="$user" />
+        <outgoing uri="smtp://smtp.cs.com" username="$user" />
+    </provider>
+    <provider id="cox" label="Cox" domain="cox.net">
+        <incoming uri="pop3+ssl+://pop.east.cox.net" username="$user" />
+        <outgoing uri="smtp+ssl+://smtp.east.cox.net" username="$user" />
+    </provider> 
+    <provider id="dotmac" label=".Mac" domain="mac.com">
+        <incoming uri="imap+ssl+://mail.mac.com" username="$email" />
+        <outgoing uri="smtp+tls+trustallcerts://smtp.mac.com" username="$email" />
+    </provider>
+    <provider id="earthlink" label="Earthlink" domain="earthlink.net">
+        <incoming uri="pop3://pop.earthlink.net" username="$email" />
+        <outgoing uri="smtp://smtpauth.earthlink.net:587" username="$email" />
+    </provider>
+    <provider id="juno" label="Juno" domain="juno.com">
+        <incoming uri="pop3://pop.juno.com" username="$user" />
+        <outgoing uri="smtp://smtp.juno.com" username="$user" />
+    </provider>
+    <provider id="live" label="Windows Live Hotmail Plus" domain="live.com"
+            note="@string/provider_note_live">
+        <incoming uri="pop3+ssl+://pop3.live.com"  username="$email" />
+        <outgoing uri="smtp+tls+://smtp.live.com" username="$email" />
+    </provider>
+    <provider id="hotmail" label="Windows Live Hotmail Plus" domain="hotmail.com"
+            note="@string/provider_note_live">
+        <incoming uri="pop3+ssl+://pop3.live.com"  username="$email" />
+        <outgoing uri="smtp+tls+://smtp.live.com" username="$email" />
+    </provider>
+    <provider id="msn" label="Windows Live Hotmail Plus" domain="msn.com"
+            note="@string/provider_note_live">
+        <incoming uri="pop3+ssl+://pop3.live.com"  username="$email" />
+        <outgoing uri="smtp+tls+://smtp.live.com" username="$email" />
+    </provider>
+    <!-- Note: Mac Mail.app sets IMAP to mail.mac.com, but it's the same server -->
+    <provider id="mobileme" label="MobileMe" domain="me.com">
+        <incoming uri="imap+ssl+://mail.me.com" username="$email" />
+        <outgoing uri="smtp+tls+trustallcerts://smtp.me.com" username="$email" />
+    </provider>
+    <provider id="netzero" label="NetZero" domain="netzero.com">
+        <incoming uri="pop3://pop.netzero.com" username="$user" />
+        <outgoing uri="smtp://smtp.netzero.com" username="$user" />
+    </provider>
+    <provider id="verizon" label="Verizon" domain="verizon.net">
+        <incoming uri="pop3://incoming.verizon.net" username="$user" />
+        <outgoing uri="smtp://outgoing.verizon.net" username="$user" />
+    </provider>
+    
+    <!-- UK -->
+    <provider id="aol-uk" label="AOL" domain="aol.co.uk">
+        <incoming uri="imap+ssl+://imap.uk.aol.com" label="IMAP" username="$user" />
+        <outgoing uri="smtp+ssl+://smtp.uk.aol.com" username="$user" />
+    </provider>
+    
+    <!-- Germany -->
+    <provider id="freenet" label="Freenet" domain="freenet.de">
+        <incoming uri="pop3://mx.freenet.de" username="$user" />
+        <outgoing uri="smtp+ssl://mx.freenet.de" username="$email" />
+    </provider>
+    <provider id="gmx" label="GMX" domain="gmx.de">
+        <incoming uri="pop3://pop.gmx.net" username="$email" />
+        <outgoing uri="smtp://mail.gmx.net" username="$email" />
+    </provider>
+    <provider id="T-Online" label="T-Online" domain="t-online.de" 
+              note="@string/provider_note_t_online">
+        <incoming uri="pop3://popmail.t-online.de" username="$email" />
+        <outgoing uri="smtp://smtpmail.t-online.de" username="$email" />
+    </provider>
+    <provider id="web.de" label="Web.de" domain="web.de">
+        <incoming uri="pop3://pop3.web.de" username="$user" />
+        <outgoing uri="smtp://smtp.web.de" username="$user" />
+    </provider>
+
+    <!-- Netherlands -->
+    <!-- TODO:  For all of these, please confirm POP3, and switch to IMAP if supported -->
+    <!-- TODO:  username="" in incoming element is broken - will not work -->
+    <!-- Disabled until username="" is resolved
+    <provider id="hetnet" label="Het Net" domain="hetnet.nl">
+        <incoming uri="pop3://pop.hetnet.nl" username="" />
+        <outgoing uri="smtp://mailhost.hetnet.nl" username="" />
+    </provider>
+    -->
+    <!-- Disabled until test accounts provided
+    <provider id="planet inet" label="Planet Internet" domain="planet.nl">
+        <incoming uri="pop3://pop.planet.nl" username="$user" />
+        <outgoing uri="smtp://mail.planet.nl" username="" />
+    </provider>
+    -->
+    <!-- TODO:  username="" in incoming element is broken - will not work -->
+    <!-- Disabled until username="" is resolved
+    <provider id="tiscali" label="Tiscali" domain="tiscali.nl">
+        <incoming uri="pop3://pop3.tiscali.nl" username="" />
+        <outgoing uri="smtp://smtp.tiscali.nl" username="" />
+    </provider>
+    -->
+    <!-- Disabled until test accounts provided
+    <provider id="wanadoo" label="Wanadoo" domain="wanadoo.nl">
+        <incoming uri="pop3://pop.wanadoo.nl" username="$user" />
+        <outgoing uri="smtp://smtp.wanadoo.nl" username="$user" />
+    </provider>
+     -->
+
+    <!-- Poland -->
+    <provider id="onet" label="Onet.pl" domain="poczta.onet.pl">
+        <incoming uri="pop3://pop3.poczta.onet.pl" username="$email" />
+        <outgoing uri="smtp://smtp.poczta.onet.pl" username="$email" />
+    </provider>
+    <provider id="wirtualna" label="Wirtualna Polska" domain="wp.pl">
+        <incoming uri="pop3://pop3.wp.pl" username="$user" />
+        <outgoing uri="smtp://smtp.wp.pl" username="$user" />
+    </provider>
+    <provider id="interia" label="Interia" domain="interia.pl">
+        <incoming uri="pop3+ssl://poczta.interia.pl" username="$user" />
+        <outgoing uri="smtp+ssl://poczta.interia.pl" username="$user" />
+    </provider>
+    <provider id="o2" label="O2" domain="o2.pl">
+        <incoming uri="pop3+ssl://poczta.o2.pl" username="$user" />
+        <outgoing uri="smtp+ssl://poczta.o2.pl" username="$user" />
+    </provider>
+
+    <!-- Yahoo! country-specific email domains -->
+    <provider id="yahoo-ar" label="Yahoo! Argentina" domain="yahoo.com.ar">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-y7" label="Yahoo!7" domain="y7mail.com">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-au" label="Yahoo! Australia" domain="yahoo.com.au">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-bg" label="Yahoo! Bulgaria" domain="yahoo.bg">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-br" label="Yahoo! Brazil" domain="yahoo.com.br">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-ca" label="Yahoo! Canada" domain="yahoo.ca">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-cl" label="Yahoo! Cote d'Ivoire" domain="yahoo.cl">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-com-cn" label="Yahoo! China" domain="yahoo.com.cn">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-cn" label="Yahoo! China" domain="yahoo.cn">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-co" label="Yahoo! Colombia" domain="yahoo.com.co">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-cz" label="Yahoo! Czech Republic" domain="yahoo.cz">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-de" label="Yahoo! Germany" domain="yahoo.de">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-dk" label="Yahoo! Denmark" domain="yahoo.dk">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-ec" label="Yahoo! Ecuador" domain="yahoo.com.ec">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-ee" label="Yahoo! Estonia" domain="yahoo.ee">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-es" label="Yahoo! Spain" domain="yahoo.es">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-fr" label="Yahoo! France" domain="yahoo.fr">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-gr" label="Yahoo! Greece" domain="yahoo.gr">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-hk" label="Yahoo! Hong Kong" domain="yahoo.com.hk">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-hu" label="Yahoo! Hungary" domain="yahoo.hu">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-id" label="Yahoo! Indonesia" domain="yahoo.co.id">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-ie" label="Yahoo! Ireland" domain="yahoo.ie">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-in" label="Yahoo! India" domain="yahoo.in">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-it" label="Yahoo! Italy" domain="yahoo.it">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <!-- Note: Yahoo! Japan's ne.jp and co.jp domains do not yet support open IMAP -->
+    <provider id="yahoo-jp-ybb" label="Yahoo! Japan" domain="ybb.ne.jp">
+        <incoming uri="pop3+ssl+://android.ybbpop.mail.yahoo.co.jp" username="$email" />
+        <outgoing uri="smtp+ssl+://android.ybbsmtp.mail.yahoo.co.jp" username="$email" />
+    </provider>
+    <!-- Note: Yahoo! Japan's co.jp domain requires $user rather than the usual $email -->
+    <provider id="yahoo-jp" label="Yahoo! Japan" domain="yahoo.co.jp">
+        <incoming uri="pop3+ssl+://android.pop.mail.yahoo.co.jp" username="$user" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.co.jp" username="$user" />
+    </provider>
+    <provider id="yahoo-kr" label="Yahoo! Republic of Korea" domain="yahoo.co.kr">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-lt" label="Yahoo! Lithuania" domain="yahoo.lt">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-lv" label="Yahoo! Latvia" domain="yahoo.lv">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-mx" label="Yahoo! Mexico" domain="yahoo.com.mx">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-my" label="Yahoo! Malaysia" domain="yahoo.com.my">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-ng" label="Yahoo! Nigeria" domain="yahoo.com.ng">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-no" label="Yahoo! Norway" domain="yahoo.no">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-nz" label="Yahoo! New Zealand" domain="yahoo.co.nz">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-pe" label="Yahoo! Peru" domain="yahoo.com.pe">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-ph" label="Yahoo! Philippines" domain="yahoo.com.ph">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-pk" label="Yahoo! Pakistan" domain="yahoo.com.pk">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-pl" label="Yahoo! Poland" domain="yahoo.pl">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-ru" label="Yahoo! Russia" domain="yahoo.ru">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-ro" label="Yahoo! Romania" domain="yahoo.ro">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-se" label="Yahoo! Sweden" domain="yahoo.se">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-sg" label="Yahoo! Singapore" domain="yahoo.com.sg">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-th" label="Yahoo! Thailand" domain="yahoo.co.th">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-tr" label="Yahoo! Turkey" domain="yahoo.com.tr">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="kimo" label="Yahoo! Taiwan" domain="kimo.com">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-tw" label="Yahoo! Taiwan" domain="yahoo.com.tw">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-ua" label="Yahoo! Ukraine" domain="yahoo.ua">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-uk" label="Yahoo! UK" domain="yahoo.co.uk">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-ve" label="Yahoo! Venezuela" domain="yahoo.com.ve">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-vn" label="Yahoo! Vietnam" domain="yahoo.com.vn">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="yahoo-za" label="Yahoo! South Africa" domain="yahoo.co.za">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+    <provider id="xtra" label="Yahoo! Xtra" domain="xtra.co.nz">
+        <incoming uri="imap+ssl+://android.imap.mail.yahoo.com" username="$email" />
+        <outgoing uri="smtp+ssl+://android.smtp.mail.yahoo.com" username="$email" />
+    </provider>
+</providers>

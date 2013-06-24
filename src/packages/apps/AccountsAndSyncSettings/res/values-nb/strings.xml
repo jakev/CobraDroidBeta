@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/*
+ * Copyright (C) 2007 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_label" msgid="3706018265751197270">"Konto- og synkroniseringsinnstillinger"</string>
+    <string name="sync_settings" msgid="8707056705985552604">"Innstillinger for kontoer og synkronisering"</string>
+    <string name="sync_too_many_deletes" msgid="1621369057980827097">"Grensen for sletting nådd"</string>
+    <string name="background_data" msgid="1103557117473896066">"Bakgrunnsdata"</string>
+    <string name="background_data_summary" msgid="9048259510387973822">"Slå på bruk av bakgrunnsdata"</string>
+    <string name="background_data_dialog_title" msgid="6303755495467986079">"NB"</string>
+    <string name="background_data_dialog_message" msgid="8417297954700022363">"Det å slå av bakgrunnsdata sparer batteri og reduserer datatrafikken. Noen applikasjoner kan fortsatt bruke tilkoblingen for bakgrunnsdata."</string>
+    <string name="sync_automatically" msgid="4694735102757960100">"Autosynk"</string>
+    <string name="sync_automatically_summary" msgid="4598895616781542745">"Synkroniser data automatisk"</string>
+    <string name="settings_backup" msgid="6114299464740014762">"Sikkerhetskopier innstillinger"</string>
+    <string name="settings_backup_summary" msgid="1787552172618610178">"Aktiver sikkerhetskopiering av innstillinger"</string>
+    <string name="sync_menu_sync_now" msgid="5796024841315572404">"Synkroniser nå"</string>
+    <string name="sync_menu_sync_cancel" msgid="1005480041232010062">"Avbryt synkronisering"</string>
+    <string name="sync_one_time_sync" msgid="3274364877518422827">"Velg for å synkronisere nå<xliff:g id="LAST_SYNC_TIME">
+%1$s</xliff:g>"</string>
+    <string name="sync_gmail" msgid="5806053858668452000">"Gmail"</string>
+    <string name="sync_calendar" msgid="1796292773734071897">"Kalender"</string>
+    <string name="sync_contacts" msgid="2035690905925565660">"Kontakter"</string>
+    <string name="sync_too_many_deletes_desc" msgid="699495654174066067">"Det er <xliff:g id="NUMBER_OF_DELETED_ITEMS">%1$d</xliff:g> slettede innslag for <xliff:g id="TYPE_OF_SYNC">%2$s</xliff:g> under kontoen <xliff:g id="ACCOUNT_NAME">%3$s</xliff:g>. Hva ønsker du å gjøre?"</string>
+    <string name="sync_really_delete" msgid="5456355204562588976">"Slett innslagene."</string>
+    <string name="sync_undo_deletes" msgid="8695514459839593307">"Angre slettingen."</string>
+    <string name="sync_do_nothing" msgid="5798755982392201673">"Ikke gjør noe nå."</string>
+    <string name="sync_is_failing" msgid="5230237058552433773">"Det er midlertidige problemer med synkroniseringen. Vent litt."</string>
+    <string name="sync_plug" msgid="7020432439004167162"><font fgcolor="#ffffffff">"Velkommen til Google-synkronisering!"</font>" "\n"En Google-løsning for å synkronisere data så du får tilgang til kontakter, avtaler og mer uansett hvor du er."</string>
+    <string name="header_application_sync_settings" msgid="5263025067167527890">"Synkronisering av applikasjoner"</string>
+    <string name="header_manage_accounts" msgid="381956296995298770">"Styr kontoer"</string>
+    <string name="header_general_sync_settings" msgid="1598537524696692308">"Generelle synkroniseringsinnstillinger"</string>
+    <string name="sync_enabled" msgid="913018877443997502">"Synkronisering er på"</string>
+    <string name="sync_disabled" msgid="185731301298967302">"Synkronisering er av"</string>
+    <string name="sync_error" msgid="681431702824599812">"Synkroniseringsfeil"</string>
+    <string name="add_account_label" msgid="2035321485672826779">"Legg til konto"</string>
+    <string name="header_data_and_synchronization" msgid="6286257845276834071">"Data og synkronisering"</string>
+    <string name="preference_change_password_title" msgid="6468827554159468315">"Endre passord"</string>
+    <string name="header_account_settings" msgid="4950809499418403792">"Kontoinnstillinger"</string>
+    <string name="remove_account_label" msgid="5624712684599197863">"Fjern konto"</string>
+    <string name="header_add_an_account" msgid="2198078922829535425">"Legg til en konto"</string>
+    <string name="finish_button_label" msgid="6121560986057356757">"Fullfør"</string>
+    <string name="really_remove_account_title" msgid="8808121039511188784">"Fjern konto"</string>
+    <string name="really_remove_account_message" msgid="3293445755620109578">"Er du sikker på at du vil fjerne denne kontoen? Hvis du fjerner den, fjernes samtidig alle data som er tilknyttet kontoen. "\n"Vil du fortsette?"</string>
+    <string name="remove_account_failed" msgid="8178924513521241001">"Kunne ikke fjerne denne kontoen."</string>
+    <string name="provider_label" msgid="6191617139291321517">"Push-abonnementer"</string>
+    <string name="sync_item_title" msgid="7984962124867021854">"Synkroniser <xliff:g id="AUTHORITY">%s</xliff:g>"</string>
+    <string name="cant_sync_dialog_title" msgid="3016197392261471761">"Kan ikke synkronisere manuelt"</string>
+    <string name="cant_sync_dialog_message" msgid="7200115394296632300">"Synkronisering for disse dataene er deaktivert. For å bytte innstillinger, slå på bakgrunnsdata og automatisk synkronisering midlertidig."</string>
+</resources>

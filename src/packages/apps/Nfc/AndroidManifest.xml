@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.android.nfc3"
+        android:sharedUserId="android.uid.nfc"
+        android:sharedUserLabel="@string/nfcUserLabel"
+>
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.STATUS_BAR" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.STOP_APP_SWITCHES" />
+    <uses-permission android:name="android.permission.MASTER_CLEAR" />
+
+    <permission android:name="com.android.nfc.permission.NFCEE_ADMIN"
+        android:label="@string/permlab_nfcAdmin"
+        android:description="@string/permdesc_nfcAdmin"
+        android:protectionLevel="signature"
+    />
+
+    <application android:name="com.android.nfc.NfcService"
+                 android:icon="@drawable/icon"
+                 android:label="@string/app_name"
+                 android:persistent="true"
+    >
+
+        <activity android:name="com.android.nfc.TechListChooserActivity"
+            android:theme="@*android:style/Theme.Dialog.Alert"
+            android:finishOnCloseSystemDialogs="true"
+            android:excludeFromRecents="true"
+            android:multiprocess="true"
+        />
+
+    </application>
+</manifest>

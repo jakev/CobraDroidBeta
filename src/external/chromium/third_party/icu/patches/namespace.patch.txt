@@ -1,0 +1,87 @@
+--- source/i18n/ucurr.cpp	2009-04-29 18:41:28.000000000 -0700
++++ source/i18n/ucurr.cpp	2009-08-15 09:05:07.120474000 -0700
+@@ -708,6 +708,7 @@
+ // all currency names in "en_US" and "en".
+ static void
+ getCurrencyNameCount(const char* loc, int32_t* total_currency_name_count, int32_t* total_currency_symbol_count) {
++    U_NAMESPACE_USE
+     *total_currency_name_count = 0;
+     *total_currency_symbol_count = 0;
+     const UChar* s = NULL;
+@@ -794,6 +795,7 @@
+                      CurrencyNameStruct** currencySymbols, 
+                      int32_t* total_currency_symbol_count, 
+                      UErrorCode& ec) {
++    U_NAMESPACE_USE
+     // Look up the Currencies resource for the given locale.
+     UErrorCode ec2 = U_ZERO_ERROR;
+ 
+--- source/i18n/bms.cpp	2009-05-04 20:49:30.000000000 -0700
++++ source/i18n/bms.cpp	2009-08-15 09:05:07.125462000 -0700
+@@ -23,6 +23,8 @@
+ #define CONST_CAST(type,value) (type) (value)
+ #endif
+ 
++U_NAMESPACE_USE
++
+ U_CAPI UCD * U_EXPORT2
+ ucd_open(UCollator *coll, UErrorCode *status)
+ {
+--- source/i18n/wintzimpl.cpp	2009-06-24 14:06:38.000000000 -0700
++++ source/i18n/wintzimpl.cpp	2009-08-17 23:48:59.278072000 -0700
+@@ -1,6 +1,6 @@
+ /*
+ ********************************************************************************
+-*   Copyright (C) 2008, International Business Machines
++*   Copyright (C) 2009, International Business Machines
+ *   Corporation and others.  All Rights Reserved.
+ ********************************************************************************
+ *
+@@ -30,6 +30,8 @@
+ 
+ #include <windows.h>
+ 
++U_NAMESPACE_USE
++
+ static UBool getSystemTimeInformation(TimeZone *tz, SYSTEMTIME &daylightDate, SYSTEMTIME &standardDate, int32_t &bias, int32_t &daylightBias, int32_t &standardBias) {
+     UErrorCode status = U_ZERO_ERROR;
+     UBool result = TRUE;
+--- source/tools/toolutil/pkg_icu.h	2009-06-24 14:06:38.000000000 -0700
++++ source/tools/toolutil/pkg_icu.h	2009-08-15 09:05:07.128458000 -0700
+@@ -13,10 +13,10 @@
+ 
+ U_CAPI int U_EXPORT2
+ writePackageDatFile(const char *outFilename, const char *outComment,
+-                    const char *sourcePath, const char *addList, Package *pkg,
++                    const char *sourcePath, const char *addList, U_NAMESPACE_QUALIFIER Package *pkg,
+                     char outType);
+ 
+-U_CAPI Package * U_EXPORT2
++U_CAPI U_NAMESPACE_QUALIFIER Package * U_EXPORT2
+ readList(const char *filesPath, const char *listname, UBool readContents);
+ 
+ #endif
+--- source/tools/toolutil/pkg_icu.cpp	2009-06-24 14:06:38.000000000 -0700
++++ source/tools/toolutil/pkg_icu.cpp	2009-08-15 09:05:07.131458000 -0700
+@@ -21,6 +21,8 @@
+ 
+ // read a file list -------------------------------------------------------- ***
+ 
++U_NAMESPACE_USE
++
+ static const struct {
+     const char *suffix;
+     int32_t length;
+--- source/common/unicode/uversion.h	2009-06-26 08:16:13.000000000 -0700
++++ source/common/unicode/uversion.h	2009-08-17 23:51:53.980054000 -0700
+@@ -174,7 +174,9 @@
+ #   define U_NAMESPACE_QUALIFIER U_ICU_NAMESPACE::
+ 
+ #   ifndef U_USING_ICU_NAMESPACE
+-#       define U_USING_ICU_NAMESPACE 1
++        /* Chrome-specific: Set to 0 to force namespace
++           declarations in Chrome ICU usage. */
++#       define U_USING_ICU_NAMESPACE 0
+ #   endif
+ #   if U_USING_ICU_NAMESPACE
+         U_NAMESPACE_USE

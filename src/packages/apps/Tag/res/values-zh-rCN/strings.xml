@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2010 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="5128188288358721369">"标记"</string>
+    <string name="title_scanned_tag" msgid="4347835407095551450">"新标记已收集"</string>
+    <string name="title_existing_tag" msgid="5656560272594190244">"标记"</string>
+    <string name="tab_tags" msgid="3254131516215269385">"标记"</string>
+    <string name="tab_starred" msgid="3892615665321783044">"已加星标"</string>
+    <string name="tab_my_tag" msgid="4194581094362833242">"我的标记"</string>
+    <string name="tag_unknown" msgid="2897956823877728783">"未知的标记类型"</string>
+    <string name="tag_empty" msgid="3726529819932095782">"空标记"</string>
+    <string name="button_delete" msgid="8636971153075546776">"删除"</string>
+    <string name="button_done" msgid="7048822758098308158">"完成"</string>
+    <string name="button_save" msgid="1396693475082322626">"保存"</string>
+    <string name="button_cancel" msgid="8094182910311905776">"取消"</string>
+    <string name="cancel_help_text" msgid="2582335582642459522">"要跳过将此标记添加到收藏的步骤，请触摸“完成”"</string>
+    <string name="action_text" msgid="577417996159152923">"向 <xliff:g id="PHONE_NUMBER">%s</xliff:g> 发送短信"</string>
+    <string name="action_call" msgid="6226253647953184035">"呼叫 <xliff:g id="PHONE_NUMBER">%s</xliff:g>"</string>
+    <string name="turn_on_my_tag" msgid="6584695906051991524">"分享我的标记"</string>
+    <string name="edit_tag" msgid="3708659122033447892">"编辑标记"</string>
+    <string name="turn_on_my_tag_subtitle" msgid="4174686056239752759">"允许他人读取我的标记"</string>
+    <string name="add_content" msgid="6592975981339055673">"更多..."</string>
+    <string name="tag_title" msgid="4734199420853998617">"名称"</string>
+    <string name="tag_text" msgid="522896767632155048">"文字"</string>
+    <string name="select_type" msgid="1845302736320827995">"选择要添加的类型"</string>
+    <string name="photo" msgid="986413518082114481">"照片"</string>
+    <string name="bad_photo" msgid="1601260684495341633">"无法打开图片。"</string>
+    <string name="url" msgid="5939765162489949437">"网址"</string>
+    <string name="contact" msgid="8810195884019228695">"联系方式"</string>
+    <string name="location" msgid="2476366526591580807">"地点"</string>
+    <string name="empty_tag_prompt" msgid="4206394383309956030">"该标记为空。"</string>
+    <string name="empty_tag_instructions" msgid="9156733538909958916">"触摸"<b>"编写标记"</b>"添加内容。"</string>
+    <string name="write" msgid="4957259770248890625">"编写标记"</string>
+    <string name="cancel" msgid="2168193471147260328">"取消"</string>
+    <string name="menu_help" msgid="2340550693525288105">"帮助"</string>
+    <string name="import_vcard" msgid="5104299047930666528">"导入 ^1"</string>
+    <string name="mime_display_name" msgid="5926357152623764485">"NFC 标记的数据"</string>
+    <string name="dialog_title_nfc_off" msgid="6945643404976801203">"NFC 已关闭"</string>
+    <string name="dialog_text_nfc_off" msgid="6323019332983777990">"您必须打开 NFC 才能扫描标记。"</string>
+    <string name="button_settings" msgid="6909066985958159920">"设置"</string>
+    <string name="empty_list" msgid="1306390399412856676">"您没有扫描到任何标记。"</string>
+    <string name="empty_list_starred" msgid="7185947321271594216">"您没有已加星标的标记。"</string>
+    <string name="button_more_info" msgid="574247138099633767">"详细信息"</string>
+    <string name="vcard_title" msgid="7122634780732426007">"^1的联系人信息"</string>
+    <string name="next" msgid="8672447228208567606">"下一页"</string>
+    <string name="back" msgid="7389918385345281227">"返回"</string>
+    <string name="close" msgid="5521003720382005075">"关闭"</string>
+    <string name="intro_title" msgid="2798106838231744219">"关于标记"</string>
+    <string name="intro_text_about" msgid="1366913102380816468">"“标记”可用于整理和分享近距离通信 (NFC) 标记。"</string>
+    <string name="intro_text_usage" msgid="2343260114638598627">"您只需打开手机并将其放置在某个标记旁边，即可扫描该标记。"</string>
+    <string name="intro_text_contents" msgid="1973327615218723220">"NFC 标记可以包含文本、网址、图片和其他类型的信息。"</string>
+    <string name="intro_text_more" msgid="4127006088499721149">"要扫描或分享标记，您必须打开 NFC（在“无线和网络”下的“设置”中）。"</string>
+    <string name="intro_text_more2" msgid="28835616891750572">"要了解详细信息，请按“菜单”，然后在任意“标记”屏幕上触摸“帮助”即可。"</string>
+    <string name="tag_deleted" msgid="5411251725532471624">"标记已删除"</string>
+    <string name="add_tag" msgid="703494598879855113">"添加新标记"</string>
+    <string name="choose_my_tag" msgid="4208730132705026130">"选择要分享的标记"</string>
+    <string name="active_tag" msgid="7417732109196094058">"活动标记"</string>
+    <string name="manage_my_tags" msgid="3616349610711109286">"管理我的标记"</string>
+    <string name="menu_delete" msgid="8834253717174232653">"删除标记"</string>
+    <string name="menu_edit" msgid="2163829689000692138">"编辑标记"</string>
+    <string name="menu_set_as_active" msgid="6637492981297642733">"设置为活动标记"</string>
+    <string name="no_tag_selected" msgid="127078607162539962">"您尚未选择要分享的标记。"</string>
+    <string name="no_tags_created" msgid="5963013948308289234">"您尚未创建任何标记。"</string>
+</resources>

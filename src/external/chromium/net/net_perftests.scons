@@ -1,0 +1,481 @@
+# This file is generated; do not edit.
+
+import os
+
+Import("env")
+
+env = env.Clone(COMPONENT_NAME='net',
+                TARGET_NAME='net_perftests')
+
+configurations = {
+    'Debug' : {
+        'Append' : dict(
+            CCFLAGS = [
+                '-Werror',
+                '-pthread',
+                '-fno-exceptions',
+                '-fno-asynchronous-unwind-tables',
+                '-fvisibility=hidden',
+                '-Wall',
+                '-D_FILE_OFFSET_BITS=64',
+                '-DPNG_NO_MMX_CODE',
+                '-pthread',
+                '-I/usr/include/gtk-2.0',
+                '-I/usr/lib/gtk-2.0/include',
+                '-I/usr/include/atk-1.0',
+                '-I/usr/include/cairo',
+                '-I/usr/include/pango-1.0',
+                '-I/usr/include/glib-2.0',
+                '-I/usr/lib/glib-2.0/include',
+                '-I/usr/include/freetype2',
+                '-I/usr/include/libpng12',
+                '-I/usr/include/pixman-1',
+                '-O0',
+                '-g'
+            ],
+            CPPDEFINES = [
+                '__STDC_FORMAT_MACROS',
+                'CHROMIUM_BUILD',
+                'PERF_TEST',
+                'UNIT_TEST',
+                'GTEST_HAS_RTTI=0',
+                '_DEBUG'
+            ],
+            CPPPATH = [
+                env.Dir('$SRC_DIR/net/..'),
+                env.Dir('$SRC_DIR/net/../testing/gtest/include')
+            ],
+            CXXFLAGS = [
+                '-fno-rtti',
+                '-fno-threadsafe-statics',
+                '-fvisibility-inlines-hidden'
+            ],
+            LINKFLAGS = [
+                '-pthread',
+                '-rdynamic'
+            ],
+            LIBS = [
+                '-lrt',
+                '-lgtk-x11-2.0',
+                '-lgdk-x11-2.0',
+                '-latk-1.0',
+                '-lgdk_pixbuf-2.0',
+                '-lm',
+                '-lpangocairo-1.0',
+                '-lpango-1.0',
+                '-lcairo',
+                '-lgobject-2.0',
+                '-lgmodule-2.0',
+                '-ldl',
+                '-lgthread-2.0',
+                '-lrt',
+                '-lglib-2.0',
+                '-lnss3',
+                '-lnssutil3',
+                '-lsmime3',
+                '-lssl3',
+                '-lplds4',
+                '-lplc4',
+                '-lnspr4',
+                '-lpthread',
+                '-ldl',
+                '-lrt',
+                '-lgconf-2',
+                '-lglib-2.0',
+                '-lgdk-x11-2.0',
+                '-lgdk_pixbuf-2.0',
+                '-lm',
+                '-lpangocairo-1.0',
+                '-lpango-1.0',
+                '-lcairo',
+                '-lgobject-2.0',
+                '-lgmodule-2.0',
+                '-ldl',
+                '-lglib-2.0',
+                '-lrt',
+                'net',
+                'net_test_support',
+                'base',
+                'base_i18n',
+                'test_support_base',
+                'test_support_perf',
+                'gtest',
+                'event',
+                'icui18n',
+                'icuuc',
+                'icudata',
+                'googleurl',
+                'sdch',
+                'chrome_bz2',
+                'modp_b64',
+                'chrome_zlib',
+                'net_base',
+                'v8_snapshot',
+                'v8_base'
+            ],
+        ),
+        'FilterOut' : dict(
+        ),
+        'Replace' : dict(
+             FLOCK_LDMODULE = ['flock', '$TOP_BUILDDIR/linker.lock', '$LDMODULE'],
+             FLOCK_LINK = ['flock', '$TOP_BUILDDIR/linker.lock', '$LINK'],
+             FLOCK_SHLINK = ['flock', '$TOP_BUILDDIR/linker.lock', '$SHLINK'],
+             IMPLICIT_COMMAND_DEPENDENCIES = '0',
+             LDMODULECOM = [['$FLOCK_LDMODULE',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$LDMODULEFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+             LIBPATH = ['$LIB_DIR'],
+             LINKCOM = [['$FLOCK_LINK',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$LINKFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+             SHLINKCOM = [['$FLOCK_SHLINK',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$SHLINKFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+        ),
+        'ImportExternal' : [
+             'AS',
+             'CC',
+             'CXX',
+             'LINK',
+        ],
+        'PropagateExternal' : [
+             'AS',
+             'CC',
+             'CCACHE_DIR',
+             'CXX',
+             'DISTCC_DIR',
+             'DISTCC_HOSTS',
+             'HOME',
+             'INCLUDE_SERVER_ARGS',
+             'INCLUDE_SERVER_PORT',
+             'LINK',
+             'CHROME_BUILD_TYPE',
+             'CHROMIUM_BUILD',
+             'OFFICIAL_BUILD',
+        ],
+    },
+    'Release' : {
+        'Append' : dict(
+            CCFLAGS = [
+                '-Werror',
+                '-pthread',
+                '-fno-exceptions',
+                '-fno-asynchronous-unwind-tables',
+                '-fvisibility=hidden',
+                '-Wall',
+                '-D_FILE_OFFSET_BITS=64',
+                '-DPNG_NO_MMX_CODE',
+                '-pthread',
+                '-I/usr/include/gtk-2.0',
+                '-I/usr/lib/gtk-2.0/include',
+                '-I/usr/include/atk-1.0',
+                '-I/usr/include/cairo',
+                '-I/usr/include/pango-1.0',
+                '-I/usr/include/glib-2.0',
+                '-I/usr/lib/glib-2.0/include',
+                '-I/usr/include/freetype2',
+                '-I/usr/include/libpng12',
+                '-I/usr/include/pixman-1',
+                '-O2',
+                '-fno-ident',
+                '-fdata-sections',
+                '-ffunction-sections'
+            ],
+            CPPDEFINES = [
+                '__STDC_FORMAT_MACROS',
+                'CHROMIUM_BUILD',
+                'PERF_TEST',
+                'UNIT_TEST',
+                'GTEST_HAS_RTTI=0',
+                'NDEBUG',
+                'NVALGRIND'
+            ],
+            CPPPATH = [
+                env.Dir('$SRC_DIR/net/..'),
+                env.Dir('$SRC_DIR/net/../testing/gtest/include')
+            ],
+            CXXFLAGS = [
+                '-fno-rtti',
+                '-fno-threadsafe-statics',
+                '-fvisibility-inlines-hidden'
+            ],
+            LINKFLAGS = [
+                '-pthread',
+                '-Wl,--gc-sections'
+            ],
+            LIBS = [
+                '-lrt',
+                '-lgtk-x11-2.0',
+                '-lgdk-x11-2.0',
+                '-latk-1.0',
+                '-lgdk_pixbuf-2.0',
+                '-lm',
+                '-lpangocairo-1.0',
+                '-lpango-1.0',
+                '-lcairo',
+                '-lgobject-2.0',
+                '-lgmodule-2.0',
+                '-ldl',
+                '-lgthread-2.0',
+                '-lrt',
+                '-lglib-2.0',
+                '-lnss3',
+                '-lnssutil3',
+                '-lsmime3',
+                '-lssl3',
+                '-lplds4',
+                '-lplc4',
+                '-lnspr4',
+                '-lpthread',
+                '-ldl',
+                '-lrt',
+                '-lgconf-2',
+                '-lglib-2.0',
+                '-lgdk-x11-2.0',
+                '-lgdk_pixbuf-2.0',
+                '-lm',
+                '-lpangocairo-1.0',
+                '-lpango-1.0',
+                '-lcairo',
+                '-lgobject-2.0',
+                '-lgmodule-2.0',
+                '-ldl',
+                '-lglib-2.0',
+                '-lrt',
+                'net',
+                'net_test_support',
+                'base',
+                'base_i18n',
+                'test_support_base',
+                'test_support_perf',
+                'gtest',
+                'event',
+                'icui18n',
+                'icuuc',
+                'icudata',
+                'googleurl',
+                'sdch',
+                'chrome_bz2',
+                'modp_b64',
+                'chrome_zlib',
+                'net_base',
+                'v8_snapshot',
+                'v8_base'
+            ],
+        ),
+        'FilterOut' : dict(
+        ),
+        'Replace' : dict(
+             FLOCK_LDMODULE = ['flock', '$TOP_BUILDDIR/linker.lock', '$LDMODULE'],
+             FLOCK_LINK = ['flock', '$TOP_BUILDDIR/linker.lock', '$LINK'],
+             FLOCK_SHLINK = ['flock', '$TOP_BUILDDIR/linker.lock', '$SHLINK'],
+             IMPLICIT_COMMAND_DEPENDENCIES = '0',
+             LDMODULECOM = [['$FLOCK_LDMODULE',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$LDMODULEFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+             LIBPATH = ['$LIB_DIR'],
+             LINKCOM = [['$FLOCK_LINK',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$LINKFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+             SHLINKCOM = [['$FLOCK_SHLINK',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$SHLINKFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+        ),
+        'ImportExternal' : [
+             'AS',
+             'CC',
+             'CXX',
+             'LINK',
+        ],
+        'PropagateExternal' : [
+             'AS',
+             'CC',
+             'CCACHE_DIR',
+             'CXX',
+             'DISTCC_DIR',
+             'DISTCC_HOSTS',
+             'HOME',
+             'INCLUDE_SERVER_ARGS',
+             'INCLUDE_SERVER_PORT',
+             'LINK',
+             'CHROME_BUILD_TYPE',
+             'CHROMIUM_BUILD',
+             'OFFICIAL_BUILD',
+        ],
+    },
+}
+
+config = configurations[env['CONFIG_NAME']]
+env.Append(**config['Append'])
+env.FilterOut(**config['FilterOut'])
+env.Replace(**config['Replace'])
+
+# Scons forces -fPIC for SHCCFLAGS on some platforms.
+# Disable that so we can control it from cflags in gyp.
+# Note that Scons itself is inconsistent with its -fPIC
+# setting. SHCCFLAGS forces -fPIC, and SHCFLAGS does not.
+# This will make SHCCFLAGS consistent with SHCFLAGS.
+env['SHCCFLAGS'] = ['$CCFLAGS']
+
+for _var in config['ImportExternal']:
+  if _var in ARGUMENTS:
+    env[_var] = ARGUMENTS[_var]
+  elif _var in os.environ:
+    env[_var] = os.environ[_var]
+for _var in config['PropagateExternal']:
+  if _var in ARGUMENTS:
+    env[_var] = ARGUMENTS[_var]
+  elif _var in os.environ:
+    env['ENV'][_var] = os.environ[_var]
+
+env['ENV']['LD_LIBRARY_PATH'] = env.subst('$LIB_DIR')
+
+if ARGUMENTS.get('COVERAGE') not in (None, '0'):
+  env.AppendUnique(
+            CCFLAGS = [
+                '-fprofile-arcs',
+                '-ftest-coverage'
+            ],
+            LINKFLAGS = [
+                '-fprofile-arcs'
+            ],
+  )
+
+if ARGUMENTS.get('PROFILE') not in (None, '0'):
+  env.AppendUnique(
+            CCFLAGS = [
+                '-pg',
+                '-g'
+            ],
+            LINKFLAGS = [
+                '-pg'
+            ],
+  )
+
+if ARGUMENTS.get('SYMBOLS') not in (None, '0'):
+  env.AppendUnique(
+            CCFLAGS = [
+                '-g'
+            ],
+  )
+
+input_files = [
+    'base/cookie_monster_perftest.cc',
+    'disk_cache/disk_cache_perftest.cc',
+    'proxy/proxy_resolver_perftest.cc',
+]
+
+target_files = []
+prerequisites = []
+
+_program = env.File('${PROGPREFIX}net_perftests${PROGSUFFIX}')
+_result = []
+for infile in input_files:
+  if env.compilable(infile):
+    if (type(infile) == type('')
+        and (infile.startswith('$SRC_DIR/net/')
+             or not os.path.isabs(env.subst(infile)))):
+      # Force files below the build directory by replacing all '..'
+      # elements in the path with '__':
+      base, ext = os.path.splitext(os.path.normpath(infile))
+      base = [d == '..' and '__' or d for d in base.split('/')]
+      base = os.path.join(*base)
+      object = '${OBJ_DIR}/${COMPONENT_NAME}/${TARGET_NAME}/' + base
+      if not infile.startswith('$SRC_DIR/net/'):
+        infile = '$SRC_DIR/net/' + infile
+      infile = env.StaticObject(object, infile)[0]
+    else:
+      infile = env.StaticObject(infile)[0]
+  _result.append(infile)
+input_files = _result
+
+_outputs = env.GypProgram(_program, input_files)
+target_files.extend(_outputs)
+
+if GetOption('verbose'):
+  _action = Action([['cd',
+ '"/usr/local/google/chromium/src/net"',
+ '&&',
+ '$TARGET_NAME',
+ '--gtest_print_time']])
+else:
+  _action = Action([['cd',
+ '"/usr/local/google/chromium/src/net"',
+ '&&',
+ '$TARGET_NAME',
+ '--gtest_print_time']], )
+
+gyp_target = env.Alias('net_perftests', target_files)
+dependencies = [
+    Alias('net'),
+    Alias('net_test_support'),
+    Alias('base'),
+    Alias('base_i18n'),
+    Alias('test_support_base'),
+    Alias('test_support_perf'),
+    Alias('gtest'),
+    Alias('gtk'),
+    Alias('nss'),
+    Alias('libevent'),
+    Alias('icui18n'),
+    Alias('icuuc'),
+    Alias('icudata'),
+    Alias('googleurl'),
+    Alias('sdch'),
+    Alias('bzip2'),
+    Alias('modp_b64'),
+    Alias('zlib'),
+    Alias('net_base'),
+    Alias('gconf'),
+    Alias('gdk'),
+    Alias('v8_snapshot'),
+    Alias('v8_base')
+]
+env.Requires(target_files, dependencies)
+env.Requires(gyp_target, dependencies)
+for prerequisite in prerequisites:
+  env.Requires(prerequisite, dependencies)
+env.Requires(gyp_target, prerequisites)
+
+_run_as_target = env.Alias('run_net_perftests', target_files, _action)
+env.Requires(_run_as_target, [
+    Alias('net_perftests'),
+])
+env.AlwaysBuild(_run_as_target)
+Return("gyp_target")

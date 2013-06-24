@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2010 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="5128188288358721369">"Thẻ"</string>
+    <string name="title_scanned_tag" msgid="4347835407095551450">"Thẻ mới đã được thu thập"</string>
+    <string name="title_existing_tag" msgid="5656560272594190244">"Thẻ"</string>
+    <string name="tab_tags" msgid="3254131516215269385">"Thẻ"</string>
+    <string name="tab_starred" msgid="3892615665321783044">"Được gắn dấu sao"</string>
+    <string name="tab_my_tag" msgid="4194581094362833242">"Thẻ của tôi"</string>
+    <string name="tag_unknown" msgid="2897956823877728783">"Loại thẻ không xác định"</string>
+    <string name="tag_empty" msgid="3726529819932095782">"Thẻ trống"</string>
+    <string name="button_delete" msgid="8636971153075546776">"Xóa"</string>
+    <string name="button_done" msgid="7048822758098308158">"Xong"</string>
+    <string name="button_save" msgid="1396693475082322626">"Lưu"</string>
+    <string name="button_cancel" msgid="8094182910311905776">"Hủy"</string>
+    <string name="cancel_help_text" msgid="2582335582642459522">"Để bỏ qua việc thêm thẻ này vào bộ sưu tập của bạn, hãy chạm vào Xong"</string>
+    <string name="action_text" msgid="577417996159152923">"Văn bản <xliff:g id="PHONE_NUMBER">%s</xliff:g>"</string>
+    <string name="action_call" msgid="6226253647953184035">"Gọi <xliff:g id="PHONE_NUMBER">%s</xliff:g>"</string>
+    <string name="turn_on_my_tag" msgid="6584695906051991524">"Chia sẻ thẻ của tôi"</string>
+    <string name="edit_tag" msgid="3708659122033447892">"Chỉnh sửa thẻ"</string>
+    <string name="turn_on_my_tag_subtitle" msgid="4174686056239752759">"Cho phép người khác đọc thẻ của tôi"</string>
+    <string name="add_content" msgid="6592975981339055673">"Khác…"</string>
+    <string name="tag_title" msgid="4734199420853998617">"Tiêu đề"</string>
+    <string name="tag_text" msgid="522896767632155048">"Văn bản"</string>
+    <string name="select_type" msgid="1845302736320827995">"Chọn loại để thêm"</string>
+    <string name="photo" msgid="986413518082114481">"Ảnh"</string>
+    <string name="bad_photo" msgid="1601260684495341633">"Không thể mở hình ảnh."</string>
+    <string name="url" msgid="5939765162489949437">"URL"</string>
+    <string name="contact" msgid="8810195884019228695">"Địa chỉ liên hệ"</string>
+    <string name="location" msgid="2476366526591580807">"Vị trí"</string>
+    <string name="empty_tag_prompt" msgid="4206394383309956030">"Thẻ này trống."</string>
+    <string name="empty_tag_instructions" msgid="9156733538909958916">"Chạm vào "<b>"Ghi thẻ"</b>" để thêm nội dung."</string>
+    <string name="write" msgid="4957259770248890625">"Ghi thẻ"</string>
+    <string name="cancel" msgid="2168193471147260328">"Hủy"</string>
+    <string name="menu_help" msgid="2340550693525288105">"Trợ giúp"</string>
+    <string name="import_vcard" msgid="5104299047930666528">"Nhập ^1"</string>
+    <string name="mime_display_name" msgid="5926357152623764485">"Dữ liệu từ thẻ NFC"</string>
+    <string name="dialog_title_nfc_off" msgid="6945643404976801203">"NFC đã tắt"</string>
+    <string name="dialog_text_nfc_off" msgid="6323019332983777990">"Bạn phải bật NFC để quét thẻ."</string>
+    <string name="button_settings" msgid="6909066985958159920">"Cài đặt"</string>
+    <string name="empty_list" msgid="1306390399412856676">"Bạn chưa quét bất kỳ thẻ nào."</string>
+    <string name="empty_list_starred" msgid="7185947321271594216">"Bạn không có thẻ được gắn dấu sao nào."</string>
+    <string name="button_more_info" msgid="574247138099633767">"Thông tin khác"</string>
+    <string name="vcard_title" msgid="7122634780732426007">"Thông tin liên hệ cho ^1"</string>
+    <string name="next" msgid="8672447228208567606">"Tiếp theo"</string>
+    <string name="back" msgid="7389918385345281227">"Quay lại"</string>
+    <string name="close" msgid="5521003720382005075">"Đóng"</string>
+    <string name="intro_title" msgid="2798106838231744219">"Giới thiệu về Thẻ"</string>
+    <string name="intro_text_about" msgid="1366913102380816468">"Thẻ để sắp xếp và chia sẻ thẻ Liên lạc gần trường (NFC)."</string>
+    <string name="intro_text_usage" msgid="2343260114638598627">"Bạn quét thẻ bằng cách bật điện thoại của mình và đặt điện thoại ngay bên cạnh thẻ."</string>
+    <string name="intro_text_contents" msgid="1973327615218723220">"Thẻ NFC có thể chứa văn bản, URL, hình ảnh và các loại thông tin khác."</string>
+    <string name="intro_text_more" msgid="4127006088499721149">"Để quét hoặc chia sẻ thẻ, bạn phải bật NFC (trong Cài đặt, trong Mạng &amp; Không dây)."</string>
+    <string name="intro_text_more2" msgid="28835616891750572">"Để biết thêm thông tin, bấm Trình đơn và chạm vào Trợ giúp trên bất kỳ màn hình Thẻ nào."</string>
+    <string name="tag_deleted" msgid="5411251725532471624">"Thẻ đã xóa"</string>
+    <string name="add_tag" msgid="703494598879855113">"Thêm thẻ mới"</string>
+    <string name="choose_my_tag" msgid="4208730132705026130">"Chọn thẻ để chia sẻ"</string>
+    <string name="active_tag" msgid="7417732109196094058">"Thẻ hoạt động"</string>
+    <string name="manage_my_tags" msgid="3616349610711109286">"Quản lý thẻ của tôi"</string>
+    <string name="menu_delete" msgid="8834253717174232653">"Xóa thẻ"</string>
+    <string name="menu_edit" msgid="2163829689000692138">"Chỉnh sửa thẻ"</string>
+    <string name="menu_set_as_active" msgid="6637492981297642733">"Đặt là thẻ hoạt động"</string>
+    <string name="no_tag_selected" msgid="127078607162539962">"Bạn chưa chọn thẻ nào để chia sẻ."</string>
+    <string name="no_tags_created" msgid="5963013948308289234">"Bạn chưa tạo thẻ nào."</string>
+</resources>

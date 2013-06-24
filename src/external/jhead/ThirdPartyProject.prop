@@ -1,0 +1,9 @@
+# Copyright 2010 Google Inc. All Rights Reserved.
+#Fri Jul 16 10:03:09 PDT 2010
+currentVersion=2.9
+version=2.87
+isNative=true
+name=jhead
+keywords=jhead
+onDevice=true
+homepage=http\://www.sentex.net/~mwandel/jhead/

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2010 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="5128188288358721369">"Žymos"</string>
+    <string name="title_scanned_tag" msgid="4347835407095551450">"Gauta nauja žyma"</string>
+    <string name="title_existing_tag" msgid="5656560272594190244">"Žyma"</string>
+    <string name="tab_tags" msgid="3254131516215269385">"Žymos"</string>
+    <string name="tab_starred" msgid="3892615665321783044">"Pažymėta žvaigždute"</string>
+    <string name="tab_my_tag" msgid="4194581094362833242">"Mano žyma"</string>
+    <string name="tag_unknown" msgid="2897956823877728783">"Nežinomas žymos tipas"</string>
+    <string name="tag_empty" msgid="3726529819932095782">"Tuščia žyma"</string>
+    <string name="button_delete" msgid="8636971153075546776">"Ištrinti"</string>
+    <string name="button_done" msgid="7048822758098308158">"Atlikta"</string>
+    <string name="button_save" msgid="1396693475082322626">"Išsaugoti"</string>
+    <string name="button_cancel" msgid="8094182910311905776">"Atšaukti"</string>
+    <string name="cancel_help_text" msgid="2582335582642459522">"Jei norite praleisti šios žymos pridėjimą prie rinkinio, palieskite „Atlikta“"</string>
+    <string name="action_text" msgid="577417996159152923">"Siųsti teksto pranešimą <xliff:g id="PHONE_NUMBER">%s</xliff:g>"</string>
+    <string name="action_call" msgid="6226253647953184035">"Skambinti <xliff:g id="PHONE_NUMBER">%s</xliff:g>"</string>
+    <string name="turn_on_my_tag" msgid="6584695906051991524">"Bendrinti žymą"</string>
+    <string name="edit_tag" msgid="3708659122033447892">"Redaguoti žymą"</string>
+    <string name="turn_on_my_tag_subtitle" msgid="4174686056239752759">"Leisti kitiems skaityti žymą"</string>
+    <string name="add_content" msgid="6592975981339055673">"Daugiau…"</string>
+    <string name="tag_title" msgid="4734199420853998617">"Pavadinimas"</string>
+    <string name="tag_text" msgid="522896767632155048">"Tekstas"</string>
+    <string name="select_type" msgid="1845302736320827995">"Pasirinkti norimą pridėti tipą"</string>
+    <string name="photo" msgid="986413518082114481">"Nuotrauka"</string>
+    <string name="bad_photo" msgid="1601260684495341633">"Nepavyko atidaryti vaizdo."</string>
+    <string name="url" msgid="5939765162489949437">"URL"</string>
+    <string name="contact" msgid="8810195884019228695">"Kontaktas"</string>
+    <string name="location" msgid="2476366526591580807">"Vieta"</string>
+    <string name="empty_tag_prompt" msgid="4206394383309956030">"Ši žyma tuščia."</string>
+    <string name="empty_tag_instructions" msgid="9156733538909958916">"Jei norite pridėti turinio, palieskite "<b>"Rašyti žymą"</b>"."</string>
+    <string name="write" msgid="4957259770248890625">"Rašyti žymą"</string>
+    <string name="cancel" msgid="2168193471147260328">"Atšaukti"</string>
+    <string name="menu_help" msgid="2340550693525288105">"Pagalba"</string>
+    <string name="import_vcard" msgid="5104299047930666528">"Importuoti ^1"</string>
+    <string name="mime_display_name" msgid="5926357152623764485">"Duomenys iš NFC žymos"</string>
+    <string name="dialog_title_nfc_off" msgid="6945643404976801203">"NFC išjungtas"</string>
+    <string name="dialog_text_nfc_off" msgid="6323019332983777990">"Jei norite nuskaityti žymas, turite įjungti NFC."</string>
+    <string name="button_settings" msgid="6909066985958159920">"Nustatymai"</string>
+    <string name="empty_list" msgid="1306390399412856676">"Nenuskaitėte jokių žymų."</string>
+    <string name="empty_list_starred" msgid="7185947321271594216">"Neturite žvaigždutėmis pažymėtų žymų."</string>
+    <string name="button_more_info" msgid="574247138099633767">"Daugiau informacijos"</string>
+    <string name="vcard_title" msgid="7122634780732426007">"^1 kontakto informacija"</string>
+    <string name="next" msgid="8672447228208567606">"Kitas"</string>
+    <string name="back" msgid="7389918385345281227">"Atgal"</string>
+    <string name="close" msgid="5521003720382005075">"Uždaryti"</string>
+    <string name="intro_title" msgid="2798106838231744219">"Apie žymas"</string>
+    <string name="intro_text_about" msgid="1366913102380816468">"Žymos skirtos artimo lauko perdavimo (angl. „Near Field Communication“, NFC) žymoms tvarkyti ir bendrinti."</string>
+    <string name="intro_text_usage" msgid="2343260114638598627">"Nuskaityti žymą galite įjungę telefoną ir padėję jį šalia žymos."</string>
+    <string name="intro_text_contents" msgid="1973327615218723220">"NFC žymose gali būti teksto, URL, paveikslėlių ir kitos rūšies informacijos."</string>
+    <string name="intro_text_more" msgid="4127006088499721149">"Jei norite nuskaityti ar bendrinti žymas, turite įjungti NFC („Nustatymuose“, skiltyje „Belaidis ir tinklai“)."</string>
+    <string name="intro_text_more2" msgid="28835616891750572">"Jei norite daugiau informacijos, bet kuriame žymų ekrane paspauskite „Meniu“ ir palieskite „Pagalba“."</string>
+    <string name="tag_deleted" msgid="5411251725532471624">"Žyma ištrinta"</string>
+    <string name="add_tag" msgid="703494598879855113">"Pridėti naują žymą"</string>
+    <string name="choose_my_tag" msgid="4208730132705026130">"Pasirinkti bendrintiną žymą"</string>
+    <string name="active_tag" msgid="7417732109196094058">"Aktyvi žyma"</string>
+    <string name="manage_my_tags" msgid="3616349610711109286">"Valdyti žymas"</string>
+    <string name="menu_delete" msgid="8834253717174232653">"Ištrinti žymą"</string>
+    <string name="menu_edit" msgid="2163829689000692138">"Redaguoti žymą"</string>
+    <string name="menu_set_as_active" msgid="6637492981297642733">"Nustatyti kaip aktyvią žymą"</string>
+    <string name="no_tag_selected" msgid="127078607162539962">"Neturite pasirinktos bendrinti žymos."</string>
+    <string name="no_tags_created" msgid="5963013948308289234">"Neturite sukurtų žymų."</string>
+</resources>

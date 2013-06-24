@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/*
+ * Copyright (C) 2007 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_label" msgid="3706018265751197270">"帳戶與同步處理設定"</string>
+    <string name="sync_settings" msgid="8707056705985552604">"帳戶與同步處理設定"</string>
+    <string name="sync_too_many_deletes" msgid="1621369057980827097">"達到刪除上限"</string>
+    <string name="background_data" msgid="1103557117473896066">"背景資料"</string>
+    <string name="background_data_summary" msgid="9048259510387973822">"應用程式隨時可以同步處理、傳送和接收資料"</string>
+    <string name="background_data_dialog_title" msgid="6303755495467986079">"注意"</string>
+    <string name="background_data_dialog_message" msgid="8417297954700022363">"停用背景資料可延長電池使用時間，並減少資料的傳輸量。但某些應用程式可能仍會使用背景資料連線。"</string>
+    <string name="sync_automatically" msgid="4694735102757960100">"自動同步處理"</string>
+    <string name="sync_automatically_summary" msgid="4598895616781542745">"應用程式會自動同步處理資料"</string>
+    <string name="settings_backup" msgid="6114299464740014762">"備份設定"</string>
+    <string name="settings_backup_summary" msgid="1787552172618610178">"備份我的設定"</string>
+    <string name="sync_menu_sync_now" msgid="5796024841315572404">"立即同步處理"</string>
+    <string name="sync_menu_sync_cancel" msgid="1005480041232010062">"取消同步處理"</string>
+    <string name="sync_one_time_sync" msgid="3274364877518422827">"輕觸此處立即開始同步 <xliff:g id="LAST_SYNC_TIME">
+%1$s</xliff:g>"</string>
+    <string name="sync_gmail" msgid="5806053858668452000">"Gmail"</string>
+    <string name="sync_calendar" msgid="1796292773734071897">"Google 日曆"</string>
+    <string name="sync_contacts" msgid="2035690905925565660">"聯絡人"</string>
+    <string name="sync_too_many_deletes_desc" msgid="699495654174066067">"<xliff:g id="ACCOUNT_NAME">%3$s</xliff:g> 帳戶的 <xliff:g id="TYPE_OF_SYNC">%2$s</xliff:g> 同步有 <xliff:g id="NUMBER_OF_DELETED_ITEMS">%1$d</xliff:g> 個刪除的項目。您想要怎麼做？"</string>
+    <string name="sync_really_delete" msgid="5456355204562588976">"刪除這些項目。"</string>
+    <string name="sync_undo_deletes" msgid="8695514459839593307">"復原刪除。"</string>
+    <string name="sync_do_nothing" msgid="5798755982392201673">"暫停執行 。"</string>
+    <string name="sync_is_failing" msgid="5230237058552433773">"同步處理目前發生問題。將於短時間內恢復。"</string>
+    <string name="sync_plug" msgid="7020432439004167162"><font fgcolor="#ffffffff">"歡迎使用 Google Sync！"</font>\n"這是 Google 所提供的資料同步處理工具，可讓您隨時隨地存取通訊錄、約會等資料。"</string>
+    <string name="header_application_sync_settings" msgid="5263025067167527890">"應用程式同步處理設定"</string>
+    <string name="header_manage_accounts" msgid="381956296995298770">"管理帳戶"</string>
+    <string name="header_general_sync_settings" msgid="1598537524696692308">"一般同步處理設定"</string>
+    <string name="sync_enabled" msgid="913018877443997502">"已開啟同步處理功能"</string>
+    <string name="sync_disabled" msgid="185731301298967302">"已關閉同步處理功能"</string>
+    <string name="sync_error" msgid="681431702824599812">"同步處理錯誤"</string>
+    <string name="add_account_label" msgid="2035321485672826779">"新增帳戶"</string>
+    <string name="header_data_and_synchronization" msgid="6286257845276834071">"資料同步處理"</string>
+    <string name="preference_change_password_title" msgid="6468827554159468315">"變更密碼"</string>
+    <string name="header_account_settings" msgid="4950809499418403792">"帳戶設定"</string>
+    <string name="remove_account_label" msgid="5624712684599197863">"移除帳戶"</string>
+    <string name="header_add_an_account" msgid="2198078922829535425">"新增帳戶"</string>
+    <string name="finish_button_label" msgid="6121560986057356757">"完成"</string>
+    <string name="really_remove_account_title" msgid="8808121039511188784">"移除帳戶"</string>
+    <string name="really_remove_account_message" msgid="3293445755620109578">"確定要移除帳戶嗎？移除帳戶後，手機上的訊息、聯絡人和其他資料將一併遭到刪除。"\n"您要繼續嗎？"</string>
+    <string name="remove_account_failed" msgid="8178924513521241001">"部分應用程式需要使用此帳戶。如要移除此帳戶，您必須將手機還原至出廠預設值 (這會刪除您全部的個人資料)；請至 [設定] 應用程式的 [隱私權設定] 中進行還原。"</string>
+    <string name="provider_label" msgid="6191617139291321517">"發送訂閱"</string>
+    <string name="sync_item_title" msgid="7984962124867021854">"同步處理<xliff:g id="AUTHORITY">%s</xliff:g>"</string>
+    <string name="cant_sync_dialog_title" msgid="3016197392261471761">"無法手動同步處理"</string>
+    <string name="cant_sync_dialog_message" msgid="7200115394296632300">"該項目的同步處理功能已停用。如要變更您的偏好設定，請暫時開啟背景資料與自動同步處理功能。"</string>
+</resources>

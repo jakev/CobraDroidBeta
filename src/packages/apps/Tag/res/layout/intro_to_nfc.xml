@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2010 The Android Open Source Project
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+>
+
+    <TextView
+        android:text="@string/intro_title"
+        android:padding="4dip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:gravity="center"
+    />
+
+    <!-- TODO: make the layout more flexible instead of a fixed size. -->
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="280dip"
+        android:layout_height="355dip"
+    >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+        >
+            <LinearLayout
+                android:id="@+id/page_1"
+                style="@style/about_page"
+                android:orientation="vertical"
+            >
+                <TextView
+                    android:text="@string/intro_text_about"
+                    style="@style/about_text"
+                />
+
+                <ImageView
+                    android:src="@drawable/tag_scan_illustration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                />
+
+                <TextView
+                    android:text="@string/intro_text_usage"
+                    style="@style/about_text"
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/page_2"
+                style="@style/about_page"
+                android:orientation="vertical"
+            >
+                <TextView
+                    android:text="@string/intro_text_contents"
+                    style="@style/about_text"
+                    android:layout_marginBottom="16dip"
+                />
+
+                <TextView
+                    android:text="@string/intro_text_more"
+                    style="@style/about_text"
+                    android:layout_marginBottom="16dip"
+                />
+
+                <TextView
+                    android:text="@string/intro_text_more2"
+                    style="@style/about_text"
+                />
+            </LinearLayout>
+
+        </FrameLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:padding="4dip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    >
+
+        <Button
+            android:id="@+id/back"
+            android:text="@string/back"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+        />
+
+        <Button
+            android:id="@+id/next"
+            android:text="@string/next"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+        />
+    </LinearLayout>
+
+</LinearLayout>

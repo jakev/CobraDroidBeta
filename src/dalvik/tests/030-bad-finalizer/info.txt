@@ -1,0 +1,3 @@
+The finalizer for this class never finishes.  Dalvik is expected to detect
+this situation and abort the VM (so you will likely see a "deadd00d"
+crash in the log output).

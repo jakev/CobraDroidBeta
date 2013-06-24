@@ -1,0 +1,28 @@
+<resources>
+
+    <string name="app_name">CustomBuildApp</string>
+    <string name="title_activity_launch">EMU Tools</string>
+    <string name="title_activity_main">EMU Tools</string>
+    <string name="title_prop_edit">Custom Build Property Editor</string>
+    <string name="title_activity_devids">Device ID Control</string>
+    <string name="title_appwidget">EMU Tools Widget</string>
+    <string name="set_mdn">Set MDN</string>
+    <string name="set_vmn">Set VoiceMail Number</string>
+    <string name="set_dev">Set Device ID (IMEI/MEID)</string>
+    <string name="set_imsi">Set Subscriber ID (IMSI)</string>
+    <string name="set_sim">Set SIM Card Serial</string>
+    <string name="update">Update Values</string>
+    <string name="button_mod_dev">Modify Device IDs</string>
+    <string name="button_reload_all">Reload All Settings</string>
+    <string name="button_build">Edit Custom build.prop</string>
+    <string name="box_build">Custom build.prop</string>
+    <string name="box_dev">Custom TelephonyManager</string>
+    <string name="box_ssl">SSL Validation Bypass</string>
+    <string name="no_data">No Data</string>
+    <string name="new_item">Add New Item</string>
+    <string name="text_property">Property Name</string>
+    <string name="text_value">Value</string>
+    <string name="widget_build">Custom build.prop</string>
+    <string name="widget_devids">Telephony Manager</string>
+    <string name="widget_ssl">SSL Validation</string>
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2010 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="5128188288358721369">"タグ"</string>
+    <string name="title_scanned_tag" msgid="4347835407095551450">"収集された新しいタグ"</string>
+    <string name="title_existing_tag" msgid="5656560272594190244">"タグ"</string>
+    <string name="tab_tags" msgid="3254131516215269385">"タグ"</string>
+    <string name="tab_starred" msgid="3892615665321783044">"スター付き"</string>
+    <string name="tab_my_tag" msgid="4194581094362833242">"マイタグ"</string>
+    <string name="tag_unknown" msgid="2897956823877728783">"タグの種類が不明です"</string>
+    <string name="tag_empty" msgid="3726529819932095782">"空のタグ"</string>
+    <string name="button_delete" msgid="8636971153075546776">"削除"</string>
+    <string name="button_done" msgid="7048822758098308158">"完了"</string>
+    <string name="button_save" msgid="1396693475082322626">"保存"</string>
+    <string name="button_cancel" msgid="8094182910311905776">"キャンセル"</string>
+    <string name="cancel_help_text" msgid="2582335582642459522">"このタグをコレクションに追加しない場合は、[完了]をタップします"</string>
+    <string name="action_text" msgid="577417996159152923">"<xliff:g id="PHONE_NUMBER">%s</xliff:g>にSMS"</string>
+    <string name="action_call" msgid="6226253647953184035">"<xliff:g id="PHONE_NUMBER">%s</xliff:g>に発信"</string>
+    <string name="turn_on_my_tag" msgid="6584695906051991524">"マイタグを共有"</string>
+    <string name="edit_tag" msgid="3708659122033447892">"タグを編集"</string>
+    <string name="turn_on_my_tag_subtitle" msgid="4174686056239752759">"マイタグの読み取りを他のユーザーに許可する"</string>
+    <string name="add_content" msgid="6592975981339055673">"その他..."</string>
+    <string name="tag_title" msgid="4734199420853998617">"タイトル"</string>
+    <string name="tag_text" msgid="522896767632155048">"テキスト"</string>
+    <string name="select_type" msgid="1845302736320827995">"追加するタイプを選択"</string>
+    <string name="photo" msgid="986413518082114481">"画像"</string>
+    <string name="bad_photo" msgid="1601260684495341633">"画像を開けませんでした。"</string>
+    <string name="url" msgid="5939765162489949437">"URL"</string>
+    <string name="contact" msgid="8810195884019228695">"連絡先"</string>
+    <string name="location" msgid="2476366526591580807">"場所"</string>
+    <string name="empty_tag_prompt" msgid="4206394383309956030">"このタグは空です。"</string>
+    <string name="empty_tag_instructions" msgid="9156733538909958916">"["<b>"タグに書き込む"</b>"]をタップしてコンテンツを追加します。"</string>
+    <string name="write" msgid="4957259770248890625">"タグに書き込む"</string>
+    <string name="cancel" msgid="2168193471147260328">"キャンセル"</string>
+    <string name="menu_help" msgid="2340550693525288105">"ヘルプ"</string>
+    <string name="import_vcard" msgid="5104299047930666528">"^1をインポート"</string>
+    <string name="mime_display_name" msgid="5926357152623764485">"NFCタグのデータ"</string>
+    <string name="dialog_title_nfc_off" msgid="6945643404976801203">"NFCがOFFです"</string>
+    <string name="dialog_text_nfc_off" msgid="6323019332983777990">"タグをスキャンするにはNFCをONにする必要があります。"</string>
+    <string name="button_settings" msgid="6909066985958159920">"設定"</string>
+    <string name="empty_list" msgid="1306390399412856676">"スキャンしたタグはありません。"</string>
+    <string name="empty_list_starred" msgid="7185947321271594216">"スター付きのタグはありません。"</string>
+    <string name="button_more_info" msgid="574247138099633767">"詳細情報"</string>
+    <string name="vcard_title" msgid="7122634780732426007">"^1の連絡先情報"</string>
+    <string name="next" msgid="8672447228208567606">"次へ"</string>
+    <string name="back" msgid="7389918385345281227">"戻る"</string>
+    <string name="close" msgid="5521003720382005075">"閉じる"</string>
+    <string name="intro_title" msgid="2798106838231744219">"タグについて"</string>
+    <string name="intro_text_about" msgid="1366913102380816468">"タグは近距離無線通信（NFC）タグを管理、共有するために使用します。"</string>
+    <string name="intro_text_usage" msgid="2343260114638598627">"タグをスキャンするには、端末の電源をONにしてタグのすぐ横に置きます。"</string>
+    <string name="intro_text_contents" msgid="1973327615218723220">"NFCタグにはテキスト、URL、写真などさまざまな情報を含めることができます。"</string>
+    <string name="intro_text_more" msgid="4127006088499721149">"タグをスキャンまたは共有するには、[設定]の[無線とネットワーク]でNFCをONにする必要があります。"</string>
+    <string name="intro_text_more2" msgid="28835616891750572">"詳しくは、いずれかのタグ画面でMENUを押して[ヘルプ]をタップしてください。"</string>
+    <string name="tag_deleted" msgid="5411251725532471624">"タグを削除しました"</string>
+    <string name="add_tag" msgid="703494598879855113">"新しいタグを追加"</string>
+    <string name="choose_my_tag" msgid="4208730132705026130">"共有するタグを選択する"</string>
+    <string name="active_tag" msgid="7417732109196094058">"アクティブタグ"</string>
+    <string name="manage_my_tags" msgid="3616349610711109286">"マイタグの管理"</string>
+    <string name="menu_delete" msgid="8834253717174232653">"タグを削除"</string>
+    <string name="menu_edit" msgid="2163829689000692138">"タグを編集"</string>
+    <string name="menu_set_as_active" msgid="6637492981297642733">"アクティブタグとして設定"</string>
+    <string name="no_tag_selected" msgid="127078607162539962">"共有するタグが選択されていません。"</string>
+    <string name="no_tags_created" msgid="5963013948308289234">"タグが作成されていません。"</string>
+</resources>

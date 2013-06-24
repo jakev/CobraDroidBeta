@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2010 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="5128188288358721369">"العلامات"</string>
+    <string name="title_scanned_tag" msgid="4347835407095551450">"تم تجميع علامة جديدة"</string>
+    <string name="title_existing_tag" msgid="5656560272594190244">"علامة"</string>
+    <string name="tab_tags" msgid="3254131516215269385">"العلامات"</string>
+    <string name="tab_starred" msgid="3892615665321783044">"مميّزة بنجمة"</string>
+    <string name="tab_my_tag" msgid="4194581094362833242">"علامتي"</string>
+    <string name="tag_unknown" msgid="2897956823877728783">"نوع علامة غير معروف"</string>
+    <string name="tag_empty" msgid="3726529819932095782">"علامة فارغة"</string>
+    <string name="button_delete" msgid="8636971153075546776">"حذف"</string>
+    <string name="button_done" msgid="7048822758098308158">"تم"</string>
+    <string name="button_save" msgid="1396693475082322626">"حفظ"</string>
+    <string name="button_cancel" msgid="8094182910311905776">"إلغاء"</string>
+    <string name="cancel_help_text" msgid="2582335582642459522">"لتخطي إضافة هذه العلامة إلى المجموعة، المس \"تم\""</string>
+    <string name="action_text" msgid="577417996159152923">"النص <xliff:g id="PHONE_NUMBER">%s</xliff:g>"</string>
+    <string name="action_call" msgid="6226253647953184035">"اتصال <xliff:g id="PHONE_NUMBER">%s</xliff:g>"</string>
+    <string name="turn_on_my_tag" msgid="6584695906051991524">"مشاركة علامتي"</string>
+    <string name="edit_tag" msgid="3708659122033447892">"تعديل العلامة"</string>
+    <string name="turn_on_my_tag_subtitle" msgid="4174686056239752759">"السماح للآخرين بقراءة علامتي"</string>
+    <string name="add_content" msgid="6592975981339055673">"المزيد…"</string>
+    <string name="tag_title" msgid="4734199420853998617">"العنوان"</string>
+    <string name="tag_text" msgid="522896767632155048">"النص"</string>
+    <string name="select_type" msgid="1845302736320827995">"تحديد نوع لإضافته"</string>
+    <string name="photo" msgid="986413518082114481">"صورة"</string>
+    <string name="bad_photo" msgid="1601260684495341633">"تعذر فتح الصورة."</string>
+    <string name="url" msgid="5939765162489949437">"عنوان URL"</string>
+    <string name="contact" msgid="8810195884019228695">"جهة الاتصال"</string>
+    <string name="location" msgid="2476366526591580807">"الموقع"</string>
+    <string name="empty_tag_prompt" msgid="4206394383309956030">"هذه العلامة فارغة."</string>
+    <string name="empty_tag_instructions" msgid="9156733538909958916">"المس "<b>"علامة الكتابة"</b>" لإضافة محتوى."</string>
+    <string name="write" msgid="4957259770248890625">"علامة الكتابة"</string>
+    <string name="cancel" msgid="2168193471147260328">"إلغاء"</string>
+    <string name="menu_help" msgid="2340550693525288105">"مساعدة"</string>
+    <string name="import_vcard" msgid="5104299047930666528">"استيراد ^1"</string>
+    <string name="mime_display_name" msgid="5926357152623764485">"بيانات من علامة NFC"</string>
+    <string name="dialog_title_nfc_off" msgid="6945643404976801203">"تم إيقاف تشغيل NFC"</string>
+    <string name="dialog_text_nfc_off" msgid="6323019332983777990">"يجب تشغيل NFC لمسح العلامات."</string>
+    <string name="button_settings" msgid="6909066985958159920">"الإعدادات"</string>
+    <string name="empty_list" msgid="1306390399412856676">"ليس لديك أي علامات تم مسحها."</string>
+    <string name="empty_list_starred" msgid="7185947321271594216">"ليس لديك علامات مميزة بنجمة."</string>
+    <string name="button_more_info" msgid="574247138099633767">"مزيد من المعلومات"</string>
+    <string name="vcard_title" msgid="7122634780732426007">"معلومات الاتصال لـ ^1"</string>
+    <string name="next" msgid="8672447228208567606">"التالي"</string>
+    <string name="back" msgid="7389918385345281227">"رجوع"</string>
+    <string name="close" msgid="5521003720382005075">"إغلاق"</string>
+    <string name="intro_title" msgid="2798106838231744219">"حول العلامات"</string>
+    <string name="intro_text_about" msgid="1366913102380816468">"إن العلامات هي لتنظيم علامات اتصال الحقل القريب (NFC) ومشاركتها."</string>
+    <string name="intro_text_usage" msgid="2343260114638598627">"يمكنك مسح العلامة عن طريق تشغيل الهاتف ووضعه بجانب العلامة مباشرة."</string>
+    <string name="intro_text_contents" msgid="1973327615218723220">"يمكن أن تحتوي علامات NFC على نص وعناوين URL وأنواع أخرى من المعلومات."</string>
+    <string name="intro_text_more" msgid="4127006088499721149">"لفحص العلامات أو مشاركتها، يجب تشغيل NFC (في الإعدادات، أسفل \"اللاسلكي والشبكات\")."</string>
+    <string name="intro_text_more2" msgid="28835616891750572">"لمزيد من المعلومات، اضغط على \"القائمة\" والمس \"مساعدة\" على أي شاشة من شاشات \"العلامات\"."</string>
+    <string name="tag_deleted" msgid="5411251725532471624">"تم حذف العلامة"</string>
+    <string name="add_tag" msgid="703494598879855113">"إضافة علامة جديدة"</string>
+    <string name="choose_my_tag" msgid="4208730132705026130">"اختيار علامة لمشاركتها"</string>
+    <string name="active_tag" msgid="7417732109196094058">"علامة نشطة"</string>
+    <string name="manage_my_tags" msgid="3616349610711109286">"إدارة علاماتي"</string>
+    <string name="menu_delete" msgid="8834253717174232653">"حذف العلامة"</string>
+    <string name="menu_edit" msgid="2163829689000692138">"تعديل علامة"</string>
+    <string name="menu_set_as_active" msgid="6637492981297642733">"تعيين كعلامة نشطة"</string>
+    <string name="no_tag_selected" msgid="127078607162539962">"ليس لديك علامة محددة لمشاركتها."</string>
+    <string name="no_tags_created" msgid="5963013948308289234">"ليس لديك علامات تم إنشاؤها."</string>
+</resources>

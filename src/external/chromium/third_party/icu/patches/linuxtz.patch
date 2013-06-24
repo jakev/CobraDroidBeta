@@ -1,0 +1,15 @@
+Index: source/common/putil.c
+===================================================================
+--- source/common/putil.c	(revision 26673)
++++ source/common/putil.c	(working copy)
+@@ -849,6 +849,10 @@
+ 
+     /* Save the current path */
+     char curpath[MAX_PATH_SIZE];
++
++    if (dirp == NULL)
++        return result;
++
+     uprv_memset(curpath, 0, MAX_PATH_SIZE);
+     uprv_strcpy(curpath, path);
+ 

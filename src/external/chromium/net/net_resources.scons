@@ -1,0 +1,301 @@
+# This file is generated; do not edit.
+
+import os
+
+Import("env")
+
+env = env.Clone(COMPONENT_NAME='net',
+                TARGET_NAME='net_resources')
+
+configurations = {
+    'Debug' : {
+        'Append' : dict(
+            CCFLAGS = [
+                '-Werror',
+                '-pthread',
+                '-fno-exceptions',
+                '-fno-asynchronous-unwind-tables',
+                '-fvisibility=hidden',
+                '-Wall',
+                '-D_FILE_OFFSET_BITS=64',
+                '-O0',
+                '-g'
+            ],
+            CPPDEFINES = [
+                '__STDC_FORMAT_MACROS',
+                'CHROMIUM_BUILD',
+                '_DEBUG'
+            ],
+            CXXFLAGS = [
+                '-fno-rtti',
+                '-fno-threadsafe-statics',
+                '-fvisibility-inlines-hidden'
+            ],
+            LINKFLAGS = [
+                '-pthread',
+                '-rdynamic'
+            ],
+        ),
+        'FilterOut' : dict(
+        ),
+        'Replace' : dict(
+             FLOCK_LDMODULE = ['flock', '$TOP_BUILDDIR/linker.lock', '$LDMODULE'],
+             FLOCK_LINK = ['flock', '$TOP_BUILDDIR/linker.lock', '$LINK'],
+             FLOCK_SHLINK = ['flock', '$TOP_BUILDDIR/linker.lock', '$SHLINK'],
+             IMPLICIT_COMMAND_DEPENDENCIES = '0',
+             LDMODULECOM = [['$FLOCK_LDMODULE',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$LDMODULEFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+             LIBPATH = ['$LIB_DIR'],
+             LINKCOM = [['$FLOCK_LINK',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$LINKFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+             SHLINKCOM = [['$FLOCK_SHLINK',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$SHLINKFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+        ),
+        'ImportExternal' : [
+             'AS',
+             'CC',
+             'CXX',
+             'LINK',
+        ],
+        'PropagateExternal' : [
+             'AS',
+             'CC',
+             'CCACHE_DIR',
+             'CXX',
+             'DISTCC_DIR',
+             'DISTCC_HOSTS',
+             'HOME',
+             'INCLUDE_SERVER_ARGS',
+             'INCLUDE_SERVER_PORT',
+             'LINK',
+             'CHROME_BUILD_TYPE',
+             'CHROMIUM_BUILD',
+             'OFFICIAL_BUILD',
+        ],
+    },
+    'Release' : {
+        'Append' : dict(
+            CCFLAGS = [
+                '-Werror',
+                '-pthread',
+                '-fno-exceptions',
+                '-fno-asynchronous-unwind-tables',
+                '-fvisibility=hidden',
+                '-Wall',
+                '-D_FILE_OFFSET_BITS=64',
+                '-O2',
+                '-fno-ident',
+                '-fdata-sections',
+                '-ffunction-sections'
+            ],
+            CPPDEFINES = [
+                '__STDC_FORMAT_MACROS',
+                'CHROMIUM_BUILD',
+                'NDEBUG',
+                'NVALGRIND'
+            ],
+            CXXFLAGS = [
+                '-fno-rtti',
+                '-fno-threadsafe-statics',
+                '-fvisibility-inlines-hidden'
+            ],
+            LINKFLAGS = [
+                '-pthread',
+                '-Wl,--gc-sections'
+            ],
+        ),
+        'FilterOut' : dict(
+        ),
+        'Replace' : dict(
+             FLOCK_LDMODULE = ['flock', '$TOP_BUILDDIR/linker.lock', '$LDMODULE'],
+             FLOCK_LINK = ['flock', '$TOP_BUILDDIR/linker.lock', '$LINK'],
+             FLOCK_SHLINK = ['flock', '$TOP_BUILDDIR/linker.lock', '$SHLINK'],
+             IMPLICIT_COMMAND_DEPENDENCIES = '0',
+             LDMODULECOM = [['$FLOCK_LDMODULE',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$LDMODULEFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+             LIBPATH = ['$LIB_DIR'],
+             LINKCOM = [['$FLOCK_LINK',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$LINKFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+             SHLINKCOM = [['$FLOCK_SHLINK',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$SHLINKFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+        ),
+        'ImportExternal' : [
+             'AS',
+             'CC',
+             'CXX',
+             'LINK',
+        ],
+        'PropagateExternal' : [
+             'AS',
+             'CC',
+             'CCACHE_DIR',
+             'CXX',
+             'DISTCC_DIR',
+             'DISTCC_HOSTS',
+             'HOME',
+             'INCLUDE_SERVER_ARGS',
+             'INCLUDE_SERVER_PORT',
+             'LINK',
+             'CHROME_BUILD_TYPE',
+             'CHROMIUM_BUILD',
+             'OFFICIAL_BUILD',
+        ],
+    },
+}
+
+config = configurations[env['CONFIG_NAME']]
+env.Append(**config['Append'])
+env.FilterOut(**config['FilterOut'])
+env.Replace(**config['Replace'])
+
+# Scons forces -fPIC for SHCCFLAGS on some platforms.
+# Disable that so we can control it from cflags in gyp.
+# Note that Scons itself is inconsistent with its -fPIC
+# setting. SHCCFLAGS forces -fPIC, and SHCFLAGS does not.
+# This will make SHCCFLAGS consistent with SHCFLAGS.
+env['SHCCFLAGS'] = ['$CCFLAGS']
+
+for _var in config['ImportExternal']:
+  if _var in ARGUMENTS:
+    env[_var] = ARGUMENTS[_var]
+  elif _var in os.environ:
+    env[_var] = os.environ[_var]
+for _var in config['PropagateExternal']:
+  if _var in ARGUMENTS:
+    env[_var] = ARGUMENTS[_var]
+  elif _var in os.environ:
+    env['ENV'][_var] = os.environ[_var]
+
+env['ENV']['LD_LIBRARY_PATH'] = env.subst('$LIB_DIR')
+
+if ARGUMENTS.get('COVERAGE') not in (None, '0'):
+  env.AppendUnique(
+            CCFLAGS = [
+                '-fprofile-arcs',
+                '-ftest-coverage'
+            ],
+            LINKFLAGS = [
+                '-fprofile-arcs'
+            ],
+  )
+
+if ARGUMENTS.get('PROFILE') not in (None, '0'):
+  env.AppendUnique(
+            CCFLAGS = [
+                '-pg',
+                '-g'
+            ],
+            LINKFLAGS = [
+                '-pg'
+            ],
+  )
+
+if ARGUMENTS.get('SYMBOLS') not in (None, '0'):
+  env.AppendUnique(
+            CCFLAGS = [
+                '-g'
+            ],
+  )
+
+input_files = [
+    'base/net_resources.grd',
+]
+
+target_files = []
+prerequisites = []
+
+grit_additional_inputs = ['$SRC_DIR/net/../tools/grit/grit.py']
+grit_outputs = ['${SHARED_INTERMEDIATE_DIR}/net/grit/${SOURCE.filebase}.h',
+ '${SHARED_INTERMEDIATE_DIR}/net/${SOURCE.filebase}.rc',
+ '${SHARED_INTERMEDIATE_DIR}/net/${SOURCE.filebase}.pak']
+def grit_emitter(target, source, env):
+  return (grit_outputs, source + grit_additional_inputs)
+if GetOption('verbose'):
+  grit_action = Action([['cd',
+ '$SRC_DIR/net',
+ '&&',
+ 'python',
+ '../tools/grit/grit.py',
+ '-i',
+ '${SOURCE.abspath}',
+ 'build',
+ '-o',
+ '${SHARED_INTERMEDIATE_DIR}/net']])
+else:
+  grit_action = Action([['cd',
+ '$SRC_DIR/net',
+ '&&',
+ 'python',
+ '../tools/grit/grit.py',
+ '-i',
+ '${SOURCE.abspath}',
+ 'build',
+ '-o',
+ '${SHARED_INTERMEDIATE_DIR}/net']], 'Generating resources from ${SOURCE.abspath}')
+env['BUILDERS']['grit'] = Builder(action=grit_action,
+                                      emitter=grit_emitter)
+
+_outputs = []
+_processed_input_files = []
+for infile in input_files:
+  if (type(infile) == type('')
+      and not os.path.isabs(infile)
+      and not infile[0] == '$'):
+    infile = '$SRC_DIR/net/' + infile
+  if str(infile).endswith('.grd'):
+    _generated = env.grit(infile)
+    env.Precious(_generated)
+    _outputs.append(_generated)
+    _processed_input_files.append(infile)
+  else:
+    _processed_input_files.append(infile)
+prerequisites.extend(_outputs)
+input_files = _processed_input_files
+
+target_files.extend(input_files)
+
+gyp_target = env.Alias('net_resources', target_files)
+env.Requires(gyp_target, prerequisites)
+Return("gyp_target")

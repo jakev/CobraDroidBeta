@@ -1,0 +1,27 @@
+// ***************************************************************************
+// *
+// * Copyright (C) 2009 International Business Machines
+// * Corporation and others.  All Rights Reserved.
+// * Tool: com.ibm.icu.dev.tool.cldr.LDML2ICUConverter.java
+// * Source File:<path>/common/main/km.xml
+// *
+// ***************************************************************************
+/**
+ *  ICU <specials> source: <path>/xml/main/km.xml
+ *  Chrome Note: This locale data is abridged to contain categories
+ *  actually used by Chrome.
+ */
+km{
+    AuxExemplarCharacters{"[\u17B4 \u17B5\u200B ឝ ឞ]"}
+    ExemplarCharacters{
+        "[\u17CE \u17CF \u17D1 \u17D0 ៈ \u17CB \u17C9 \u17CA \u17CD \u17CC ក-រ ឫ ឬ ល "
+        "ឭ ឮ វ ស-អ {អា} ឥ-ឧ {ឧក} ឪ ឩ ឯ-ឳ ា-ះ \u17D2]"
+    }
+    Languages{
+        km{"ភាសាខ្មែរ"}
+    }
+    LocaleScript{
+        "Khmr",
+    }
+    Version{"1.77"}
+}

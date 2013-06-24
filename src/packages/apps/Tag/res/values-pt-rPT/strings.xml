@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2010 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="5128188288358721369">"Etiquetas"</string>
+    <string name="title_scanned_tag" msgid="4347835407095551450">"Nova etiqueta recolhida"</string>
+    <string name="title_existing_tag" msgid="5656560272594190244">"Etiqueta"</string>
+    <string name="tab_tags" msgid="3254131516215269385">"Etiquetas"</string>
+    <string name="tab_starred" msgid="3892615665321783044">"Marcado com estrela"</string>
+    <string name="tab_my_tag" msgid="4194581094362833242">"A minha etiqueta"</string>
+    <string name="tag_unknown" msgid="2897956823877728783">"Tipo de etiqueta desconhecido"</string>
+    <string name="tag_empty" msgid="3726529819932095782">"Etiqueta vazia"</string>
+    <string name="button_delete" msgid="8636971153075546776">"Eliminar"</string>
+    <string name="button_done" msgid="7048822758098308158">"Concluído"</string>
+    <string name="button_save" msgid="1396693475082322626">"Guardar"</string>
+    <string name="button_cancel" msgid="8094182910311905776">"Cancelar"</string>
+    <string name="cancel_help_text" msgid="2582335582642459522">"Para ignorar a adição desta etiqueta à sua colecção, toque em Concluído"</string>
+    <string name="action_text" msgid="577417996159152923">"Enviar SMS para <xliff:g id="PHONE_NUMBER">%s</xliff:g>"</string>
+    <string name="action_call" msgid="6226253647953184035">"Ligar a <xliff:g id="PHONE_NUMBER">%s</xliff:g>"</string>
+    <string name="turn_on_my_tag" msgid="6584695906051991524">"Partilhar a minha etiqueta"</string>
+    <string name="edit_tag" msgid="3708659122033447892">"Editar etiqueta"</string>
+    <string name="turn_on_my_tag_subtitle" msgid="4174686056239752759">"Permitir a outras pessoas ler a minha etiqueta"</string>
+    <string name="add_content" msgid="6592975981339055673">"Mais…"</string>
+    <string name="tag_title" msgid="4734199420853998617">"Título"</string>
+    <string name="tag_text" msgid="522896767632155048">"Texto"</string>
+    <string name="select_type" msgid="1845302736320827995">"Seleccionar tipo a adicionar"</string>
+    <string name="photo" msgid="986413518082114481">"Fotografia"</string>
+    <string name="bad_photo" msgid="1601260684495341633">"Não foi possível abrir a imagem."</string>
+    <string name="url" msgid="5939765162489949437">"URL"</string>
+    <string name="contact" msgid="8810195884019228695">"Contacto"</string>
+    <string name="location" msgid="2476366526591580807">"Localização"</string>
+    <string name="empty_tag_prompt" msgid="4206394383309956030">"Esta etiqueta está vazia."</string>
+    <string name="empty_tag_instructions" msgid="9156733538909958916">"Toque em "<b>"Escrever etiqueta"</b>" para adicionar conteúdo."</string>
+    <string name="write" msgid="4957259770248890625">"Escrever etiqueta"</string>
+    <string name="cancel" msgid="2168193471147260328">"Cancelar"</string>
+    <string name="menu_help" msgid="2340550693525288105">"Ajuda"</string>
+    <string name="import_vcard" msgid="5104299047930666528">"Importar ^1"</string>
+    <string name="mime_display_name" msgid="5926357152623764485">"Dados da etiqueta NFC"</string>
+    <string name="dialog_title_nfc_off" msgid="6945643404976801203">"NFC desactivado"</string>
+    <string name="dialog_text_nfc_off" msgid="6323019332983777990">"Tem de activar o NFC para ler etiquetas."</string>
+    <string name="button_settings" msgid="6909066985958159920">"Definições"</string>
+    <string name="empty_list" msgid="1306390399412856676">"Não efectuou a leitura de nenhuma etiqueta."</string>
+    <string name="empty_list_starred" msgid="7185947321271594216">"Não tem etiquetas marcadas com estrela."</string>
+    <string name="button_more_info" msgid="574247138099633767">"Mais informações"</string>
+    <string name="vcard_title" msgid="7122634780732426007">"Informações de contacto para ^1"</string>
+    <string name="next" msgid="8672447228208567606">"Seguinte"</string>
+    <string name="back" msgid="7389918385345281227">"Anterior"</string>
+    <string name="close" msgid="5521003720382005075">"Fechar"</string>
+    <string name="intro_title" msgid="2798106838231744219">"Acerca das etiquetas"</string>
+    <string name="intro_text_about" msgid="1366913102380816468">"As etiquetas servem para organizar e partilhar etiquetas NFC (Near Field Communication)."</string>
+    <string name="intro_text_usage" msgid="2343260114638598627">"É possível analisar uma etiqueta ligando o telefone e colocando-o junto à etiqueta."</string>
+    <string name="intro_text_contents" msgid="1973327615218723220">"As etiquetas NFC podem incluir texto, URL, imagens e outros tipos de informação."</string>
+    <string name="intro_text_more" msgid="4127006088499721149">"Para analisar ou partilhar etiquetas, deve ter o NFC activado (em Definições, sob Redes sem fios)."</string>
+    <string name="intro_text_more2" msgid="28835616891750572">"Para obter mais informações, prima Menu e toque em Ajuda em qualquer ecrã de Etiquetas."</string>
+    <string name="tag_deleted" msgid="5411251725532471624">"Etiqueta eliminada"</string>
+    <string name="add_tag" msgid="703494598879855113">"Adicionar nova etiqueta"</string>
+    <string name="choose_my_tag" msgid="4208730132705026130">"Escolher uma etiqueta a partilhar"</string>
+    <string name="active_tag" msgid="7417732109196094058">"Etiqueta activa"</string>
+    <string name="manage_my_tags" msgid="3616349610711109286">"Gerir as minhas etiquetas"</string>
+    <string name="menu_delete" msgid="8834253717174232653">"Eliminar etiqueta"</string>
+    <string name="menu_edit" msgid="2163829689000692138">"Editar etiqueta"</string>
+    <string name="menu_set_as_active" msgid="6637492981297642733">"Definir como etiqueta activa"</string>
+    <string name="no_tag_selected" msgid="127078607162539962">"Não tem uma etiqueta para partilhar."</string>
+    <string name="no_tags_created" msgid="5963013948308289234">"Não tem etiquetas criadas."</string>
+</resources>

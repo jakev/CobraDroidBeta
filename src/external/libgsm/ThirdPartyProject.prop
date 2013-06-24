@@ -1,0 +1,8 @@
+# Copyright 2010 Google Inc. All Rights Reserved.
+#Thu Sep 23 02:46:21 CST 2010
+currentVersion=1.0.13
+version=1.0.13
+isNative=true
+name=libgsm
+keywords=libgsm
+onDevice=true

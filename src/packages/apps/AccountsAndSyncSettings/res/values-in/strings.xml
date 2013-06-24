@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/*
+ * Copyright (C) 2007 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_label" msgid="3706018265751197270">"Setelan Akun dan Sinkronisasi"</string>
+    <string name="sync_settings" msgid="8707056705985552604">"Setelan sinkronisasi &amp; akun"</string>
+    <string name="sync_too_many_deletes" msgid="1621369057980827097">"Penghapusan melebihi batas"</string>
+    <string name="background_data" msgid="1103557117473896066">"Data latar belakang"</string>
+    <string name="background_data_summary" msgid="9048259510387973822">"Aplikasi dapat menyinkronkan, mengirimkan, dan menerima data kapan pun"</string>
+    <string name="background_data_dialog_title" msgid="6303755495467986079">"Perhatian"</string>
+    <string name="background_data_dialog_message" msgid="8417297954700022363">"Menonaktifkan data latar belakang dapat memperpanjang usia pakai baterai dan mengurangi penggunaan data. Sebagian aplikasi mungkin masih menggunakan sambungan data latar belakang."</string>
+    <string name="sync_automatically" msgid="4694735102757960100">"Sinkronisasi otomatis"</string>
+    <string name="sync_automatically_summary" msgid="4598895616781542745">"Aplikasi menyinkronkan data secara otomatis"</string>
+    <string name="settings_backup" msgid="6114299464740014762">"Setelan cadangan"</string>
+    <string name="settings_backup_summary" msgid="1787552172618610178">"Cadangkan setelan saya"</string>
+    <string name="sync_menu_sync_now" msgid="5796024841315572404">"Sinkronisasi sekarang"</string>
+    <string name="sync_menu_sync_cancel" msgid="1005480041232010062">"Batalkan sinkronisasi"</string>
+    <string name="sync_one_time_sync" msgid="3274364877518422827">"Sentuh untuk menyinkronkan sekarang<xliff:g id="LAST_SYNC_TIME">
+%1$s</xliff:g>"</string>
+    <string name="sync_gmail" msgid="5806053858668452000">"Gmail"</string>
+    <string name="sync_calendar" msgid="1796292773734071897">"Kalender"</string>
+    <string name="sync_contacts" msgid="2035690905925565660">"Kenalan"</string>
+    <string name="sync_too_many_deletes_desc" msgid="699495654174066067">"Terdapat <xliff:g id="NUMBER_OF_DELETED_ITEMS">%1$d</xliff:g> item yang dihapus untuk <xliff:g id="TYPE_OF_SYNC">%2$s</xliff:g>, akun <xliff:g id="ACCOUNT_NAME">%3$s</xliff:g>. Apakah yang ingin Anda lakukan?"</string>
+    <string name="sync_really_delete" msgid="5456355204562588976">"Hapus item."</string>
+    <string name="sync_undo_deletes" msgid="8695514459839593307">"Urung penghapusan."</string>
+    <string name="sync_do_nothing" msgid="5798755982392201673">"Jangan lakukan apa pun untuk saat ini."</string>
+    <string name="sync_is_failing" msgid="5230237058552433773">"Saat ini sinkronisasi mengalami masalah. Sinkronisasi akan segera kembali."</string>
+    <string name="sync_plug" msgid="7020432439004167162"><font fgcolor="#ffffffff">"Selamat datang di Google Talk!"</font>\n" Pendekatan Google untuk menyinkronkan data guna membolehkan akses ke kenalan, janji temu, dan lain-lain dari mana saja."</string>
+    <string name="header_application_sync_settings" msgid="5263025067167527890">"Setelan sinkronisasi aplikasi"</string>
+    <string name="header_manage_accounts" msgid="381956296995298770">"Mengelola akun"</string>
+    <string name="header_general_sync_settings" msgid="1598537524696692308">"Setelan sinkronisasi umum"</string>
+    <string name="sync_enabled" msgid="913018877443997502">"Sinkronisasi HIDUP"</string>
+    <string name="sync_disabled" msgid="185731301298967302">"Sinkronisasi MATI"</string>
+    <string name="sync_error" msgid="681431702824599812">"Galat sinkronisasi"</string>
+    <string name="add_account_label" msgid="2035321485672826779">"Tambahkan akun"</string>
+    <string name="header_data_and_synchronization" msgid="6286257845276834071">"Data &amp; sinkronisasi"</string>
+    <string name="preference_change_password_title" msgid="6468827554159468315">"Ubah sandi"</string>
+    <string name="header_account_settings" msgid="4950809499418403792">"Setelan akun"</string>
+    <string name="remove_account_label" msgid="5624712684599197863">"Hapus akun"</string>
+    <string name="header_add_an_account" msgid="2198078922829535425">"Tambah akun"</string>
+    <string name="finish_button_label" msgid="6121560986057356757">"Selesai"</string>
+    <string name="really_remove_account_title" msgid="8808121039511188784">"Hapus akun"</string>
+    <string name="really_remove_account_message" msgid="3293445755620109578">"Apakah Anda yakin ingin menghapus akun ini? Menghapusnya juga akan menghapus semua pesan, kenalan, dan data lainnya dari ponsel. "\n"Lanjutkan?"</string>
+    <string name="remove_account_failed" msgid="8178924513521241001">"Akun ini diperlukan oleh sebagian aplikasi. Anda hanya dapat menghapusnya dengan menyetel ulang ponsel ke bawaan pabrik (yang menghapus data pribadi Anda). Anda melakukannya pada aplikasi Setelan, berdasarkan Privasi."</string>
+    <string name="provider_label" msgid="6191617139291321517">"Langganan push"</string>
+    <string name="sync_item_title" msgid="7984962124867021854">"Sinkron <xliff:g id="AUTHORITY">%s</xliff:g>"</string>
+    <string name="cant_sync_dialog_title" msgid="3016197392261471761">"Tidak dapat menyinkronkan secara manual"</string>
+    <string name="cant_sync_dialog_message" msgid="7200115394296632300">"Saat ini sinkronisasi untuk item ini dinonaktifkan. Untuk mengubah preferensi Anda, hidupkan sinkronisasi otomatis dan data latar belakang untuk sementara."</string>
+</resources>

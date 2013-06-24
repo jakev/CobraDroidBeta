@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2010 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="5128188288358721369">"Značky"</string>
+    <string name="title_scanned_tag" msgid="4347835407095551450">"Bola pridaná nová značka"</string>
+    <string name="title_existing_tag" msgid="5656560272594190244">"Značka"</string>
+    <string name="tab_tags" msgid="3254131516215269385">"Značky"</string>
+    <string name="tab_starred" msgid="3892615665321783044">"Označené hviezdičkou"</string>
+    <string name="tab_my_tag" msgid="4194581094362833242">"Moja značka"</string>
+    <string name="tag_unknown" msgid="2897956823877728783">"Neznámy typ značky"</string>
+    <string name="tag_empty" msgid="3726529819932095782">"Prázdna značka"</string>
+    <string name="button_delete" msgid="8636971153075546776">"Odstrániť"</string>
+    <string name="button_done" msgid="7048822758098308158">"Hotovo"</string>
+    <string name="button_save" msgid="1396693475082322626">"Uložiť"</string>
+    <string name="button_cancel" msgid="8094182910311905776">"Zrušiť"</string>
+    <string name="cancel_help_text" msgid="2582335582642459522">"Ak chcete preskočiť pridanie tejto značky do svojej zbierky, dotknite sa tlačidla Hotovo"</string>
+    <string name="action_text" msgid="577417996159152923">"Poslať správu kontaktu <xliff:g id="PHONE_NUMBER">%s</xliff:g>"</string>
+    <string name="action_call" msgid="6226253647953184035">"Volať kontakt <xliff:g id="PHONE_NUMBER">%s</xliff:g>"</string>
+    <string name="turn_on_my_tag" msgid="6584695906051991524">"Zdieľať značku"</string>
+    <string name="edit_tag" msgid="3708659122033447892">"Upraviť značku"</string>
+    <string name="turn_on_my_tag_subtitle" msgid="4174686056239752759">"Povoliť ostatným používateľom čítať moju značku"</string>
+    <string name="add_content" msgid="6592975981339055673">"Viac…"</string>
+    <string name="tag_title" msgid="4734199420853998617">"Názov"</string>
+    <string name="tag_text" msgid="522896767632155048">"Text"</string>
+    <string name="select_type" msgid="1845302736320827995">"Vyberte typ, ktorý chcete pridať"</string>
+    <string name="photo" msgid="986413518082114481">"Fotografia"</string>
+    <string name="bad_photo" msgid="1601260684495341633">"Súbor nie je možné otvoriť."</string>
+    <string name="url" msgid="5939765162489949437">"Adresa URL"</string>
+    <string name="contact" msgid="8810195884019228695">"Kontakt"</string>
+    <string name="location" msgid="2476366526591580807">"Poloha"</string>
+    <string name="empty_tag_prompt" msgid="4206394383309956030">"Táto značka je prázdna."</string>
+    <string name="empty_tag_instructions" msgid="9156733538909958916">"Ak chcete pridať obsah, dotknite sa možnosti "<b>"Zapísať značku"</b>"."</string>
+    <string name="write" msgid="4957259770248890625">"Zapísať značku"</string>
+    <string name="cancel" msgid="2168193471147260328">"Zrušiť"</string>
+    <string name="menu_help" msgid="2340550693525288105">"Pomocník"</string>
+    <string name="import_vcard" msgid="5104299047930666528">"Importovať kontakt ^1"</string>
+    <string name="mime_display_name" msgid="5926357152623764485">"Údaje zo značky NFC"</string>
+    <string name="dialog_title_nfc_off" msgid="6945643404976801203">"Funkcia NFC je vypnutá"</string>
+    <string name="dialog_text_nfc_off" msgid="6323019332983777990">"Ak chcete skenovať značky, musíte zapnúť funkciu NFC."</string>
+    <string name="button_settings" msgid="6909066985958159920">"Nastavenia"</string>
+    <string name="empty_list" msgid="1306390399412856676">"Nenaskenovali ste žiadne značky."</string>
+    <string name="empty_list_starred" msgid="7185947321271594216">"Nemáte žiadne značky označené hviezdičkou."</string>
+    <string name="button_more_info" msgid="574247138099633767">"Ďalšie informácie"</string>
+    <string name="vcard_title" msgid="7122634780732426007">"Kontaktné informácie pre ^1"</string>
+    <string name="next" msgid="8672447228208567606">"Ďalej"</string>
+    <string name="back" msgid="7389918385345281227">"Späť"</string>
+    <string name="close" msgid="5521003720382005075">"Zavrieť"</string>
+    <string name="intro_title" msgid="2798106838231744219">"Informácie o Značkách"</string>
+    <string name="intro_text_about" msgid="1366913102380816468">"Značky slúžia na usporiadanie a zdieľanie značiek NFC (komunikácia na veľmi krátku vzdialenosť)."</string>
+    <string name="intro_text_usage" msgid="2343260114638598627">"Ak chcete načítať značku, zapnite telefón a položte ho vedľa značky."</string>
+    <string name="intro_text_contents" msgid="1973327615218723220">"Značky NFC môžu obsahovať text, adresy URL, obrázky a ďalšie druhy informácií."</string>
+    <string name="intro_text_more" msgid="4127006088499721149">"Pri skenovaní či zdieľaní značiek musíte mať zapnutú funkciu NFC (Nastavenia &gt; Bezdrôtové pripojenie a siete)."</string>
+    <string name="intro_text_more2" msgid="28835616891750572">"Viac informácií získate stlačením tlačidla Menu a dotykom na možnosť Pomocník na ktorejkoľvek obrazovke Značiek."</string>
+    <string name="tag_deleted" msgid="5411251725532471624">"Značka bola odstránená"</string>
+    <string name="add_tag" msgid="703494598879855113">"Pridať novú značku"</string>
+    <string name="choose_my_tag" msgid="4208730132705026130">"Vyberte značku na zdieľanie"</string>
+    <string name="active_tag" msgid="7417732109196094058">"Aktívna značka"</string>
+    <string name="manage_my_tags" msgid="3616349610711109286">"Správa značiek"</string>
+    <string name="menu_delete" msgid="8834253717174232653">"Odstrániť značku"</string>
+    <string name="menu_edit" msgid="2163829689000692138">"Upraviť značku"</string>
+    <string name="menu_set_as_active" msgid="6637492981297642733">"Nastaviť ako aktívnu značku"</string>
+    <string name="no_tag_selected" msgid="127078607162539962">"Nevybrali ste žiadny štítok na zdieľanie."</string>
+    <string name="no_tags_created" msgid="5963013948308289234">"Nevytvorili ste žiadne štítky."</string>
+</resources>

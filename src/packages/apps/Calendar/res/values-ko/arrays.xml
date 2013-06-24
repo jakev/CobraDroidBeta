@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string-array name="reminder_minutes_labels">
+    <item msgid="9134196715565887256">"1분"</item>
+    <item msgid="7350720278790900276">"5분"</item>
+    <item msgid="559329025736829220">"10분"</item>
+    <item msgid="4523534383318084162">"15분"</item>
+    <item msgid="7153990736543668084">"20분"</item>
+    <item msgid="2030352540011653596">"25분"</item>
+    <item msgid="7307245847296317340">"30분"</item>
+    <item msgid="5174730509775969611">"45분"</item>
+    <item msgid="1920425054049263702">"1시간"</item>
+    <item msgid="6972139375792068825">"2시간"</item>
+    <item msgid="5643568168685093982">"3시간"</item>
+    <item msgid="2179302053572039553">"12시간"</item>
+    <item msgid="314399712609472931">"24시간"</item>
+    <item msgid="6908283876728494719">"2일"</item>
+    <item msgid="3390146235648970198">"1주"</item>
+  </string-array>
+  <string-array name="timezone_labels">
+    <item msgid="6833649526258274889">"마셜 제도"</item>
+    <item msgid="7176569939440505575">"미드웨이 제도"</item>
+    <item msgid="5000628410717488070">"하와이"</item>
+    <item msgid="3809977082338992040">"알래스카"</item>
+    <item msgid="1206600898319778734">"태평양 표준시"</item>
+    <item msgid="4251553449779733536">"티후아나"</item>
+    <item msgid="4796372144693551811">"애리조나"</item>
+    <item msgid="4589419122570218444">"치와와"</item>
+    <item msgid="1653398220457872326">"산지 표준시"</item>
+    <item msgid="229005026661478023">"중앙 아메리카"</item>
+    <item msgid="1545268116831476742">"중부 표준시"</item>
+    <item msgid="9135129204936732090">"멕시코시티"</item>
+    <item msgid="3703110560723049255">"서스캐처원"</item>
+    <item msgid="5458958644945369505">"보고타"</item>
+    <item msgid="355450740949670294">"동부 표준시"</item>
+    <item msgid="5786717434693228701">"베네수엘라"</item>
+    <item msgid="165048018515834952">"대서양 표준시"</item>
+    <item msgid="5398045998666341917">"마나우스"</item>
+    <item msgid="8167627904199889197">"산티아고"</item>
+    <item msgid="2793058279461039833">"뉴펀들랜드"</item>
+    <item msgid="5247265991408608312">"브라질리아"</item>
+    <item msgid="7862856378699038344">"부에노스아이레스"</item>
+    <item msgid="7307349572838946177">"그린란드"</item>
+    <item msgid="2287491943472924232">"몬테비데오"</item>
+    <item msgid="6337125611768317903">"중부-대서양"</item>
+    <item msgid="1083966762112959704">"아조레스"</item>
+    <item msgid="3208435599095023369">"카보베르데 제도"</item>
+    <item msgid="8380333624463354109">"카사블랑카"</item>
+    <item msgid="8737442113188999866">"런던, 더블린"</item>
+    <item msgid="72424340270348400">"암스테르담/베를린"</item>
+    <item msgid="3665952257850630547">"베오그라드"</item>
+    <item msgid="3284290759549286849">"브뤼셀"</item>
+    <item msgid="3112943938015033049">"사라예보"</item>
+    <item msgid="2184425710639965762">"파리"</item>
+    <item msgid="5997630882187580225">"빈트후크"</item>
+    <item msgid="3828800493609994208">"서아프리카 시간대"</item>
+    <item msgid="7527935722014187591">"암만, 요르단"</item>
+    <item msgid="672509109295227133">"아테네, 이스탄불"</item>
+    <item msgid="1835470340349221646">"베이루트, 레바논"</item>
+    <item msgid="9006223109403693650">"카이로"</item>
+    <item msgid="2877875673636361825">"헬싱키"</item>
+    <item msgid="4528124308590807049">"예루살렘"</item>
+    <item msgid="7823856457885290195">"민스크"</item>
+    <item msgid="8650995074282357197">"하라레"</item>
+    <item msgid="209523815326871285">"바그다드"</item>
+    <item msgid="8077211460729251609">"모스크바"</item>
+    <item msgid="6103383184232804522">"쿠웨이트"</item>
+    <item msgid="8581935265080466099">"나이로비"</item>
+    <item msgid="1531618843539764728">"테헤란"</item>
+    <item msgid="141548505188106312">"바쿠"</item>
+    <item msgid="5974315340250149692">"트빌리시"</item>
+    <item msgid="3344801680659888795">"예레반"</item>
+    <item msgid="2537944335416132075">"두바이"</item>
+    <item msgid="5630432498109110949">"카불"</item>
+    <item msgid="2274762525650993846">"이슬라마바드, 카라치"</item>
+    <item msgid="272153171103339242">"우랄스크"</item>
+    <item msgid="4757644551253886090">"에카테린부르크"</item>
+    <item msgid="3036512479614493957">"콜카타"</item>
+    <item msgid="4190271241277312277">"스리랑카"</item>
+    <item msgid="4489139826358657866">"카트만두"</item>
+    <item msgid="1195461607876034232">"아스타나"</item>
+    <item msgid="8777509327730950228">"양곤"</item>
+    <item msgid="3838899720161825998">"크라스노야르스크"</item>
+    <item msgid="6495532062164690437">"방콕"</item>
+    <item msgid="4910549870048384487">"베이징"</item>
+    <item msgid="7174954011332328153">"홍콩"</item>
+    <item msgid="415034182139280334">"이르쿠츠크"</item>
+    <item msgid="3407263784503834649">"쿠알라룸푸르"</item>
+    <item msgid="6547945295249807755">"퍼스"</item>
+    <item msgid="4571776847411430193">"타이베이"</item>
+    <item msgid="3043691515163887690">"서울"</item>
+    <item msgid="6369124969606372122">"도쿄, 오사카"</item>
+    <item msgid="8317842783685169193">"야쿠츠크"</item>
+    <item msgid="6993206457323990990">"애들레이드"</item>
+    <item msgid="2431970257749452312">"다윈"</item>
+    <item msgid="2709489188606506801">"브리즈번"</item>
+    <item msgid="6832511138206913044">"호바트"</item>
+    <item msgid="6933429790996727761">"시드니, 캔버라"</item>
+    <item msgid="4546625974877459074">"블라디보스토크"</item>
+    <item msgid="7421491250467489614">"괌"</item>
+    <item msgid="3450367738093440984">"마가단"</item>
+    <item msgid="5046540868552082971">"오클랜드"</item>
+    <item msgid="481903191189494072">"피지"</item>
+    <item msgid="1926932394586102998">"통가"</item>
+  </string-array>
+  <string-array name="preferences_default_reminder_labels">
+    <item msgid="7495163916242649023">"없음"</item>
+    <item msgid="3377199512833209480">"1분"</item>
+    <item msgid="5023205715881387516">"5분"</item>
+    <item msgid="7720870540593319107">"10분"</item>
+    <item msgid="1653841700859180907">"15분"</item>
+    <item msgid="3741629746313107482">"20분"</item>
+    <item msgid="5357458446224446398">"25분"</item>
+    <item msgid="403143749684280703">"30분"</item>
+    <item msgid="5611574008997362948">"45분"</item>
+    <item msgid="30462793717552">"1시간"</item>
+    <item msgid="119808229352802480">"2시간"</item>
+    <item msgid="7456742278252094745">"3시간"</item>
+    <item msgid="5263928189935026559">"12시간"</item>
+    <item msgid="6451763179435252852">"24시간"</item>
+    <item msgid="966666856467721784">"2일"</item>
+    <item msgid="5840973497558794742">"1주"</item>
+  </string-array>
+  <string-array name="preferences_alert_type_labels">
+    <item msgid="2724242028978664229">"알리미 사용"</item>
+    <item msgid="8723674378160518790">"상태 표시줄 알림"</item>
+    <item msgid="8433736231022186661">"사용 안함"</item>
+  </string-array>
+  <string-array name="availability">
+    <item msgid="454869065893453189">"바쁨"</item>
+    <item msgid="6228387173725732140">"한가함"</item>
+  </string-array>
+  <string-array name="visibility">
+    <item msgid="3035788428581513163">"기본값"</item>
+    <item msgid="5200216103966973369">"비공개"</item>
+    <item msgid="9182342638433672664">"공개"</item>
+  </string-array>
+  <string-array name="ordinal_labels">
+    <item msgid="2693927956303125332">"처음"</item>
+    <item msgid="5631923029483854900">"2번째"</item>
+    <item msgid="148935502975250973">"3번째"</item>
+    <item msgid="5124200797326669172">"4번째"</item>
+    <item msgid="7564374178324652137">"마지막"</item>
+  </string-array>
+  <string-array name="response_labels1">
+    <item msgid="3654955385120106241">"(응답 안함)"</item>
+    <item msgid="3724434080904437698">"예"</item>
+    <item msgid="8854145743148992583">"미정"</item>
+    <item msgid="6174292185978948873">"아니요"</item>
+  </string-array>
+  <string-array name="response_labels2">
+    <item msgid="5967437218994333578">"예"</item>
+    <item msgid="1254269034445160199">"미정"</item>
+    <item msgid="1099407454885268744">"아니요"</item>
+  </string-array>
+  <string-array name="delete_repeating_labels">
+    <item msgid="4208432367651646938">"이 일정만"</item>
+    <item msgid="8626755531271570950">"이번 및 향후 일정"</item>
+    <item msgid="7833229563617435430">"모든 일정"</item>
+  </string-array>
+  <string-array name="delete_repeating_labels_no_selected">
+    <item msgid="1341910309321756150">"이번 및 향후 일정"</item>
+    <item msgid="6315440193748139854">"모든 일정"</item>
+  </string-array>
+  <string-array name="change_response_labels">
+    <item msgid="2012815396992847028">"이번 일정만"</item>
+    <item msgid="140670561403965380">"모든 반복 일정"</item>
+  </string-array>
+</resources>

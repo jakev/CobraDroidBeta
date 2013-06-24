@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/2/trunk/include/libiptc
+END
+libip6tc.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/include/libiptc/libip6tc.h
+END
+libxtc.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2/trunk/include/libiptc/libxtc.h
+END
+libiptc.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/include/libiptc/libiptc.h
+END
+ipt_kernel_headers.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2/trunk/include/libiptc/ipt_kernel_headers.h
+END

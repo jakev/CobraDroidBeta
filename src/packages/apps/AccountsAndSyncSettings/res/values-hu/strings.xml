@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/*
+ * Copyright (C) 2007 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_label" msgid="3706018265751197270">"Fiók- és szinkronizálási beállítások"</string>
+    <string name="sync_settings" msgid="8707056705985552604">"Fiókok és szinkronizálás beállításai"</string>
+    <string name="sync_too_many_deletes" msgid="1621369057980827097">"A szinkronizálás elérte a törlésre vonatkozó korlátot"</string>
+    <string name="background_data" msgid="1103557117473896066">"Háttéradatok"</string>
+    <string name="background_data_summary" msgid="9048259510387973822">"Az alkalmazások bármikor szinkronizálhatnak, küldhetnek és fogadhatnak adatokat"</string>
+    <string name="background_data_dialog_title" msgid="6303755495467986079">"Figyelem"</string>
+    <string name="background_data_dialog_message" msgid="8417297954700022363">"A háttéradatok letiltásával növelheti az akkumulátor élettartamát és csökkentheti az adathasználatot. Egyes alkalmazások azonban továbbra is használhatják a háttérben zajló adatkapcsolatot."</string>
+    <string name="sync_automatically" msgid="4694735102757960100">"Automatikus szinkronizálás"</string>
+    <string name="sync_automatically_summary" msgid="4598895616781542745">"Az alkalmazások automatikusan szinkronizálják az adatokat"</string>
+    <string name="settings_backup" msgid="6114299464740014762">"Biztonsági másolat készítése a beállításokról"</string>
+    <string name="settings_backup_summary" msgid="1787552172618610178">"Biztonsági másolat készítése a beállításaimról"</string>
+    <string name="sync_menu_sync_now" msgid="5796024841315572404">"Szinkronizálás most"</string>
+    <string name="sync_menu_sync_cancel" msgid="1005480041232010062">"Szinkronizálás megszakítása"</string>
+    <string name="sync_one_time_sync" msgid="3274364877518422827">"Érintse meg az azonnali szinkronizáláshoz<xliff:g id="LAST_SYNC_TIME">
+%1$s</xliff:g>"</string>
+    <string name="sync_gmail" msgid="5806053858668452000">"Gmail"</string>
+    <string name="sync_calendar" msgid="1796292773734071897">"Naptár"</string>
+    <string name="sync_contacts" msgid="2035690905925565660">"Címtár"</string>
+    <string name="sync_too_many_deletes_desc" msgid="699495654174066067">"<xliff:g id="NUMBER_OF_DELETED_ITEMS">%1$d</xliff:g> törölt elem van a(z) <xliff:g id="TYPE_OF_SYNC">%2$s</xliff:g> szinkronizálásánál, a(z) <xliff:g id="ACCOUNT_NAME">%3$s</xliff:g> fiókban. Mit kíván tenni?"</string>
+    <string name="sync_really_delete" msgid="5456355204562588976">"Az elemek törlése."</string>
+    <string name="sync_undo_deletes" msgid="8695514459839593307">"Törlés visszavonása."</string>
+    <string name="sync_do_nothing" msgid="5798755982392201673">"Most nem."</string>
+    <string name="sync_is_failing" msgid="5230237058552433773">"A szinkronizálással jelenleg gondok vannak; hamarosan újra működni fog."</string>
+    <string name="sync_plug" msgid="7020432439004167162"><font fgcolor="#ffffffff">"Üdvözli a Google Sync!"</font>" "\n"Az adatok Google-féle szinkronizálása lehetővé teszi, hogy bárhonnan hozzáférjen címtárához, találkozóihoz stb."</string>
+    <string name="header_application_sync_settings" msgid="5263025067167527890">"Alkalmazásszinkronizálási beállítások"</string>
+    <string name="header_manage_accounts" msgid="381956296995298770">"Fiókok kezelése"</string>
+    <string name="header_general_sync_settings" msgid="1598537524696692308">"Általános szinkronizálási beállítások"</string>
+    <string name="sync_enabled" msgid="913018877443997502">"Szinkronizálás bekapcsolva"</string>
+    <string name="sync_disabled" msgid="185731301298967302">"Szinkronizálás kikapcsolva"</string>
+    <string name="sync_error" msgid="681431702824599812">"Szinkronizálási hiba"</string>
+    <string name="add_account_label" msgid="2035321485672826779">"Fiók hozzáadása"</string>
+    <string name="header_data_and_synchronization" msgid="6286257845276834071">"Adatok és szinkronizálás"</string>
+    <string name="preference_change_password_title" msgid="6468827554159468315">"Jelszó módosítása"</string>
+    <string name="header_account_settings" msgid="4950809499418403792">"Fiókbeállítások"</string>
+    <string name="remove_account_label" msgid="5624712684599197863">"Fiók eltávolítása"</string>
+    <string name="header_add_an_account" msgid="2198078922829535425">"Fiók hozzáadása"</string>
+    <string name="finish_button_label" msgid="6121560986057356757">"Befejezés"</string>
+    <string name="really_remove_account_title" msgid="8808121039511188784">"Fiók eltávolítása"</string>
+    <string name="really_remove_account_message" msgid="3293445755620109578">"Valóban törli ezt a fiókot? Ha eltávolítja, akkor vele együtt törli az üzeneteit, a névjegyeit, valamint a telefonon lévő többi vele kapcsolatos adatot. "\n"Folytatja?"</string>
+    <string name="remove_account_failed" msgid="8178924513521241001">"Erre a fiókra szüksége van néhány alkalmazásnak. Csak úgy távolíthatja el, hogy visszaállítja az alapértelmezett gyári beállításokat (amivel törli az összes személyes adatát). Ezt a Beállítások között, az Adatvédelem alatt teheti meg."</string>
+    <string name="provider_label" msgid="6191617139291321517">"Feliratkozások továbbítása"</string>
+    <string name="sync_item_title" msgid="7984962124867021854">"<xliff:g id="AUTHORITY">%s</xliff:g> szinkronizálása"</string>
+    <string name="cant_sync_dialog_title" msgid="3016197392261471761">"Nem lehet kézi vezérléssel szinkronizálni"</string>
+    <string name="cant_sync_dialog_message" msgid="7200115394296632300">"Ennek az elemnek a szinkronizálása jelenleg le van tiltva. Preferenciái módosításához ideiglenesen kapcsolja be a háttéradatokat és az automatikus szinkronizálást."</string>
+</resources>

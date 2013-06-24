@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 28
+/svn/!svn/ver/2/trunk/libipq
+END
+ipq_message_type.3
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/libipq/ipq_message_type.3
+END
+ipq_get_packet.3
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2/trunk/libipq/ipq_get_packet.3
+END
+libipq.c
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/2/trunk/libipq/libipq.c
+END
+libipq.3
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/2/trunk/libipq/libipq.3
+END
+Makefile.in
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/2/trunk/libipq/Makefile.in
+END
+ipq_perror.3
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/2/trunk/libipq/ipq_perror.3
+END
+ipq_read.3
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/2/trunk/libipq/ipq_read.3
+END
+ipq_set_verdict.3
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2/trunk/libipq/ipq_set_verdict.3
+END
+ipq_get_msgerr.3
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2/trunk/libipq/ipq_get_msgerr.3
+END
+ipq_create_handle.3
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/libipq/ipq_create_handle.3
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/2/trunk/libipq/Makefile.am
+END
+ipq_set_mode.3
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/2/trunk/libipq/ipq_set_mode.3
+END
+ipq_errstr.3
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/2/trunk/libipq/ipq_errstr.3
+END
+ipq_destroy_handle.3
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2/trunk/libipq/ipq_destroy_handle.3
+END

@@ -1,0 +1,149 @@
+This directory contains the source code of ICU 4.2.1 for C/C++
+
+1. It was obtained with the following:
+
+    $ svn export --native-eol LF http://source.icu-project.org/repos/icu/icu/tags/release-4-2-1 icu42
+
+2. The following directories were removed because they're not used by Chromium
+   at the moment:
+   as_is
+   packaging
+   source/extra
+   source/sample
+   source/layout
+   source/layoutex
+
+3. Platform header files for Linux and Mac OS X:
+   On Linux and Mac OS X, 'runConfigureICU Linux' and 'runConfigureICU MacOSX'
+   are run to generate source/common/unicode/platform.h.
+   Rename it to 'plinux.h' and 'pmac.h' on Linux and Mac and check them in.
+
+   The Mac 'pmac.h' file needs to have patches/pmac.h.patch applied.
+
+   Change source/common/unicode/umachine.h to refer to plinux.h and pmac.h
+   on Linux and Mac, respetively.
+
+4. To avoid name collisions (two different versions of StringPiece
+   are in Chrome's base and ICU), make the use of 'icu::' namespace
+   qualifier required by setting U_USING_ICU_NAMESPACE to 0 in
+   source/common/unicode/uversion.h
+
+   In addition, the patches for ICU ticket 6935
+   (http://icu-project.org/trac/ticket/6935) are applied.
+
+   The combined patch is patches/namespace.patch.txt
+
+5. The word breaking for Chinese and Japanese were modified to use a word
+   frequency list with the following patch and cjdict.txt. 
+   
+   In addition, the word breaking rule for ASCII and full-width full stop(period)
+   surrounded by letters has been modified to fit our need for segmenting
+   a host name into its components  (e.g. treating 'www.google.com' not as
+   a single word but as 5 words). It's what ICU 3.8 did before UTR 29
+   changed the rule (WB #6, #7).  This also let us pass
+   LayoutTests/css1/text_properties/text_transform.html without rebaselining.
+
+   These patches alone will not work without build-related changes mentioned
+   in #10 below.
+
+   - patches/segmentation.patch.txt :
+       Adds a dictionary (word-frequency)-based word breaking for CJK
+       (Korean is supported in the code, but it does not do anything
+        because we don't have a Korean word-list.)
+
+   - source/data/brkitr/cjdict.txt :
+       Chinese and Japanese word frequency list.
+       See the file for license/copyright notice
+
+   - source/data/brkitr/cc_edict.txt :
+       the list of words derived from CC-Edict.)
+
+   The following two files were removed (because Japanese breaking rules
+   are now the same as that of other langauges).
+
+   - source/data/brkitr/word_ja.txt
+   - source/data/brkitr/ja.txt
+
+   If you want to run ICU tests, you have to copy source/data/brkitr/cjdict.txt
+   to source/test/testdata/cjdict-truncated.txt to pass TestTrieWithValue test.
+
+6. A minor break iterator change
+
+   - patches/brkitr.patch.txt
+
+7. Converter changes : converters.patch.txt
+  - Include what we really need. See source/data/mappings/ucmlocal.txt
+  - Alias and mapping changes : source/data/mappings/convrtrs.txt
+  - Changes several tables and add six new tables, three of which
+    are 'fake' tables for ISO-2022-CN(-Ext).
+  - ucnv2022.c is modified to use 3 'fake' tables added above for
+    ISO-2022-CN(-Ext).
+
+8. Locale changes
+  - patches/locale1.patch.txt :
+      Filipino locale, exemplar character set changes for CJK + 9 Indian
+      locales with minor fixes for Danish, Hungarian, Turkish, Korean
+      and Catalan.
+
+  - patches/locale2.patch.txt :
+      The minimum locale data Chrome needs for 35 languages Chrome is
+      not localized to. Each locale data file has ExemplarCharacters,
+      LocaleScript, layout, and the name of the language for a locale
+      in its native language.
+
+  - patches/locale3.patch.txt : Locale build configuration files
+
+9. Removal of unihan collation tables from data/coll/{zh,ja,ko}.txt
+
+  - patches/unihan.patch.txt:
+    unihan collation tables are never used in Chrome/Webkit, but it takes
+    about 1MB in the uncompressed ICU data file in ICU 4.2.1.
+
+10. Build-related changes
+
+  - patches/wpo.patch
+  - patches/windows.patch
+  - patches/data.build.patch :
+      To remove some data files we don't use and cut down the data size.
+  - patches/data.build.win.patch :
+      Windows-only data build patch. Add a new target DATALIB to makedata.mak
+  - add an empty file (stubdatabuilt.txt) to source/stubdata
+
+11. Pre-built data libraries are checked in. 
+
+    - source/data/in/icudt42l.dat : Built on Linux with all the patches
+      above applied,
+    - icudt42.dll : With icudt42l.dat in place, all the patches applied
+      and header files moved (#11 below), generated in bin/ by building
+      icudt_build project of build/icudt_build.sln on Windows.
+      It's made in bin/ and moved to the top and checked in. 
+    - {mac,linux}/icudt42l_dat.s : Built on Mac and Linux with all the
+      patches above applied and checked in.
+      linux needs the '@' in the preamble changed to '%'. See
+      http://codereview.chromium.org/215026.
+      mac/icudt42l_dat.s needs one line added after it is generated.  A
+      .private_extern directive needs to be added so that the top of the
+      file looks like:
+
+.globl _icudt42_dat
+        .private_extern _icudt42_dat
+        .data
+
+12. The header files were moved as shown below:
+
+   source/common/unicode ==> public/common/unicode
+   source/i18n/unicode   ==> public/i18n/unicode
+
+13. The patch for a memory leak in i18n/timezone.cpp (Windows only):
+    see http://bugs.icu-project.org/trac/ticket/7135
+
+    - patches/tzmemory.patch
+
+14. The patch for a crash in common/putil.c (Linux only):
+    see http://bugs.icu-project.org/trac/ticket/7177
+
+    - patches/linuxtz.patch
+
+15. The patch for Linux locale detection
+
+    - patches/locdet.patch

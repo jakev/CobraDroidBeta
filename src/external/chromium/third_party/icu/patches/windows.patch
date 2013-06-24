@@ -1,0 +1,11 @@
+--- source/data/makedata.mak	2007-08-15 14:42:41.636529000 -0700
++++ source/data/makedata.mak	2008-07-14 19:01:56.086161000 -0700
+@@ -587,7 +587,7 @@
+ # If you modify this, modify winmode.c in pkgdata.
+ "$(ICUTMP)\icudata.res": "$(ICUMISC)\icudata.rc"
+ 	@echo Creating data DLL version information from $**
+-	@rc.exe /i "..\..\..\..\common" /r /fo $@ $**
++	@rc.exe /i "..\..\..\..\common;..\..\..\..\..\public\common" /r /fo $@ $**
+ 
+ # Targets for unames.icu
+ "$(ICUBLD_PKG)\unames.icu": "$(ICUUNIDATA)\*.txt" "$(ICUTOOLS)\gennames\$(CFG)\gennames.exe"

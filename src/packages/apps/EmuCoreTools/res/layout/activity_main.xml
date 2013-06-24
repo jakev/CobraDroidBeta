@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#FFFFFF">
+
+    <Button
+        android:id="@+id/buttonModIDs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/buttonResetAll"
+        android:text="@string/button_mod_dev" />
+
+    <Button
+        android:id="@+id/buttonResetAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:text="@string/button_reload_all" />
+
+    <Button
+        android:id="@+id/buttonPropEditor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/buttonModIDs"
+        android:layout_below="@+id/buttonResetAll"
+        android:text="@string/button_build" />
+
+    <CheckBox
+        android:id="@+id/checkBoxBuild"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/buttonPropEditor"
+        android:text="@string/box_build" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSsl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/checkBoxBuild"
+        android:text="@string/box_ssl" />
+
+    <CheckBox
+        android:id="@+id/checkBoxDevids"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/checkBoxSsl"
+        android:text="@string/box_dev" />
+
+</RelativeLayout>

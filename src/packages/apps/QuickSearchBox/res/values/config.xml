@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+
+  <!-- Names of corpora that are enabled by default in QSB.
+       For external single-source corpora, the corpus name is the component name of the
+       searchable activity. -->
+  <string-array name="default_corpora" translatable="false">
+    <item>web</item>
+    <item>apps</item>
+    <item>com.android.contacts/.SearchResultsActivity</item>
+    <item>com.android.providers.applications/.ApplicationLauncher</item>
+  </string-array>
+
+  <!-- Names of corpora that are not shown in the corpus selector, even if they are
+       enabled in Searchable Items. -->
+  <string-array name="hidden_corpora" translatable="false">
+  </string-array>
+
+  <!-- The component name of the installed apps source used in QSB  -->
+  <string name="installed_apps_component" translatable="false">com.android.providers.applications/.ApplicationLauncher</string>
+
+  <!-- The component name of the browser bookmarks and history source used in QSB  -->
+  <string name="browser_search_component" translatable="false">com.android.browser/.BookmarkSearch</string>
+
+  <!-- The component name of the activity that search intents in the Apps corpus are sent to.
+       If not set, Apps search intents are sent to the Apps suggestion source. -->
+  <string name="apps_search_activity" translatable="false"></string>
+
+  <!-- Number of suggestions slots that are visible above
+      the onscreen keyboard. These slots will be shared among
+      the default sources. -->
+  <integer name="num_suggestions_above_keyboard">4</integer>
+
+</resources>

@@ -1,0 +1,335 @@
+# This file is generated; do not edit.
+
+import os
+
+Import("env")
+
+configurations = {
+    'Debug' : {
+        'Append' : dict(
+            ASFLAGS = [
+                '-32'
+            ],
+            CCFLAGS = [
+                '-Werror',
+                '-pthread',
+                '-m32',
+                '-fno-exceptions',
+                '-Wall',
+                '-march=pentium4',
+                '-msse2',
+                '-mfpmath=sse',
+                '-DPNG_NO_MMX_CODE',
+                '-I/usr/include/gtk-2.0',
+                '-I/usr/lib/gtk-2.0/include',
+                '-I/usr/include/atk-1.0',
+                '-I/usr/include/cairo',
+                '-I/usr/include/pango-1.0',
+                '-I/usr/include/glib-2.0',
+                '-I/usr/lib/glib-2.0/include',
+                '-I/usr/include/freetype2',
+                '-I/usr/include/libpng12',
+                '-I/usr/include/pixman-1',
+                '-O0',
+                '-g'
+            ],
+            CPPDEFINES = [
+                '__STDC_FORMAT_MACROS',
+                'CHROMIUM_BUILD',
+                'CHROME_PNG_WRITE_SUPPORT',
+                'PNG_USER_CONFIG',
+                '_DEBUG'
+            ],
+            CPPPATH = [
+                '..',
+                '../skia/config',
+                '../third_party/skia/include/core',
+                '../third_party/skia/include/effects',
+                '../skia/ext',
+                '../third_party/harfbuzz/src',
+                '../third_party/harfbuzz/contrib',
+                '../third_party/libjpeg',
+                '../third_party/libpng',
+                '../third_party/zlib'
+            ],
+            CXXFLAGS = [
+                '-fno-threadsafe-statics'
+            ],
+            LINKFLAGS = [
+                '-pthread',
+                '-m32',
+                '-rdynamic'
+            ],
+            SHLINKFLAGS = [
+                '-pthread',
+                '-m32',
+                '-rdynamic'
+            ],
+        ),
+        'FilterOut' : dict(
+        ),
+        'Replace' : dict(
+             FLOCK_LDMODULE = ['flock', '$TOP_BUILDDIR/linker.lock', '$LDMODULE'],
+             FLOCK_LINK = ['flock', '$TOP_BUILDDIR/linker.lock', '$LINK'],
+             FLOCK_SHLINK = ['flock', '$TOP_BUILDDIR/linker.lock', '$SHLINK'],
+             IMPLICIT_COMMAND_DEPENDENCIES = 0,
+             LDMODULECOM = [['$FLOCK_LDMODULE',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$LDMODULEFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+             LIBPATH = ['$LIB_DIR'],
+             LINKCOM = [['$FLOCK_LINK',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$LINKFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+             SHLINKCOM = [['$FLOCK_SHLINK',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$SHLINKFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+        ),
+        'ImportExternal' : [
+             'AS',
+             'CC',
+             'CXX',
+             'LINK',
+        ],
+        'PropagateExternal' : [
+             'AS',
+             'CC',
+             'CCACHE_DIR',
+             'CXX',
+             'DISTCC_DIR',
+             'DISTCC_HOSTS',
+             'HOME',
+             'INCLUDE_SERVER_ARGS',
+             'INCLUDE_SERVER_PORT',
+             'LINK',
+             'CHROME_BUILD_TYPE',
+             'CHROMIUM_BUILD',
+             'OFFICIAL_BUILD',
+        ],
+    },
+    'Release' : {
+        'Append' : dict(
+            ASFLAGS = [
+                '-32'
+            ],
+            CCFLAGS = [
+                '-Werror',
+                '-pthread',
+                '-m32',
+                '-fno-exceptions',
+                '-Wall',
+                '-march=pentium4',
+                '-msse2',
+                '-mfpmath=sse',
+                '-DPNG_NO_MMX_CODE',
+                '-I/usr/include/gtk-2.0',
+                '-I/usr/lib/gtk-2.0/include',
+                '-I/usr/include/atk-1.0',
+                '-I/usr/include/cairo',
+                '-I/usr/include/pango-1.0',
+                '-I/usr/include/glib-2.0',
+                '-I/usr/lib/glib-2.0/include',
+                '-I/usr/include/freetype2',
+                '-I/usr/include/libpng12',
+                '-I/usr/include/pixman-1',
+                '-O2',
+                '-fno-ident',
+                '-fdata-sections',
+                '-ffunction-sections'
+            ],
+            CPPDEFINES = [
+                '__STDC_FORMAT_MACROS',
+                'CHROMIUM_BUILD',
+                'CHROME_PNG_WRITE_SUPPORT',
+                'PNG_USER_CONFIG',
+                'NDEBUG'
+            ],
+            CPPPATH = [
+                '..',
+                '../skia/config',
+                '../third_party/skia/include/core',
+                '../third_party/skia/include/effects',
+                '../skia/ext',
+                '../third_party/harfbuzz/src',
+                '../third_party/harfbuzz/contrib',
+                '../third_party/libjpeg',
+                '../third_party/libpng',
+                '../third_party/zlib'
+            ],
+            CXXFLAGS = [
+                '-fno-threadsafe-statics'
+            ],
+            LINKFLAGS = [
+                '-pthread',
+                '-m32'
+            ],
+            SHLINKFLAGS = [
+                '-pthread',
+                '-m32'
+            ],
+        ),
+        'FilterOut' : dict(
+        ),
+        'Replace' : dict(
+             FLOCK_LDMODULE = ['flock', '$TOP_BUILDDIR/linker.lock', '$LDMODULE'],
+             FLOCK_LINK = ['flock', '$TOP_BUILDDIR/linker.lock', '$LINK'],
+             FLOCK_SHLINK = ['flock', '$TOP_BUILDDIR/linker.lock', '$SHLINK'],
+             IMPLICIT_COMMAND_DEPENDENCIES = 0,
+             LDMODULECOM = [['$FLOCK_LDMODULE',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$LDMODULEFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+             LIBPATH = ['$LIB_DIR'],
+             LINKCOM = [['$FLOCK_LINK',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$LINKFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+             SHLINKCOM = [['$FLOCK_SHLINK',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$SHLINKFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+        ),
+        'ImportExternal' : [
+             'AS',
+             'CC',
+             'CXX',
+             'LINK',
+        ],
+        'PropagateExternal' : [
+             'AS',
+             'CC',
+             'CCACHE_DIR',
+             'CXX',
+             'DISTCC_DIR',
+             'DISTCC_HOSTS',
+             'HOME',
+             'INCLUDE_SERVER_ARGS',
+             'INCLUDE_SERVER_PORT',
+             'LINK',
+             'CHROME_BUILD_TYPE',
+             'CHROMIUM_BUILD',
+             'OFFICIAL_BUILD',
+        ],
+    },
+}
+
+env = env.Clone(COMPONENT_NAME='base',
+                TARGET_NAME='base_gfx')
+
+config = configurations[env['CONFIG_NAME']]
+env.Append(**config['Append'])
+env.FilterOut(**config['FilterOut'])
+env.Replace(**config['Replace'])
+for _var in config['ImportExternal']:
+  if _var in ARGUMENTS:
+    env[_var] = ARGUMENTS[_var]
+  elif _var in os.environ:
+    env[_var] = os.environ[_var]
+for _var in config['PropagateExternal']:
+  if _var in ARGUMENTS:
+    env[_var] = ARGUMENTS[_var]
+  elif _var in os.environ:
+    env['ENV'][_var] = os.environ[_var]
+
+if ARGUMENTS.get('COVERAGE') not in (None, '0'):
+  env.Append(
+      CCFLAGS = [
+          '-fprofile-arcs',
+          '-ftest-coverage'
+      ],
+      LINKFLAGS = [
+          '-fprofile-arcs'
+      ],
+      SHLINKFLAGS = [
+          '-fprofile-arcs'
+      ],
+  )
+
+if ARGUMENTS.get('PROFILE') not in (None, '0'):
+  env.Append(
+      CCFLAGS = [
+          '-pg',
+          '-g'
+      ],
+      LINKFLAGS = [
+          '-pg'
+      ],
+      SHLINKFLAGS = [
+          '-pg'
+      ],
+  )
+
+if ARGUMENTS.get('SYMBOLS') not in (None, '0'):
+  env.Append(
+      CCFLAGS = [
+          '-g'
+      ],
+  )
+
+input_files = ChromeFileList([
+    'gfx/gdi_util.h',
+    'gfx/gtk_native_view_id_manager.cc',
+    'gfx/gtk_native_view_id_manager.h',
+    'gfx/gtk_util.cc',
+    'gfx/gtk_util.h',
+    'gfx/jpeg_codec.cc',
+    'gfx/jpeg_codec.h',
+    'gfx/native_theme.h',
+    'gfx/native_widget_types.h',
+    'gfx/native_widget_types_gtk.cc',
+    'gfx/png_decoder.cc',
+    'gfx/png_decoder.h',
+    'gfx/png_encoder.cc',
+    'gfx/png_encoder.h',
+    'gfx/point.cc',
+    'gfx/point.h',
+    'gfx/rect.cc',
+    'gfx/rect.h',
+    'gfx/size.cc',
+    'gfx/size.h',
+])
+
+target_files = []
+prerequisites = []
+
+_outputs = env.ChromeStaticLibrary('base_gfx', input_files)
+target_files.extend(_outputs)
+
+gyp_target = env.Alias('base_gfx', target_files)
+env.Requires(gyp_target, [
+    Alias('gtk')
+])
+env.Requires(gyp_target, prerequisites)
+Return("gyp_target")

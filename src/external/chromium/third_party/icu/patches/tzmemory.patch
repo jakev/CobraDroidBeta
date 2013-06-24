@@ -1,0 +1,67 @@
+Index: source/common/wintz.c
+===================================================================
+--- source/common/wintz.c	(revision 25709)
++++ source/common/wintz.c	(working copy)
+@@ -106,9 +106,9 @@
+                               0,
+                               KEY_QUERY_VALUE,
+                               &hkey);
+-        RegCloseKey(hkey);
+ 
+         if (result == ERROR_SUCCESS) {
++            RegCloseKey(hkey);
+             break;
+         }
+     }
+@@ -162,11 +162,9 @@
+                                     NULL,
+                                     (LPBYTE)tzi,
+                                     &cbData);
+-
++        RegCloseKey(hkey);
+     }
+ 
+-    RegCloseKey(hkey);
+-
+     return result;
+ }
+ 
+Index: source/common/putil.c
+===================================================================
+--- source/common/putil.c	(revision 25709)
++++ source/common/putil.c	(working copy)
+@@ -969,7 +969,9 @@
+ #endif
+ 
+ #ifdef U_TZNAME
+-#if !defined(U_WINDOWS)
++#ifdef U_WINDOWS
++    return uprv_strdup(U_TZNAME[n]);
++#else
+     /*
+     U_TZNAME is usually a non-unique abbreviation, which isn't normally usable.
+     So we remap the abbreviation to an olson ID.
+@@ -993,8 +995,8 @@
+             return tzid;
+         }
+     }
++    return U_TZNAME[n];
+ #endif
+-    return U_TZNAME[n];
+ #else
+     return "";
+ #endif
+Index: source/i18n/timezone.cpp
+===================================================================
+--- source/i18n/timezone.cpp	(revision 25709)
++++ source/i18n/timezone.cpp	(working copy)
+@@ -571,6 +571,9 @@
+     hostStrID.append((UChar)0);
+     hostStrID.truncate(hostStrID.length()-1);
+     default_zone = createSystemTimeZone(hostStrID);
++#ifdef U_WINDOWS
++    uprv_free(const_cast<char *>(hostID));
++#endif
+ 
+     int32_t hostIDLen = hostStrID.length();
+     if (default_zone != NULL && rawOffset != default_zone->getRawOffset()

@@ -1,0 +1,479 @@
+# This file is generated; do not edit.
+
+import os
+
+Import("env")
+
+env = env.Clone(COMPONENT_NAME='net',
+                TARGET_NAME='net_base')
+
+configurations = {
+    'Debug' : {
+        'Append' : dict(
+            CCFLAGS = [
+                '-Werror',
+                '-pthread',
+                '-fno-exceptions',
+                '-fno-asynchronous-unwind-tables',
+                '-fvisibility=hidden',
+                '-Wall',
+                '-D_FILE_OFFSET_BITS=64',
+                '-DPNG_NO_MMX_CODE',
+                '-pthread',
+                '-I/usr/include/gtk-2.0',
+                '-I/usr/lib/gtk-2.0/include',
+                '-I/usr/include/atk-1.0',
+                '-I/usr/include/cairo',
+                '-I/usr/include/pango-1.0',
+                '-I/usr/include/glib-2.0',
+                '-I/usr/lib/glib-2.0/include',
+                '-I/usr/include/freetype2',
+                '-I/usr/include/libpng12',
+                '-I/usr/include/pixman-1',
+                '-DORBIT2=1',
+                '-pthread',
+                '-I/usr/include/gconf/2',
+                '-I/usr/include/orbit-2.0',
+                '-I/usr/include/glib-2.0',
+                '-I/usr/lib/glib-2.0/include',
+                '-DPNG_NO_MMX_CODE',
+                '-I/usr/include/gtk-2.0',
+                '-I/usr/lib/gtk-2.0/include',
+                '-I/usr/include/pango-1.0',
+                '-I/usr/include/glib-2.0',
+                '-I/usr/lib/glib-2.0/include',
+                '-I/usr/include/cairo',
+                '-I/usr/include/freetype2',
+                '-I/usr/include/libpng12',
+                '-I/usr/include/pixman-1',
+                '-I/usr/include/nss',
+                '-I/usr/include/nspr',
+                '-O0',
+                '-g'
+            ],
+            CPPDEFINES = [
+                '__STDC_FORMAT_MACROS',
+                'CHROMIUM_BUILD',
+                'U_STATIC_IMPLEMENTATION',
+                '_DEBUG'
+            ],
+            CPPPATH = [
+                env.Dir('$SRC_DIR/net/../third_party/icu/public/common'),
+                env.Dir('$SRC_DIR/net/../third_party/icu/public/i18n'),
+                env.Dir('$SRC_DIR/net/..'),
+                env.Dir('$SRC_DIR/net/../sdch/open-vcdiff/src'),
+                env.Dir('$SRC_DIR/net/../third_party/bzip2'),
+                env.Dir('$SRC_DIR/net/../third_party/zlib'),
+                env.Dir('${SHARED_INTERMEDIATE_DIR}/net')
+            ],
+            CXXFLAGS = [
+                '-fno-rtti',
+                '-fno-threadsafe-statics',
+                '-fvisibility-inlines-hidden'
+            ],
+            LINKFLAGS = [
+                '-pthread',
+                '-rdynamic'
+            ],
+        ),
+        'FilterOut' : dict(
+        ),
+        'Replace' : dict(
+             FLOCK_LDMODULE = ['flock', '$TOP_BUILDDIR/linker.lock', '$LDMODULE'],
+             FLOCK_LINK = ['flock', '$TOP_BUILDDIR/linker.lock', '$LINK'],
+             FLOCK_SHLINK = ['flock', '$TOP_BUILDDIR/linker.lock', '$SHLINK'],
+             IMPLICIT_COMMAND_DEPENDENCIES = '0',
+             LDMODULECOM = [['$FLOCK_LDMODULE',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$LDMODULEFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+             LIBPATH = ['$LIB_DIR'],
+             LINKCOM = [['$FLOCK_LINK',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$LINKFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+             SHLINKCOM = [['$FLOCK_SHLINK',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$SHLINKFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+        ),
+        'ImportExternal' : [
+             'AS',
+             'CC',
+             'CXX',
+             'LINK',
+        ],
+        'PropagateExternal' : [
+             'AS',
+             'CC',
+             'CCACHE_DIR',
+             'CXX',
+             'DISTCC_DIR',
+             'DISTCC_HOSTS',
+             'HOME',
+             'INCLUDE_SERVER_ARGS',
+             'INCLUDE_SERVER_PORT',
+             'LINK',
+             'CHROME_BUILD_TYPE',
+             'CHROMIUM_BUILD',
+             'OFFICIAL_BUILD',
+        ],
+    },
+    'Release' : {
+        'Append' : dict(
+            CCFLAGS = [
+                '-Werror',
+                '-pthread',
+                '-fno-exceptions',
+                '-fno-asynchronous-unwind-tables',
+                '-fvisibility=hidden',
+                '-Wall',
+                '-D_FILE_OFFSET_BITS=64',
+                '-DPNG_NO_MMX_CODE',
+                '-pthread',
+                '-I/usr/include/gtk-2.0',
+                '-I/usr/lib/gtk-2.0/include',
+                '-I/usr/include/atk-1.0',
+                '-I/usr/include/cairo',
+                '-I/usr/include/pango-1.0',
+                '-I/usr/include/glib-2.0',
+                '-I/usr/lib/glib-2.0/include',
+                '-I/usr/include/freetype2',
+                '-I/usr/include/libpng12',
+                '-I/usr/include/pixman-1',
+                '-DORBIT2=1',
+                '-pthread',
+                '-I/usr/include/gconf/2',
+                '-I/usr/include/orbit-2.0',
+                '-I/usr/include/glib-2.0',
+                '-I/usr/lib/glib-2.0/include',
+                '-DPNG_NO_MMX_CODE',
+                '-I/usr/include/gtk-2.0',
+                '-I/usr/lib/gtk-2.0/include',
+                '-I/usr/include/pango-1.0',
+                '-I/usr/include/glib-2.0',
+                '-I/usr/lib/glib-2.0/include',
+                '-I/usr/include/cairo',
+                '-I/usr/include/freetype2',
+                '-I/usr/include/libpng12',
+                '-I/usr/include/pixman-1',
+                '-I/usr/include/nss',
+                '-I/usr/include/nspr',
+                '-O2',
+                '-fno-ident',
+                '-fdata-sections',
+                '-ffunction-sections'
+            ],
+            CPPDEFINES = [
+                '__STDC_FORMAT_MACROS',
+                'CHROMIUM_BUILD',
+                'U_STATIC_IMPLEMENTATION',
+                'NDEBUG',
+                'NVALGRIND'
+            ],
+            CPPPATH = [
+                env.Dir('$SRC_DIR/net/../third_party/icu/public/common'),
+                env.Dir('$SRC_DIR/net/../third_party/icu/public/i18n'),
+                env.Dir('$SRC_DIR/net/..'),
+                env.Dir('$SRC_DIR/net/../sdch/open-vcdiff/src'),
+                env.Dir('$SRC_DIR/net/../third_party/bzip2'),
+                env.Dir('$SRC_DIR/net/../third_party/zlib'),
+                env.Dir('${SHARED_INTERMEDIATE_DIR}/net')
+            ],
+            CXXFLAGS = [
+                '-fno-rtti',
+                '-fno-threadsafe-statics',
+                '-fvisibility-inlines-hidden'
+            ],
+            LINKFLAGS = [
+                '-pthread',
+                '-Wl,--gc-sections'
+            ],
+        ),
+        'FilterOut' : dict(
+        ),
+        'Replace' : dict(
+             FLOCK_LDMODULE = ['flock', '$TOP_BUILDDIR/linker.lock', '$LDMODULE'],
+             FLOCK_LINK = ['flock', '$TOP_BUILDDIR/linker.lock', '$LINK'],
+             FLOCK_SHLINK = ['flock', '$TOP_BUILDDIR/linker.lock', '$SHLINK'],
+             IMPLICIT_COMMAND_DEPENDENCIES = '0',
+             LDMODULECOM = [['$FLOCK_LDMODULE',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$LDMODULEFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+             LIBPATH = ['$LIB_DIR'],
+             LINKCOM = [['$FLOCK_LINK',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$LINKFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+             SHLINKCOM = [['$FLOCK_SHLINK',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$SHLINKFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+        ),
+        'ImportExternal' : [
+             'AS',
+             'CC',
+             'CXX',
+             'LINK',
+        ],
+        'PropagateExternal' : [
+             'AS',
+             'CC',
+             'CCACHE_DIR',
+             'CXX',
+             'DISTCC_DIR',
+             'DISTCC_HOSTS',
+             'HOME',
+             'INCLUDE_SERVER_ARGS',
+             'INCLUDE_SERVER_PORT',
+             'LINK',
+             'CHROME_BUILD_TYPE',
+             'CHROMIUM_BUILD',
+             'OFFICIAL_BUILD',
+        ],
+    },
+}
+
+config = configurations[env['CONFIG_NAME']]
+env.Append(**config['Append'])
+env.FilterOut(**config['FilterOut'])
+env.Replace(**config['Replace'])
+
+# Scons forces -fPIC for SHCCFLAGS on some platforms.
+# Disable that so we can control it from cflags in gyp.
+# Note that Scons itself is inconsistent with its -fPIC
+# setting. SHCCFLAGS forces -fPIC, and SHCFLAGS does not.
+# This will make SHCCFLAGS consistent with SHCFLAGS.
+env['SHCCFLAGS'] = ['$CCFLAGS']
+
+for _var in config['ImportExternal']:
+  if _var in ARGUMENTS:
+    env[_var] = ARGUMENTS[_var]
+  elif _var in os.environ:
+    env[_var] = os.environ[_var]
+for _var in config['PropagateExternal']:
+  if _var in ARGUMENTS:
+    env[_var] = ARGUMENTS[_var]
+  elif _var in os.environ:
+    env['ENV'][_var] = os.environ[_var]
+
+env['ENV']['LD_LIBRARY_PATH'] = env.subst('$LIB_DIR')
+
+if ARGUMENTS.get('COVERAGE') not in (None, '0'):
+  env.AppendUnique(
+            CCFLAGS = [
+                '-fprofile-arcs',
+                '-ftest-coverage'
+            ],
+            LINKFLAGS = [
+                '-fprofile-arcs'
+            ],
+  )
+
+if ARGUMENTS.get('PROFILE') not in (None, '0'):
+  env.AppendUnique(
+            CCFLAGS = [
+                '-pg',
+                '-g'
+            ],
+            LINKFLAGS = [
+                '-pg'
+            ],
+  )
+
+if ARGUMENTS.get('SYMBOLS') not in (None, '0'):
+  env.AppendUnique(
+            CCFLAGS = [
+                '-g'
+            ],
+  )
+
+input_files = [
+    'base/address_family.h',
+    'base/address_list.cc',
+    'base/address_list.h',
+    'base/auth.h',
+    'base/base64.cc',
+    'base/base64.h',
+    'base/bzip2_filter.cc',
+    'base/bzip2_filter.h',
+    'base/cache_type.h',
+    'base/cert_database.h',
+    'base/cert_database_nss.cc',
+    'base/cert_status_flags.cc',
+    'base/cert_status_flags.h',
+    'base/cert_verifier.cc',
+    'base/cert_verifier.h',
+    'base/cert_verify_result.h',
+    'base/completion_callback.h',
+    'base/connection_type_histograms.cc',
+    'base/connection_type_histograms.h',
+    'base/cookie_monster.cc',
+    'base/cookie_monster.h',
+    'base/cookie_options.h',
+    'base/cookie_policy.cc',
+    'base/cookie_policy.h',
+    'base/cookie_store.h',
+    'base/data_url.cc',
+    'base/data_url.h',
+    'base/directory_lister.cc',
+    'base/directory_lister.h',
+    'base/dns_util.cc',
+    'base/dns_util.h',
+    'base/effective_tld_names.cc',
+    'base/effective_tld_names.dat',
+    'base/escape.cc',
+    'base/escape.h',
+    'base/ev_root_ca_metadata.cc',
+    'base/ev_root_ca_metadata.h',
+    'base/file_stream.h',
+    'base/file_stream_posix.cc',
+    'base/filter.cc',
+    'base/filter.h',
+    'base/fixed_host_resolver.cc',
+    'base/fixed_host_resolver.h',
+    'base/gzip_filter.cc',
+    'base/gzip_filter.h',
+    'base/gzip_header.cc',
+    'base/gzip_header.h',
+    'base/host_cache.cc',
+    'base/host_cache.h',
+    'base/host_resolver.cc',
+    'base/host_resolver.h',
+    'base/host_resolver_impl.cc',
+    'base/host_resolver_impl.h',
+    'base/host_resolver_proc.cc',
+    'base/host_resolver_proc.h',
+    'base/io_buffer.cc',
+    'base/io_buffer.h',
+    'base/keygen_handler.h',
+    'base/keygen_handler_nss.cc',
+    'base/listen_socket.cc',
+    'base/listen_socket.h',
+    'base/load_flags.h',
+    'base/load_log.h',
+    'base/load_log.cc',
+    'base/load_log_event_type_list.h',
+    'base/load_log_util.cc',
+    'base/load_log_util.h',
+    'base/load_states.h',
+    'base/mime_sniffer.cc',
+    'base/mime_sniffer.h',
+    'base/mime_util.cc',
+    'base/mime_util.h',
+    'base/mock_host_resolver.cc',
+    'base/mock_host_resolver.h',
+    'base/net_error_list.h',
+    'base/net_errors.cc',
+    'base/net_errors.h',
+    'base/net_module.cc',
+    'base/net_module.h',
+    'base/net_util.cc',
+    'base/net_util.h',
+    'base/net_util_posix.cc',
+    'base/nss_memio.c',
+    'base/nss_memio.h',
+    'base/platform_mime_util.h',
+    'base/platform_mime_util_linux.cc',
+    'base/registry_controlled_domain.cc',
+    'base/registry_controlled_domain.h',
+    'base/scoped_cert_chain_context.h',
+    'base/sdch_filter.cc',
+    'base/sdch_filter.h',
+    'base/sdch_manager.cc',
+    'base/sdch_manager.h',
+    'base/ssl_cert_request_info.h',
+    'base/ssl_client_auth_cache.cc',
+    'base/ssl_client_auth_cache.h',
+    'base/ssl_config_service.cc',
+    'base/ssl_config_service.h',
+    'base/ssl_config_service_defaults.h',
+    'base/ssl_config_service_mac.h',
+    'base/ssl_config_service_win.h',
+    'base/ssl_info.h',
+    'base/strict_transport_security_state.cc',
+    'base/strict_transport_security_state.h',
+    'base/telnet_server.cc',
+    'base/telnet_server.h',
+    'base/test_completion_callback.h',
+    'base/upload_data.cc',
+    'base/upload_data.h',
+    'base/upload_data_stream.cc',
+    'base/upload_data_stream.h',
+    'base/wininet_util.h',
+    'base/winsock_init.h',
+    'base/x509_certificate.cc',
+    'base/x509_certificate.h',
+    'base/x509_certificate_nss.cc',
+]
+
+target_files = []
+prerequisites = []
+
+_result = []
+for infile in input_files:
+  if env.compilable(infile):
+    if (type(infile) == type('')
+        and (infile.startswith('$SRC_DIR/net/')
+             or not os.path.isabs(env.subst(infile)))):
+      # Force files below the build directory by replacing all '..'
+      # elements in the path with '__':
+      base, ext = os.path.splitext(os.path.normpath(infile))
+      base = [d == '..' and '__' or d for d in base.split('/')]
+      base = os.path.join(*base)
+      object = '${OBJ_DIR}/${COMPONENT_NAME}/${TARGET_NAME}/' + base
+      if not infile.startswith('$SRC_DIR/net/'):
+        infile = '$SRC_DIR/net/' + infile
+      infile = env.StaticObject(object, infile)[0]
+    else:
+      infile = env.StaticObject(infile)[0]
+  _result.append(infile)
+input_files = _result
+
+_outputs = env.GypStaticLibrary('net_base', input_files)
+target_files.extend(_outputs)
+
+gyp_target = env.Alias('net_base', target_files)
+dependencies = [
+    Alias('net_resources'),
+    Alias('gconf'),
+    Alias('gdk'),
+    Alias('nss')
+]
+env.Requires(target_files, dependencies)
+env.Requires(gyp_target, dependencies)
+for prerequisite in prerequisites:
+  env.Requires(prerequisite, dependencies)
+env.Requires(gyp_target, prerequisites)
+Return("gyp_target")

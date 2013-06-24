@@ -1,0 +1,2 @@
+# This file is generated; do not edit.
+SConscript('libevent_main.scons')

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/*
+ * Copyright (C) 2007 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_label" msgid="3706018265751197270">"Konto- &amp; Synchronisierungseinst."</string>
+    <string name="sync_settings" msgid="8707056705985552604">"Einstellungen für Konten &amp; Synchronisierung"</string>
+    <string name="sync_too_many_deletes" msgid="1621369057980827097">"Löschbegrenzung überschritten"</string>
+    <string name="background_data" msgid="1103557117473896066">"Hintergrunddaten"</string>
+    <string name="background_data_summary" msgid="9048259510387973822">"Daten können synchronisiert, gesendet und empfangen werden."</string>
+    <string name="background_data_dialog_title" msgid="6303755495467986079">"Achtung"</string>
+    <string name="background_data_dialog_message" msgid="8417297954700022363">"Durch die Deaktivierung von Hintergrunddaten kann die Akkulaufzeit verlängert und die Verwendung von Daten verringert werden. Einige Anwendungen nutzen die Hintergrunddatenverbindung möglicherweise weiterhin."</string>
+    <string name="sync_automatically" msgid="4694735102757960100">"Autom. synchronisieren"</string>
+    <string name="sync_automatically_summary" msgid="4598895616781542745">"Anwendungen synchronisieren Daten automatisch."</string>
+    <string name="settings_backup" msgid="6114299464740014762">"Einstellungen sichern"</string>
+    <string name="settings_backup_summary" msgid="1787552172618610178">"Einstellungen sichern"</string>
+    <string name="sync_menu_sync_now" msgid="5796024841315572404">"Jetzt synchronisieren"</string>
+    <string name="sync_menu_sync_cancel" msgid="1005480041232010062">"Synchronisierung abbrechen"</string>
+    <string name="sync_one_time_sync" msgid="3274364877518422827">"Zum sofortigen Synchronisieren berühren<xliff:g id="LAST_SYNC_TIME">
+%1$s</xliff:g>"</string>
+    <string name="sync_gmail" msgid="5806053858668452000">"Google Mail"</string>
+    <string name="sync_calendar" msgid="1796292773734071897">"Google Kalender"</string>
+    <string name="sync_contacts" msgid="2035690905925565660">"Kontakte"</string>
+    <string name="sync_too_many_deletes_desc" msgid="699495654174066067">"Für <xliff:g id="TYPE_OF_SYNC">%2$s</xliff:g>, Konto <xliff:g id="ACCOUNT_NAME">%3$s</xliff:g>, liegen <xliff:g id="NUMBER_OF_DELETED_ITEMS">%1$d</xliff:g> gelöschte Elemente vor. Was möchten Sie tun?"</string>
+    <string name="sync_really_delete" msgid="5456355204562588976">"Elemente löschen"</string>
+    <string name="sync_undo_deletes" msgid="8695514459839593307">"Löschen rückgängig machen"</string>
+    <string name="sync_do_nothing" msgid="5798755982392201673">"Im Moment nichts unternehmen"</string>
+    <string name="sync_is_failing" msgid="5230237058552433773">"Bei der Synchronisierung treten derzeit Probleme auf. Sie wird in Kürze fortgesetzt."</string>
+    <string name="sync_plug" msgid="7020432439004167162"><font fgcolor="#ffffffff">"Willkommen bei Google Sync!"</font>\n"Mit dieser Funktion von Google können Sie Ihre Daten synchronisieren, um auf Ihre Kontakte, Termine und vieles mehr zuzugreifen - wo immer Sie auch sind!"</string>
+    <string name="header_application_sync_settings" msgid="5263025067167527890">"Anwendungssynchronisierung"</string>
+    <string name="header_manage_accounts" msgid="381956296995298770">"Konten verwalten"</string>
+    <string name="header_general_sync_settings" msgid="1598537524696692308">"Allgemeine Synchronisierungseinstellungen"</string>
+    <string name="sync_enabled" msgid="913018877443997502">"Synchronisierung ist aktiviert"</string>
+    <string name="sync_disabled" msgid="185731301298967302">"Synchronisierung deaktiviert"</string>
+    <string name="sync_error" msgid="681431702824599812">"Synchronisierungsfehler"</string>
+    <string name="add_account_label" msgid="2035321485672826779">"Konto hinzufügen"</string>
+    <string name="header_data_and_synchronization" msgid="6286257845276834071">"Daten &amp; Synchronisierung"</string>
+    <string name="preference_change_password_title" msgid="6468827554159468315">"Passwort ändern"</string>
+    <string name="header_account_settings" msgid="4950809499418403792">"Kontoeinstellungen"</string>
+    <string name="remove_account_label" msgid="5624712684599197863">"Konto entfernen"</string>
+    <string name="header_add_an_account" msgid="2198078922829535425">"Konto hinzufügen"</string>
+    <string name="finish_button_label" msgid="6121560986057356757">"Fertigstellen"</string>
+    <string name="really_remove_account_title" msgid="8808121039511188784">"Konto entfernen"</string>
+    <string name="really_remove_account_message" msgid="3293445755620109578">"Möchten Sie dieses Konto wirklich entfernen? Hierdurch werden auch die zugehörigen Nachrichten, Kontakte und anderen Daten auf dem Telefon gelöscht. "\n"Vorgang fortsetzen?"</string>
+    <string name="remove_account_failed" msgid="8178924513521241001">"Dieses Konto wird von einigen Anwendungen benötigt. Sie können es nur entfernen, indem Sie das Telefon auf die Werkseinstellungen zurücksetzen und so alle persönlichen Daten löschen. Wählen Sie hierfür unter \"Datenschutz\" die Option \"Einstellungen\"."</string>
+    <string name="provider_label" msgid="6191617139291321517">"Push-Abos"</string>
+    <string name="sync_item_title" msgid="7984962124867021854">"<xliff:g id="AUTHORITY">%s</xliff:g> synchr."</string>
+    <string name="cant_sync_dialog_title" msgid="3016197392261471761">"Manuelle Synchronisierung kann nicht durchgeführt werden"</string>
+    <string name="cant_sync_dialog_message" msgid="7200115394296632300">"Die Synchronisierung ist für dieses Element zurzeit deaktiviert. Zur Änderung Ihrer Voreinstellungen aktivieren Sie vorübergehend Hintergrunddaten und automatische Synchronisierung."</string>
+</resources>

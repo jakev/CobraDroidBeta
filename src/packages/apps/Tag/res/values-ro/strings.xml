@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2010 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" msgid="5128188288358721369">"Etichete"</string>
+    <string name="title_scanned_tag" msgid="4347835407095551450">"A fost colectată o etichetă nouă"</string>
+    <string name="title_existing_tag" msgid="5656560272594190244">"Etichetă"</string>
+    <string name="tab_tags" msgid="3254131516215269385">"Etichete"</string>
+    <string name="tab_starred" msgid="3892615665321783044">"Cu stea"</string>
+    <string name="tab_my_tag" msgid="4194581094362833242">"Eticheta mea"</string>
+    <string name="tag_unknown" msgid="2897956823877728783">"Tip de etichetă necunoscut"</string>
+    <string name="tag_empty" msgid="3726529819932095782">"Etichetă goală"</string>
+    <string name="button_delete" msgid="8636971153075546776">"Ştergeţi"</string>
+    <string name="button_done" msgid="7048822758098308158">"Terminat"</string>
+    <string name="button_save" msgid="1396693475082322626">"Salvaţi"</string>
+    <string name="button_cancel" msgid="8094182910311905776">"Anulaţi"</string>
+    <string name="cancel_help_text" msgid="2582335582642459522">"Pentru a omite adăugarea acestei etichete în colecţia dvs., atingeţi butonul Terminat"</string>
+    <string name="action_text" msgid="577417996159152923">"Trimiteţi mesaj la <xliff:g id="PHONE_NUMBER">%s</xliff:g>"</string>
+    <string name="action_call" msgid="6226253647953184035">"Apelaţi <xliff:g id="PHONE_NUMBER">%s</xliff:g>"</string>
+    <string name="turn_on_my_tag" msgid="6584695906051991524">"Distribuiţi eticheta"</string>
+    <string name="edit_tag" msgid="3708659122033447892">"Editaţi eticheta"</string>
+    <string name="turn_on_my_tag_subtitle" msgid="4174686056239752759">"Permiteţi altor utilizatori să citească eticheta"</string>
+    <string name="add_content" msgid="6592975981339055673">"Mai multe..."</string>
+    <string name="tag_title" msgid="4734199420853998617">"Titlu"</string>
+    <string name="tag_text" msgid="522896767632155048">"Text"</string>
+    <string name="select_type" msgid="1845302736320827995">"Selectaţi tipul de conţinut pe care doriţi să îl adăugaţi"</string>
+    <string name="photo" msgid="986413518082114481">"Fotografie"</string>
+    <string name="bad_photo" msgid="1601260684495341633">"Nu se poate deschide imaginea."</string>
+    <string name="url" msgid="5939765162489949437">"URL"</string>
+    <string name="contact" msgid="8810195884019228695">"Persoană din agendă"</string>
+    <string name="location" msgid="2476366526591580807">"Locaţie"</string>
+    <string name="empty_tag_prompt" msgid="4206394383309956030">"Această etichetă este goală."</string>
+    <string name="empty_tag_instructions" msgid="9156733538909958916">"Atingeţi "<b>"Creaţi o etichetă"</b>" pentru a adăuga conţinut."</string>
+    <string name="write" msgid="4957259770248890625">"Creaţi o etichetă"</string>
+    <string name="cancel" msgid="2168193471147260328">"Anulaţi"</string>
+    <string name="menu_help" msgid="2340550693525288105">"Ajutor"</string>
+    <string name="import_vcard" msgid="5104299047930666528">"Importaţi ^1"</string>
+    <string name="mime_display_name" msgid="5926357152623764485">"Date de la eticheta NFC"</string>
+    <string name="dialog_title_nfc_off" msgid="6945643404976801203">"NFC oprit"</string>
+    <string name="dialog_text_nfc_off" msgid="6323019332983777990">"Pentru a scana etichete trebuie să porniţi dispozitivul NFC."</string>
+    <string name="button_settings" msgid="6909066985958159920">"Setări"</string>
+    <string name="empty_list" msgid="1306390399412856676">"Nu aţi scanat nicio etichetă."</string>
+    <string name="empty_list_starred" msgid="7185947321271594216">"Nu aveţi etichete cu stea."</string>
+    <string name="button_more_info" msgid="574247138099633767">"Mai multe informaţii"</string>
+    <string name="vcard_title" msgid="7122634780732426007">"Informaţii de contact pentru ^1"</string>
+    <string name="next" msgid="8672447228208567606">"Înainte"</string>
+    <string name="back" msgid="7389918385345281227">"Înapoi"</string>
+    <string name="close" msgid="5521003720382005075">"Închideţi"</string>
+    <string name="intro_title" msgid="2798106838231744219">"Despre etichete"</string>
+    <string name="intro_text_about" msgid="1366913102380816468">"Etichetele servesc la organizarea şi distribuirea etichetelor NFC (Near Field Communication)"</string>
+    <string name="intro_text_usage" msgid="2343260114638598627">"Pentru a scana o etichetă, porniţi telefonul şi plasaţi chiar deasupra acesteia."</string>
+    <string name="intro_text_contents" msgid="1973327615218723220">"Etichetele NFC pot conţine text, adrese URL, imagini şi alte tipuri de informaţii."</string>
+    <string name="intro_text_more" msgid="4127006088499721149">"Pentru a scana sau distribui etichete, trebuie să aveţi pornit NFC (în Setări, sub Wireless şi reţele)."</string>
+    <string name="intro_text_more2" msgid="28835616891750572">"Pentru mai multe informaţii, apăsaţi pe Meniu şi atingeţi Ajutor."</string>
+    <string name="tag_deleted" msgid="5411251725532471624">"Eticheta a fost ştearsă"</string>
+    <string name="add_tag" msgid="703494598879855113">"Adăugaţi o etichetă nouă"</string>
+    <string name="choose_my_tag" msgid="4208730132705026130">"Alegeţi o etichetă pe care doriţi să o distribuiţi"</string>
+    <string name="active_tag" msgid="7417732109196094058">"Etichetă activă"</string>
+    <string name="manage_my_tags" msgid="3616349610711109286">"Gestionaţi etichetele"</string>
+    <string name="menu_delete" msgid="8834253717174232653">"Ştergeţi eticheta"</string>
+    <string name="menu_edit" msgid="2163829689000692138">"Editaţi eticheta"</string>
+    <string name="menu_set_as_active" msgid="6637492981297642733">"Setaţi ca etichetă activă"</string>
+    <string name="no_tag_selected" msgid="127078607162539962">"Nu aţi selectat o etichetă pentru distribuire."</string>
+    <string name="no_tags_created" msgid="5963013948308289234">"Nu aţi creat nicio etichetă."</string>
+</resources>

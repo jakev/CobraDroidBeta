@@ -1,0 +1,14 @@
+This is an alternative implementation of the su binary for Superuser on Android.
+This implementation is compatible with the original su binary but differs in
+the following:
+o it doesn't use the am command for notifying Superuser.
+  The old C++ code crafting intent body is used instead. The code supports
+  Android versions up to ICS inclusive.
+o it sets LD_LIBRARY_PATH to the value copied from the parent process
+  on ICS or higher.
+o it is linked dynamically.
+o it tracks both su.db and permissions.sqlite databases when checking
+  whether the caller is allowed to call su. Thus, all Superuser versions are
+  supported.
+
+The implementation is compatible with Superuser 3.1.3 or less.

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2010 The Android Open Source Project
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- The touch target for enabling/disabling "My Tag". -->
+    <RelativeLayout
+        android:id="@+id/toggle_enabled_target"
+        android:padding="8dip"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- The checkbox simply presents state to the user - its parent
+        is the real click target -->
+        <CheckBox android:id="@+id/toggle_enabled_checkbox"
+            android:layout_marginRight="4dip"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:clickable="false"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/toggle_enabled_hint_title"
+            android:text="@string/turn_on_my_tag"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_toRightOf="@+id/toggle_enabled_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="@string/turn_on_my_tag_subtitle"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_toRightOf="@+id/toggle_enabled_checkbox"
+            android:layout_below="@+id/toggle_enabled_hint_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <TextView
+        android:text="@string/active_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/listSeparatorTextViewStyle"
+    />
+
+    <!-- Currently selected tag -->
+    <FrameLayout
+        android:id="@+id/active_tag"
+        android:padding="8dip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/active_tag_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        >
+
+            <TextView
+                android:id="@+id/active_tag_title"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="@string/choose_my_tag"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_below="@+id/active_tag_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/choose_my_tag"
+            android:text="@string/choose_my_tag"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        />
+    </FrameLayout>
+
+    <TextView
+        android:text="@string/manage_my_tags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/listSeparatorTextViewStyle"
+    />
+
+    <!-- Tag list. -->
+    <ListView
+        android:id="@android:id/list"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+    />
+
+    <!-- Control to add new tag. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        style="@android:style/ButtonBar"
+    >
+
+        <View
+            android:layout_height="0dip"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+        />
+
+        <Button
+            android:id="@+id/add_tag"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/add_tag"
+        />
+
+        <View
+            android:layout_height="0dip"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+        />
+    </LinearLayout>
+</LinearLayout>
+

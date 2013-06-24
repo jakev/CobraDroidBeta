@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/*
+ * Copyright (C) 2007 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_label" msgid="3706018265751197270">"Indstillinger for konto og synkronisering"</string>
+    <string name="sync_settings" msgid="8707056705985552604">"Indstillinger for konti og synkronisering"</string>
+    <string name="sync_too_many_deletes" msgid="1621369057980827097">"Grænsen for sletning er overskredet"</string>
+    <string name="background_data" msgid="1103557117473896066">"Baggrundsdata"</string>
+    <string name="background_data_summary" msgid="9048259510387973822">"Programmer kan altid synkronisere, sende og modtage data"</string>
+    <string name="background_data_dialog_title" msgid="6303755495467986079">"Bemærk"</string>
+    <string name="background_data_dialog_message" msgid="8417297954700022363">"Deaktivering af baggrundsdata forlænger batteriets levetid og mindsker databrug. Nogle programmer kan muligvis stadig bruge baggrundsdataforbindelsen."</string>
+    <string name="sync_automatically" msgid="4694735102757960100">"Autom. synkronisering"</string>
+    <string name="sync_automatically_summary" msgid="4598895616781542745">"Programmer synkroniserer data automatisk"</string>
+    <string name="settings_backup" msgid="6114299464740014762">"Sikkerhedskopier indstillinger"</string>
+    <string name="settings_backup_summary" msgid="1787552172618610178">"Sikkerhedskopier mine indstillinger"</string>
+    <string name="sync_menu_sync_now" msgid="5796024841315572404">"Synkroniser nu"</string>
+    <string name="sync_menu_sync_cancel" msgid="1005480041232010062">"Annuller synkronisering"</string>
+    <string name="sync_one_time_sync" msgid="3274364877518422827">"Berør for at synkronisere nu<xliff:g id="LAST_SYNC_TIME">
+%1$s</xliff:g>"</string>
+    <string name="sync_gmail" msgid="5806053858668452000">"Gmail"</string>
+    <string name="sync_calendar" msgid="1796292773734071897">"Kalender"</string>
+    <string name="sync_contacts" msgid="2035690905925565660">"Kontakt."</string>
+    <string name="sync_too_many_deletes_desc" msgid="699495654174066067">"Der er <xliff:g id="NUMBER_OF_DELETED_ITEMS">%1$d</xliff:g> slettede elementer for <xliff:g id="TYPE_OF_SYNC">%2$s</xliff:g>, konto <xliff:g id="ACCOUNT_NAME">%3$s</xliff:g>. Hvad ønsker du at gøre?"</string>
+    <string name="sync_really_delete" msgid="5456355204562588976">"Slet elementerne."</string>
+    <string name="sync_undo_deletes" msgid="8695514459839593307">"Fortryd sletningerne."</string>
+    <string name="sync_do_nothing" msgid="5798755982392201673">"Gør ikke noget lige nu."</string>
+    <string name="sync_is_failing" msgid="5230237058552433773">"Der er problemer med synkroniseringen i øjeblikket. Den er snart tilbage."</string>
+    <string name="sync_plug" msgid="7020432439004167162"><font fgcolor="#ffffffff">"Velkommen til Google Sync!"</font>" "\n"En tilgang til synkronisering af data fra Google, som giver dig adgang til dine kontaktpersoner, aftaler og mere, uanset hvor du er."</string>
+    <string name="header_application_sync_settings" msgid="5263025067167527890">"Indstillinger for programsynkronisering"</string>
+    <string name="header_manage_accounts" msgid="381956296995298770">"Administration af konti"</string>
+    <string name="header_general_sync_settings" msgid="1598537524696692308">"Generelle indstillinger for synkronisering"</string>
+    <string name="sync_enabled" msgid="913018877443997502">"Synkronisering er aktiveret"</string>
+    <string name="sync_disabled" msgid="185731301298967302">"Synkronisering slået fra"</string>
+    <string name="sync_error" msgid="681431702824599812">"Synkroniseringsfejl"</string>
+    <string name="add_account_label" msgid="2035321485672826779">"Tilføj konto"</string>
+    <string name="header_data_and_synchronization" msgid="6286257845276834071">"Data og synkronisering"</string>
+    <string name="preference_change_password_title" msgid="6468827554159468315">"Skift adgangskode"</string>
+    <string name="header_account_settings" msgid="4950809499418403792">"Indstillinger for konto"</string>
+    <string name="remove_account_label" msgid="5624712684599197863">"Fjern konto"</string>
+    <string name="header_add_an_account" msgid="2198078922829535425">"Tilføj en konto"</string>
+    <string name="finish_button_label" msgid="6121560986057356757">"Afslut"</string>
+    <string name="really_remove_account_title" msgid="8808121039511188784">"Fjern konto"</string>
+    <string name="really_remove_account_message" msgid="3293445755620109578">"Ønsker du virkelig at fjerne denne konto? Hvis du fjerner den, slettes også alle dens beskeder, kontaktpersoner og andre data fra telefonen. "\n"Fortsæt?"</string>
+    <string name="remove_account_failed" msgid="8178924513521241001">"Denne konto kræves af nogle programmer. Du kan kun fjerne den ved at gendanne telefonen til fabriksstandard (hvilket sletter alle dine personlige oplysninger). Du kan gøre dette under Fortrolighed i Indstillinger."</string>
+    <string name="provider_label" msgid="6191617139291321517">"Push-abonnementer"</string>
+    <string name="sync_item_title" msgid="7984962124867021854">"Synkroniser <xliff:g id="AUTHORITY">%s</xliff:g>"</string>
+    <string name="cant_sync_dialog_title" msgid="3016197392261471761">"Kan ikke synkronisere manuelt"</string>
+    <string name="cant_sync_dialog_message" msgid="7200115394296632300">"Synkronisering af dette element er slået fra i øjeblikket. Hvis du vil ændre indstillingen, skal du midlertidigt slå baggrundsdata til og synkronisere automatisk."</string>
+</resources>

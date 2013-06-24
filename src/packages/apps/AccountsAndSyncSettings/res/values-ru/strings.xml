@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/*
+ * Copyright (C) 2007 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_label" msgid="3706018265751197270">"Настройки аккаунта и синхронизации"</string>
+    <string name="sync_settings" msgid="8707056705985552604">"Настройки аккаунтов и синхронизации"</string>
+    <string name="sync_too_many_deletes" msgid="1621369057980827097">"Превышен предел удаления"</string>
+    <string name="background_data" msgid="1103557117473896066">"Фоновый режим"</string>
+    <string name="background_data_summary" msgid="9048259510387973822">"Синхронизация, отправка и прием данных возможны в любое время"</string>
+    <string name="background_data_dialog_title" msgid="6303755495467986079">"Внимание!"</string>
+    <string name="background_data_dialog_message" msgid="8417297954700022363">"Отключение фонового режима обмена данными экономит энергию батареи и уменьшает объем трафика. Однако некоторые приложения смогут, тем не менее, продолжить использование фоновой передачи даже после ее отключения."</string>
+    <string name="sync_automatically" msgid="4694735102757960100">"Автосинхронизация"</string>
+    <string name="sync_automatically_summary" msgid="4598895616781542745">"Приложения синхронизируют данные автоматически по расписанию"</string>
+    <string name="settings_backup" msgid="6114299464740014762">"Создать резервную копию настроек"</string>
+    <string name="settings_backup_summary" msgid="1787552172618610178">"Создать резервную копию настроек"</string>
+    <string name="sync_menu_sync_now" msgid="5796024841315572404">"Синхронизировать сейчас"</string>
+    <string name="sync_menu_sync_cancel" msgid="1005480041232010062">"Отменить синхронизацию"</string>
+    <string name="sync_one_time_sync" msgid="3274364877518422827">"Нажмите, чтобы начать синхронизацию<xliff:g id="LAST_SYNC_TIME">
+%1$s</xliff:g>"</string>
+    <string name="sync_gmail" msgid="5806053858668452000">"Gmail"</string>
+    <string name="sync_calendar" msgid="1796292773734071897">"Календарь"</string>
+    <string name="sync_contacts" msgid="2035690905925565660">"Контакты"</string>
+    <string name="sync_too_many_deletes_desc" msgid="699495654174066067">"Удаленных объектов для <xliff:g id="TYPE_OF_SYNC">%2$s</xliff:g>: <xliff:g id="NUMBER_OF_DELETED_ITEMS">%1$d</xliff:g>, аккаунт <xliff:g id="ACCOUNT_NAME">%3$s</xliff:g>. Что нужно сделать?"</string>
+    <string name="sync_really_delete" msgid="5456355204562588976">"Удалить элементы."</string>
+    <string name="sync_undo_deletes" msgid="8695514459839593307">"Отменить удаления."</string>
+    <string name="sync_do_nothing" msgid="5798755982392201673">"Ничего не делать сейчас."</string>
+    <string name="sync_is_failing" msgid="5230237058552433773">"Проблемы с синхронизацией. Скоро все снова будет работать."</string>
+    <string name="sync_plug" msgid="7020432439004167162"><font fgcolor="#ffffffff">"Добро пожаловать в Google Sync!"</font>" "\n"Подход Google к синхронизации данных, позволяющий получить данные о контактах, встречах и многом другом, где бы вы ни были."</string>
+    <string name="header_application_sync_settings" msgid="5263025067167527890">"Настройки синхронизации приложения"</string>
+    <string name="header_manage_accounts" msgid="381956296995298770">"Управление аккаунтами"</string>
+    <string name="header_general_sync_settings" msgid="1598537524696692308">"Общие настройки синхронизации"</string>
+    <string name="sync_enabled" msgid="913018877443997502">"Синхронизация включена"</string>
+    <string name="sync_disabled" msgid="185731301298967302">"Синхронизация выключена"</string>
+    <string name="sync_error" msgid="681431702824599812">"Ошибка синхронизации"</string>
+    <string name="add_account_label" msgid="2035321485672826779">"Добавить аккаунт"</string>
+    <string name="header_data_and_synchronization" msgid="6286257845276834071">"Cинхронизация"</string>
+    <string name="preference_change_password_title" msgid="6468827554159468315">"Изменить пароль"</string>
+    <string name="header_account_settings" msgid="4950809499418403792">"Настройки аккаунта"</string>
+    <string name="remove_account_label" msgid="5624712684599197863">"Удалить аккаунт"</string>
+    <string name="header_add_an_account" msgid="2198078922829535425">"Добавить аккаунт"</string>
+    <string name="finish_button_label" msgid="6121560986057356757">"Готово"</string>
+    <string name="really_remove_account_title" msgid="8808121039511188784">"Удалить аккаунт"</string>
+    <string name="really_remove_account_message" msgid="3293445755620109578">"Вы действительно хотите удалить этот аккаунт? Это приведет к потере всех связанных с ним сообщений, контактов и других данных, имеющихся в телефоне. "\n"Продолжить?"</string>
+    <string name="remove_account_failed" msgid="8178924513521241001">"Данный аккаунт используется некоторыми приложениями. Чтобы удалить его, перейдите в меню \"Настройки\", выберите пункт \"Восстановление и сброс\" и нажмите \"Сброс настроек\". Обратите внимание: при этом все ваши личные данные будут также удалены с устройства."</string>
+    <string name="provider_label" msgid="6191617139291321517">"Подписки Push"</string>
+    <string name="sync_item_title" msgid="7984962124867021854">"Синхр. <xliff:g id="AUTHORITY">%s</xliff:g>"</string>
+    <string name="cant_sync_dialog_title" msgid="3016197392261471761">"Не удается синхронизировать вручную"</string>
+    <string name="cant_sync_dialog_message" msgid="7200115394296632300">"Синхронизация для этого элемента отключена. Чтобы изменить настройку, временно разрешите использование фонового режима передачи данных и автоматическую синхронизацию."</string>
+</resources>

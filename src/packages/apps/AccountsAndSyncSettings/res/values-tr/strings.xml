@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/*
+ * Copyright (C) 2007 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_label" msgid="3706018265751197270">"Hesap ve Senkronizasyon Ayarları"</string>
+    <string name="sync_settings" msgid="8707056705985552604">"Hesaplar ve senkronizasyon ayarları"</string>
+    <string name="sync_too_many_deletes" msgid="1621369057980827097">"Silme sınırı aşıldı"</string>
+    <string name="background_data" msgid="1103557117473896066">"Arka plan veri"</string>
+    <string name="background_data_summary" msgid="9048259510387973822">"Uygulamalar, verileri istediğiniz zaman senkronize edebilir ve gönderip alabilir"</string>
+    <string name="background_data_dialog_title" msgid="6303755495467986079">"Dikkat"</string>
+    <string name="background_data_dialog_message" msgid="8417297954700022363">"Arka plan verilerini devre dışı bırakmak, pilden tasarruf sağlar ve veri kullanımını azaltır. Bazı uygulamalar yine de arka plan veri bağlantısını kullanmaya devam edebilir."</string>
+    <string name="sync_automatically" msgid="4694735102757960100">"Otomatik senk."</string>
+    <string name="sync_automatically_summary" msgid="4598895616781542745">"Uygulamalar verileri otomatik olarak senkronize eder"</string>
+    <string name="settings_backup" msgid="6114299464740014762">"Ayarları yedekle"</string>
+    <string name="settings_backup_summary" msgid="1787552172618610178">"Ayarlarımı yedekle"</string>
+    <string name="sync_menu_sync_now" msgid="5796024841315572404">"Şimdi senk. et"</string>
+    <string name="sync_menu_sync_cancel" msgid="1005480041232010062">"Senkronizasyonu iptal et"</string>
+    <string name="sync_one_time_sync" msgid="3274364877518422827">"Şimdi senkronize etmek için dokunun<xliff:g id="LAST_SYNC_TIME">
+%1$s</xliff:g>"</string>
+    <string name="sync_gmail" msgid="5806053858668452000">"Gmail"</string>
+    <string name="sync_calendar" msgid="1796292773734071897">"Takvim"</string>
+    <string name="sync_contacts" msgid="2035690905925565660">"Kişiler"</string>
+    <string name="sync_too_many_deletes_desc" msgid="699495654174066067">"<xliff:g id="TYPE_OF_SYNC">%2$s</xliff:g>, <xliff:g id="ACCOUNT_NAME">%3$s</xliff:g> hesabı için <xliff:g id="NUMBER_OF_DELETED_ITEMS">%1$d</xliff:g> silinmiş öğe var. Ne yapmak istiyorsunuz?"</string>
+    <string name="sync_really_delete" msgid="5456355204562588976">"Öğeleri silin."</string>
+    <string name="sync_undo_deletes" msgid="8695514459839593307">"Silme işlemlerini geri alın."</string>
+    <string name="sync_do_nothing" msgid="5798755982392201673">"Şimdilik bir şey yapma."</string>
+    <string name="sync_is_failing" msgid="5230237058552433773">"Senk. şu anda sorun yaşıyor. Kısa bir süre sonra yeniden devreye girecek."</string>
+    <string name="sync_plug" msgid="7020432439004167162"><font fgcolor="#ffffffff">"Google Sync\'e Hoş Geldiniz!"</font>" "\n"Kişilerinize, randevularınıza ve diğer bilgilerinize istediğiniz yerden erişebilmenize olanak veren, Google\'ın veri senkronizasyonu ürünü."</string>
+    <string name="header_application_sync_settings" msgid="5263025067167527890">"Uygulama senk. ayarları"</string>
+    <string name="header_manage_accounts" msgid="381956296995298770">"Hesapları yönetin"</string>
+    <string name="header_general_sync_settings" msgid="1598537524696692308">"Genel senk. ayarları"</string>
+    <string name="sync_enabled" msgid="913018877443997502">"Senkronizasyon AÇIK"</string>
+    <string name="sync_disabled" msgid="185731301298967302">"Senkronizasyon KAPALI"</string>
+    <string name="sync_error" msgid="681431702824599812">"Senkronizasyon hatası"</string>
+    <string name="add_account_label" msgid="2035321485672826779">"Hesap ekle"</string>
+    <string name="header_data_and_synchronization" msgid="6286257845276834071">"Veri ve senkronizasyon"</string>
+    <string name="preference_change_password_title" msgid="6468827554159468315">"Şifreyi değiştir"</string>
+    <string name="header_account_settings" msgid="4950809499418403792">"Hesap ayarları"</string>
+    <string name="remove_account_label" msgid="5624712684599197863">"Hesabı kaldır"</string>
+    <string name="header_add_an_account" msgid="2198078922829535425">"Bir hesap ekleyin"</string>
+    <string name="finish_button_label" msgid="6121560986057356757">"Son"</string>
+    <string name="really_remove_account_title" msgid="8808121039511188784">"Hesabı kaldır"</string>
+    <string name="really_remove_account_message" msgid="3293445755620109578">"Bu hesabı gerçekten kaldırmak istiyor musunuz? Bunu kaldırmak, bu hesaba ait tüm mesajları, kişileri ve telefondaki diğer verileri de silecektir. "\n"Devam etmek istiyor musunuz?"</string>
+    <string name="remove_account_failed" msgid="8178924513521241001">"Bu hesap, bazı uygulamalar için gereklidir. Hesabı ancak telefonu varsayılan fabrika ayarlarına geri döndürerek kaldırabilirsiniz (tüm kişisel verileriniz silinir). Bu işlemi Ayarlar uygulamasında, Gizlilik altında gerçekleştirebilirsiniz."</string>
+    <string name="provider_label" msgid="6191617139291321517">"Abonelik şart koş"</string>
+    <string name="sync_item_title" msgid="7984962124867021854">"<xliff:g id="AUTHORITY">%s</xliff:g> senkronize et"</string>
+    <string name="cant_sync_dialog_title" msgid="3016197392261471761">"Manuel olarak senkronize edilemiyor"</string>
+    <string name="cant_sync_dialog_message" msgid="7200115394296632300">"Bu öğe için senkronizasyon şu anda devre dışı bırakılmış durumdadır. Tercihinizi değiştirmek için geçici olarak arka plan verilerini ve otomatik senkronizasyonu açın."</string>
+</resources>

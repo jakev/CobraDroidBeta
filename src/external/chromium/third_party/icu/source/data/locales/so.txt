@@ -1,0 +1,23 @@
+// ***************************************************************************
+// *
+// * Copyright (C) 2009 International Business Machines
+// * Corporation and others.  All Rights Reserved.
+// * Tool: com.ibm.icu.dev.tool.cldr.LDML2ICUConverter.java
+// * Source File:<path>/common/main/so.xml
+// *
+// ***************************************************************************
+/**
+ *  ICU <specials> source: <path>/xml/main/so.xml
+ *  Chrome Note: This locale data is abridged to contain categories
+ *  actually used by Chrome.
+ */
+so{
+    ExemplarCharacters{"[a-z]"}
+    Languages{
+        so{"Soomaali"}
+    }
+    LocaleScript{
+        "Latn",
+    }
+    Version{"1.68"}
+}

@@ -1,0 +1,29 @@
+--- source/data/makedata.mak	2009-04-15 12:08:25.000000000 -0700
++++ source/data/makedata.mak	2009-08-27 11:01:55.289559000 -0700
+@@ -384,6 +384,17 @@
+ ALL : GODATA "$(ICU_LIB_TARGET)" "$(TESTDATAOUT)\testdata.dat"
+ 	@echo All targets are up to date
+ 
++#############################################################################
++#
++# DATALIB
++#     This target builds the data library. It's identical to 
++#     ALL except that testdata.dat is not built.
++#
++#############################################################################
++DATALIB : GODATA "$(ICU_LIB_TARGET)"
++	@echo Data library is built
++
++
+ # Starting with ICU4C 3.4, the core Unicode properties files (uprops.icu, ucase.icu, ubidi.icu, unorm.icu)
+ # are hardcoded in the common DLL and therefore not included in the data package any more.
+ # They are not built by default but need to be built for ICU4J data and for getting the .c source files
+@@ -621,7 +632,7 @@
+ # If you modify this, modify winmode.c in pkgdata.
+ "$(ICUTMP)\icudata.res": "$(ICUMISC)\icudata.rc"
+ 	@echo Creating data DLL version information from $**
+-	@rc.exe /i "..\..\..\..\common" /r /fo $@ $**
++	@rc.exe /i "..\..\..\..\common;..\..\..\..\..\public\common" /r /fo $@ $**
+ 
+ # Targets for unames.icu
+ "$(ICUBLD_PKG)\unames.icu": "$(ICUUNIDATA)\*.txt" "$(ICUTOOLS)\gennames\$(CFG)\gennames.exe"

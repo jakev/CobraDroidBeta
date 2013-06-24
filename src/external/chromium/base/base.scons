@@ -1,0 +1,603 @@
+# This file is generated; do not edit.
+
+import os
+
+Import("env")
+
+env = env.Clone(COMPONENT_NAME='base',
+                TARGET_NAME='base')
+
+configurations = {
+    'Debug' : {
+        'Append' : dict(
+            CCFLAGS = [
+                '-Werror',
+                '-pthread',
+                '-fno-exceptions',
+                '-fno-asynchronous-unwind-tables',
+                '-fvisibility=hidden',
+                '-Wall',
+                '-D_FILE_OFFSET_BITS=64',
+                '-Wno-write-strings',
+                '-DPNG_NO_MMX_CODE',
+                '-pthread',
+                '-I/usr/include/gtk-2.0',
+                '-I/usr/lib/gtk-2.0/include',
+                '-I/usr/include/atk-1.0',
+                '-I/usr/include/cairo',
+                '-I/usr/include/pango-1.0',
+                '-I/usr/include/glib-2.0',
+                '-I/usr/lib/glib-2.0/include',
+                '-I/usr/include/freetype2',
+                '-I/usr/include/libpng12',
+                '-I/usr/include/pixman-1',
+                '-I/usr/include/nss',
+                '-I/usr/include/nspr',
+                '-O0',
+                '-g'
+            ],
+            CPPDEFINES = [
+                '__STDC_FORMAT_MACROS',
+                'CHROMIUM_BUILD',
+                '_DEBUG'
+            ],
+            CPPPATH = [
+                env.Dir('$SRC_DIR/base/..')
+            ],
+            CXXFLAGS = [
+                '-fno-rtti',
+                '-fno-threadsafe-statics',
+                '-fvisibility-inlines-hidden'
+            ],
+            LINKFLAGS = [
+                '-pthread',
+                '-rdynamic'
+            ],
+        ),
+        'FilterOut' : dict(
+        ),
+        'Replace' : dict(
+             FLOCK_LDMODULE = ['flock', '$TOP_BUILDDIR/linker.lock', '$LDMODULE'],
+             FLOCK_LINK = ['flock', '$TOP_BUILDDIR/linker.lock', '$LINK'],
+             FLOCK_SHLINK = ['flock', '$TOP_BUILDDIR/linker.lock', '$SHLINK'],
+             IMPLICIT_COMMAND_DEPENDENCIES = '0',
+             LDMODULECOM = [['$FLOCK_LDMODULE',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$LDMODULEFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+             LIBPATH = ['$LIB_DIR'],
+             LINKCOM = [['$FLOCK_LINK',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$LINKFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+             SHLINKCOM = [['$FLOCK_SHLINK',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$SHLINKFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+        ),
+        'ImportExternal' : [
+             'AS',
+             'CC',
+             'CXX',
+             'LINK',
+        ],
+        'PropagateExternal' : [
+             'AS',
+             'CC',
+             'CCACHE_DIR',
+             'CXX',
+             'DISTCC_DIR',
+             'DISTCC_HOSTS',
+             'HOME',
+             'INCLUDE_SERVER_ARGS',
+             'INCLUDE_SERVER_PORT',
+             'LINK',
+             'CHROME_BUILD_TYPE',
+             'CHROMIUM_BUILD',
+             'OFFICIAL_BUILD',
+        ],
+    },
+    'Release' : {
+        'Append' : dict(
+            CCFLAGS = [
+                '-Werror',
+                '-pthread',
+                '-fno-exceptions',
+                '-fno-asynchronous-unwind-tables',
+                '-fvisibility=hidden',
+                '-Wall',
+                '-D_FILE_OFFSET_BITS=64',
+                '-Wno-write-strings',
+                '-DPNG_NO_MMX_CODE',
+                '-pthread',
+                '-I/usr/include/gtk-2.0',
+                '-I/usr/lib/gtk-2.0/include',
+                '-I/usr/include/atk-1.0',
+                '-I/usr/include/cairo',
+                '-I/usr/include/pango-1.0',
+                '-I/usr/include/glib-2.0',
+                '-I/usr/lib/glib-2.0/include',
+                '-I/usr/include/freetype2',
+                '-I/usr/include/libpng12',
+                '-I/usr/include/pixman-1',
+                '-I/usr/include/nss',
+                '-I/usr/include/nspr',
+                '-O2',
+                '-fno-ident',
+                '-fdata-sections',
+                '-ffunction-sections'
+            ],
+            CPPDEFINES = [
+                '__STDC_FORMAT_MACROS',
+                'CHROMIUM_BUILD',
+                'NDEBUG',
+                'NVALGRIND'
+            ],
+            CPPPATH = [
+                env.Dir('$SRC_DIR/base/..')
+            ],
+            CXXFLAGS = [
+                '-fno-rtti',
+                '-fno-threadsafe-statics',
+                '-fvisibility-inlines-hidden'
+            ],
+            LINKFLAGS = [
+                '-pthread',
+                '-Wl,--gc-sections'
+            ],
+        ),
+        'FilterOut' : dict(
+        ),
+        'Replace' : dict(
+             FLOCK_LDMODULE = ['flock', '$TOP_BUILDDIR/linker.lock', '$LDMODULE'],
+             FLOCK_LINK = ['flock', '$TOP_BUILDDIR/linker.lock', '$LINK'],
+             FLOCK_SHLINK = ['flock', '$TOP_BUILDDIR/linker.lock', '$SHLINK'],
+             IMPLICIT_COMMAND_DEPENDENCIES = '0',
+             LDMODULECOM = [['$FLOCK_LDMODULE',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$LDMODULEFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+             LIBPATH = ['$LIB_DIR'],
+             LINKCOM = [['$FLOCK_LINK',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$LINKFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+             SHLINKCOM = [['$FLOCK_SHLINK',
+  '-o',
+  '$TARGET',
+  '$_LIBDIRFLAGS',
+  '$SHLINKFLAGS',
+  '$SOURCES',
+  '-Wl,--start-group',
+  '$_LIBFLAGS',
+  '-Wl,--end-group']],
+        ),
+        'ImportExternal' : [
+             'AS',
+             'CC',
+             'CXX',
+             'LINK',
+        ],
+        'PropagateExternal' : [
+             'AS',
+             'CC',
+             'CCACHE_DIR',
+             'CXX',
+             'DISTCC_DIR',
+             'DISTCC_HOSTS',
+             'HOME',
+             'INCLUDE_SERVER_ARGS',
+             'INCLUDE_SERVER_PORT',
+             'LINK',
+             'CHROME_BUILD_TYPE',
+             'CHROMIUM_BUILD',
+             'OFFICIAL_BUILD',
+        ],
+    },
+}
+
+config = configurations[env['CONFIG_NAME']]
+env.Append(**config['Append'])
+env.FilterOut(**config['FilterOut'])
+env.Replace(**config['Replace'])
+
+# Scons forces -fPIC for SHCCFLAGS on some platforms.
+# Disable that so we can control it from cflags in gyp.
+# Note that Scons itself is inconsistent with its -fPIC
+# setting. SHCCFLAGS forces -fPIC, and SHCFLAGS does not.
+# This will make SHCCFLAGS consistent with SHCFLAGS.
+env['SHCCFLAGS'] = ['$CCFLAGS']
+
+for _var in config['ImportExternal']:
+  if _var in ARGUMENTS:
+    env[_var] = ARGUMENTS[_var]
+  elif _var in os.environ:
+    env[_var] = os.environ[_var]
+for _var in config['PropagateExternal']:
+  if _var in ARGUMENTS:
+    env[_var] = ARGUMENTS[_var]
+  elif _var in os.environ:
+    env['ENV'][_var] = os.environ[_var]
+
+env['ENV']['LD_LIBRARY_PATH'] = env.subst('$LIB_DIR')
+
+if ARGUMENTS.get('COVERAGE') not in (None, '0'):
+  env.AppendUnique(
+            CCFLAGS = [
+                '-fprofile-arcs',
+                '-ftest-coverage'
+            ],
+            LINKFLAGS = [
+                '-fprofile-arcs'
+            ],
+  )
+
+if ARGUMENTS.get('PROFILE') not in (None, '0'):
+  env.AppendUnique(
+            CCFLAGS = [
+                '-pg',
+                '-g'
+            ],
+            LINKFLAGS = [
+                '-pg'
+            ],
+  )
+
+if ARGUMENTS.get('SYMBOLS') not in (None, '0'):
+  env.AppendUnique(
+            CCFLAGS = [
+                '-g'
+            ],
+  )
+
+input_files = [
+    '../build/build_config.h',
+    'crypto/rsa_private_key.h',
+    'crypto/rsa_private_key.cc',
+    'crypto/rsa_private_key_nss.cc',
+    'crypto/signature_creator.h',
+    'crypto/signature_creator_nss.cc',
+    'crypto/signature_verifier.h',
+    'crypto/signature_verifier_nss.cc',
+    'third_party/dmg_fp/dmg_fp.h',
+    'third_party/dmg_fp/dtoa.cc',
+    'third_party/dmg_fp/g_fmt.cc',
+    'third_party/icu/icu_utf.cc',
+    'third_party/icu/icu_utf.h',
+    'third_party/nspr/prcpucfg.h',
+    'third_party/nspr/prcpucfg_win.h',
+    'third_party/nspr/prtime.cc',
+    'third_party/nspr/prtime.h',
+    'third_party/nspr/prtypes.h',
+    'third_party/nss/blapi.h',
+    'third_party/nss/blapit.h',
+    'third_party/nss/sha256.h',
+    'third_party/nss/sha512.cc',
+    'third_party/purify/pure.h',
+    'third_party/xdg_mime/xdgmime.c',
+    'third_party/xdg_mime/xdgmime.h',
+    'third_party/xdg_mime/xdgmimealias.c',
+    'third_party/xdg_mime/xdgmimealias.h',
+    'third_party/xdg_mime/xdgmimecache.c',
+    'third_party/xdg_mime/xdgmimecache.h',
+    'third_party/xdg_mime/xdgmimeglob.c',
+    'third_party/xdg_mime/xdgmimeglob.h',
+    'third_party/xdg_mime/xdgmimeicon.c',
+    'third_party/xdg_mime/xdgmimeicon.h',
+    'third_party/xdg_mime/xdgmimeint.c',
+    'third_party/xdg_mime/xdgmimeint.h',
+    'third_party/xdg_mime/xdgmimemagic.c',
+    'third_party/xdg_mime/xdgmimemagic.h',
+    'third_party/xdg_mime/xdgmimeparent.c',
+    'third_party/xdg_mime/xdgmimeparent.h',
+    'atomicops_internals_x86_gcc.cc',
+    'at_exit.cc',
+    'at_exit.h',
+    'atomic_flag.h',
+    'atomic_flag.cc',
+    'atomic_ref_count.h',
+    'atomic_sequence_num.h',
+    'atomicops.h',
+    'atomicops_internals_x86_msvc.h',
+    'base_drag_source.h',
+    'base_drop_target.h',
+    'base_paths.cc',
+    'base_paths.h',
+    'base_paths_linux.h',
+    'base_paths_linux.cc',
+    'base_paths_mac.h',
+    'base_paths_win.h',
+    'base_switches.cc',
+    'base_switches.h',
+    'basictypes.h',
+    'bits.h',
+    'bzip2_error_handler.cc',
+    'chrome_application_mac.h',
+    'cocoa_protocols_mac.h',
+    'command_line.cc',
+    'command_line.h',
+    'compiler_specific.h',
+    'condition_variable.h',
+    'condition_variable_posix.cc',
+    'cpu.h',
+    'data_pack.cc',
+    'debug_on_start.h',
+    'debug_util.cc',
+    'debug_util.h',
+    'debug_util_posix.cc',
+    'directory_watcher.h',
+    'directory_watcher_inotify.cc',
+    'dynamic_annotations.h',
+    'dynamic_annotations.cc',
+    'event_recorder.h',
+    'event_recorder_stubs.cc',
+    'field_trial.cc',
+    'field_trial.h',
+    'file_descriptor_shuffle.cc',
+    'file_descriptor_shuffle.h',
+    'file_path.cc',
+    'file_path.h',
+    'file_util.cc',
+    'file_util.h',
+    'file_util_linux.cc',
+    'file_util_posix.cc',
+    'file_version_info.h',
+    'fix_wp64.h',
+    'float_util.h',
+    'foundation_utils_mac.h',
+    'gfx/point.cc',
+    'gfx/point.h',
+    'gfx/rect.cc',
+    'gfx/rect.h',
+    'gfx/size.cc',
+    'gfx/size.h',
+    'global_descriptors_posix.h',
+    'global_descriptors_posix.cc',
+    'hash_tables.h',
+    'histogram.cc',
+    'histogram.h',
+    'hmac.h',
+    'hmac_nss.cc',
+    'iat_patch.h',
+    'id_map.h',
+    'image_util.h',
+    'json/json_reader.cc',
+    'json/json_reader.h',
+    'json/json_writer.cc',
+    'json/json_writer.h',
+    'json/string_escape.cc',
+    'json/string_escape.h',
+    'keyboard_code_conversion_gtk.cc',
+    'keyboard_code_conversion_gtk.h',
+    'keyboard_codes.h',
+    'keyboard_codes_win.h',
+    'keyboard_codes_posix.h',
+    'lazy_instance.cc',
+    'lazy_instance.h',
+    'leak_annotations.h',
+    'leak_tracker.h',
+    'linked_list.h',
+    'linked_ptr.h',
+    'linux_util.cc',
+    'linux_util.h',
+    'lock.cc',
+    'lock.h',
+    'lock_impl.h',
+    'lock_impl_posix.cc',
+    'logging.cc',
+    'logging.h',
+    'mac_util.h',
+    'md5.cc',
+    'md5.h',
+    'memory_debug.cc',
+    'memory_debug.h',
+    'message_loop.cc',
+    'message_loop.h',
+    'message_pump.h',
+    'message_pump_default.cc',
+    'message_pump_default.h',
+    'message_pump_glib.cc',
+    'message_pump_glib.h',
+    'message_pump_libevent.cc',
+    'message_pump_libevent.h',
+    'message_pump_mac.h',
+    'message_pump_win.h',
+    'mime_util.h',
+    'mime_util_linux.cc',
+    'native_library.h',
+    'native_library_linux.cc',
+    'non_thread_safe.cc',
+    'non_thread_safe.h',
+    'nsimage_cache_mac.h',
+    'nss_init.cc',
+    'nss_init.h',
+    'nullable_string16.h',
+    'object_watcher.h',
+    'observer_list.h',
+    'observer_list_threadsafe.h',
+    'path_service.cc',
+    'path_service.h',
+    'pe_image.h',
+    'pickle.cc',
+    'pickle.h',
+    'platform_file.h',
+    'platform_file_posix.cc',
+    'platform_thread.h',
+    'platform_thread_posix.cc',
+    'port.h',
+    'profiler.cc',
+    'profiler.h',
+    'process.h',
+    'process_linux.cc',
+    'process_posix.cc',
+    'process_util.h',
+    'process_util_linux.cc',
+    'process_util_posix.cc',
+    'rand_util.cc',
+    'rand_util.h',
+    'rand_util_posix.cc',
+    'ref_counted.cc',
+    'ref_counted.h',
+    'ref_counted_memory.h',
+    'registry.h',
+    'resource_util.h',
+    'safe_strerror_posix.cc',
+    'safe_strerror_posix.h',
+    'scoped_bool.h',
+    'scoped_bstr_win.h',
+    'scoped_cftyperef.h',
+    'scoped_comptr_win.h',
+    'scoped_handle.h',
+    'scoped_handle_gtk.h',
+    'scoped_handle_win.h',
+    'scoped_nsautorelease_pool.h',
+    'scoped_nsdisable_screen_updates.h',
+    'scoped_nsobject.h',
+    'scoped_ptr.h',
+    'scoped_temp_dir.cc',
+    'scoped_temp_dir.h',
+    'scoped_variant_win.h',
+    'scoped_vector.h',
+    'setproctitle_linux.c',
+    'setproctitle_linux.h',
+    'sha1.cc',
+    'sha1.h',
+    'sha2.cc',
+    'sha2.h',
+    'shared_memory.h',
+    'shared_memory_posix.cc',
+    'simple_thread.cc',
+    'simple_thread.h',
+    'singleton.h',
+    'spin_wait.h',
+    'stack_container.h',
+    'stats_counters.h',
+    'stats_table.cc',
+    'stats_table.h',
+    'stl_util-inl.h',
+    'string16.cc',
+    'string16.h',
+    'string_piece.cc',
+    'string_piece.h',
+    'string_tokenizer.h',
+    'string_util.cc',
+    'string_util.h',
+    'string_util_win.h',
+    'sys_info.h',
+    'sys_info_posix.cc',
+    'sys_string_conversions.h',
+    'sys_string_conversions_linux.cc',
+    'system_monitor.cc',
+    'system_monitor.h',
+    'system_monitor_posix.cc',
+    'task.h',
+    'thread.cc',
+    'thread.h',
+    'thread_collision_warner.cc',
+    'thread_collision_warner.h',
+    'thread_local.h',
+    'thread_local_posix.cc',
+    'thread_local_storage.h',
+    'thread_local_storage_posix.cc',
+    'time.cc',
+    'time.h',
+    'time_posix.cc',
+    'timer.cc',
+    'timer.h',
+    'trace_event.cc',
+    'trace_event.h',
+    'tracked.cc',
+    'tracked.h',
+    'tracked_objects.cc',
+    'tracked_objects.h',
+    'tuple.h',
+    'utf_offset_string_conversions.cc',
+    'utf_offset_string_conversions.h',
+    'utf_string_conversion_utils.cc',
+    'utf_string_conversion_utils.h',
+    'utf_string_conversions.cc',
+    'utf_string_conversions.h',
+    'unix_domain_socket_posix.cc',
+    'values.cc',
+    'values.h',
+    'version.cc',
+    'version.h',
+    'waitable_event.h',
+    'waitable_event_posix.cc',
+    'waitable_event_watcher.h',
+    'waitable_event_watcher_posix.cc',
+    'watchdog.cc',
+    'watchdog.h',
+    'weak_ptr.h',
+    'win_util.h',
+    'windows_message_list.h',
+    'wmi_util.h',
+    'worker_pool.h',
+    'worker_pool_linux.cc',
+    'worker_pool_linux.h',
+    'worker_pool_mac.h',
+]
+
+target_files = []
+prerequisites = []
+
+_result = []
+for infile in input_files:
+  if env.compilable(infile):
+    if (type(infile) == type('')
+        and (infile.startswith('$SRC_DIR/base/')
+             or not os.path.isabs(env.subst(infile)))):
+      # Force files below the build directory by replacing all '..'
+      # elements in the path with '__':
+      base, ext = os.path.splitext(os.path.normpath(infile))
+      base = [d == '..' and '__' or d for d in base.split('/')]
+      base = os.path.join(*base)
+      object = '${OBJ_DIR}/${COMPONENT_NAME}/${TARGET_NAME}/' + base
+      if not infile.startswith('$SRC_DIR/base/'):
+        infile = '$SRC_DIR/base/' + infile
+      infile = env.StaticObject(object, infile)[0]
+    else:
+      infile = env.StaticObject(infile)[0]
+  _result.append(infile)
+input_files = _result
+
+_outputs = env.GypStaticLibrary('base', input_files)
+target_files.extend(_outputs)
+
+gyp_target = env.Alias('base', target_files)
+dependencies = [
+    Alias('lastchange'),
+    Alias('gtk'),
+    Alias('nss')
+]
+env.Requires(target_files, dependencies)
+env.Requires(gyp_target, dependencies)
+for prerequisite in prerequisites:
+  env.Requires(prerequisite, dependencies)
+env.Requires(gyp_target, prerequisites)
+Return("gyp_target")

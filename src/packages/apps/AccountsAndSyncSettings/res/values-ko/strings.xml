@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/*
+ * Copyright (C) 2007 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_label" msgid="3706018265751197270">"계정 및 동기화 설정"</string>
+    <string name="sync_settings" msgid="8707056705985552604">"계정 및 동기화 설정"</string>
+    <string name="sync_too_many_deletes" msgid="1621369057980827097">"삭제 한도를 초과했습니다."</string>
+    <string name="background_data" msgid="1103557117473896066">"백그라운드 데이터"</string>
+    <string name="background_data_summary" msgid="9048259510387973822">"애플리케이션에서 언제든지 데이터를 동기화하고 보내고 받음"</string>
+    <string name="background_data_dialog_title" msgid="6303755495467986079">"주의"</string>
+    <string name="background_data_dialog_message" msgid="8417297954700022363">"백그라운드 데이터를 사용하지 않도록 설정하면 배터리 수명이 늘어나고 데이터 사용률이 낮아집니다. 일부 애플리케이션은 여전히 백그라운드 데이터 연결을 사용할 수 있습니다."</string>
+    <string name="sync_automatically" msgid="4694735102757960100">"자동 동기화"</string>
+    <string name="sync_automatically_summary" msgid="4598895616781542745">"애플리케이션에서 데이터를 자동으로 동기화함"</string>
+    <string name="settings_backup" msgid="6114299464740014762">"설정 백업"</string>
+    <string name="settings_backup_summary" msgid="1787552172618610178">"내 설정 백업"</string>
+    <string name="sync_menu_sync_now" msgid="5796024841315572404">"지금 동기화"</string>
+    <string name="sync_menu_sync_cancel" msgid="1005480041232010062">"동기화 취소"</string>
+    <string name="sync_one_time_sync" msgid="3274364877518422827">"지금 동기화하려면 터치<xliff:g id="LAST_SYNC_TIME">
+%1$s</xliff:g>"</string>
+    <string name="sync_gmail" msgid="5806053858668452000">"Gmail"</string>
+    <string name="sync_calendar" msgid="1796292773734071897">"캘린더"</string>
+    <string name="sync_contacts" msgid="2035690905925565660">"주소록"</string>
+    <string name="sync_too_many_deletes_desc" msgid="699495654174066067">"<xliff:g id="TYPE_OF_SYNC">%2$s</xliff:g>, <xliff:g id="ACCOUNT_NAME">%3$s</xliff:g> 계정에 대해 <xliff:g id="NUMBER_OF_DELETED_ITEMS">%1$d</xliff:g>개의 삭제된 항목이 있습니다. 어떻게 하시겠습니까?"</string>
+    <string name="sync_really_delete" msgid="5456355204562588976">"항목 삭제"</string>
+    <string name="sync_undo_deletes" msgid="8695514459839593307">"삭제 실행취소"</string>
+    <string name="sync_do_nothing" msgid="5798755982392201673">"지금은 아무 작업도 안함"</string>
+    <string name="sync_is_failing" msgid="5230237058552433773">"동기화에 현재 문제가 발생했습니다. 곧 다시 동기화됩니다."</string>
+    <string name="sync_plug" msgid="7020432439004167162"><font fgcolor="#ffffffff">"Google Sync에 오신 것을 환영합니다."</font>" "\n"Google Sync는 사용자가 어디에서든지 연락처, 일정 등에 액세스할 수 있도록 데이터를 동기화하는 Google 서비스입니다."</string>
+    <string name="header_application_sync_settings" msgid="5263025067167527890">"애플리케이션 동기화 설정"</string>
+    <string name="header_manage_accounts" msgid="381956296995298770">"계정 관리"</string>
+    <string name="header_general_sync_settings" msgid="1598537524696692308">"기본 동기화 설정"</string>
+    <string name="sync_enabled" msgid="913018877443997502">"동기화 사용 중"</string>
+    <string name="sync_disabled" msgid="185731301298967302">"동기화 사용 안함"</string>
+    <string name="sync_error" msgid="681431702824599812">"동기화 오류"</string>
+    <string name="add_account_label" msgid="2035321485672826779">"계정 추가"</string>
+    <string name="header_data_and_synchronization" msgid="6286257845276834071">"데이터 및 동기화"</string>
+    <string name="preference_change_password_title" msgid="6468827554159468315">"비밀번호 변경"</string>
+    <string name="header_account_settings" msgid="4950809499418403792">"계정 설정"</string>
+    <string name="remove_account_label" msgid="5624712684599197863">"계정 삭제"</string>
+    <string name="header_add_an_account" msgid="2198078922829535425">"계정 추가"</string>
+    <string name="finish_button_label" msgid="6121560986057356757">"마침"</string>
+    <string name="really_remove_account_title" msgid="8808121039511188784">"계정 삭제"</string>
+    <string name="really_remove_account_message" msgid="3293445755620109578">"계정을 삭제하시겠습니까? 삭제하면 휴대전화의 메시지, 연락처 및 다른 데이터가 모두 지워집니다. "\n"계속하시겠습니까?"</string>
+    <string name="remove_account_failed" msgid="8178924513521241001">"일부 애플리케이션의 경우 이 계정이 필요합니다. 휴대전화를 공장 초기화해야 계정을 삭제할 수 있으며 이 경우 모든 개인정보가 삭제됩니다. \'설정\'의 \'개인정보 보호\'메뉴에서 재설정할 수 있습니다."</string>
+    <string name="provider_label" msgid="6191617139291321517">"구독정보 푸시"</string>
+    <string name="sync_item_title" msgid="7984962124867021854">"<xliff:g id="AUTHORITY">%s</xliff:g> 동기화"</string>
+    <string name="cant_sync_dialog_title" msgid="3016197392261471761">"수동으로 동기화할 수 없음"</string>
+    <string name="cant_sync_dialog_message" msgid="7200115394296632300">"현재 이 항목에 대해 동기화를 사용할 수 없습니다. 환경설정을 변경하려면 백그라운드 데이터 및 자동 동기화를 일시적으로 사용하도록 설정하세요."</string>
+</resources>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+	
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/thislayout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+    	android:orientation="horizontal"
+  		android:background="@drawable/appwidget_bg">
+    
+
+    	<LinearLayout
+    	    android:layout_width="0.0dip"
+			android:layout_weight="1"
+			android:layout_height="match_parent"     
+			android:orientation="vertical"> 
+				
+			<Button
+			    android:id="@+id/buildButton"
+			    android:layout_width="match_parent"
+			    android:layout_height="0.0dip"
+			    android:layout_weight=".9"
+			    android:background="@drawable/appwidget_button_solo"
+			    android:text="@string/widget_build"
+			    android:textColor="#ffffff"
+			    android:textSize="13sp"
+			    android:textStyle="bold" />
+			
+			<ImageView 
+				android:id="@+id/buildIndicator" 
+				android:layout_width="match_parent" 
+				android:layout_height="@dimen/widget_indicator_height" 
+				android:src="@drawable/ic_appwidget_ind_off"
+				android:scaleType="fitXY" />
+
+    	</LinearLayout>
+
+		<ImageView
+			android:layout_width="1.0dip"
+			android:layout_height="match_parent"
+			android:background="@drawable/appwidget_divider"/>
+		
+		
+		<LinearLayout
+			android:layout_width="0.0dip"
+			android:layout_weight="1"
+			android:layout_height="match_parent"     
+			android:orientation="vertical"> 
+				
+			<Button
+			    android:id="@id/devidsButton"
+			    android:layout_width="match_parent"
+			    android:layout_height="0.0dip"
+			    android:layout_weight=".9"
+			    android:text="@string/widget_devids"
+			    android:textColor="#ffffff"
+			    android:textSize="14sp"
+			    android:textStyle="bold"
+				android:background="@drawable/appwidget_button_solo"/>
+			
+			<ImageView 
+				android:id="@+id/devidsIndicator" 
+				android:layout_width="match_parent" 
+				android:layout_height="@dimen/widget_indicator_height" 
+				android:src="@drawable/ic_appwidget_ind_off"
+				android:scaleType="fitXY" />
+    	    
+    	</LinearLayout>    	
+    	    	
+		<ImageView
+			android:layout_width="1.0dip"
+			android:layout_height="match_parent"
+			android:background="@drawable/appwidget_divider"/>    	    	
+    	
+		
+    	<LinearLayout
+			android:layout_width="0.0dip"
+			android:layout_weight="1"
+			android:layout_height="match_parent"     
+			android:orientation="vertical"> 
+				
+			<Button
+			    android:id="@id/sslButton"
+			    android:layout_width="match_parent"
+			    android:layout_height="0.0dip"
+			    android:layout_weight=".9"
+			    android:text="@string/widget_ssl"
+			    android:textColor="#ffffff"
+			    android:textSize="14sp"
+			    android:textStyle="bold"
+				android:background="@drawable/appwidget_button_solo"/>
+			
+			<ImageView 
+				android:id="@+id/sslIndicator" 
+				android:layout_width="match_parent" 
+				android:layout_height="@dimen/widget_indicator_height" 
+				android:src="@drawable/ic_appwidget_ind_off"
+				android:scaleType="fitXY" />
+			
+    	</LinearLayout>
+    	
+		<ImageView
+			android:layout_width="1.0dip"
+			android:layout_height="match_parent"
+			android:background="@drawable/appwidget_divider"/>    	
+    	
+		
+    	<LinearLayout
+			android:layout_width="0.0dip"
+			android:layout_weight="1"
+			android:layout_height="match_parent"     
+			android:orientation="vertical"> 
+				
+			<ImageButton
+			    android:id="@id/launcherButton"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:background="@drawable/appwidget_button_solo"
+			    android:src="@drawable/ic_launcher" />
+
+		</LinearLayout>
+	</LinearLayout>

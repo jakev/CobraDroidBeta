@@ -1,0 +1,379 @@
+// ***************************************************************************
+// *
+// * Copyright (C) 2009 International Business Machines
+// * Corporation and others.  All Rights Reserved.
+// * Tool: com.ibm.icu.dev.tool.cldr.LDML2ICUConverter.java
+// * Source File:<path>/common/main/sw.xml
+// *
+// ***************************************************************************
+/**
+ *  ICU <specials> source: <path>/xml/main/sw.xml
+ */
+sw{
+    AuxExemplarCharacters{"[q x]"}
+    Countries{
+        419{"Amerika ya Kilatini na Karibiani"}
+        AR{"Ajentina"}
+        AT{"Austria"}
+        AU{"Australia"}
+        AZ{"Azabajani"}
+        BE{"Ubelgiji"}
+        BG{"Bulgaria"}
+        BO{"Bolivia"}
+        BR{"Brazili"}
+        BY{"Belarusi"}
+        CA{"Kanada"}
+        CH{"Uswisi"}
+        CL{"Chile"}
+        CN{"China"}
+        CO{"Kolombia"}
+        CR{"Kosta Rika"}
+        CS{"Serbia na Montenegro"}
+        CU{"Kuba"}
+        CZ{"Jamhuri ya Cheki"}
+        DE{"Ujerumani"}
+        DK{"Denmaki"}
+        DO{"Jamhuri ya Dominika"}
+        DZ{"Aljeria"}
+        EC{"Ekwado"}
+        EE{"Estonia"}
+        EG{"Misri"}
+        ES{"Hispania"}
+        ET{"Ethiopia"}
+        FI{"Ufini"}
+        FR{"Ufaransa"}
+        GB{"Uingereza"}
+        GE{"Jojia"}
+        GR{"Ugiriki"}
+        GT{"Gwatemala"}
+        HK{"Hong Kong"}
+        HN{"Hondurasi"}
+        HR{"Kroeshia"}
+        HT{"Haiti"}
+        HU{"Hungaria"}
+        ID{"Indonesia"}
+        IE{"Ayalandi"}
+        IL{"Israeli"}
+        IN{"India"}
+        IQ{"Iraki"}
+        IR{"Uajemi"}
+        IS{"Aisilandi"}
+        IT{"Italia"}
+        JP{"Japani"}
+        KR{"Korea Kusini"}
+        LT{"Litwania"}
+        LU{"Lasembagi"}
+        LV{"Lativia"}
+        LY{"Libya"}
+        MA{"Moroko"}
+        MD{"Moldova"}
+        MX{"Meksiko"}
+        NL{"Uholanzi"}
+        NO{"Norwe"}
+        NZ{"Nyuzilandi"}
+        PA{"Panama"}
+        PE{"Peru"}
+        PH{"Ufilipino"}
+        PK{"Pakistani"}
+        PL{"Poland"}
+        PR{"Pwetoriko"}
+        PT{"Ureno"}
+        PY{"Paragwai"}
+        QA{"Katari"}
+        RS{"Serbia"}
+        RU{"Urusi"}
+        SA{"Saudia"}
+        SE{"Uswidi"}
+        SG{"Singapoo"}
+        SI{"Slovenia"}
+        SK{"Slovakia"}
+        SV{"Elsavado"}
+        SY{"Siria"}
+        TH{"Tailandi"}
+        TR{"Uturuki"}
+        TW{"Taiwan"}
+        UA{"Ukraini"}
+        US{"Marekani"}
+        UY{"Urugwai"}
+        UZ{"Uzibekistani"}
+        VE{"Venezuela"}
+        VN{"Vietinamu"}
+        ZA{"Afrika Kusini"}
+    }
+    ExemplarCharacters{"[a-d {dh} e-n {ng} {ng'} {ny} o p r s {sh} t {th} u-w y z]"}
+    Languages{
+        af{"Kiafrikana"}
+        am{"Kiamhariki"}
+        ar{"Kiarabu"}
+        az{"Kiazabaijani"}
+        be{"Kibelarusi"}
+        bg{"Kibulgaria"}
+        bh{"Kibihari"}
+        bn{"Kibengali"}
+        br{"Kibreton"}
+        bs{"Kibosnia"}
+        ca{"Kikatalani"}
+        co{"Kikosikani"}
+        cs{"Kicheki"}
+        cy{"Kiwelisi"}
+        da{"Kidenmaki"}
+        de{"Kijerumani"}
+        el{"Kigiriki"}
+        en{"Kiingereza"}
+        eo{"Kiesperanto"}
+        es{"Kihispania"}
+        et{"Kiestonia"}
+        eu{"Kibaski"}
+        fa{"Kiajemi"}
+        fi{"Kifini"}
+        fil{"Kifilipino"}
+        fo{"Kifaroe"}
+        fr{"Kifaransa"}
+        fy{"Kifrisia cha Magharibi"}
+        ga{"Kiayalandi"}
+        gd{"Kigaeli"}
+        gl{"Kigalisia"}
+        gn{"Kiguarani"}
+        gu{"Kigujarati"}
+        he{"Kiyahudi"}
+        hi{"Kihindi"}
+        hr{"Kikroeshia"}
+        hu{"Kihungari"}
+        hy{"Kiarmenia"}
+        ia{"Kiintalingua"}
+        id{"Kiindonesia"}
+        is{"Kiaislandi"}
+        it{"Kiitaliano"}
+        ja{"Kijapani"}
+        jw{"Kijava"}
+        ka{"Kijojia"}
+        kk{"Kikazakhi"}
+        km{"Kikambodia"}
+        kn{"Kikannada"}
+        ko{"Kikorea"}
+        ku{"Kikurdi"}
+        ky{"Kikirgizi"}
+        la{"Kilatini"}
+        ln{"Kilingala"}
+        lo{"Kilaosi"}
+        lt{"Kilithuania"}
+        lv{"Kilatvia"}
+        mk{"Kimasedonia"}
+        ml{"Kimalayam"}
+        mn{"Kimongolia"}
+        mo{"Kimoldavia"}
+        mr{"Kimarathi"}
+        ms{"Kimalei"}
+        mt{"Kimalta"}
+        nb{"Kinorwe (Bokmål)"}
+        ne{"Kinepali"}
+        nl{"Kiholanzi"}
+        nn{"Kinorwe (Nynorsk)"}
+        no{"Kinorwe"}
+        oc{"Kiositani"}
+        or{"Kioriya"}
+        pa{"Kipunjabi"}
+        pl{"Kipolandi"}
+        ps{"Kipashto"}
+        pt{"Kireno"}
+        qu{"Kiquechua"}
+        rm{"Kirumi cha Raetia"}
+        ro{"Kiromania"}
+        ru{"Kirusi"}
+        sd{"Kisindhi"}
+        sh{"Kiserbia-Kikroeshia"}
+        si{"Kisinhali"}
+        sk{"Kislovakia"}
+        sl{"Kislovenia"}
+        sn{"Kishona"}
+        so{"Kisomali"}
+        sq{"Kialbania"}
+        sr{"Kiserbia"}
+        st{"Kisotho"}
+        su{"Kinubi"}
+        sv{"Kiswidi"}
+        sw{"Kiswahili"}
+        ta{"Kitamil"}
+        te{"Kitelugu"}
+        tg{"Kitajiki"}
+        th{"Kithai"}
+        ti{"Kitigrinya"}
+        tk{"Kiturukimeni"}
+        to{"Kitonga"}
+        tr{"Kituruki"}
+        tt{"Kitatari"}
+        tw{"Kitwii"}
+        ug{"Kiuigur"}
+        uk{"Kiukrania"}
+        ur{"Kiurdu"}
+        uz{"Kiuzbeki"}
+        vi{"Kivietnamu"}
+        xh{"Kixhosa"}
+        yi{"Kiyidi"}
+        yo{"Kiyoruba"}
+        zh{"Kichina"}
+        zu{"Kizulu"}
+    }
+    LocaleScript{
+        "Latn",
+    }
+    NumberPatterns{
+        "#,##0.###",
+        "#,##0.00 ¤",
+        "#,##0%",
+        "#E0",
+    }
+    Scripts{
+        Arab{"Kiarabu"}
+        Armn{"Kiarmenia"}
+        Beng{"Kibengali"}
+        Bopo{"Kibopomofo"}
+        Cher{"Kicheroki"}
+        Copt{"Kikoptiki"}
+        Cyrl{"Kisiriliki"}
+        Dsrt{"Kidesereti"}
+        Deva{"Kidevengari"}
+        Ethi{"Kiethiopia"}
+        Geor{"Kijojia"}
+        Goth{"Kigothiki"}
+        Grek{"Kigiriki"}
+        Gujr{"Kigujarati"}
+        Guru{"Kigurimuki"}
+        Hani{"Kihan"}
+        Hang{"Kihanguli"}
+        Hebr{"Kiebrania"}
+        Hira{"Kihirigana"}
+        Knda{"Kikannada"}
+        Kana{"Kikatakana"}
+        Khmr{"Kikambodia"}
+        Laoo{"Kilaosi"}
+        Latn{"Kilatini"}
+        Mlym{"Kimalayam"}
+        Mong{"Kimongolia"}
+        Mymr{"Kimyamari"}
+        Ogam{"Kiogam"}
+        Ital{"Kiitaliki cha Kale"}
+        Orya{"Kioriya"}
+        Runr{"Kiruni"}
+        Sinh{"Kisinhali"}
+        Syrc{"Kisiriaki"}
+        Taml{"Kitamil"}
+        Telu{"Kitelugu"}
+        Thaa{"Kithaana"}
+        Thai{"Kitai"}
+        Tibt{"Kitibeti"}
+        Cans{"Silabi za Kanada za Kiaborijini Zilizosawazishwa"}
+        Yiii{"Kiyii"}
+        Tglg{"Kitagalog"}
+        Hano{"Kihanunoo"}
+        Buhd{"Kibuhidi"}
+        Tagb{"Kitagbanwa"}
+        Brai{"Braille"}
+        Cprt{"Kisaiprasi"}
+        Limb{"Kilimbu"}
+        Linb{"Mistari B"}
+        Osma{"Kiosmanya"}
+        Shaw{"Kishawi"}
+        Tale{"Kitai-Le"}
+        Ugar{"Kiyugariti"}
+        Jpan{"Kijapani"}
+        Hans{"Kihan Rahisi"}
+        Hant{"Kihan cha Jadi"}
+        Kore{"Kikorea"}
+        Hrkt{"Kikatakana au Kihiragana"}
+        Zmth{"Alama za Hesabu"}
+        Zsym{"Ishara"}
+        Zyyy{"Kawaida"}
+        Zzzz{"Hati Batili au Isiyojulikana"}
+        Qaai{"Iliyorithiwa"}
+    }
+    Version{"1.74"}
+    calendar{
+        gregorian{
+            AmPmMarkers{
+                "AM",
+                "PM",
+            }
+            DateTimePatterns{
+                "HH:mm:ss zzzz",
+                "HH:mm:ss z",
+                "HH:mm:ss",
+                "HH:mm",
+                "EEEE, dd MMMM y",
+                "d MMMM y",
+                "d MMM y",
+                "dd/MM/yy",
+                "{1} {0}",
+                "{1} {0}",
+                "{1} {0}",
+                "{1} {0}",
+                "{1} {0}",
+            }
+            dayNames{
+                format{
+                    abbreviated{
+                        "Jpi",
+                        "Jtt",
+                        "Jnn",
+                        "Jtn",
+                        "Alh",
+                        "Iju",
+                        "Jmo",
+                    }
+                    wide{
+                        "Jumapili",
+                        "Jumatatu",
+                        "Jumanne",
+                        "Jumatano",
+                        "Alhamisi",
+                        "Ijumaa",
+                        "Jumamosi",
+                    }
+                }
+            }
+            eras{
+                abbreviated{
+                    "KK",
+                    "BK",
+                }
+            }
+            monthNames{
+                format{
+                    abbreviated{
+                        "Jan",
+                        "Feb",
+                        "Mac",
+                        "Apr",
+                        "Mei",
+                        "Jun",
+                        "Jul",
+                        "Ago",
+                        "Sep",
+                        "Okt",
+                        "Nov",
+                        "Des",
+                    }
+                    wide{
+                        "Januari",
+                        "Februari",
+                        "Machi",
+                        "Aprili",
+                        "Mei",
+                        "Juni",
+                        "Julai",
+                        "Agosti",
+                        "Septemba",
+                        "Oktoba",
+                        "Novemba",
+                        "Desemba",
+                    }
+                }
+            }
+        }
+    }
+    zoneStrings{
+        "meta:Africa_Eastern"{
+            ls{"Saa za Africa Mashariki"}
+        }
+    }
+}
