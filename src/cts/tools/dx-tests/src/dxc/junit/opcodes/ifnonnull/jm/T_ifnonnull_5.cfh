@@ -1,0 +1,194 @@
+//@class:dxc/junit/opcodes/ifnonnull/jm/T_ifnonnull_5
+// parsed:, offset 0, len 0, h: begin classfile
+// parsed:, offset 0, len 4, h: magic: cafebabe
+// .  .  .  .  
+   ca fe ba be 
+// parsed:, offset 4, len 2, h: minor_version: 0003
+// .  .  
+   00 03 
+// parsed:, offset 6, len 2, h: major_version: 002d
+// .  -  
+   00 2d 
+// parsed:, offset 8, len 2, h: constant_pool_count: 000e
+// .  .  
+   00 0e 
+// parsed:, offset 10, len 0, h:  constant_pool:
+    // parsed:, offset 10, len 5, h: 0001: method{java.lang.Object.<init>:()V}
+    // .  .  .  .  .  
+       0a 00 0d 00 08 
+    // parsed:, offset 15, len 19, h: 0002: utf8{"java/lang/Object"}
+    // .  .  .  j  a  v  a  /  l  a  n  g  /  O  b  j  e  c  t  
+       01 00 10 6a 61 76 61 2f 6c 61 6e 67 2f 4f 62 6a 65 63 74 
+    // parsed:, offset 34, len 47, h: 0003: utf8{"dxc/junit/opcodes/ifnonnull/jm/T_ifnonnull_5"}
+    // .  .  ,  d  x  c  /  j  u  n  i  t  /  o  p  c  o  d  e  s  /  i  f  n  o  n  n  u  l  l  /  j  m  /  T  _  i  f  n  o  n  n  u  l  l  _  5  
+       01 00 2c 64 78 63 2f 6a 75 6e 69 74 2f 6f 70 63 6f 64 65 73 2f 69 66 6e 6f 6e 6e 75 6c 6c 2f 6a 6d 2f 54 5f 69 66 6e 6f 6e 6e 75 6c 6c 5f 35 
+    // parsed:, offset 81, len 13, h: 0004: utf8{"SourceFile"}
+    // .  .  .  S  o  u  r  c  e  F  i  l  e  
+       01 00 0a 53 6f 75 72 63 65 46 69 6c 65 
+    // parsed:, offset 94, len 24, h: 0005: utf8{"(Ljava/lang/Object;)Z"}
+    // .  .  .  (  L  j  a  v  a  /  l  a  n  g  /  O  b  j  e  c  t  ;  )  Z  
+       01 00 15 28 4c 6a 61 76 61 2f 6c 61 6e 67 2f 4f 62 6a 65 63 74 3b 29 5a 
+    // parsed:, offset 118, len 9, h: 0006: utf8{"<init>"}
+    // .  .  .  <  i  n  i  t  >  
+       01 00 06 3c 69 6e 69 74 3e 
+    // parsed:, offset 127, len 6, h: 0007: utf8{"run"}
+    // .  .  .  r  u  n  
+       01 00 03 72 75 6e 
+    // parsed:, offset 133, len 5, h: 0008: nat{<init>:()V}
+    // .  .  .  .  .  
+       0c 00 06 00 0c 
+    // parsed:, offset 138, len 21, h: 0009: utf8{"T_ifnonnull_5.java"}
+    // .  .  .  T  _  i  f  n  o  n  n  u  l  l  _  5  .  j  a  v  a  
+       01 00 12 54 5f 69 66 6e 6f 6e 6e 75 6c 6c 5f 35 2e 6a 61 76 61 
+    // parsed:, offset 159, len 7, h: 000a: utf8{"Code"}
+    // .  .  .  C  o  d  e  
+       01 00 04 43 6f 64 65 
+    // parsed:, offset 166, len 3, h: 000b: type{dxc.junit.opcodes.ifnonnull.jm.T_ifnonnull_5}
+    // .  .  .  
+       07 00 03 
+    // parsed:, offset 169, len 6, h: 000c: utf8{"()V"}
+    // .  .  .  (  )  V  
+       01 00 03 28 29 56 
+    // parsed:, offset 175, len 3, h: 000d: type{java.lang.Object}
+    // .  .  .  
+       07 00 02 
+// parsed:, offset 178, len 0, h: end constant_pool
+// parsed:, offset 178, len 2, h: access_flags: public|super
+// .  !  
+   00 21 
+// parsed:, offset 180, len 2, h: this_class: type{dxc.junit.opcodes.ifnonnull.jm.T_ifnonnull_5}
+// .  .  
+   00 0b 
+// parsed:, offset 182, len 2, h: super_class: type{java.lang.Object}
+// .  .  
+   00 0d 
+// parsed:, offset 184, len 2, h: interfaces_count: 0000
+// .  .  
+   00 00 
+// parsed:, offset 186, len 2, h: fields_count: 0000
+// .  .  
+   00 00 
+// parsed:, offset 188, len 2, h: methods_count: 0002
+// .  .  
+   00 02 
+// ========== start-ParseMember:<init>, offset 190, len:75,desc: ()V
+// parsed:, offset 190, len 0, h:  methods[0]: 
+    // parsed:, offset 190, len 2, h: access_flags: public
+    // .  .  
+       00 01 
+    // parsed:, offset 192, len 2, h: name: <init>
+    // .  .  
+       00 06 
+    // parsed:, offset 194, len 2, h: descriptor: ()V
+    // .  .  
+       00 0c 
+    // parsed:, offset 196, len 2, h: attributes_count: 0001
+    // .  .  
+       00 01 
+    // parsed:, offset 198, len 0, h:  attributes[0]: 
+        // parsed:, offset 198, len 2, h: name: Code
+        // .  .  
+           00 0a 
+        // parsed:, offset 200, len 4, h: length: 00000011
+        // .  .  .  .  
+           00 00 00 11 
+        // parsed:, offset 204, len 2, h: max_stack: 0001
+        // .  .  
+           00 01 
+        // parsed:, offset 206, len 2, h: max_locals: 0001
+        // .  .  
+           00 01 
+        // parsed:, offset 208, len 4, h: code_length: 00000005
+        // .  .  .  .  
+           00 00 00 05 
+        // parsed:, offset 0, len 1, h: 0000: aload_0 // 00
+        // *  
+           2a 
+        // parsed:, offset 1, len 3, h: 0001: invokespecial method{java.lang.Object.<init>:()V}
+        // .  .  .  
+           b7 00 01 
+        // parsed:, offset 4, len 1, h: 0004: return
+        // .  
+           b1 
+        // parsed:, offset 217, len 2, h: exception_table_length: 0000
+        // .  .  
+           00 00 
+        // parsed:, offset 219, len 2, h: attributes_count: 0000
+        // .  .  
+           00 00 
+    // parsed:, offset 221, len 0, h: end attributes[0] 
+// parsed:, offset 221, len 0, h: end methods[0] 
+// ========== end-ParseMember:<init>, desc: ()V
+// ========== start-ParseMember:run, offset 221, len:44,desc: (Ljava/lang/Object;)Z
+// parsed:, offset 221, len 0, h:  methods[1]: 
+    // parsed:, offset 221, len 2, h: access_flags: public
+    // .  .  
+       00 01 
+    // parsed:, offset 223, len 2, h: name: run
+    // .  .  
+       00 07 
+    // parsed:, offset 225, len 2, h: descriptor: (Ljava/lang/Object;)Z
+    // .  .  
+       00 05 
+    // parsed:, offset 227, len 2, h: attributes_count: 0001
+    // .  .  
+       00 01 
+    // parsed:, offset 229, len 0, h:  attributes[0]: 
+        // parsed:, offset 229, len 2, h: name: Code
+        // .  .  
+           00 0a 
+        // parsed:, offset 231, len 4, h: length: 00000014
+        // .  .  .  .  
+           00 00 00 14 
+        // parsed:, offset 235, len 2, h: max_stack: 0002
+        // .  .  
+           00 02 
+        // parsed:, offset 237, len 2, h: max_locals: 0003
+        // .  .  
+           00 03 
+        // parsed:, offset 239, len 4, h: code_length: 00000008
+        // .  .  .  .  
+           00 00 00 08 
+        // parsed:, offset 0, len 1, h: 0000: aload_1 // 01
+        // +  
+           2b 
+        // parsed:, offset 1, len 3, h: 0001: ifnonnull 00ff
+        // .  .  .  
+//@mod     c7 00 05    
+           c7 00 ff 
+        // parsed:, offset 4, len 1, h: 0004: iconst_0 // #+00
+        // .  
+           03 
+        // parsed:, offset 5, len 1, h: 0005: ireturn
+        // .  
+           ac 
+        // parsed:, offset 6, len 1, h: 0006: iconst_1 // #+01
+        // .  
+           04 
+        // parsed:, offset 7, len 1, h: 0007: ireturn
+        // .  
+           ac 
+        // parsed:, offset 251, len 2, h: exception_table_length: 0000
+        // .  .  
+           00 00 
+        // parsed:, offset 253, len 2, h: attributes_count: 0000
+        // .  .  
+           00 00 
+    // parsed:, offset 255, len 0, h: end attributes[0] 
+// parsed:, offset 255, len 0, h: end methods[1] 
+// ========== end-ParseMember:run, desc: (Ljava/lang/Object;)Z
+// parsed:, offset 255, len 2, h: attributes_count: 0001
+// .  .  
+   00 01 
+// parsed:, offset 257, len 0, h:  attributes[0]: 
+    // parsed:, offset 257, len 2, h: name: SourceFile
+    // .  .  
+       00 04 
+    // parsed:, offset 259, len 4, h: length: 00000002
+    // .  .  .  .  
+       00 00 00 02 
+    // parsed:, offset 263, len 2, h: source: utf8{"T_ifnonnull_5.java"}
+    // .  .  
+       00 09 
+// parsed:, offset 265, len 0, h: end attributes[0] 
+// parsed:, offset 265, len 0, h: end classfile

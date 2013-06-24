@@ -1,0 +1,88 @@
+#!/bin/bash
+
+# Copyright (C) 2008 The Android Open Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+
+CTS_SH=cts
+CTS_LIB=cts.jar
+DDMS_LIB=ddmlib-prebuilt.jar
+JUNIT_LIB=junit.jar
+HOSTTEST_LIB=hosttestlib.jar
+
+# Checking if "adb" is known by the system
+PATH=.:${PATH}
+ADB_TOOLS=adb
+ADB_PATH=`which ${ADB_TOOLS}`
+if [ "${ANDROID_ROOT}" == "" ] && [ -f "${ADB_PATH}" ]; then
+    ANDROID_ROOT=`dirname ${ADB_PATH}`/..
+fi;
+
+# Checking Android dependancies
+BINARY_DIR=bin
+JAR_DIR=framework
+if [ -f ${ANDROID_ROOT}/tools/${ADB_TOOLS} ]; then
+    # Default SDK paths
+    BINARY_DIR=tools
+    JAR_DIR=tools/lib
+else if [ ! -f ${ANDROID_ROOT}/bin/${ADB_TOOLS} ]; then
+    echo "Missing ${ANDROID_ROOT}/bin/${ADB_TOOLS}"
+    exit -1;
+fi;
+fi;
+
+if [ ! -f ${ANDROID_ROOT}/${JAR_DIR}/${DDMS_LIB} ]; then
+    echo "Missing ${ANDROID_ROOT}/${JAR_DIR}/${DDMS_LIB}"
+    exit -1;
+fi;
+
+
+# -------------------------------------------------------------------------
+
+CTS_PATH=`which ${CTS_SH}`
+if [ ! -f "${CTS_PATH}" ]; then
+    CTS_PATH=$0
+fi;
+
+CTS_DIR=`dirname ${CTS_PATH}`
+# Setup the correct path for getting "adb"
+PATH=${PATH}:${ANDROID_ROOT}/${BINARY_DIR}
+# Add paths to JAR files in Android framework
+CTS_LIBS=\
+${ANDROID_ROOT}/${JAR_DIR}/${DDMS_LIB}:\
+${ANDROID_ROOT}/${JAR_DIR}/${JUNIT_LIB}:\
+${ANDROID_ROOT}/${JAR_DIR}/${HOSTTEST_LIB}:\
+${ANDROID_ROOT}/${JAR_DIR}/${CTS_LIB}
+# Add path to CTS JAR file in the CTS archive
+CTS_LIBS=${CTS_LIBS}:${CTS_DIR}/${CTS_LIB}
+
+# Default location of the repository
+CTS_REPO=${CTS_DIR}/../cts/android-cts/repository
+
+# Try to locate CTS repository
+if [ $# -eq 1 ] || [ $(echo "$*" | grep -c -e --config -) -gt 0 ];
+then
+    # single parameter or --config argument specifies config file
+    :
+else
+    # config file not specified, try to locate if not already defined
+    if [ -z "${CTS_HOST_CFG}" ] && [ -d "${CTS_REPO}" ]; then
+       CTS_HOST_CFG=${CTS_REPO}/host_config.xml
+    fi;
+fi;
+
+JAVA_OPTS="-Xmx512M"
+JAVA_OPTS="${JAVA_OPTS} -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=1337"
+
+java ${JAVA_OPTS} -cp ${CTS_LIBS} -DHOST_CONFIG=${CTS_HOST_CFG} com.android.cts.TestHost "$@"

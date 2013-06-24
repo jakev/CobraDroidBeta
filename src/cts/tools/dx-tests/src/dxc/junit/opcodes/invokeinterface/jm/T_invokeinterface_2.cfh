@@ -1,0 +1,155 @@
+//@class:dxc/junit/opcodes/invokeinterface/jm/T_invokeinterface_2
+// parsed:, offset 0, len 0, h: begin classfile
+// parsed:, offset 0, len 4, h: magic: cafebabe
+// .  .  .  .  
+   ca fe ba be 
+// parsed:, offset 4, len 2, h: minor_version: 0003
+// .  .  
+   00 03 
+// parsed:, offset 6, len 2, h: major_version: 002d
+// .  -  
+   00 2d 
+// parsed:, offset 8, len 2, h: constant_pool_count: 0012
+// .  .  
+   00 12 
+// parsed:, offset 10, len 0, h:  constant_pool:
+    // parsed:, offset 10, len 5, h: 0001: ifaceMethod{dxc.junit.opcodes.invokeinterface.jm.ITest.doit:()V}
+    // .  .  .  .  .  
+       0b 00 08 00 0f 
+    // parsed:, offset 15, len 5, h: 0002: method{java.lang.Object.<init>:()V}
+    // .  .  .  .  .  
+       0a 00 11 00 09 
+    // parsed:, offset 20, len 19, h: 0003: utf8{"java/lang/Object"}
+    // .  .  .  j  a  v  a  /  l  a  n  g  /  O  b  j  e  c  t  
+       01 00 10 6a 61 76 61 2f 6c 61 6e 67 2f 4f 62 6a 65 63 74 
+    // parsed:, offset 39, len 3, h: 0004: type{dxc.junit.opcodes.invokeinterface.jm.T_invokeinterface_2}
+    // .  .  .  
+       07 00 10 
+    // parsed:, offset 42, len 13, h: 0005: utf8{"SourceFile"}
+    // .  .  .  S  o  u  r  c  e  F  i  l  e  
+       01 00 0a 53 6f 75 72 63 65 46 69 6c 65 
+    // parsed:, offset 55, len 27, h: 0006: utf8{"T_invokeinterface_2.java"}
+    // .  .  .  T  _  i  n  v  o  k  e  i  n  t  e  r  f  a  c  e  _  2  .  j  a  v  a  
+       01 00 18 54 5f 69 6e 76 6f 6b 65 69 6e 74 65 72 66 61 63 65 5f 32 2e 6a 61 76 61 
+    // parsed:, offset 82, len 9, h: 0007: utf8{"<init>"}
+    // .  .  .  <  i  n  i  t  >  
+       01 00 06 3c 69 6e 69 74 3e 
+    // parsed:, offset 91, len 3, h: 0008: type{dxc.junit.opcodes.invokeinterface.jm.ITest}
+    // .  .  .  
+       07 00 0b 
+    // parsed:, offset 94, len 5, h: 0009: nat{<init>:()V}
+    // .  .  .  .  .  
+       0c 00 07 00 0e 
+    // parsed:, offset 99, len 7, h: 000a: utf8{"doit"}
+    // .  .  .  d  o  i  t  
+       01 00 04 64 6f 69 74 
+    // parsed:, offset 106, len 45, h: 000b: utf8{"dxc/junit/opcodes/invokeinterface/jm/ITest"}
+    // .  .  *  d  x  c  /  j  u  n  i  t  /  o  p  c  o  d  e  s  /  i  n  v  o  k  e  i  n  t  e  r  f  a  c  e  /  j  m  /  I  T  e  s  t  
+       01 00 2a 64 78 63 2f 6a 75 6e 69 74 2f 6f 70 63 6f 64 65 73 2f 69 6e 76 6f 6b 65 69 6e 74 65 72 66 61 63 65 2f 6a 6d 2f 49 54 65 73 74 
+    // parsed:, offset 151, len 7, h: 000c: utf8{"Code"}
+    // .  .  .  C  o  d  e  
+       01 00 04 43 6f 64 65 
+    // parsed:, offset 158, len 50, h: 000d: utf8{"(Ldxc/junit/opcodes/invokeinterface/jm/ITest;)V"}
+    // .  .  /  (  L  d  x  c  /  j  u  n  i  t  /  o  p  c  o  d  e  s  /  i  n  v  o  k  e  i  n  t  e  r  f  a  c  e  /  j  m  /  I  T  e  s  t  ;  )  V  
+       01 00 2f 28 4c 64 78 63 2f 6a 75 6e 69 74 2f 6f 70 63 6f 64 65 73 2f 69 6e 76 6f 6b 65 69 6e 74 65 72 66 61 63 65 2f 6a 6d 2f 49 54 65 73 74 3b 29 56 
+    // parsed:, offset 208, len 6, h: 000e: utf8{"()V"}
+    // .  .  .  (  )  V  
+       01 00 03 28 29 56 
+    // parsed:, offset 214, len 5, h: 000f: nat{doit:()V}
+    // .  .  .  .  .  
+       0c 00 0a 00 0e 
+    // parsed:, offset 219, len 59, h: 0010: utf8{"dxc/junit/opcodes/invokeinterface/jm/T_invokeinterface_2"}
+    // .  .  8  d  x  c  /  j  u  n  i  t  /  o  p  c  o  d  e  s  /  i  n  v  o  k  e  i  n  t  e  r  f  a  c  e  /  j  m  /  T  _  i  n  v  o  k  e  i  n  t  e  r  f  a  c  e  _  2  
+       01 00 38 64 78 63 2f 6a 75 6e 69 74 2f 6f 70 63 6f 64 65 73 2f 69 6e 76 6f 6b 65 69 6e 74 65 72 66 61 63 65 2f 6a 6d 2f 54 5f 69 6e 76 6f 6b 65 69 6e 74 65 72 66 61 63 65 5f 32 
+    // parsed:, offset 278, len 3, h: 0011: type{java.lang.Object}
+    // .  .  .  
+       07 00 03 
+// parsed:, offset 281, len 0, h: end constant_pool
+// parsed:, offset 281, len 2, h: access_flags: public|super
+// .  !  
+   00 21 
+// parsed:, offset 283, len 2, h: this_class: type{dxc.junit.opcodes.invokeinterface.jm.T_invokeinterface_2}
+// .  .  
+   00 04 
+// parsed:, offset 285, len 2, h: super_class: type{java.lang.Object}
+// .  .  
+   00 11 
+// parsed:, offset 287, len 2, h: interfaces_count: 0000
+// .  .  
+   00 00 
+// parsed:, offset 289, len 2, h: fields_count: 0000
+// .  .  
+   00 00 
+// parsed:, offset 291, len 2, h: methods_count: 0001
+// .  .  
+   00 01 
+// ========== start-ParseMember:<init>, offset 293, len:47,desc: (Ldxc/junit/opcodes/invokeinterface/jm/ITest;)V
+// parsed:, offset 293, len 0, h:  methods[0]: 
+    // parsed:, offset 293, len 2, h: access_flags: public
+    // .  .  
+       00 01 
+    // parsed:, offset 295, len 2, h: name: <init>
+    // .  .  
+       00 07 
+    // parsed:, offset 297, len 2, h: descriptor: (Ldxc/junit/opcodes/invokeinterface/jm/ITest;)V
+    // .  .  
+       00 0d 
+    // parsed:, offset 299, len 2, h: attributes_count: 0001
+    // .  .  
+       00 01 
+    // parsed:, offset 301, len 0, h:  attributes[0]: 
+        // parsed:, offset 301, len 2, h: name: Code
+        // .  .  
+           00 0c 
+        // parsed:, offset 303, len 4, h: length: 00000017
+        // .  .  .  .  
+           00 00 00 17 
+        // parsed:, offset 307, len 2, h: max_stack: 0001
+        // .  .  
+           00 01 
+        // parsed:, offset 309, len 2, h: max_locals: 0002
+        // .  .  
+           00 02 
+        // parsed:, offset 311, len 4, h: code_length: 0000000b
+        // .  .  .  .  
+           00 00 00 0b 
+        // parsed:, offset 0, len 1, h: 0000: aload_0 // 00
+        // *  
+           2a 
+        // parsed:, offset 1, len 3, h: 0001: invokespecial method{java.lang.Object.<init>:()V}
+        // .  .  .  
+           b7 00 02 
+        // parsed:, offset 4, len 1, h: 0004: aload_1 // 01
+        // +  
+           2b 
+        // parsed:, offset 5, len 5, h: 0005: invokeinterface ifaceMethod{dxc.junit.opcodes.invokeinterface.jm.ITest.doit:()V}, 0001
+        // .  .  .  .  .  
+//@mod:    b9 00 01 01 00 
+           b9 00 02 01 00 
+        // parsed:, offset 10, len 1, h: 000a: return
+        // .  
+           b1 
+        // parsed:, offset 326, len 2, h: exception_table_length: 0000
+        // .  .  
+           00 00 
+        // parsed:, offset 328, len 2, h: attributes_count: 0000
+        // .  .  
+           00 00 
+    // parsed:, offset 330, len 0, h: end attributes[0] 
+// parsed:, offset 330, len 0, h: end methods[0] 
+// ========== end-ParseMember:<init>, desc: (Ldxc/junit/opcodes/invokeinterface/jm/ITest;)V
+// parsed:, offset 330, len 2, h: attributes_count: 0001
+// .  .  
+   00 01 
+// parsed:, offset 332, len 0, h:  attributes[0]: 
+    // parsed:, offset 332, len 2, h: name: SourceFile
+    // .  .  
+       00 05 
+    // parsed:, offset 334, len 4, h: length: 00000002
+    // .  .  .  .  
+       00 00 00 02 
+    // parsed:, offset 338, len 2, h: source: utf8{"T_invokeinterface_2.java"}
+    // .  .  
+       00 06 
+// parsed:, offset 340, len 0, h: end attributes[0] 
+// parsed:, offset 340, len 0, h: end classfile

@@ -1,0 +1,30 @@
+on init
+    export PATH /sbin:/system/sbin:/system/bin
+    export ANDROID_ROOT /system
+    export ANDROID_DATA /data
+
+    symlink /system/etc /etc
+
+    mkdir /data
+    mkdir /cache
+    mount /tmp /tmp tmpfs
+
+# mount the installer needed partitions
+#    mount ext2 /dev/block/sdb2 /data ro
+
+on boot
+    ifup lo
+    hostname localhost
+    domainname localdomain
+
+    class_start default
+
+service installer /system/bin/installer -p /dev/block/sdb2
+    console
+    oneshot
+
+service logcat /system/bin/logcat
+    console
+
+service console /system/bin/sh
+    console

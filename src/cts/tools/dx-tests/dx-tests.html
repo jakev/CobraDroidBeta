@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+  <head>
+    <title>DX Converter Test Suite</title>
+    <link rel=stylesheet href="dx-tests.css">
+  </head>
+
+  <body>
+    <h1>DX Converter Test Suite</h1>
+    <p>Version 1.0</p>
+    <p>Copyright &copy; 2008 The Android Open Source Project
+
+    <h2>Overview</h2>
+
+    <p>    
+      This directory contains a test suite for the DX converter. It tests the
+      capabilities of the DX converter in a black-box manner, based on the
+      usual specifications for <code>.class</code> files. The suite does both
+      functional and verifier tests. Regarding the latter, the DX converter has
+      only limited bytecode verification capabilities, but the combination of DX
+      and the Dalvik VM is supposed to perform bytecode verification equivalent
+      to that done in other virtual machines. Please see
+        
+      <pre>
+        docs/dalvik/java-constraints.html
+        docs/dalvik/verifier.html
+      </pre>
+        
+      for further details.
+    </p>
+
+    <h2>How to build</h2>
+    
+    <p>
+      The test suite is normally included in a full build of the Android
+      project. If it needs to be built individually, a simple
+        
+      <pre>
+        make dx-tests
+      </pre>
+        
+      or an
+        
+      <pre>
+        mm
+      </pre>
+        
+      in this directory will do.
+    </p>
+
+    <h2>How to run</h2>
+        
+    <p>
+      The suite can be invoked by executing
+    
+      <pre>
+        dx-tests
+      </pre>
+    
+      from any location, assuming the suite has been built. This will run
+      all tests. If you want to limit the suite to the test cases
+      corresponding to a single instruction, you can specifiy the mnemonic
+      as a parameter. For example
+
+      <pre>
+        dx-tests anewarray
+      </pre>
+      
+      executes the tests for the <code>anewarray</code> instruction.
+      Please see the corresponding specification for all the mnemonics. Two
+      additional parameters are possible that don't represent instructions.
+      These run sanity checks for the suite itself and general verifier tests,
+      respectively: 
+
+      <pre>
+        dx-tests sanity
+        dx-tests verifier
+      </pre>
+
+      The suite is normally run for the fast version of the interpreter. To run
+      it for the portable interpreter, pass <code>--portable</code> as the first
+      parameter. Passing <code>--help</code> results in a brief overview of the
+      options.
+    </p>
+
+    <p>      
+      The suite is compatible with both emulator and simulator 
+      builds. For an emulator build, please make sure you have
+      either an emulator running or a device attached via USB before
+      invoking the test suite.
+    </p>
+
+    <p>
+      The suite might easily take 30 minutes or more for execution,
+      depending on the environment. It will generate a full HTML
+      report with details on all test cases. While running, console output
+      is produced to give a quick impression of the progress and results.
+      For both types of output, each individual test results falls into one of
+      the following categories:
+    </p>
+            
+    <table>
+      <tr>
+        <th>Type in report</th><th>Type on console</th><th>Description</th>
+      </tr>
+      <tr>
+        <td>Success</td>
+        <td>.</td>
+        <td>
+          The test case passed successfully.
+        </td>
+      </tr>
+      <tr>
+        <td>Functional failure</td>
+        <td>F</td>
+        <td>
+          A functional (normal or boundary) or an exception test case
+          failed.
+        </td>
+        </tr>
+        <tr>
+          <td>Verifier failure</td>
+          <td>V</td>
+          <td>
+            A verifier test case failed. Either the verifier accepted
+            some invalid piece of code or it rejected a valid one.
+          </td>
+        </tr>
+        <tr>
+          <td>Warning</td>
+          <td>W</td>
+          <td>
+            A verifier test case threw <code>VerifyError</code>, where a
+            different VM would have thrown a different exception. This is
+            specified Dalvik behavior, though, hence just the warning.
+          </td>
+        </tr>
+      </table> 
+  </body>
+</html>

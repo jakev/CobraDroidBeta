@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="WelcomeFont" parent="@android:style/TextAppearance.Large">
+        <item name="android:textColor">#9fbf3b</item>
+    </style>
+</resources>

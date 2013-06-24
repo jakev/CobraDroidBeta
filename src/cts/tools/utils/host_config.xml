@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2008 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<HostConfiguration version="1.0">
+    <Repository>
+        <!-- Specific OEM test plan directory (optional) -->
+        <TestPlan path="plans" />
+        <!-- Specific OEM test case directory (optional) -->
+        <TestCase path="testcases" />
+        <!-- Specific OEM test result directory (optional) -->
+        <TestResult path="results" />
+    </Repository>
+
+    <!-- Number of tests executed between reboots. A value <= 0 disables reboots. -->
+    <IntValue name="maxTestCount" value="200" />
+    <!-- Max size [tests] for a package to be run in batch mode. -->
+    <IntValue name="maxTestsInBatchMode" value="5000" />
+
+    <!-- Max time [ms] between test status updates. -->
+    <IntValue name="testStatusTimeoutMs" value="600000" />
+    <!-- Max time [ms] from start of package in batch mode and the first test status update. -->
+    <IntValue name="batchStartTimeoutMs" value="1800000" />
+    <!-- Max time [ms] from start of test in individual mode to the first test status update. -->
+    <IntValue name="individualStartTimeoutMs" value="300000" />
+    <!-- Timeout [ms] for the signature check. -->
+    <IntValue name="signatureTestTimeoutMs" value="600000" />
+    <!-- Timeout [ms] for package installations. -->
+    <IntValue name="packageInstallTimeoutMs" value="120000" />
+    <!-- Time to wait [ms] after a package installation or removal. -->
+    <IntValue name="postInstallWaitMs" value="10000" />
+
+</HostConfiguration>

@@ -1,0 +1,200 @@
+//@class:dxc/junit/opcodes/lookupswitch/jm/T_lookupswitch_7
+// parsed:, offset 0, len 0, h: begin classfile
+// parsed:, offset 0, len 4, h: magic: cafebabe
+// .  .  .  .  
+   ca fe ba be 
+// parsed:, offset 4, len 2, h: minor_version: 0003
+// .  .  
+   00 03 
+// parsed:, offset 6, len 2, h: major_version: 002d
+// .  -  
+   00 2d 
+// parsed:, offset 8, len 2, h: constant_pool_count: 000e
+// .  .  
+   00 0e 
+// parsed:, offset 10, len 0, h:  constant_pool:
+    // parsed:, offset 10, len 5, h: 0001: method{java.lang.Object.<init>:()V}
+    // .  .  .  .  .  
+       0a 00 0b 00 07 
+    // parsed:, offset 15, len 19, h: 0002: utf8{"java/lang/Object"}
+    // .  .  .  j  a  v  a  /  l  a  n  g  /  O  b  j  e  c  t  
+       01 00 10 6a 61 76 61 2f 6c 61 6e 67 2f 4f 62 6a 65 63 74 
+    // parsed:, offset 34, len 13, h: 0003: utf8{"SourceFile"}
+    // .  .  .  S  o  u  r  c  e  F  i  l  e  
+       01 00 0a 53 6f 75 72 63 65 46 69 6c 65 
+    // parsed:, offset 47, len 9, h: 0004: utf8{"<init>"}
+    // .  .  .  <  i  n  i  t  >  
+       01 00 06 3c 69 6e 69 74 3e 
+    // parsed:, offset 56, len 6, h: 0005: utf8{"run"}
+    // .  .  .  r  u  n  
+       01 00 03 72 75 6e 
+    // parsed:, offset 62, len 3, h: 0006: type{dxc.junit.opcodes.lookupswitch.jm.T_lookupswitch_7}
+    // .  .  .  
+       07 00 0c 
+    // parsed:, offset 65, len 5, h: 0007: nat{<init>:()V}
+    // .  .  .  .  .  
+       0c 00 04 00 0a 
+    // parsed:, offset 70, len 7, h: 0008: utf8{"Code"}
+    // .  .  .  C  o  d  e  
+       01 00 04 43 6f 64 65 
+    // parsed:, offset 77, len 24, h: 0009: utf8{"T_lookupswitch_7.java"}
+    // .  .  .  T  _  l  o  o  k  u  p  s  w  i  t  c  h  _  7  .  j  a  v  a  
+       01 00 15 54 5f 6c 6f 6f 6b 75 70 73 77 69 74 63 68 5f 37 2e 6a 61 76 61 
+    // parsed:, offset 101, len 6, h: 000a: utf8{"()V"}
+    // .  .  .  (  )  V  
+       01 00 03 28 29 56 
+    // parsed:, offset 107, len 3, h: 000b: type{java.lang.Object}
+    // .  .  .  
+       07 00 02 
+    // parsed:, offset 110, len 53, h: 000c: utf8{"dxc/junit/opcodes/lookupswitch/jm/T_lookupswitch_7"}
+    // .  .  2  d  x  c  /  j  u  n  i  t  /  o  p  c  o  d  e  s  /  l  o  o  k  u  p  s  w  i  t  c  h  /  j  m  /  T  _  l  o  o  k  u  p  s  w  i  t  c  h  _  7  
+       01 00 32 64 78 63 2f 6a 75 6e 69 74 2f 6f 70 63 6f 64 65 73 2f 6c 6f 6f 6b 75 70 73 77 69 74 63 68 2f 6a 6d 2f 54 5f 6c 6f 6f 6b 75 70 73 77 69 74 63 68 5f 37 
+    // parsed:, offset 163, len 7, h: 000d: utf8{"(I)I"}
+    // .  .  .  (  I  )  I  
+       01 00 04 28 49 29 49 
+// parsed:, offset 170, len 0, h: end constant_pool
+// parsed:, offset 170, len 2, h: access_flags: public|super
+// .  !  
+   00 21 
+// parsed:, offset 172, len 2, h: this_class: type{dxc.junit.opcodes.lookupswitch.jm.T_lookupswitch_7}
+// .  .  
+   00 06 
+// parsed:, offset 174, len 2, h: super_class: type{java.lang.Object}
+// .  .  
+   00 0b 
+// parsed:, offset 176, len 2, h: interfaces_count: 0000
+// .  .  
+   00 00 
+// parsed:, offset 178, len 2, h: fields_count: 0000
+// .  .  
+   00 00 
+// parsed:, offset 180, len 2, h: methods_count: 0002
+// .  .  
+   00 02 
+// ========== start-ParseMember:<init>, offset 182, len:110,desc: ()V
+// parsed:, offset 182, len 0, h:  methods[0]: 
+    // parsed:, offset 182, len 2, h: access_flags: public
+    // .  .  
+       00 01 
+    // parsed:, offset 184, len 2, h: name: <init>
+    // .  .  
+       00 04 
+    // parsed:, offset 186, len 2, h: descriptor: ()V
+    // .  .  
+       00 0a 
+    // parsed:, offset 188, len 2, h: attributes_count: 0001
+    // .  .  
+       00 01 
+    // parsed:, offset 190, len 0, h:  attributes[0]: 
+        // parsed:, offset 190, len 2, h: name: Code
+        // .  .  
+           00 08 
+        // parsed:, offset 192, len 4, h: length: 00000011
+        // .  .  .  .  
+           00 00 00 11 
+        // parsed:, offset 196, len 2, h: max_stack: 0001
+        // .  .  
+           00 01 
+        // parsed:, offset 198, len 2, h: max_locals: 0001
+        // .  .  
+           00 01 
+        // parsed:, offset 200, len 4, h: code_length: 00000005
+        // .  .  .  .  
+           00 00 00 05 
+        // parsed:, offset 0, len 1, h: 0000: aload_0 // 00
+        // *  
+           2a 
+        // parsed:, offset 1, len 3, h: 0001: invokespecial method{java.lang.Object.<init>:()V}
+        // .  .  .  
+           b7 00 01 
+        // parsed:, offset 4, len 1, h: 0004: return
+        // .  
+           b1 
+        // parsed:, offset 209, len 2, h: exception_table_length: 0000
+        // .  .  
+           00 00 
+        // parsed:, offset 211, len 2, h: attributes_count: 0000
+        // .  .  
+           00 00 
+    // parsed:, offset 213, len 0, h: end attributes[0] 
+// parsed:, offset 213, len 0, h: end methods[0] 
+// ========== end-ParseMember:<init>, desc: ()V
+// ========== start-ParseMember:run, offset 213, len:79,desc: (I)I
+// parsed:, offset 213, len 0, h:  methods[1]: 
+    // parsed:, offset 213, len 2, h: access_flags: public
+    // .  .  
+       00 01 
+    // parsed:, offset 215, len 2, h: name: run
+    // .  .  
+       00 05 
+    // parsed:, offset 217, len 2, h: descriptor: (I)I
+    // .  .  
+       00 0d 
+    // parsed:, offset 219, len 2, h: attributes_count: 0001
+    // .  .  
+       00 01 
+    // parsed:, offset 221, len 0, h:  attributes[0]: 
+        // parsed:, offset 221, len 2, h: name: Code
+        // .  .  
+           00 08 
+        // parsed:, offset 223, len 4, h: length: 00000037
+        // .  .  .  7  
+           00 00 00 37 
+        // parsed:, offset 227, len 2, h: max_stack: 0001
+        // .  .  
+           00 01 
+        // parsed:, offset 229, len 2, h: max_locals: 0002
+        // .  .  
+           00 02 
+        // parsed:, offset 231, len 4, h: code_length: 0000002b
+        // .  .  .  +  
+           00 00 00 2b 
+        // parsed:, offset 0, len 1, h: 0000: iload_1 // 01
+        // .  
+           1b 
+        // parsed:, offset 1, len 35, h: 0001: lookupswitch   -00000001: 0024   +0000000a: 0026   +0000000f: 0026   default: 0029
+        // .  .  .  .  .  .  (  .  .  .  .  .  .  .  .  .  .  .  #  .  .  .  .  .  .  .  %  .  .  .  .  .  .  .  %  
+//@mod           ab 00 00 00 00 00 28 00 00 00 03 ff ff ff ff 00 00 00 23 00 00 00 0a 00 00 00 25 00 00 00 0f 00 00 00 25 
+           ab 01 00 00 00 00 28 00 00 00 03 ff ff ff ff 00 00 00 23 00 00 00 0a 00 00 00 25 00 00 00 0f 00 00 00 25 
+        // parsed:, offset 36, len 1, h: 0024: iconst_2 // #+02
+        // .  
+           05 
+        // parsed:, offset 37, len 1, h: 0025: ireturn
+        // .  
+           ac 
+        // parsed:, offset 38, len 2, h: 0026: bipush #+14
+        // .  .  
+           10 14 
+        // parsed:, offset 40, len 1, h: 0028: ireturn
+        // .  
+           ac 
+        // parsed:, offset 41, len 1, h: 0029: iconst_m1 // #-01
+        // .  
+           02 
+        // parsed:, offset 42, len 1, h: 002a: ireturn
+        // .  
+           ac 
+        // parsed:, offset 278, len 2, h: exception_table_length: 0000
+        // .  .  
+           00 00 
+        // parsed:, offset 280, len 2, h: attributes_count: 0000
+        // .  .  
+           00 00 
+    // parsed:, offset 282, len 0, h: end attributes[0] 
+// parsed:, offset 282, len 0, h: end methods[1] 
+// ========== end-ParseMember:run, desc: (I)I
+// parsed:, offset 282, len 2, h: attributes_count: 0001
+// .  .  
+   00 01 
+// parsed:, offset 284, len 0, h:  attributes[0]: 
+    // parsed:, offset 284, len 2, h: name: SourceFile
+    // .  .  
+       00 03 
+    // parsed:, offset 286, len 4, h: length: 00000002
+    // .  .  .  .  
+       00 00 00 02 
+    // parsed:, offset 290, len 2, h: source: utf8{"T_lookupswitch_7.java"}
+    // .  .  
+       00 09 
+// parsed:, offset 292, len 0, h: end attributes[0] 
+// parsed:, offset 292, len 0, h: end classfile

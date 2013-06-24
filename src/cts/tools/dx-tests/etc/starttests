@@ -1,0 +1,341 @@
+#!/bin/bash
+#
+# Copyright (C) 2008 The Android Open Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Set up prog to be the path of this script, including following symlinks,
+# and set up progdir to be the fully-qualified pathname of its directory.
+
+prog="$0"
+while [ -h "${prog}" ]; do
+    newProg=`/bin/ls -ld "${prog}"`
+    newProg=`expr "${newProg}" : ".* -> \(.*\)$"`
+    if expr "x${newProg}" : 'x/' >/dev/null; then
+        prog="${newProg}"
+    else
+        progdir=`dirname "${prog}"`
+        prog="${progdir}/${newProg}"
+    fi
+done
+oldwd=`pwd`
+progdir=`dirname "${prog}"`
+cd "${progdir}"
+progdir=`pwd`
+prog="${progdir}"/`basename "${prog}"`
+cd "${oldwd}"
+
+libdir=`dirname $progdir`/framework
+
+javaOpts=""
+while expr "x$1" : 'x-J' >/dev/null; do
+    opt=`expr "$1" : '-J\(.*\)'`
+    javaOpts="${javaOpts} -${opt}"
+    shift
+done
+
+#exec java $javaOpts -jar $libdir/hat.jar "$@"
+
+#######################################################################
+# Original content of invocation script follows. Uses values cleverly
+# deduced by the above code.
+#######################################################################
+
+selection=$1
+interpreter="fast"
+if [ "$selection" = "--portable" ]; then
+    selection=$2;
+    interpreter="portable"
+fi
+
+datadir=/tmp/${USER}
+rm -rf --preserve-root $datadir/dalvik-cache
+mkdir -p $datadir
+mkdir -p $datadir/dalvik-cache
+
+base=$OUT
+framework=$base/system/framework
+export ANDROID_PRINTF_LOG=tag
+export ANDROID_LOG_TAGS='*:s' # was: jdwp:i dalvikvm:i dalvikvmi:i'
+export ANDROID_DATA=$datadir
+export ANDROID_ROOT=$base/system
+export LD_LIBRARY_PATH=$base/system/lib
+export DYLD_LIBRARY_PATH=$base/system/lib
+debug_opts="-Xcheck:jni"
+exe=$base/system/bin/dalvikvm
+bpath=$framework/core.jar
+BASEDIR=$progdir/../cts/dxconverter
+
+echo "--------------------------------------------------"
+echo "DX Converter Test Suite"
+echo "Version 1.0"
+echo "Copyright (c) 2008 The Android Open Source Project"
+echo ""
+
+if [ "$selection" = "--help" ]; then
+    echo "Usage: dx-tests [--help|--portable] [<mnemonic>]"
+    echo ""
+    echo "    --help      prints this help message"
+    echo "    --portable  uses the portable interpreter;"
+    echo "                default is the fast one"
+    echo ""
+    echo "    <mnemonic>  specifies the instruction to test;"
+    echo "                default is to run all tests"
+    echo ""
+    exit 1;
+fi
+
+# we need for launching: the dx tool, the dalvikvm executable, and the directory with all .class files
+# - prep dxcore.jar
+# - init reportfile
+# for each package as stated in data/scriptdata (like dxc/junit/opcode/aaload) do
+#   - clear tmpoutput
+#   - try to dx Test_opcode.class and all .class files in the ./jm directory into a classes.jar file
+#   - launch dalvikvm, let it write output &> to tmpoutput (surrounded by magic key for start/stop)
+#   - look at tmpoutput -> green or red test result
+#   - append the result to the report.html file (table form)
+#   - clear the tmpoutput, the classes.jar etc.
+# end for
+# - close the report file and cat its path to stdout
+
+# sanity checks:
+# dx around?
+curmode=""
+dx --version &> /dev/null
+if [ ! $? -eq 0 ]
+then
+    echo "error:could not start dx tool"
+    exit 1;
+fi
+ 
+if [ "$TARGET_SIMULATOR" = "true" ]; then
+    echo "Simulator mode, $interpreter interpreter";
+    curmode="simulator"
+    if [ -f $exe ]; then
+        version=`${exe} -version 2> /dev/null | grep -o "version.*$"`
+        echo "Using Dalvik VM ${version}"
+    else
+        echo "No Dalvik VM found at $exe";
+        exit 1;
+    fi
+else
+    echo "Emulator mode, $interpreter interpreter";
+    curmode="emulator"
+    version=`adb shell dalvikvm -version 2> /dev/null | grep -o "version.*$"`
+    if [ "${version}" != "" ]; then
+        echo "Using Dalvik VM ${version}"
+    else
+        echo "No emulator or device found";
+        exit 1;
+    fi
+fi
+
+echo ""
+
+latestpath=""
+curdate=`date`
+dxtmpdir=$BASEDIR/dxtmp
+dxruntmpdir=$BASEDIR/dxruntmp
+javac_out=$BASEDIR/classout
+report=$BASEDIR/report.html
+mkdir -p $dxtmpdir
+rm -f $report
+pre_report="<html><head><style>
+table tr.ok { background:#a0ffa0; }
+table tr.nok { background:#ffa0a0; }
+table tr.wok { background:#ffffa0; }
+table tr.lok { background:#aaaaff; }
+</style></head>
+<body>
+<h1>DX test suite results</h1>
+Generated $curdate (using the $curmode)
+<p>
+<table width='100%'>
+<tr><td>Status</td><td>Target</td><td>Category</td><td>Details</td></tr>"
+post_report="</body></html>"
+echo $pre_report > $report
+
+# ----------- generating dxcore.jar
+cd $javac_out
+# consists of dxc.junit.DxAbstractMain and dxc.junit.DxUtil
+dx --dex --positions=lines --output="$BASEDIR/dxcore.jar" dxc/junit/DxAbstractMain.class dxc/junit/DxUtil.class
+
+# ----------- generating jars for each opcode test ------------
+
+export jpassedcnt=0
+export jwarningcnt=0
+export jvfefailedcnt=0
+export jfailedcnt=0
+export jallcnt=0
+export jcolumns=0
+
+function classnameToPath()
+{
+    echo $1 | sed -e 's#\.#/#g;s#$#.class#'
+}
+
+function lecho()
+{
+    if [ ! -z $CTS_DX_DEBUG ]; then echo $@; fi
+}
+
+while read -u 3 myline;
+do
+    mainclass=`echo $myline | cut -d";" -f1` # e.g dxc.junit.verify.t482_9.Main_testVFE2
+    classfiles=`classnameToPath $mainclass`
+    
+    testclasses=`echo $myline | cut -d";" -f2` # e.g dxc.junit.verity.t482_9.jm.T_t482_9_1
+    
+    for testclass in $testclasses; do
+        classfiles="$classfiles "`classnameToPath $testclass`;
+    done
+    
+    jtitle=`echo $myline | cut -d";" -f3`
+    jcomment=`echo $myline | cut -d";" -f4`
+    details=`echo $myline | cut -d";" -f5`
+    
+    if [ "$selection" == "" ] || [ "$jtitle" == "$selection" ]; then
+    
+        (( jallcnt += 1 ))   
+    
+    
+        rm -rf --preserve-root $dxtmpdir/*
+        mkdir -p $dxtmpdir
+        cd $dxtmpdir            
+        
+        for testclass in $classfiles; do
+            lecho -n "dexing $testclass : "
+            mkdir -p `dirname ${dxtmpdir}/${testclass}`
+            cp ${javac_out}/${testclass} ${dxtmpdir}/${testclass}
+            
+            dx --dex --positions=lines $testclass &>/dev/null
+            
+            if [ $? -eq 0 ]; then
+                lecho " dexable";
+            else
+                lecho " not dexable->remove";
+                rm $testclass
+            fi
+        done
+        
+        dx --dex --positions=lines --output="$BASEDIR/dxclasses.jar" .
+            
+        # run the previously prepared jar files in the dalvik vm.
+        # the dalvik vm executable (dalvikvm) must be on the PATH.
+        # 
+        ### echo -n ">>> launch dalvikvm for class: $mainclass"
+        cd $BASEDIR
+        rm -f $BASEDIR/dalvikout
+        # write dalvik output to file
+        echo -n "mk_b:" > $BASEDIR/dalvikout
+            #echo ">>> launch dex package -classpath $BASEDIR/dxcore.jar:$BASEDIR/dxclasses.jar $mainclass"
+    
+        if [ "$TARGET_SIMULATOR" = "true" ]; then
+            ### echo " on simulator";
+            $valgrind $exe -Xint:$interpreter -Xmx512M -Xss32K -Xbootclasspath:$bpath -DacceptCNF=true -classpath $BASEDIR/dxcore.jar:$BASEDIR/dxclasses.jar $debug_opts $mainclass "$@" >> $BASEDIR/dalvikout 2>&1
+            RESULTCODE=$?
+            if [ ${RESULTCODE} -ne 0 ]; then
+                echo "execute dalvikvm failed with resultcode: ${RESULTCODE}" >> $BASEDIR/dalvikout 2>&1
+            fi
+        else
+            # adb shell dalvikvm -Xint:$interpreter -Djava.io.tmpdir=/data/local/tmp -classpath /data/dxcore.jar:/data/dxclasses.jar dxc.junit.opcodes.aload.Main_testN2
+            # either no output (ok) or
+            # java.lang.RuntimeException: test did not cause the expected verify error, but:java.lang.RuntimeException, msg:AssertionFailedError msg:expected a verification exception
+            #    at dxc.junit.DxUtil.checkVerifyException(DxUtil.java:65)
+            #    at dxc.junit.opcodes.aload.Test_aload.testVFE10(Test_aload.java:181)
+            #    at dxc.junit.opcodes.aload.Main_testVFE10.main(Main_testVFE10.java:5)
+            #    at dalvik.system.NativeStart.main(Native Method)
+        
+            ### echo " on emulator/device with adb push"
+            adb push $BASEDIR/dxcore.jar /data/dxcore.jar &> /dev/null
+            adb push $BASEDIR/dxclasses.jar /data/dxclasses.jar &> /dev/null
+            adb shell "dalvikvm -Djava.io.tmpdir=/data/local/tmp -classpath /data/dxcore.jar:/data/dxclasses.jar $mainclass && echo -n dvmpassed:" >> $BASEDIR/dalvikout 2>&1
+        fi
+        
+        echo -n "mk_s:" >> $BASEDIR/dalvikout
+        # verify tmpout only contains mkdxc_start;mkdxc_stop -> no system.out/err because of exception.
+            # if ok -> green report line else red report with info between mkdxc_start and stop
+        ### echo "vmresult: $vmresult"
+        vmresult=`cat $BASEDIR/dalvikout`
+        if [[ ("$vmresult" == "mk_b:mk_s:") || ("$vmresult" == "mk_b:dvmpassed:mk_s:") ]]; then
+            (( jpassedcnt += 1 )) 
+            echo "<tr class=\"ok\"><td>Success</td><td>$jtitle</td><td>$jcomment</td><td>$details</td></tr>" >> $report
+            ### echo " -> PASSED (passed:$jpassedcnt, failed:$jfailedcnt, vfe failed:$jvfefailedcnt, warnings:$jwarningcnt)"
+            echo -n "."
+        elif [[ ("$vmresult" == "mk_b:dvmvfe:mk_s:") || ("$vmresult" == "mk_b:dvmvfe:dvmpassed:mk_s:") ]]; then
+            (( jwarningcnt += 1 )) 
+            echo "<tr class=\"wok\"><td>Warning</td><td>$jtitle</td><td>$jcomment</td><td>Special behavior regarding VerifyError</td></tr>" >> $report
+            ### echo " -> WARNING (passed:$jpassedcnt, failed:$jfailedcnt, vfe failed:$jvfefailedcnt, warnings:$jwarningcnt)"
+            echo -n "W"
+        else
+           vmres=`cat $BASEDIR/dalvikout | sed -e 's/mk_b://;s/mk_s://'`
+           vmres="$details<br><pre>$vmres</pre>"    
+            # red with additional info if a VFE failed, red if either a N,B, or E failed
+            jtype=`echo "$mainclass" | sed -e 's/.*_test\([^0-9]*\)[0-9].*/\1/' `
+            if [ "$jtype" == "VFE" ]; then
+                (( jvfefailedcnt += 1 ))
+                echo -n "<tr class=\"nok\"><td>Verifier failure</td><td>$jtitle</td><td>$jcomment</td><td>$vmres</td></tr>" >> $report
+                ### echo " -> VFE FAILED (passed:$jpassedcnt, failed:$jfailedcnt, vfe failed:$jvfefailedcnt, warnings:$jwarningcnt)"
+                echo -n "V"
+            else
+                (( jfailedcnt += 1 )) 
+                echo -n "<tr class=\"nok\"><td>Functional failure</td><td>$jtitle</td><td>$jcomment</td><td>$vmres</td></tr>" >> $report
+                ### echo " -> FAILED (passed:$jpassedcnt, failed:$jfailedcnt, vfe failed:$jvfefailedcnt, warnings:$jwarningcnt)"
+                echo -n "F"
+            fi
+        fi
+        
+        (( jcolumns += 1 ))
+        if [ ${jcolumns} -eq 40 ]; then
+            echo ""
+            (( jcolumns = 0 ))
+        fi
+        
+    fi
+      
+done 3<$BASEDIR/data/scriptdata #we use fd nr 3 to avoid subshelling via cat since this looses all variables (and thus also the counters we are interested in).
+
+echo "</table>" >> $report
+let jallcalccnt=$jpassedcnt+$jfailedcnt+$jvfefailedcnt+$jwarningcnt
+if [ $jallcalccnt -ne $jallcnt ]; then
+    echo "<br>error: green & red != total , $jallcalccnt -ne $jallcnt" >> $report
+    exit 1;
+fi
+
+echo "<br>Tests run: ${jallcnt}" >> $report
+echo "<br>Functional failures: ${jfailedcnt}" >> $report
+echo "<br>Verifier failures: ${jvfefailedcnt}" >> $report
+echo "<br>Warnings: ${jwarningcnt}" >> $report
+
+echo $post_report >> $report
+
+if [[ jcolumns -ne 0 ]]; then
+    echo ""
+fi
+
+echo ""
+
+if [[ jallcnt -eq jpassedcnt ]]; then
+    echo "OK (${jpassedcnt} tests)"
+else
+    echo "FAILURES!!!"
+    echo ""
+    echo "Tests run          : ${jallcnt}"
+    echo "Functional failures: ${jfailedcnt}"
+    echo "Verifier failures  : ${jvfefailedcnt}"
+    echo "Warnings           : ${jwarningcnt}"
+fi
+
+echo ""
+echo "Please see complete report in ${report}"
+echo "--------------------------------------------------"

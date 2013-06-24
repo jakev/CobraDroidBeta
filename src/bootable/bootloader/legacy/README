@@ -1,0 +1,51 @@
+
+The bootloader environment consists of a set of libraries that provide
+various features and a couple small driver programs that build against
+these libraries.  The libraries used come from three categories --
+generic (containing code useful to any bootloader), architecture
+(containing code useful to a specific cpu, system-on-chip, etc), and
+board (containing code useful to a single specific device)
+
+For the purpose of this discussion, we will involve the fictional
+companies Outstanding Electronics Manufacturing (OEM) and Silicon
+Engineering Management, Inc (SEMI).  OEM produces the quality Brick
+mobile device using SEMI's 65002 ARM-based system-on-chip.
+
+Common bootloader libraries and base architectures:
+
+boot/include/boot                     headers
+boot/libboot                          libboot.a
+boot/libc                             libboot_c.a
+boot/arch_armv6                       libboot_arch_armv6.a
+
+Architecture-specific libraries for SEMI 65002 SOC:
+
+partner/semi/boot/include/65002       headers
+partner/semi/boot/arch_65002          liboot_arch_65002.a
+
+Device-specific library for OEM Brick phone:
+
+partner/oem/brick/product_config.mk   configuration
+partner/oem/brick/boot                libboot_board_brick.a
+
+The actual bootloader:
+
+boot/bootloader                       bootloader
+
+
+The product_config.mk defines three important build variables:
+
+DEVICE_BOOTLOADER_LIBS := \
+	libboot_board_brick.a \
+	libboot_arch_65002.a \
+	libboot_arch_armv6.a
+
+DEVICE_BOOTLOADER_LINK_SCRIPT := \
+	partner/semi/boot/boot.ld
+
+DEVICE_BOOTLOADER_INIT := \
+	partner/semi/boot/init.S
+
+Which are used by the bootloader to specify which board and
+architecture specific libraries to link against as well as what link
+script and init.S to use

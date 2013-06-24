@@ -1,0 +1,270 @@
+//@class:dxc/junit/opcodes/getstatic/jm/T_getstatic_13
+// parsed:, offset 0, len 0, h: begin classfile
+// parsed:, offset 0, len 4, h: magic: cafebabe
+// .  .  .  .  
+   ca fe ba be 
+// parsed:, offset 4, len 2, h: minor_version: 0003
+// .  .  
+   00 03 
+// parsed:, offset 6, len 2, h: major_version: 002d
+// .  -  
+   00 2d 
+// parsed:, offset 8, len 2, h: constant_pool_count: 0014
+// .  .  
+   00 14 
+// parsed:, offset 10, len 0, h:  constant_pool:
+    // parsed:, offset 10, len 19, h: 0001: utf8{"java/lang/Object"}
+    // .  .  .  j  a  v  a  /  l  a  n  g  /  O  b  j  e  c  t  
+       01 00 10 6a 61 76 61 2f 6c 61 6e 67 2f 4f 62 6a 65 63 74 
+    // parsed:, offset 29, len 5, h: 0002: float{0x4048f5c3 / 3.14}
+    // .  @  H  .  .  
+       04 40 48 f5 c3 
+    // parsed:, offset 34, len 9, h: 0003: utf8{"<init>"}
+    // .  .  .  <  i  n  i  t  >  
+       01 00 06 3c 69 6e 69 74 3e 
+    // parsed:, offset 43, len 3, h: 0004: type{java.lang.Object}
+    // .  .  .  
+       07 00 01 
+    // parsed:, offset 46, len 5, h: 0005: nat{<init>:()V}
+    // .  .  .  .  .  
+       0c 00 03 00 07 
+    // parsed:, offset 51, len 11, h: 0006: utf8{"<clinit>"}
+    // .  .  .  <  c  l  i  n  i  t  >  
+       01 00 08 3c 63 6c 69 6e 69 74 3e 
+    // parsed:, offset 62, len 6, h: 0007: utf8{"()V"}
+    // .  .  .  (  )  V  
+       01 00 03 28 29 56 
+    // parsed:, offset 68, len 5, h: 0008: field{dxc.junit.opcodes.getstatic.jm.T_getstatic_13.i1:I}
+    // .  .  .  .  .  
+       09 00 11 00 0d 
+    // parsed:, offset 73, len 7, h: 0009: utf8{"Code"}
+    // .  .  .  C  o  d  e  
+       01 00 04 43 6f 64 65 
+    // parsed:, offset 80, len 13, h: 000a: utf8{"SourceFile"}
+    // .  .  .  S  o  u  r  c  e  F  i  l  e  
+       01 00 0a 53 6f 75 72 63 65 46 69 6c 65 
+    // parsed:, offset 93, len 4, h: 000b: utf8{"I"}
+    // .  .  .  I  
+       01 00 01 49 
+    // parsed:, offset 97, len 48, h: 000c: utf8{"dxc/junit/opcodes/getstatic/jm/T_getstatic_13"}
+    // .  .  -  d  x  c  /  j  u  n  i  t  /  o  p  c  o  d  e  s  /  g  e  t  s  t  a  t  i  c  /  j  m  /  T  _  g  e  t  s  t  a  t  i  c  _  1  3  
+       01 00 2d 64 78 63 2f 6a 75 6e 69 74 2f 6f 70 63 6f 64 65 73 2f 67 65 74 73 74 61 74 69 63 2f 6a 6d 2f 54 5f 67 65 74 73 74 61 74 69 63 5f 31 33 
+    // parsed:, offset 145, len 5, h: 000d: nat{i1:I}
+    // .  .  .  .  .  
+       0c 00 12 00 0b 
+    // parsed:, offset 150, len 6, h: 000e: utf8{"()I"}
+    // .  .  .  (  )  I  
+       01 00 03 28 29 49 
+    // parsed:, offset 156, len 6, h: 000f: utf8{"run"}
+    // .  .  .  r  u  n  
+       01 00 03 72 75 6e 
+    // parsed:, offset 162, len 5, h: 0010: method{java.lang.Object.<init>:()V}
+    // .  .  .  .  .  
+       0a 00 04 00 05 
+    // parsed:, offset 167, len 3, h: 0011: type{dxc.junit.opcodes.getstatic.jm.T_getstatic_13}
+    // .  .  .  
+       07 00 0c 
+    // parsed:, offset 170, len 5, h: 0012: utf8{"i1"}
+    // .  .  .  i  1  
+       01 00 02 69 31 
+    // parsed:, offset 175, len 22, h: 0013: utf8{"T_getstatic_13.java"}
+    // .  .  .  T  _  g  e  t  s  t  a  t  i  c  _  1  3  .  j  a  v  a  
+       01 00 13 54 5f 67 65 74 73 74 61 74 69 63 5f 31 33 2e 6a 61 76 61 
+// parsed:, offset 197, len 0, h: end constant_pool
+// parsed:, offset 197, len 2, h: access_flags: public|super
+// .  !  
+   00 21 
+// parsed:, offset 199, len 2, h: this_class: type{dxc.junit.opcodes.getstatic.jm.T_getstatic_13}
+// .  .  
+   00 11 
+// parsed:, offset 201, len 2, h: super_class: type{java.lang.Object}
+// .  .  
+   00 04 
+// parsed:, offset 203, len 2, h: interfaces_count: 0000
+// .  .  
+   00 00 
+// parsed:, offset 205, len 2, h: fields_count: 0001
+// .  .  
+   00 01 
+// ========== start-ParseMember:i1, offset 207, len:115,desc: I
+// parsed:, offset 207, len 0, h:  fields[0]: 
+    // parsed:, offset 207, len 2, h: access_flags: public|static
+    // .  .  
+       00 09 
+    // parsed:, offset 209, len 2, h: name: i1
+    // .  .  
+       00 12 
+    // parsed:, offset 211, len 2, h: descriptor: I
+    // .  .  
+       00 0b 
+    // parsed:, offset 213, len 2, h: attributes_count: 0000
+    // .  .  
+       00 00 
+// parsed:, offset 215, len 0, h: end fields[0] 
+// ========== end-ParseMember:i1, desc: I
+// parsed:, offset 215, len 2, h: methods_count: 0003
+// .  .  
+   00 03 
+// ========== start-ParseMember:<clinit>, offset 217, len:105,desc: ()V
+// parsed:, offset 217, len 0, h:  methods[0]: 
+    // parsed:, offset 217, len 2, h: access_flags: static
+    // .  .  
+       00 08 
+    // parsed:, offset 219, len 2, h: name: <clinit>
+    // .  .  
+       00 06 
+    // parsed:, offset 221, len 2, h: descriptor: ()V
+    // .  .  
+       00 07 
+    // parsed:, offset 223, len 2, h: attributes_count: 0001
+    // .  .  
+       00 01 
+    // parsed:, offset 225, len 0, h:  attributes[0]: 
+        // parsed:, offset 225, len 2, h: name: Code
+        // .  .  
+           00 09 
+        // parsed:, offset 227, len 4, h: length: 00000011
+        // .  .  .  .  
+           00 00 00 11 
+        // parsed:, offset 231, len 2, h: max_stack: 0001
+        // .  .  
+           00 01 
+        // parsed:, offset 233, len 2, h: max_locals: 0000
+        // .  .  
+           00 00 
+        // parsed:, offset 235, len 4, h: code_length: 00000005
+        // .  .  .  .  
+           00 00 00 05 
+        // parsed:, offset 0, len 1, h: 0000: iconst_5 // #+05
+        // .  
+           08 
+        // parsed:, offset 1, len 3, h: 0001: putstatic field{dxc.junit.opcodes.getstatic.jm.T_getstatic_13.i1:I}
+        // .  .  .  
+           b3 00 08 
+        // parsed:, offset 4, len 1, h: 0004: return
+        // .  
+           b1 
+        // parsed:, offset 244, len 2, h: exception_table_length: 0000
+        // .  .  
+           00 00 
+        // parsed:, offset 246, len 2, h: attributes_count: 0000
+        // .  .  
+           00 00 
+    // parsed:, offset 248, len 0, h: end attributes[0] 
+// parsed:, offset 248, len 0, h: end methods[0] 
+// ========== end-ParseMember:<clinit>, desc: ()V
+// ========== start-ParseMember:<init>, offset 248, len:74,desc: ()V
+// parsed:, offset 248, len 0, h:  methods[1]: 
+    // parsed:, offset 248, len 2, h: access_flags: public
+    // .  .  
+       00 01 
+    // parsed:, offset 250, len 2, h: name: <init>
+    // .  .  
+       00 03 
+    // parsed:, offset 252, len 2, h: descriptor: ()V
+    // .  .  
+       00 07 
+    // parsed:, offset 254, len 2, h: attributes_count: 0001
+    // .  .  
+       00 01 
+    // parsed:, offset 256, len 0, h:  attributes[0]: 
+        // parsed:, offset 256, len 2, h: name: Code
+        // .  .  
+           00 09 
+        // parsed:, offset 258, len 4, h: length: 00000011
+        // .  .  .  .  
+           00 00 00 11 
+        // parsed:, offset 262, len 2, h: max_stack: 0001
+        // .  .  
+           00 01 
+        // parsed:, offset 264, len 2, h: max_locals: 0001
+        // .  .  
+           00 01 
+        // parsed:, offset 266, len 4, h: code_length: 00000005
+        // .  .  .  .  
+           00 00 00 05 
+        // parsed:, offset 0, len 1, h: 0000: aload_0 // 00
+        // *  
+           2a 
+        // parsed:, offset 1, len 3, h: 0001: invokespecial method{java.lang.Object.<init>:()V}
+        // .  .  .  
+           b7 00 10 
+        // parsed:, offset 4, len 1, h: 0004: return
+        // .  
+           b1 
+        // parsed:, offset 275, len 2, h: exception_table_length: 0000
+        // .  .  
+           00 00 
+        // parsed:, offset 277, len 2, h: attributes_count: 0000
+        // .  .  
+           00 00 
+    // parsed:, offset 279, len 0, h: end attributes[0] 
+// parsed:, offset 279, len 0, h: end methods[1] 
+// ========== end-ParseMember:<init>, desc: ()V
+// ========== start-ParseMember:run, offset 279, len:43,desc: ()I
+// parsed:, offset 279, len 0, h:  methods[2]: 
+    // parsed:, offset 279, len 2, h: access_flags: public
+    // .  .  
+       00 01 
+    // parsed:, offset 281, len 2, h: name: run
+    // .  .  
+       00 0f 
+    // parsed:, offset 283, len 2, h: descriptor: ()I
+    // .  .  
+       00 0e 
+    // parsed:, offset 285, len 2, h: attributes_count: 0001
+    // .  .  
+       00 01 
+    // parsed:, offset 287, len 0, h:  attributes[0]: 
+        // parsed:, offset 287, len 2, h: name: Code
+        // .  .  
+           00 09 
+        // parsed:, offset 289, len 4, h: length: 00000013
+        // .  .  .  .  
+           00 00 00 13 
+        // parsed:, offset 293, len 2, h: max_stack: 0001
+        // .  .  
+           00 01 
+        // parsed:, offset 295, len 2, h: max_locals: 0001
+        // .  .  
+           00 01 
+        // parsed:, offset 297, len 4, h: code_length: 00000007
+        // .  .  .  .  
+           00 00 00 07 
+        // parsed:, offset 0, len 2, h: 0000: ldc #4048f5c3 // 3.14
+        // .  .  
+           12 02 
+        // parsed:, offset 2, len 1, h: 0002: pop
+        // W  
+           57 
+        // parsed:, offset 3, len 3, h: 0003: getstatic field{dxc.junit.opcodes.getstatic.jm.T_getstatic_13.i1:I}
+        // .  .  .  
+//@mod           b2 00 08 
+           b2 00 02 
+        // parsed:, offset 6, len 1, h: 0006: ireturn
+        // .  
+           ac 
+        // parsed:, offset 308, len 2, h: exception_table_length: 0000
+        // .  .  
+           00 00 
+        // parsed:, offset 310, len 2, h: attributes_count: 0000
+        // .  .  
+           00 00 
+    // parsed:, offset 312, len 0, h: end attributes[0] 
+// parsed:, offset 312, len 0, h: end methods[2] 
+// ========== end-ParseMember:run, desc: ()I
+// parsed:, offset 312, len 2, h: attributes_count: 0001
+// .  .  
+   00 01 
+// parsed:, offset 314, len 0, h:  attributes[0]: 
+    // parsed:, offset 314, len 2, h: name: SourceFile
+    // .  .  
+       00 0a 
+    // parsed:, offset 316, len 4, h: length: 00000002
+    // .  .  .  .  
+       00 00 00 02 
+    // parsed:, offset 320, len 2, h: source: utf8{"T_getstatic_13.java"}
+    // .  .  
+       00 13 
+// parsed:, offset 322, len 0, h: end attributes[0] 
+// parsed:, offset 322, len 0, h: end classfile

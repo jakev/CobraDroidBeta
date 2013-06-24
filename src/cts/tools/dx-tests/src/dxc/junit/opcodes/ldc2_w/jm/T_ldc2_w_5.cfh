@@ -1,0 +1,194 @@
+//@class:dxc/junit/opcodes/ldc2_w/jm/T_ldc2_w_5
+// parsed:, offset 0, len 0, h: begin classfile
+// parsed:, offset 0, len 4, h: magic: cafebabe
+// .  .  .  .  
+   ca fe ba be 
+// parsed:, offset 4, len 2, h: minor_version: 0003
+// .  .  
+   00 03 
+// parsed:, offset 6, len 2, h: major_version: 002d
+// .  -  
+   00 2d 
+// parsed:, offset 8, len 2, h: constant_pool_count: 0011
+// .  .  
+   00 11 
+// parsed:, offset 10, len 0, h:  constant_pool:
+    // parsed:, offset 10, len 5, h: 0001: method{java.lang.Object.<init>:()V}
+    // .  .  .  .  .  
+       0a 00 10 00 07 
+    // parsed:, offset 15, len 19, h: 0002: utf8{"java/lang/Object"}
+    // .  .  .  j  a  v  a  /  l  a  n  g  /  O  b  j  e  c  t  
+       01 00 10 6a 61 76 61 2f 6c 61 6e 67 2f 4f 62 6a 65 63 74 
+    // parsed:, offset 34, len 13, h: 0003: utf8{"SourceFile"}
+    // .  .  .  S  o  u  r  c  e  F  i  l  e  
+       01 00 0a 53 6f 75 72 63 65 46 69 6c 65 
+    // parsed:, offset 47, len 18, h: 0004: utf8{"T_ldc2_w_5.java"}
+    // .  .  .  T  _  l  d  c  2  _  w  _  5  .  j  a  v  a  
+       01 00 0f 54 5f 6c 64 63 32 5f 77 5f 35 2e 6a 61 76 61 
+    // parsed:, offset 65, len 9, h: 0005: utf8{"<init>"}
+    // .  .  .  <  i  n  i  t  >  
+       01 00 06 3c 69 6e 69 74 3e 
+    // parsed:, offset 74, len 6, h: 0006: utf8{"run"}
+    // .  .  .  r  u  n  
+       01 00 03 72 75 6e 
+    // parsed:, offset 80, len 5, h: 0007: nat{<init>:()V}
+    // .  .  .  .  .  
+       0c 00 05 00 0d 
+    // parsed:, offset 85, len 3, h: 0008: type{dxc.junit.opcodes.ldc2_w.jm.T_ldc2_w_5}
+    // .  .  .  
+       07 00 0f 
+    // parsed:, offset 88, len 6, h: 0009: utf8{"()D"}
+    // .  .  .  (  )  D  
+       01 00 03 28 29 44 
+    // parsed:, offset 94, len 7, h: 000a: utf8{"Code"}
+    // .  .  .  C  o  d  e  
+       01 00 04 43 6f 64 65 
+    // parsed:, offset 101, len 9, h: 000b: double{0x40091eb860000000 / 3.140000104904175}
+    // .  @  .  .  .  `  .  .  .  
+       06 40 09 1e b8 60 00 00 00 
+    // parsed:, offset 110, len 6, h: 000d: utf8{"()V"}
+    // .  .  .  (  )  V  
+       01 00 03 28 29 56 
+    // parsed:, offset 116, len 5, h: 000e: float{0x4048f5c3 / 3.14}
+    // .  @  H  .  .  
+       04 40 48 f5 c3 
+    // parsed:, offset 121, len 41, h: 000f: utf8{"dxc/junit/opcodes/ldc2_w/jm/T_ldc2_w_5"}
+    // .  .  &  d  x  c  /  j  u  n  i  t  /  o  p  c  o  d  e  s  /  l  d  c  2  _  w  /  j  m  /  T  _  l  d  c  2  _  w  _  5  
+       01 00 26 64 78 63 2f 6a 75 6e 69 74 2f 6f 70 63 6f 64 65 73 2f 6c 64 63 32 5f 77 2f 6a 6d 2f 54 5f 6c 64 63 32 5f 77 5f 35 
+    // parsed:, offset 162, len 3, h: 0010: type{java.lang.Object}
+    // .  .  .  
+       07 00 02 
+// parsed:, offset 165, len 0, h: end constant_pool
+// parsed:, offset 165, len 2, h: access_flags: public|super
+// .  !  
+   00 21 
+// parsed:, offset 167, len 2, h: this_class: type{dxc.junit.opcodes.ldc2_w.jm.T_ldc2_w_5}
+// .  .  
+   00 08 
+// parsed:, offset 169, len 2, h: super_class: type{java.lang.Object}
+// .  .  
+   00 10 
+// parsed:, offset 171, len 2, h: interfaces_count: 0000
+// .  .  
+   00 00 
+// parsed:, offset 173, len 2, h: fields_count: 0000
+// .  .  
+   00 00 
+// parsed:, offset 175, len 2, h: methods_count: 0002
+// .  .  
+   00 02 
+// ========== start-ParseMember:<init>, offset 177, len:74,desc: ()V
+// parsed:, offset 177, len 0, h:  methods[0]: 
+    // parsed:, offset 177, len 2, h: access_flags: public
+    // .  .  
+       00 01 
+    // parsed:, offset 179, len 2, h: name: <init>
+    // .  .  
+       00 05 
+    // parsed:, offset 181, len 2, h: descriptor: ()V
+    // .  .  
+       00 0d 
+    // parsed:, offset 183, len 2, h: attributes_count: 0001
+    // .  .  
+       00 01 
+    // parsed:, offset 185, len 0, h:  attributes[0]: 
+        // parsed:, offset 185, len 2, h: name: Code
+        // .  .  
+           00 0a 
+        // parsed:, offset 187, len 4, h: length: 00000011
+        // .  .  .  .  
+           00 00 00 11 
+        // parsed:, offset 191, len 2, h: max_stack: 0001
+        // .  .  
+           00 01 
+        // parsed:, offset 193, len 2, h: max_locals: 0001
+        // .  .  
+           00 01 
+        // parsed:, offset 195, len 4, h: code_length: 00000005
+        // .  .  .  .  
+           00 00 00 05 
+        // parsed:, offset 0, len 1, h: 0000: aload_0 // 00
+        // *  
+           2a 
+        // parsed:, offset 1, len 3, h: 0001: invokespecial method{java.lang.Object.<init>:()V}
+        // .  .  .  
+           b7 00 01 
+        // parsed:, offset 4, len 1, h: 0004: return
+        // .  
+           b1 
+        // parsed:, offset 204, len 2, h: exception_table_length: 0000
+        // .  .  
+           00 00 
+        // parsed:, offset 206, len 2, h: attributes_count: 0000
+        // .  .  
+           00 00 
+    // parsed:, offset 208, len 0, h: end attributes[0] 
+// parsed:, offset 208, len 0, h: end methods[0] 
+// ========== end-ParseMember:<init>, desc: ()V
+// ========== start-ParseMember:run, offset 208, len:43,desc: ()D
+// parsed:, offset 208, len 0, h:  methods[1]: 
+    // parsed:, offset 208, len 2, h: access_flags: public
+    // .  .  
+       00 01 
+    // parsed:, offset 210, len 2, h: name: run
+    // .  .  
+       00 06 
+    // parsed:, offset 212, len 2, h: descriptor: ()D
+    // .  .  
+       00 09 
+    // parsed:, offset 214, len 2, h: attributes_count: 0001
+    // .  .  
+       00 01 
+    // parsed:, offset 216, len 0, h:  attributes[0]: 
+        // parsed:, offset 216, len 2, h: name: Code
+        // .  .  
+           00 0a 
+        // parsed:, offset 218, len 4, h: length: 00000013
+        // .  .  .  .  
+           00 00 00 13 
+        // parsed:, offset 222, len 2, h: max_stack: 0002
+        // .  .  
+           00 02 
+        // parsed:, offset 224, len 2, h: max_locals: 0001
+        // .  .  
+           00 01 
+        // parsed:, offset 226, len 4, h: code_length: 00000007
+        // .  .  .  .  
+           00 00 00 07 
+        // parsed:, offset 0, len 2, h: 0000: ldc #4048f5c3 // 3.14
+        // .  .  
+           12 0e 
+        // parsed:, offset 2, len 1, h: 0002: pop
+        // W  
+           57 
+        // parsed:, offset 3, len 3, h: 0003: ldc2_w #40091eb860000000 // 3.140000104904175
+        // .  .  .  
+//@mod           14 00 0b 
+           14 00 0e 
+        // parsed:, offset 6, len 1, h: 0006: dreturn
+        // .  
+           af 
+        // parsed:, offset 237, len 2, h: exception_table_length: 0000
+        // .  .  
+           00 00 
+        // parsed:, offset 239, len 2, h: attributes_count: 0000
+        // .  .  
+           00 00 
+    // parsed:, offset 241, len 0, h: end attributes[0] 
+// parsed:, offset 241, len 0, h: end methods[1] 
+// ========== end-ParseMember:run, desc: ()D
+// parsed:, offset 241, len 2, h: attributes_count: 0001
+// .  .  
+   00 01 
+// parsed:, offset 243, len 0, h:  attributes[0]: 
+    // parsed:, offset 243, len 2, h: name: SourceFile
+    // .  .  
+       00 03 
+    // parsed:, offset 245, len 4, h: length: 00000002
+    // .  .  .  .  
+       00 00 00 02 
+    // parsed:, offset 249, len 2, h: source: utf8{"T_ldc2_w_5.java"}
+    // .  .  
+       00 04 
+// parsed:, offset 251, len 0, h: end attributes[0] 
+// parsed:, offset 251, len 0, h: end classfile

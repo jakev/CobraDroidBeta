@@ -1,0 +1,234 @@
+/* Copyright (C) 2008 The Android Open Source Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/
+
+body {
+    font-family:arial,sans-serif;
+    color:#000;
+    font-size:13px;
+    color:#333;
+    padding:10;
+    margin:10;
+}
+
+table {
+    font-size:1em;
+    margin:0 0 1em;
+    padding:0;
+    border-collapse:collapse;
+    border-width:0;
+    empty-cells:show;
+    width: 95%;
+}
+
+/* Report logo and device name */
+#title table {
+    padding:5px;
+    border-width: 0px;
+    margin-left:auto;
+    margin-right:auto;
+    vertical-align:middle;
+}
+
+/* Device and test plan summary below the title */
+#summary table {
+    background-color: rgb(212, 233, 169);
+    -moz-border-radius:5px;
+    border-radius:5px;
+    padding:5px;
+    border-color: #A5C639 #A5C639 #A5C639 #A5C639;
+    border-width: 0px 0px 0px 0px;
+    margin-left:auto;
+    margin-right:auto;
+    width:80%;
+}
+
+#summary th {
+    background-color: #A5C639;
+    font-size:1.2em;
+    height: 2em;
+    width: 50%;
+}
+
+#summary td {
+    border-width: 0px 0px 0px 0px;
+    border-color: gray;
+    border-style: inset;
+    font-size:1em;
+    vertical-align: top;
+}
+
+#summaryinfo table {
+    background-color: rgb(212, 233, 169);
+    padding:5px;
+    border-width:0;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#summaryinfo td {
+    padding:1px;
+    border-width: 0px 0px 0px 0px;
+    vertical-align: top;
+}
+
+/* The test summary */
+#testsummary table {
+    background-color: rgb(212, 233, 169);
+    padding:5px;
+    border-width:1;
+    border-color: #A5C639;
+    margin-left:auto;
+    margin-right:auto;
+    width: 40%;
+}
+
+#testsummary th {
+    background-color: #A5C639;
+    border-width: 1px;
+    border-color: gray;
+    border-style: outset;
+    height: 2em;
+}
+
+#testsummary td {
+    border-width: 1px;
+    border-color: #A5C639;
+    border-style: outset;
+    text-align: center;
+}
+
+/* The test details */
+#testdetail table {
+    background-color: rgb(212, 233, 169);
+    padding:5px;
+    border-width:1;
+    border-color: #A5C639;
+    margin-left:auto;
+    margin-right:auto;
+    width: 95%;
+    table-layout:fixed;
+    vertical-align: top;
+}
+
+#testdetail th {
+    background-color: #A5C639;
+    border-width: 1px;
+    border-color: gray;
+    border-style: outset;
+    height: 2em;
+}
+
+#testdetail td {
+    border-width: 1px;
+    border-color: #A5C639;
+    border-style: outset;
+    text-align: left;
+    vertical-align: top;
+    padding:1;
+}
+
+/* The test package name */
+#none table {
+    border-width:0;
+    border-color: white;
+    background-color: white;
+    text-align:left;
+    border-collapse:collapse;
+}
+
+#none td {
+    border-width:0;
+    border-color: white;
+    background-color: white;
+    text-align:left;
+    border-collapse:collapse;
+    font-weight:bold;
+}
+
+/* Test cell details */
+td.failed {
+    background-color: #FA5858;
+    font-weight:bold;
+    vertical-align: top;
+    text-align: center;
+}
+
+td.failuredetails {
+    text-align: left;
+}
+
+td.pass {
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+td.timeout, td.omitted, td.notExecuted {
+    background-color: #A5C639;
+    vertical-align: top;
+    text-align: center;
+}
+
+td.testname {
+    border-width: 1px;
+    border-color: #A5C639;
+    border-style: outset;
+    text-align: left;
+    vertical-align: top;
+    padding:1;
+    overflow:hidden;
+}
+
+td.testcase {
+    border-width: 1px;
+    border-color: #A5C639;
+    border-style: outset;
+    text-align: left;
+    vertical-align: top;
+    padding:1;
+    overflow:hidden;
+    font-weight:bold;
+}
+
+td.testcasespacer {
+    border-width: 1px;
+    border-color: #A5C639;
+    border-style: outset;
+    text-align: left;
+    vertical-align: top;
+    padding:1;
+    overflow:hidden;
+    font-weight:bold;
+}
+
+td.testsuite {
+    border-width: 1px;
+    border-color: #A5C639;
+    border-style: outset;
+    text-align: left;
+    vertical-align: top;
+    padding:1;
+    overflow:hidden;
+    font-weight:bold;
+}
+
+#details {
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    overflow:auto;
+}

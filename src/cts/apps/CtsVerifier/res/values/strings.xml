@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2010 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <string name="app_name">CTS Verifier</string>
+    <string name="welcome_text">Welcome to the CTS Verifier!</string>
+    <string name="continue_button_text">Continue</string>
+
+    <string name="pass_button_text">Pass</string>
+    <string name="info_button_text">Info</string>
+    <string name="fail_button_text">Fail</string>
+
+    <!-- Strings for TestResultsReport -->
+    <string name="subject_header">[CTS Verifier %1$s]</string>
+    <string name="body_header">CTS Verifier %1$s Test Results</string>
+    <string name="pass_result">PASS</string>
+    <string name="fail_result">FAIL</string>
+    <string name="not_executed_result">NOT_EXECUTED</string>
+
+    <!-- Strings for TestListActivity -->
+    <string name="test_list_title">Manual Test List</string>
+    <string name="test_category_audio">Audio</string>
+    <string name="test_category_networking">Networking</string>
+    <string name="test_category_sensors">Sensors</string>
+    <string name="test_category_security">Security</string>
+    <string name="test_category_features">Features</string>
+    <string name="test_category_other">Other</string>
+    <string name="clear">Clear</string>
+    <string name="test_results_cleared">Test results cleared.</string>
+    <string name="copy">Copy</string>
+    <string name="test_results_copied">Test results copied to clipboard.</string>
+    <string name="share">Share</string>
+    <string name="share_test_results">Share Test Results</string>
+
+    <!-- Strings for BluetoothActivity -->
+    <string name="bluetooth_test">Bluetooth Test</string>
+    <string name="bluetooth_test_info">The Bluetooth Control tests check whether or not the device 
+        can disable and enable Bluetooth properly.\n\nThe Device Communication tests require two
+        devices to pair and exchange messages. The two devices must be:
+        \n\n1. a candidate device implementation running the software build to be tested
+        \n\n2. a separate device implementation already known to be compatible</string>
+
+    <string name="bt_not_available_title">Bluetooth is not available?</string>
+    <string name="bt_not_available_message">If your device is supposed to have Bluetooth, your API implementation is not behaving correctly!</string>
+
+    <string name="bt_control">Bluetooth Control</string>
+    <string name="bt_device_communication">Device Communication</string>
+
+    <string name="bt_toggle_bluetooth">Toggle Bluetooth</string>
+    <string name="bt_toggle_instructions">Disable and enable Bluetooth to successfully complete this test.</string>
+    <string name="bt_enable_bluetooth">Enable Bluetooth</string>
+    <string name="bt_disable_bluetooth">Disable Bluetooth</string>
+    <string name="bt_disabling">Disabling Bluetooth...</string>
+    <string name="bt_disabling_error">Could not disable Bluetooth...</string>
+
+    <string name="bt_secure_server">Secure Server</string>
+    <string name="bt_secure_server_instructions">Start the CTS Verifier on another device, start the Bluetooth test, and choose \"Secure Client\" to complete the test.</string>
+    <string name="bt_insecure_server">Insecure Server</string>
+    <string name="bt_insecure_server_instructions">Start the CTS Verifier on another device, start the Bluetooth test, and choose \"Insecure Client\" to complete the test.</string>
+    <string name="bt_waiting">Waiting for client...</string>
+    <string name="bt_connecting">Connecting...</string>
+    <string name="bt_received_messages">Received Messages</string>
+    <string name="bt_sent_messages">Sent Messages</string>
+    <string name="bt_no_messages">No messages</string>
+    <string name="bt_make_discoverable">Make Discoverable</string>
+    <string name="bt_insecure_pairing_error_title">Pairing dialog shown?</string>
+    <string name="bt_insecure_pairing_error_message">Insecure connections should not show the pairing dialog!</string>
+
+    <string name="bt_secure_client">Secure Client</string>
+    <string name="bt_insecure_client">Insecure Client</string>
+
+    <string name="bt_device_picker">Device Picker</string>
+    <string name="bt_paired_devices">Paired Devices</string>
+    <string name="bt_new_devices">New Devices</string>
+    <string name="bt_no_devices">No devices</string>
+    <string name="bt_scan">Scan for Devices</string>
+    <string name="bt_scanning">Scanning...</string>
+    <string name="bt_unpair">Device must be unpaired via Bluetooth settings before completing the test.\n\nUnpair the device in settings, make the server discoverable, and rescan to pick this device.</string>
+    <string name="bt_settings">Bluetooth Settings</string>
+
+    <!-- Strings for FeatureSummaryActivity -->
+    <string name="feature_summary">Hardware/Software Feature Summary</string>
+    <string name="feature_summary_info">This is a test for...</string>
+    <string name="fs_disallowed">WARNING: device reports a disallowed feature name</string>
+    <string name="fs_missing_wifi_telephony">WARNING: device reports neither WiFi nor telephony</string>
+    <string name="fs_no_data">No data.</string>
+    <string name="fs_legend_good">standard feature reported by device</string>
+    <string name="fs_legend_indeterminate">optional feature not reported by device</string>
+    <string name="fs_legend_warning">non-standard feature reported by device</string>
+    <string name="fs_legend_error">required feature not reported, or forbidden feature reported</string>
+
+    <string name="empty"></string>
+
+    <!-- Strings for AccelerometerTestActivity and MagnetometerTestActivity -->
+    <string name="snsr_accel_test">Accelerometer Test</string>
+    <string name="snsr_accel_test_info">This test verifies that the accelerometer is working properly. As you move the device around through space, the triangle should always point down (i.e. in the direction of gravity.) If it does not, the accelerometer is improperly configured.</string>
+    <string name="snsr_mag_test">Magnetometer Test</string>
+    <string name="snsr_mag_test_info">This test verifies that the magnetometer (compass) is working properly. As you move the device around through space, the triangle should always point toward the north pole (which may point through the ground.) If it does not, the magnetometer is improperly configured. Be sure not to run this test with the device near any strong magnetic field generators.</string>
+
+    <!-- Strings for SuidFilesActivity -->
+    <string name="suid_files">SUID File Scanner</string>
+    <string name="suid_files_info">This test will attempt to find unauthorized SUID binaries, but it is not comprehensive due to permission restrictions.\n\nAuthorized SUID binaries will appear green, while unauthorized SUID binaries will appear red.\n\nPress OK to start the scan...</string>
+    <string name="scanning_directory">Scanning directory...</string>
+    <string name="file_status">User: %1$s\nGroup: %2$s\nPermissions: %3$s\nPath: %4$s</string>
+    <string name="no_file_status">Could not stat file...</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="no_suid_files">No unauthorized suid files detected!</string>
+
+    <!--  Strings for Audio Quality Verifier -->
+    
+     <!-- Title for Audio Quality Verifier activity -->
+    <string name="aq_verifier">Audio Quality Verifier</string>
+    <string name="aq_verifier_info">
+        1. Click \"Calibrate\". Position the phone in front of the center of
+           the speaker cone with the microphone facing the speaker,
+           and adjust the volume of the speaker until the status message
+           indicates it is correct.
+        \n\n2. Click on any test in the list to run it, or \"Run All\" to run
+           each test in sequence.
+        \n\nIf the sound level check fails, go back to the calibration step before
+            running any other test.
+        \n\n3. Click \"Results\" to view the outcomes. A correctly functioning
+           device should pass all tests.
+        \n\n4. Click \"Send by email\" from the results page to send the
+           results to an e-mail address of your choice. The recordings
+           made are also attached as raw 16 bit, 16 kHz audio files to
+           help you diagnose any failed tests.
+    </string>
+    
+    <!-- Button labels for VerifierActivity -->
+    <string name="aq_calibrate">Calibrate</string>
+    <string name="aq_run_all">Run All</string>
+    <string name="aq_stop">Stop</string>
+    <string name="aq_view_results">Results</string>
+    <string name="aq_email_results">Send by email</string>
+    <string name="aq_clear">Clear</string>
+    
+    <!-- Title for ViewResultsActivity -->
+    <string name="aq_view_results_name">Audio Quality Results</string>
+    <!-- Button label for ViewResultsActivity -->
+    <string name="aq_dismiss">Dismiss</string>
+    <!-- E-mail subject line for test results -->
+    <string name="aq_subject">Android Audio Quality Verifier Test Results</string>
+    
+    <!--  Title for CalibrateVolumeActivity -->
+    <string name="aq_calibrate_volume_name">Calibrate Volume</string>
+    <!--  Instructions for calibrating the volume -->
+    <string name="aq_calibrate_volume_instructions">Adjust volume to the central point</string>
+    <!-- Button label for CalibrateVolumeActivity -->
+    <string name="aq_done">Done</string>
+    <!--  Status values for CalibrateVolumeActivity -->
+    <string name="aq_status_unknown">Status: unknown</string>
+    <string name="aq_status_low">Volume too low</string>
+    <string name="aq_status_high">Volume too high</string>
+    <string name="aq_status_ok">Volume OK</string>
+    
+    <!-- Experiment names -->
+    <string name="aq_default_exp">Unnamed experiment</string>
+    <string name="aq_sound_level_exp">Sound level check</string>
+    <string name="aq_spectrum_shape_exp">Spectrum shape test</string>
+    <string name="aq_glitch_exp">Glitch test</string>
+    <string name="aq_linearity_exp">Gain linearity test</string>
+    <string name="aq_overflow_exp">Overflow check</string>
+    <string name="aq_bias_exp">Bias measurement</string>
+    <string name="aq_cold_latency">Cold recording latency</string>
+    <string name="aq_warm_latency">Warm recording latency</string>
+    
+    <!-- Experiment outcomes -->
+    <string name="aq_fail">Fail</string>
+    <string name="aq_pass">Pass</string>
+    <string name="aq_complete">Complete</string>
+    
+    <!-- Experiment reports -->
+    <string name="aq_loopback_report">Experiment ran successfully.</string>
+    <string name="aq_bias_report">Mean = %1$.3g, tolerance = +/- %2$.0f\nRMS = %3$.0f, duration = %4$.1fs</string>
+    <string name="aq_overflow_report_error">Overflow check unsuccessful</string>
+    <string name="aq_overflow_report_short">Insufficient tone detected.\nExpected %1$.1fs tone; observed %2$.1fs</string>
+    <string name="aq_overflow_report_fail">"Overflow check failed due to discontinuities.\nObserved %1$d bad frames\nTone duration %2$.1fs\nMin peak = %3$.0f, max = %4$.0f</string>
+    <string name="aq_overflow_report_pass">"Observed %1$d bad frames\nTone duration %2$.1fs\nMin peak = %3$.0f, max = %4$.0f</string>
+    <string name="aq_linearity_report_error">Experiment failed, error code %1$g</string>
+    <string name="aq_linearity_report_normal">Deviation from linearity = %1$.3g dB\nMax allowed = %2$.1f dB</string>
+    <string name="aq_glitch_report_error">Error performing Glitch test.</string>
+    <string name="aq_glitch_report_exact">%1$d glitches detected; expected %2$d, duration %3$.1fs</string>
+    <string name="aq_glitch_report_range">%1$d glitches detected; expected %2$d-%3$d, duration %4$.1fs</string>
+    <string name="aq_level_report">RMS = %1$.0f, target = %2$.0f\nTolerance = %3$.1f%%\nDuration = %4$.1fs</string>
+    <string name="aq_spectrum_report_error">Cannot perform test.\nCheck volume is sufficiently high?</string>
+    <string name="aq_spectrum_report_normal">RMS deviation = %1$.2f\nMax allowed deviation = %2$.1f</string>
+    <string name="aq_cold_latency_report">Latency = %1$dms, maximum allowed = %2$dms</string>
+    <string name="aq_warm_latency_report_error">RMS = %1$.0f, target = %2$.0f</string>
+    <string name="aq_warm_latency_report_normal">Latency = %1$dms</string>
+    
+    <!-- General experiment messages -->    
+    <string name="aq_audiorecord_buffer_size_error">Error getting minimum AudioRecord buffer size: %1$d</string>
+    <string name="aq_audiotrack_buffer_size_error">Error getting minimum AudioTrack buffer size: %1$d</string>
+    <string name="aq_init_audiorecord_error">Error initializing AudioRecord instance</string>
+    <string name="aq_init_audiotrack_error">Error initializing AudioTrack instance</string>
+    <string name="aq_recording_error">Error reading data from AudioRecord instance</string>
+    <string name="aq_exception_error">Exception thrown during test: %1$s</string>
+
+</resources>

@@ -1,0 +1,97 @@
+#! /bin/bash
+
+# Copyright (C) 2009 The Android Open Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+if [ -z "${CTS_ROOT}" ]; then
+# CONFIGURATION
+# Set this variable to the root of unzipped CTS directory
+# This only needs to be changed if this script has been moved
+CTS_ROOT="$(dirname $0)/.."
+fi;
+
+# ----------------------------------------------------------------------------
+# END OF CONFIGURATION SECTION
+# ----------------------------------------------------------------------------
+
+checkDir() {
+    if [ ! -d $1 ]; then
+        echo "$2"
+        exit
+    fi;
+}
+
+
+checkFile() {
+    if [ ! -f "$1" ]; then
+        echo "Unable to locate $1."
+        exit
+    fi;
+}
+
+checkPath() {
+    if ! type -P $1 &> /dev/null; then
+        echo "Unable to find $1 in path."
+        exit
+    fi;
+}
+
+checkDir ${CTS_ROOT} "Error: Cannot locate CTS in \"${CTS_DIR}\". Please check your configuration in $0"
+
+DDM_LIB=${CTS_ROOT}/tools/ddmlib-prebuilt.jar
+CTS_LIB=${CTS_ROOT}/tools/cts.jar
+JUNIT_LIB=${CTS_ROOT}/tools/junit.jar
+HOSTTEST_LIB=${CTS_ROOT}/tools/hosttestlib.jar
+
+checkFile ${DDM_LIB}
+checkFile ${CTS_LIB}
+checkFile ${JUNIT_LIB}
+checkFile ${HOSTTEST_LIB}
+
+JARS=${CTS_LIB}:${DDM_LIB}:${JUNIT_LIB}:${HOSTTEST_LIB}
+
+# Add SDK_ROOT to the PATH for backwards compatibility with prior startcts
+# commands that required SDK_ROOT to find adb.
+if [ -n "${SDK_ROOT}" ]; then
+  PATH=${SDK_ROOT}/platform-tools:${SDK_ROOT}/tools:${PATH}
+fi
+
+checkPath adb
+
+# options for the JVM
+JAVA_OPTS="-Xmx512M"
+# configuration supplied as single argument
+CONFIG=
+# configuration supplied with --config option
+DDCONFIG=
+
+if [ $# -eq 1 ]; then
+    # single argument specifies configuration file
+    :
+else
+    if [ $(echo "$*" | grep -c -e --config -) -gt 0 ]; then
+        # --config supplied on command line
+        :
+    else
+        if [ $# -eq 0 ]; then
+            # no arguments; supply config as single argument
+            CONFIG=${CTS_ROOT}/repository/host_config.xml
+        else
+            # no config; append --config to existing command line
+            DDCONFIG="--config ${CTS_ROOT}/repository/host_config.xml"
+        fi;
+    fi;
+fi;
+
+java ${JAVA_OPTS} -cp ${JARS} com.android.cts.TestHost ${CONFIG} "$@" ${DDCONFIG}

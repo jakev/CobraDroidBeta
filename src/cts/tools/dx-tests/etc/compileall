@@ -1,0 +1,114 @@
+#!/bin/bash
+#
+# Copyright (C) 2008 The Android Open Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+echo "building dx-test-suite"
+#
+# generates .class files from the .j (jasmin) and .cfh (hex format) files for the dxconverter test project.
+# the dx executable must be on the PATH.
+# only for lunch 2 at the moment - TODO check which commands are available in busybox/toolbox on the device
+#
+
+prog="$0"
+while [ -h "${prog}" ]; do
+    newProg=`/bin/ls -ld "${prog}"`
+    newProg=`expr "${newProg}" : ".* -> \(.*\)$"`
+    if expr "x${newProg}" : 'x/' >/dev/null; then
+        prog="${newProg}"
+    else
+        progdir=`dirname "${prog}"`
+        prog="${progdir}/${newProg}"
+    fi
+done
+oldwd=`pwd`
+progdir=`dirname "${prog}"`
+cd "${progdir}"
+progdir=`pwd`
+prog="${progdir}"/`basename "${prog}"`
+cd "${oldwd}"
+
+libdir=`dirname $progdir`/framework
+
+javaOpts=""
+while expr "x$1" : 'x-J' >/dev/null; do
+    opt=`expr "$1" : '-J\(.*\)'`
+    javaOpts="${javaOpts} -${opt}"
+    shift
+done
+
+#echo "progdir: $progdir"
+#echo "android build top: $ANDROID_BUILD_TOP"
+project_home=$1
+javac=$2
+tmpdir=$3 # ANDROID_BUILD_TOP/$3
+dxjarpath=$4
+outdir=$5
+project_src=$project_home/src
+project_lib=$project_home/lib
+project_data=$project_home/data
+javac_out=$tmpdir/classout
+javafiles=$tmpdir/_javafiles
+mainfilesdir=$tmpdir/mainfiles
+mainfileslist=$tmpdir/_mainfileslist
+
+#echo "home: $project_home"
+
+if [ "$tmpdir" = "" ]; then
+    echo "error: intermediates dir not set/found!!";
+    exit 1;
+else
+    echo "tmp/intermediates dir (rel): $tmpdir"
+fi
+rm -rf --preserve-root $javac_out
+rm -rf --preserve-root $javafiles
+
+# compile all files from javafiles
+echo "compiling all java files (with package dxc.junit.**)"
+find $project_src/dxc/junit -name '*.java' > $javafiles
+echo "$project_src/util/CollectAllTests.java" >> $javafiles
+mkdir -p $javac_out
+jfiles=\@$javafiles
+javac -d $javac_out -classpath ${dxjarpath} -sourcepath $project_src $jfiles
+
+echo "compiling all jasmin (*.j)"
+
+find $project_src/dxc/junit -name '*.j' | sort > $tmpdir/alljasminfiles
+java -classpath $project_home/utilclasses:$project_lib/jasmin.jar util.CompileAllJasmin $tmpdir/alljasminfiles $javac_out  &> /dev/null
+
+echo "compiling all .cfh files into .class files"
+for acfhfile in `find $project_src/dxc/junit -name '*.cfh'`
+do
+    #echo "cfh file:$acfhfile"
+    java -classpath ${dxjarpath} dxconvext.ClassFileAssembler $acfhfile $javac_out &> /dev/null
+done
+
+echo "generating Main_*.java files reading from $project_home writing to $mainfilesdir"
+mkdir -p $mainfilesdir
+# generate the Main_*.java files
+java -cp $project_lib/junit.jar:$javac_out util.CollectAllTests $project_home $mainfilesdir 
+# compile the Main_*.java files
+find $mainfilesdir/dxc/junit -name '*.java' > $mainfileslist
+echo "compile the Main_*.java files"
+javac -d $javac_out -classpath $project_lib/junit.jar:$javac_out -sourcepath $mainfilesdir \@$mainfileslist
+
+# now copy relevant data from intermediates dir to its final destination
+fdest=$outdir/cts/dxconverter
+mkdir -p $fdest/data
+acp -r $javac_out $fdest/
+acp $mainfilesdir/data/scriptdata $fdest/data/scriptdata
+
+echo "dxconverter test suite sucessfully built!"
+echo "intermediate Main_*.java files (for stacktrace analysis) can be found under $mainfilesdir" 
+

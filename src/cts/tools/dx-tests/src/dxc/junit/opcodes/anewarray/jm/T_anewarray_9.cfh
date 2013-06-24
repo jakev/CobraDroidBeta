@@ -1,0 +1,200 @@
+//@class:dxc/junit/opcodes/anewarray/jm/T_anewarray_9
+// parsed:, offset 0, len 0, h: begin classfile
+// parsed:, offset 0, len 4, h: magic: cafebabe
+// .  .  .  .  
+   ca fe ba be 
+// parsed:, offset 4, len 2, h: minor_version: 0003
+// .  .  
+   00 03 
+// parsed:, offset 6, len 2, h: major_version: 002d
+// .  -  
+   00 2d 
+// parsed:, offset 8, len 2, h: constant_pool_count: 0011
+// .  .  
+   00 11 
+// parsed:, offset 10, len 0, h:  constant_pool:
+    // parsed:, offset 10, len 5, h: 0001: method{java.lang.Object.<init>:()V}
+    // .  .  .  .  .  
+       0a 00 0f 00 09 
+    // parsed:, offset 15, len 47, h: 0002: utf8{"dxc/junit/opcodes/anewarray/jm/T_anewarray_9"}
+    // .  .  ,  d  x  c  /  j  u  n  i  t  /  o  p  c  o  d  e  s  /  a  n  e  w  a  r  r  a  y  /  j  m  /  T  _  a  n  e  w  a  r  r  a  y  _  9  
+       01 00 2c 64 78 63 2f 6a 75 6e 69 74 2f 6f 70 63 6f 64 65 73 2f 61 6e 65 77 61 72 72 61 79 2f 6a 6d 2f 54 5f 61 6e 65 77 61 72 72 61 79 5f 39 
+    // parsed:, offset 62, len 19, h: 0003: utf8{"java/lang/Object"}
+    // .  .  .  j  a  v  a  /  l  a  n  g  /  O  b  j  e  c  t  
+       01 00 10 6a 61 76 61 2f 6c 61 6e 67 2f 4f 62 6a 65 63 74 
+    // parsed:, offset 81, len 3, h: 0004: type{java.lang.String}
+    // .  .  .  
+       07 00 0b 
+    // parsed:, offset 84, len 13, h: 0005: utf8{"SourceFile"}
+    // .  .  .  S  o  u  r  c  e  F  i  l  e  
+       01 00 0a 53 6f 75 72 63 65 46 69 6c 65 
+    // parsed:, offset 97, len 5, h: 0006: int{0x0000007b / 123}
+    // .  .  .  .  {  
+       03 00 00 00 7b 
+    // parsed:, offset 102, len 9, h: 0007: utf8{"<init>"}
+    // .  .  .  <  i  n  i  t  >  
+       01 00 06 3c 69 6e 69 74 3e 
+    // parsed:, offset 111, len 7, h: 0008: utf8{"run2"}
+    // .  .  .  r  u  n  2  
+       01 00 04 72 75 6e 32 
+    // parsed:, offset 118, len 5, h: 0009: nat{<init>:()V}
+    // .  .  .  .  .  
+       0c 00 07 00 0c 
+    // parsed:, offset 123, len 7, h: 000a: utf8{"Code"}
+    // .  .  .  C  o  d  e  
+       01 00 04 43 6f 64 65 
+    // parsed:, offset 130, len 19, h: 000b: utf8{"java/lang/String"}
+    // .  .  .  j  a  v  a  /  l  a  n  g  /  S  t  r  i  n  g  
+       01 00 10 6a 61 76 61 2f 6c 61 6e 67 2f 53 74 72 69 6e 67 
+    // parsed:, offset 149, len 6, h: 000c: utf8{"()V"}
+    // .  .  .  (  )  V  
+       01 00 03 28 29 56 
+    // parsed:, offset 155, len 3, h: 000d: type{dxc.junit.opcodes.anewarray.jm.T_anewarray_9}
+    // .  .  .  
+       07 00 02 
+    // parsed:, offset 158, len 25, h: 000e: utf8{"(I)[Ljava/lang/String;"}
+    // .  .  .  (  I  )  [  L  j  a  v  a  /  l  a  n  g  /  S  t  r  i  n  g  ;  
+       01 00 16 28 49 29 5b 4c 6a 61 76 61 2f 6c 61 6e 67 2f 53 74 72 69 6e 67 3b 
+    // parsed:, offset 183, len 3, h: 000f: type{java.lang.Object}
+    // .  .  .  
+       07 00 03 
+    // parsed:, offset 186, len 21, h: 0010: utf8{"T_anewarray_9.java"}
+    // .  .  .  T  _  a  n  e  w  a  r  r  a  y  _  9  .  j  a  v  a  
+       01 00 12 54 5f 61 6e 65 77 61 72 72 61 79 5f 39 2e 6a 61 76 61 
+// parsed:, offset 207, len 0, h: end constant_pool
+// parsed:, offset 207, len 2, h: access_flags: public|super
+// .  !  
+   00 21 
+// parsed:, offset 209, len 2, h: this_class: type{dxc.junit.opcodes.anewarray.jm.T_anewarray_9}
+// .  .  
+   00 0d 
+// parsed:, offset 211, len 2, h: super_class: type{java.lang.Object}
+// .  .  
+   00 0f 
+// parsed:, offset 213, len 2, h: interfaces_count: 0000
+// .  .  
+   00 00 
+// parsed:, offset 215, len 2, h: fields_count: 0000
+// .  .  
+   00 00 
+// parsed:, offset 217, len 2, h: methods_count: 0002
+// .  .  
+   00 02 
+// ========== start-ParseMember:<init>, offset 219, len:75,desc: ()V
+// parsed:, offset 219, len 0, h:  methods[0]: 
+    // parsed:, offset 219, len 2, h: access_flags: public
+    // .  .  
+       00 01 
+    // parsed:, offset 221, len 2, h: name: <init>
+    // .  .  
+       00 07 
+    // parsed:, offset 223, len 2, h: descriptor: ()V
+    // .  .  
+       00 0c 
+    // parsed:, offset 225, len 2, h: attributes_count: 0001
+    // .  .  
+       00 01 
+    // parsed:, offset 227, len 0, h:  attributes[0]: 
+        // parsed:, offset 227, len 2, h: name: Code
+        // .  .  
+           00 0a 
+        // parsed:, offset 229, len 4, h: length: 00000011
+        // .  .  .  .  
+           00 00 00 11 
+        // parsed:, offset 233, len 2, h: max_stack: 0001
+        // .  .  
+           00 01 
+        // parsed:, offset 235, len 2, h: max_locals: 0001
+        // .  .  
+           00 01 
+        // parsed:, offset 237, len 4, h: code_length: 00000005
+        // .  .  .  .  
+           00 00 00 05 
+        // parsed:, offset 0, len 1, h: 0000: aload_0 // 00
+        // *  
+           2a 
+        // parsed:, offset 1, len 3, h: 0001: invokespecial method{java.lang.Object.<init>:()V}
+        // .  .  .  
+           b7 00 01 
+        // parsed:, offset 4, len 1, h: 0004: return
+        // .  
+           b1 
+        // parsed:, offset 246, len 2, h: exception_table_length: 0000
+        // .  .  
+           00 00 
+        // parsed:, offset 248, len 2, h: attributes_count: 0000
+        // .  .  
+           00 00 
+    // parsed:, offset 250, len 0, h: end attributes[0] 
+// parsed:, offset 250, len 0, h: end methods[0] 
+// ========== end-ParseMember:<init>, desc: ()V
+// ========== start-ParseMember:run2, offset 250, len:44,desc: (I)[Ljava/lang/String;
+// parsed:, offset 250, len 0, h:  methods[1]: 
+    // parsed:, offset 250, len 2, h: access_flags: public
+    // .  .  
+       00 01 
+    // parsed:, offset 252, len 2, h: name: run2
+    // .  .  
+       00 08 
+    // parsed:, offset 254, len 2, h: descriptor: (I)[Ljava/lang/String;
+    // .  .  
+       00 0e 
+    // parsed:, offset 256, len 2, h: attributes_count: 0001
+    // .  .  
+       00 01 
+    // parsed:, offset 258, len 0, h:  attributes[0]: 
+        // parsed:, offset 258, len 2, h: name: Code
+        // .  .  
+           00 0a 
+        // parsed:, offset 260, len 4, h: length: 00000014
+        // .  .  .  .  
+           00 00 00 14 
+        // parsed:, offset 264, len 2, h: max_stack: 0001
+        // .  .  
+           00 01 
+        // parsed:, offset 266, len 2, h: max_locals: 0002
+        // .  .  
+           00 02 
+        // parsed:, offset 268, len 4, h: code_length: 00000008
+        // .  .  .  .  
+           00 00 00 08 
+        // parsed:, offset 0, len 2, h: 0000: ldc #+0000007b
+        // .  .  
+           12 06 
+        // parsed:, offset 2, len 1, h: 0002: pop
+        // W  
+           57 
+        // parsed:, offset 3, len 1, h: 0003: iload_1 // 01
+        // .  
+           1b 
+        // parsed:, offset 4, len 3, h: 0004: anewarray type{java.lang.String}
+        // .  .  .  
+//@mod           bd 00 04 
+           bd 00 06 
+        // parsed:, offset 7, len 1, h: 0007: areturn
+        // .  
+           b0 
+        // parsed:, offset 280, len 2, h: exception_table_length: 0000
+        // .  .  
+           00 00 
+        // parsed:, offset 282, len 2, h: attributes_count: 0000
+        // .  .  
+           00 00 
+    // parsed:, offset 284, len 0, h: end attributes[0] 
+// parsed:, offset 284, len 0, h: end methods[1] 
+// ========== end-ParseMember:run2, desc: (I)[Ljava/lang/String;
+// parsed:, offset 284, len 2, h: attributes_count: 0001
+// .  .  
+   00 01 
+// parsed:, offset 286, len 0, h:  attributes[0]: 
+    // parsed:, offset 286, len 2, h: name: SourceFile
+    // .  .  
+       00 05 
+    // parsed:, offset 288, len 4, h: length: 00000002
+    // .  .  .  .  
+       00 00 00 02 
+    // parsed:, offset 292, len 2, h: source: utf8{"T_anewarray_9.java"}
+    // .  .  
+       00 10 
+// parsed:, offset 294, len 0, h: end attributes[0] 
+// parsed:, offset 294, len 0, h: end classfile

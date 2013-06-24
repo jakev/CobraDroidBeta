@@ -1,0 +1,35 @@
+[
+/* These tests consistently fail on GRH78. */
+{ name: "android.location.cts.GeocoderTest#testGetFromLocation" },
+{ name: "android.location.cts.GeocoderTest#testGetFromLocationName" },
+{ name: "android.webkit.cts.WebSettingsTest#testSetAppCacheEnabled" },
+{ name: "android.net.cts.SSLCertificateSocketFactoryTest" },
+
+{
+  description: "Flaky tests that need to be rewritten or deleted.",
+  names: [
+    "android.media.cts.MediaRecorderTest#testSetCamera",
+    "android.webkit.cts.CacheManagerTest#testCacheFile",
+    "android.widget.cts.AutoCompleteTextViewTest#testOnFilterComplete"
+  ]
+},
+
+{
+  description: "Broken test that is fixed in a future release.",
+  name: "android.provider.cts.MediaStore_Audio_Playlists_MembersTest"
+},
+
+{
+  description: "These tests pass when executed individually but fail when running CTS as a whole on GRH78.",
+  bug: 3184701,
+  names: [
+    "org.apache.harmony.luni.tests.internal.net.www.protocol.https.HttpsURLConnectionTest#testProxyConnection",
+    "org.apache.harmony.luni.tests.internal.net.www.protocol.https.HttpsURLConnectionTest#testProxyAuthConnection",
+    "org.apache.harmony.luni.tests.internal.net.www.protocol.https.HttpsURLConnectionTest#testConsequentProxyConnection",
+    "org.apache.harmony.luni.tests.internal.net.www.protocol.https.HttpsURLConnectionTest#testProxyAuthConnection_doOutput",
+    "org.apache.harmony.luni.tests.internal.net.www.protocol.https.HttpsURLConnectionTest#testProxyAuthConnectionFailed",
+    "org.apache.harmony.luni.tests.internal.net.www.protocol.https.HttpsURLConnectionTest#testProxyConnection_Not_Found_Response"
+  ]
+}
+
+]

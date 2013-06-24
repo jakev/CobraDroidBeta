@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+  <head>
+    <title>Dalvik VM Test Suite</title>
+    <link rel=stylesheet href="vm-tests.css">
+  </head>
+
+  <body>
+    <h1>Dalvik VM Test Suite</h1>
+    <p>Version 1.0</p>
+    <p>Copyright &copy; 2008 The Android Open Source Project
+
+    <h2>Overview</h2>
+
+    <p>    
+      This directory contains a test suite for the Dalvik VM. It tests the
+      capabilities of the Dalvik VM in a black-box manner, based on the Dalvik
+      bytecode and <code>.dex</code> file format specifications. The suite does
+      both functional and verifier tests. Regarding the latter, the Dalvik VM is
+      supposed to perform bytecode verification equivalent to that done in other
+      virtual machines. Please see
+        
+      <pre>
+        docs/dalvik/dalvik-bytecode.html
+        docs/dalvik/dalvik-constraints.html
+        docs/dalvik/dex-format.html
+        docs/dalvik/verifier.html
+      </pre>
+        
+      for further details.
+    </p>
+
+    <h2>How to build</h2>
+    
+    <p>
+      The test suite is normally included in a full build of the Android
+      project. If it needs to be built individually, a simple
+        
+      <pre>
+        make vm-tests
+      </pre>
+        
+      or an
+        
+      <pre>
+        mm
+      </pre>
+        
+      in this directory will do.
+    </p>
+
+    <h2>How to run</h2>
+        
+    <p>
+      The suite can be invoked by executing
+    
+      <pre>
+        vm-tests
+      </pre>
+    
+      from any location, assuming the suite has been built. This will run
+      all tests. If you want to limit the suite to the test cases
+      corresponding to a single instruction, you can specifiy the mnemonic
+      as a parameter. For example
+
+      <pre>
+        vm-tests add-int/lit16
+      </pre>
+      
+      executes the tests for the <code>add-int/lit16</code> instruction.
+      Please see the Dalvik VM specification for all the mnemonics. Two
+      additional parameters are possible that don't represent instructions.
+      These run integrity tests for the DEX file format and general
+      verifier tests, respectively: 
+
+      <pre>
+        vm-tests format
+        vm-tests verifier
+      </pre>
+
+      The suite is normally run for the fast version of the interpreter. To run
+      it for the portable interpreter, pass <code>--portable</code> as the first
+      parameter. Passing <code>--help</code> results in a brief overview of the
+      options.
+    </p>
+    
+    <p>      
+      The suite is compatible with both emulator and simulator 
+      builds. For an emulator build, please make sure you have
+      either an emulator running or a device attached via USB before
+      invoking the test suite.
+    </p>
+    
+    <p>
+      The full suite might easily take 30 minutes or more for execution,
+      depending on the environment. It will generate an HTML
+      report with details on all test cases. While running, console output
+      is produced to give a quick impression of the progress and results.
+      For both types of output, each individual test result falls into one of
+      the following categories:
+    </p>
+            
+    <table>
+      <tr>
+        <th>Type in report</th><th>Type on console</th><th>Description</th>
+      </tr>
+      <tr>
+        <td>Success</td>
+        <td>.</td>
+        <td>
+          The test case passed successfully.
+        </td>
+      </tr>
+      <tr>
+        <td>Functional failure</td>
+        <td>F</td>
+        <td>
+          A functional (normal or boundary) or an exception test case
+          failed.
+        </td>
+        </tr>
+        <tr>
+          <td>Verifier failure</td>
+          <td>V</td>
+          <td>
+            A verifier test case failed. Either the verifier accepted
+            some invalid piece of code or it rejected a valid one.
+          </td>
+        </tr>
+        <tr>
+          <td>Console error</td>
+          <td>C</td>
+          <td>
+            The process running the VM returned error messages on the
+            standard output or error stream, but it is not clear what the
+            nature of the problem is. The test case is considered a failure,
+            though. This problem should only occur when running the suite on
+            a simulator build.
+          </td>
+        </tr>
+      </table> 
+  </body>
+</html>
