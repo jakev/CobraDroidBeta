@@ -1084,6 +1084,10 @@ function set_java_home() {
         esac
     fi
 }
+# Begin CobraDroid Modifications
+export TOP=$(pwd)
+export ANDROID_JAR=out/target/common/obj/JAVA_LIBRARIES/android_stubs_current_intermediates/javalib.jar
+# End CobraDroid Modifications
 
 # determine whether arrays are zero-based (bash) or one-based (zsh)
 _xarray=(a b c)
